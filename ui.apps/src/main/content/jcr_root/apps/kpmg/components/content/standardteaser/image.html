@@ -1,0 +1,8 @@
+<sly data-sly-template.image="${@ teaser}">
+	<div data-sly-use.coreimage="com.adobe.cq.wcm.core.components.models.Image" data-cmp-data-layer="${coreimage.data.json}" data-asset-id="${coreimage.uuid}" data-cmp-clickable="${coreimage.data ? true : false}" data-sly-set.imagePath="${properties.imageFromPageImage!='false' ? teaser.featuredImagePath : properties.fileReference}" data-sly-test="${imagePath}" data-sly-use.imageModel="${'com.kpmg.core.models.Image' 
+		@ componentName='standardteaser', imagePath=imagePath,
+		 imageAltText=coreimage.alt}"
+		class="cmp-teaser__image">
+		<sly data-sly-use.dm="${'/apps/kpmg/components/htl-templates/image.html'}" data-sly-call="${dm.dmImageTemplate @ imageModel=imageModel,cssClass='',lazyload='lazy'}"/>
+	</div>
+</sly>

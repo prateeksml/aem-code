@@ -1,0 +1,5 @@
+<sly data-sly-template.image="${@ profile}"  data-sly-test="${profile.image}" data-sly-use.imageModel="${'com.kpmg.core.models.Image' 
+		@ componentName='contactcard', imagePath=profile.image,
+		 imageAltText=profile.imageAltText}">
+		<sly data-sly-use.dm="${'/apps/kpmg/components/htl-templates/image.html'}" data-sly-call="${dm.dmImageTemplate @ imageModel=imageModel ,cssClass='cmp-contact-card__img'}"/>
+	</sly>

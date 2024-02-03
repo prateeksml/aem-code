@@ -1,0 +1,121 @@
+$searchAutoParent: ".cmp-search-auto-complete";
+
+#{$searchAutoParent} {
+  $autoCompleteHeight: calc(($alias-size-base * 2) + $alias-size-medium); //56px
+  $iconHeight: $alias-size-medium; //24px
+
+  @include normalize-style;
+  display: none;
+  height: $autoCompleteHeight;
+  border-bottom: 1px solid $global-color-grayscale-black;
+
+  &--active {
+    @include display-flex-align-center;
+  }
+
+  &__wrapper {
+    flex: auto;
+  }
+
+  &__input {
+    @include normalize-style;
+    @include typography-body-default-regular;
+    border: none;
+    text-align: left;
+    background-color: transparent;
+
+    &:focus {
+      outline: none;
+    }
+
+    &--label {
+      @include display-flex-align-center;
+      margin-right: $alias-margin-x-small;
+      height: $iconHeight;
+    }
+
+    &--icon {
+      @include material-icons-outlined;
+      font-size: $alias-size-base;
+    }
+
+    &-clear {
+      @include material-icons-outlined;
+      cursor: pointer;
+      background-color: transparent;
+      padding: 0;
+      border: 0;
+      border-radius: $alias-border-radius;
+      display: none;
+      z-index: 100;
+      font-size: $alias-icon-size-base;
+      width: $alias-size-base;
+      height: $iconHeight;
+
+      &:focus {
+        outline: 4px solid $alias-color-button-outline-color-primary-focus;
+      }
+
+      &--active {
+        display: block;
+      }
+    }
+  }
+
+  &__menu {
+    @include normalize-style;
+    @include typography-body-default-regular;
+    position: absolute;
+    left: 0;
+    padding: $alias-padding-medium $alias-padding-base 0;
+    list-style-type: none;
+
+    &--hidden {
+      display: none;
+    }
+
+    &--visible {
+      display: block;
+    }
+  }
+
+  &__option {
+    @include normalize-style;
+    @include typography-body-default-regular;
+    @include display-flex-align-center;
+    cursor: pointer;
+    color: $global-color-brand-spectrum-blue;
+    height: $alias-size-xx-large;
+
+    &:hover {
+      color: $global-color-brand-cobalt-blue;
+      // text-decoration: underline;
+
+      span {
+        color: $global-color-brand-cobalt-blue;
+      }
+    }
+
+    // &:hover:before {
+    //   text-decoration: none;
+    // }
+
+    &:focus {
+      border: none;
+    }
+
+    &:focus-visible {
+      outline: none;
+    }
+
+    //Icon
+    &:before {
+      @include material-icons-outlined;
+      font-size: $alias-size-base;
+      content: "search";
+      color: $global-color-grayscale-neutrals-500;
+      padding-right: $alias-padding-x-small;
+      text-decoration: none;
+    }
+  }
+}

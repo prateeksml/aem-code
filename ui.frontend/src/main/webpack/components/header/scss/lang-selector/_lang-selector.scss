@@ -1,0 +1,249 @@
+$parent: ".cmp-lang-selector";
+#{$parent} {
+  @include menu-item;
+
+  $lang-selector-width: calc(
+    $alias-size-4x-large + $alias-size-x-large
+  ); //120px
+
+  width: $lang-selector-width;
+
+  // $lang-selector-width: calc(
+  //   $alias-size-4x-large + $alias-size-x-large
+  // ); //120px
+  // $lang-selector-height: $alias-size-xx-large; //48px
+
+  // @include normalize-style;
+
+  // width: $lang-selector-width;
+  // height: $lang-selector-height;
+
+  // background: transparent;
+
+  // &__inner {
+  //   @include normalize-style;
+  //   @include display-flex-align-center;
+
+  //   flex-direction: column;
+  //   text-decoration: none;
+  //   width: $lang-selector-width;
+  //   height: $lang-selector-height;
+  //   justify-content: center;
+  // }
+
+  // button {
+  //   cursor: pointer;
+  //   background: none;
+  //   border: none;
+  //   width: 100%;
+  // }
+
+  // &__icon {
+  //   @include material-icons-outlined;
+  //   font-size: 1rem;
+  //   color: $global-color-brand-white;
+  //   padding-bottom: $alias-padding-xx-small;
+  //   width: 100%;
+  //   text-align: center;
+  // }
+
+  // &__label {
+  //   @include typography-body-caption;
+  //   color: $global-color-brand-white;
+  //   text-transform: capitalize;
+  //   padding-top: $alias-padding-xx-small;
+  //   width: 100%;
+  //   text-align: center;
+  // }
+}
+
+.language-selector {
+  $lang-value-8: 8px;
+  $lang-value-12: 12px;
+  $lang-value-18: 18px;
+  $lang-value-43: 43px;
+  $lang-value-376: 376px;
+
+  &__side-navbar {
+    height: 100vh;
+    width: 0;
+    position: fixed;
+    z-index: 99000;
+    top: 0;
+    right: -$lang-value-376;
+    background-color: $global-color-grayscale-neutrals-100;
+    overflow: hidden;
+    transition: 0.5s;
+    visibility: hidden;
+
+    @include tablet {
+      top: $global-size-25;
+      height: calc(100vh - $global-size-25);
+    }
+    @include desktop-small {
+      top: $global-size-25;
+      height: calc(100vh - $global-size-25);
+    }
+    &.active {
+      right: 0;
+      width: 100%;
+      visibility: visible;
+      @include tablet {
+        width: $lang-value-376;
+      }
+      @include desktop-small {
+        width: $lang-value-376;
+      }
+      @include desktop-medium {
+        width: $lang-value-376;
+      }
+    }
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    height: 94%;
+
+    padding: $alias-padding-medium $alias-padding-base;
+
+    @include tablet {
+      padding-left: $alias-padding-medium;
+      padding-right: $alias-padding-medium;
+      height: 100%;
+    }
+
+    @include desktop-small {
+      padding-left: $alias-padding-medium;
+      padding-right: $alias-padding-medium;
+      height: 100%;
+    }
+
+    @include desktop-medium {
+      padding-left: $alias-padding-medium;
+      padding-right: $alias-padding-medium;
+      height: 100%;
+    }
+    ul.country-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      background-color: $global-color-brand-white;
+      li {
+        border-width: 1px 0px;
+        border-style: solid;
+        border-color: $global-color-strokes-cobalt-blue-20-percent;
+        a {
+          text-decoration: none;
+          font-size: $global-font-size-0875;
+          line-height: $alias-fonts-line-height-large;
+          color: $global-color-brand-spectrum-blue;
+          padding: $alias-padding-small $alias-padding-medium;
+          display: block;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+      &--short {
+        margin-bottom: $alias-margin-medium;
+      }
+      &--all {
+        margin-right: $alias-margin-medium;
+      }
+    }
+    .contry-list-container {
+      overflow-y: auto;
+      overflow-x: hidden;
+      margin-top: $alias-margin-medium;
+      margin-bottom: $alias-margin-medium;
+      &::-webkit-scrollbar {
+        width: $alias-width-x-small;
+      }
+
+      &::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 $lang-value-8 $global-color-brand-white;
+        border-radius: $global-size-075;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        border-radius: $global-size-075;
+
+        box-shadow: inset 0 0 $lang-value-8 $global-color-brand-pacific-blue;
+      }
+    }
+    .cmp-form-text {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      label {
+        margin-bottom: $alias-margin-x-small;
+      }
+      &__text {
+        padding: $alias-padding-small $alias-padding-x-large
+          $alias-padding-small $alias-padding-base;
+        background-color: $global-color-brand-white;
+        font-weight: 400;
+        font-size: $alias-font-size-base;
+        line-height: $global-fonts-line-height-15;
+        color: $global-color-grayscale-neutrals-500;
+        border: 0;
+      }
+      .material-icons-outlined.input-cancel {
+        font-size: $global-font-size-0875;
+        position: absolute;
+        top: $lang-value-43;
+        right: $global-size-1;
+        color: $global-color-grayscale-neutrals-500;
+        display: none;
+        cursor: pointer;
+        &.show {
+          display: block;
+        }
+      }
+    }
+    .cmp-form-text label,
+    .filter-message {
+      color: $global-color-grayscale-black;
+      font-weight: 600;
+      font-size: $global-font-size-075;
+      line-height: $global-fonts-line-height-1125;
+    }
+    .filter-message {
+      margin-top: $alias-margin-small;
+      text-align: center;
+      display: none;
+      &.show {
+        display: block;
+      }
+    }
+  }
+  &__mobile-close {
+    display: block;
+    padding: $lang-value-18 $alias-padding-medium;
+    border-bottom: 1px solid $global-color-strokes-cobalt-blue-20-percent;
+
+    @include tablet {
+      display: none;
+    }
+
+    @include desktop-small {
+      display: none;
+    }
+
+    @include desktop-medium {
+      display: none;
+    }
+    &--btn {
+      height: $lang-value-12;
+      width: $alias-width-small;
+      display: flex;
+      text-decoration: none;
+      .material-icons-outlined {
+        color: $global-color-brand-cobalt-blue;
+        font-size: $global-font-size-075;
+      }
+    }
+  }
+}
+
+@import "breakpoints/lang-selector--tablet";

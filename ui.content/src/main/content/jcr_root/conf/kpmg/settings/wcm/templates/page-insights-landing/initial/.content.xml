@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:template="/conf/kpmg/settings/wcm/templates/page-services"
+        jcr:primaryType="cq:PageContent"
+        sling:resourceType="kpmg/components/structure/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="kpmg/components/container/container"
+            layout="responsiveGrid">
+            <hero_fbv
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="kpmg/components/content/hero-fbv"
+                titleFromPage="{Boolean}false"
+                descriptionFromPage="{Boolean}false"
+                selectBackground="image"
+                jcr:title="Insights"
+                jcr:description="KPMG has market-leading alliances with many of the world's leading software and services vendors."
+                imageFromPage="{Boolean}true"
+                altValueFromPageImage="{Boolean}true"
+                cq:styleIds="[1689274232919]"/>
+            <main
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="kpmg/components/container/main"
+                layout="simple">
+                <section_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="kpmg/components/container/section"
+                    cq:styleIds="[1685975499316]">
+                    <sectionheader
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="kpmg/components/content/sectionheader"
+                        title="Core expertise areas"
+                        description="Lorem ipsum dolor sit amet consectetur. Tempus odio egestas id quis porttitor rutrum placerat. Pellentesque eros orci sapien feugiat egestas."/>
+                </section_1>
+                <section_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="kpmg/components/container/section"
+                    cq:styleIds="[1685975499316]">
+                    <teaserbox
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="kpmg/components/container/teaserbox"
+                        columnWidth="threeUnEven">
+                        <container-1
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="kpmg/components/container/teaserbox/container">
+                            <topicteaser
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="kpmg/components/content/topicteaser"
+                                titleFromPage="{Boolean}false"
+                                descriptionFromPage="{Boolean}false"
+                                jcr:title="Title"
+                                jcr:description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ornare sem ut imperdiet dapibus.">
+                                <actions jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        link="/content/kpmg-style-guide"
+                                        linkTarget="_self"
+                                        text="Read more"/>
+                                </actions>
+                            </topicteaser>
+                        </container-1>
+                        <container-2
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="kpmg/components/container/teaserbox/container">
+                                <topicteaser_1
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="kpmg/components/content/topicteaser"
+                                    titleFromPage="{Boolean}false"
+                                    descriptionFromPage="{Boolean}false"
+                                    jcr:title="Title"
+                                    jcr:description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ornare sem ut imperdiet dapibus.">
+                                    <actions jcr:primaryType="nt:unstructured">
+                                        <item0
+                                            jcr:primaryType="nt:unstructured"
+                                            link="/content/kpmg-style-guide"
+                                            linkTarget="_self"
+                                            text="Read more"/>
+                                    </actions>
+                                </topicteaser_1>
+                                <topicteaser_2
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="kpmg/components/content/topicteaser"
+                                    titleFromPage="{Boolean}false"
+                                    descriptionFromPage="{Boolean}false"
+                                    jcr:title="Title"
+                                    jcr:description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ornare sem ut imperdiet dapibus.">
+                                    <actions jcr:primaryType="nt:unstructured">
+                                        <item0
+                                            jcr:primaryType="nt:unstructured"
+                                            link="/content/kpmg-style-guide"
+                                            linkTarget="_self"
+                                            text="Read more"/>
+                                    </actions>
+                            </topicteaser_2>
+                        </container-2>
+                        <container-3
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="kpmg/components/container/teaserbox/container">
+                            <topicteaser_1
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="kpmg/components/content/topicteaser"
+                                titleFromPage="{Boolean}false"
+                                descriptionFromPage="{Boolean}false"
+                                jcr:title="Title"
+                                jcr:description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ornare sem ut imperdiet dapibus.">
+                                <actions jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        link="/content/kpmg-style-guide"
+                                        linkTarget="_self"
+                                        text="Read more"/>
+                                </actions>
+                            </topicteaser_1>
+                            <topicteaser_2
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="kpmg/components/content/topicteaser"
+                                titleFromPage="{Boolean}false"
+                                descriptionFromPage="{Boolean}false"
+                                jcr:title="Title"
+                                jcr:description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ornare sem ut imperdiet dapibus.">
+                                <actions jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        link="/content/kpmg-style-guide"
+                                        linkTarget="_self"
+                                        text="Read more"/>
+                                </actions>
+                            </topicteaser_2>
+                        </container-3>
+                    </teaserbox>
+                </section_2>
+                <engagementpromo
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="kpmg/components/content/engagementpromo"
+                    titleFromPage="{Boolean}false"
+                    descriptionFromPage="{Boolean}false"
+                    jcr:title="Submit RFP"
+                    jcr:description="Lorem ipsum dolor sit amet consectetur. Montes sed leo dui orci massa risus. Sed consectetur semper nunc."
+                    cq:styleIds="[1688689203145,1688689275023]">
+                    <actions
+                        jcr:primaryType="nt:unstructured">
+                        <item0 
+                            jcr:primaryType="nt:unstructured"
+                            link="/content/kpmg-style-guide"
+                            linkTarget="_self"
+                            text="Contact Us"/>
+                    </actions>
+                </engagementpromo>
+                <section_3
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="kpmg/components/container/section"
+                    cq:styleIds="[1685975486988]">
+                    <sectionheader
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="kpmg/components/content/sectionheader"
+                        title="Latest Insights"
+                        description="Lorem ipsum dolor sit amet consectetur. Tempus odio egestas id quis porttitor rutrum placerat. Pellentesque eros orci sapien feugiat egestas."/>
+                </section_3>
+                <section_4
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="kpmg/components/container/section"
+                    cq:styleIds="[1685975486988]">
+                    <filterlisting
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="kpmg/components/content/filterlisting" />
+                </section_4>
+            </main>
+        </root>
+    </jcr:content>
+</jcr:root>

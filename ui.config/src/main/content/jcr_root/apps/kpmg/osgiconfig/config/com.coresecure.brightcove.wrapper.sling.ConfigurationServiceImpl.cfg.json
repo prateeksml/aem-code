@@ -1,0 +1,10 @@
+{
+  "accountAlias":"$[env:BRIGHTCOVE_ACCOUNT_ALIAS]",
+  "clientId":"$[env:BRIGHTCOVE_CLIENT_ID]",
+  "clientSecret":"$[secret:BRIGHTCOVE_CLIENT_SECRET]",
+  "allowedGroups":[
+    "brightcove_administrators"
+  ],
+  "accountId":"$[env:BRIGHTCOVE_ACCOUNT_ID]",
+  "defaultVideoPlayerId":"$[env:BRIGHTCOVE_DEFAULT_VIDEO_PLAYER]"
+}

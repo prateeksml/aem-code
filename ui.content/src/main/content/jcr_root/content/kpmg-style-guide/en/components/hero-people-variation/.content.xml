@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2023-08-08T09:58:44.573-05:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/kpmg/settings/wcm/templates/page-content"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Hero people variation"
+        sling:resourceType="kpmg/components/structure/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="kpmg/components/container/container"
+            layout="responsiveGrid">
+            <main
+                jcr:lastModified="{Date}2023-06-03T19:12:45.974-05:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="kpmg/components/container/main"
+                layout="simple">
+                <hero_people
+                    jcr:lastModified="{Date}2023-08-08T09:58:44.507-05:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="kpmg/components/content/hero-people"
+                    displayMode="multi"
+                    fragmentPath="/content/dam/kpmg-style-guide/profiles/patricia-bosco"
+                    paragraphScope="all"
+                    searchIndexable="true"
+                    text="Ms Patricia Bosco Supply Chain &amp; Operations Leader firm 1 call mail"
+                    variationName="master"/>
+                <section
+                    jcr:lastModified="{Date}2023-06-03T18:53:29.854-05:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="kpmg/components/container/section"
+                    layout="simple"/>
+            </main>
+        </root>
+    </jcr:content>
+</jcr:root>

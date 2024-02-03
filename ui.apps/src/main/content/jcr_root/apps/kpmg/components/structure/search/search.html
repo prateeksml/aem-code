@@ -1,0 +1,62 @@
+<div class="cmp-search" data-cmp-search data-sly-use.search="com.kpmg.integration.models.SearchConfig"
+    data-search-endpoint="${search.searchEndpoint}" data-suggest-endpoint="${search.suggestEndpoint}"
+    data-pagination-limit="${search.paginationLimit}" data-search-result-page="${search.searchPagePath}"
+    data-run-mode="${search.runMode}" data-country-code="${search.countryCode}"
+    data-language-code="${search.languageCode}" data-people-contact-form-url="${search.peopleContactFormPath}">
+
+    <!--/* Search Button*/-->
+    <button class="cmp-search__button" data-cmp-search-button>
+        <span class="cmp-search__button--icon">search</span>
+        <div class="cmp-search__button--text">${'kpmg.search.button.label' @ i18n}</div>
+    </button>
+
+    <!--/* Search Section */-->
+    <section class="cmp-search__section" data-cmp-search-section>
+
+        <!--/* Top Bar with Close Button */-->
+        <div class="cmp-search__close-bar--container">
+
+            <!--/* Search Cancel Button*/-->
+            <button class="cmp-search__cancel-button" data-cmp-search-cancel-button
+                aria-label="${'kpmg.search.cancel.button.label' @ i18n}">
+                <span class="cmp-search__cancel-button--icon">close</span>
+            </button>
+        </div>
+
+
+        <!--/* Search Input Container */-->
+        <div class="cmp-search__input--container">
+
+            <div class="cmp-search__input--inner">
+                <!--/* Autocomplete */-->
+                <div class="cmp-search-auto-complete" data-cmp-search-auto-complete>
+                    <!--/* We are injecting the input via a node package */-->
+                    <!--/* Please see https://github.com/alphagov/accessible-autocomplete for documentation*/-->
+                    <label class="cmp-search-auto-complete__input--label" for="cmp-search-auto-complete"
+                        data-placeholder-text="${'kpmg.search.label' @ i18n}" data-cmp-search-auto-complete-input-label>
+                        <span class="cmp-search-auto-complete__input--icon">search</span>
+                    </label>
+                </div>
+
+                <!--/* Previous Search */-->
+                <div class="cmp-search__previous-search" data-cmp-search-previous-search>
+                    <div 
+                        class="cmp-search__previous-search--screen-reader-only" 
+                        data-cmp-search-previous-search-screen-reader-only
+                        role="alert"
+                        data-message="${'kpmg.search.previous.accessibility.label' @ i18n}"
+                        aria-live="polite"
+                        aria-atomic="true"></div>
+                    <div class="cmp-search__previous-search--title">${'kpmg.search.previous.label' @ i18n}</div>
+                    <ul class="cmp-search__previous-search--list" data-cmp-search-previous-search-list></ul>
+                </div>
+
+                <!--/* Empty Search */-->
+                <div class="cmp-search__empty-search-container" role="alert" aria-live="polite" aria-atomic="true">
+                    <div>${'kpmg.search.short.label' @ i18n}</div>
+                    <div>${'kpmg.search.limit.label' @ i18n}</div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

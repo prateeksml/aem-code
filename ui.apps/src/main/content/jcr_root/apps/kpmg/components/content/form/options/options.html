@@ -1,0 +1,47 @@
+<sly data-sly-use.options="com.adobe.cq.wcm.core.components.models.form.Options"
+     data-sly-use.optionnew="com.kpmg.integration.models.FormOptions"
+     data-sly-use.template="core/wcm/components/commons/v1/templates.html"
+     data-sly-use.clientlib="core/wcm/components/commons/v1/templates/clientlib.html">
+    <fieldset class="cmp-form-options cmp-form-options--${options.type.value}"  data-cmp-required-message="${optionnew.requiredMessage}">
+        <sly data-sly-test="${options.type.value == 'checkbox' || options.type.value == 'radio'}">
+            <legend class="cmp-form-options__legend">${options.title}</legend>
+            <label class="cmp-form-options__field-label" data-sly-repeat.optionItem="${options.items}">
+                <input class="cmp-form-options__field cmp-form-options__field--${options.type.value} custom"
+                       name="${options.name}"
+                       value="${optionItem.value}" checked="${optionItem.selected}" disabled="${optionItem.disabled}"   required="${optionnew.required}"
+                       type="${options.type.value}"
+                       data-sly-attribute.aria-describedby="${options.helpMessage ? [options.id, 'helpMessage'] : '' @ join = '-'}" data-cmp-required-message = "${optionnew.requiredMessage}"
+                />
+                <span class="cmp-form-options__field-description">
+                    <span>${optionItem.text}</span>
+                </span>
+            </label>
+        </sly>
+        <sly data-sly-test="${options.type.value == 'drop-down' || options.type.value == 'multi-drop-down'}">
+            <label class="cmp-form-options__label" for="${options.id}">${options.title}<sup data-sly-test="${optionnew.required}">*</sup></span></label>
+            <div class="select-wrapper" >
+                <div data-sly-test ="${options.items}">
+                    <select aria-label="${options.title}" class="cmp-form-options__field cmp-form-options__field--${options.type.value}"
+                            name="${options.name}" id="${options.id}"
+                            data-sly-list.optionItem="${options.items}"
+                            data-sly-attribute.multiple="${options.type.value == 'multi-drop-down'}" required="${optionnew.required}">
+                        <option value="${optionItem.value ? optionItem.value : ''}" selected="${optionItem.selected}" disabled="${optionItem.disabled}"
+                                data-sly-attribute.aria-describedby="${options.helpMessage ? [options.id, 'helpMessage'] : '' @ join = '-'}">
+                            ${optionItem.text}
+                        </option>
+                    </select>
+                </div>
+                <div data-sly-test ="${!(options.items)}">
+                    <select class="cmp-form-options__field cmp-form-options__field--${options.type.value}">
+                        <option value=""></option>
+                    </select>
+                </div>
+            </div>
+            <div class="err-msg" id="${options.id}-err-msg" aria-hidden="true"
+                data-help-message-id="${options.helpMessage ? [options.id, 'helpMessage'] : '' @ join = '-'}"></div>
+        </sly>
+        <p id="${options.id}-helpMessage" class="cmp-form-options__help-message" data-sly-test="${options.helpMessage}">
+            ${options.helpMessage}</p>
+    </fieldset>
+</sly>
+<sly data-sly-call="${template.placeholder @ isEmpty=!isNotEmpty, classAppend='cmp-form-options'}"></sly>

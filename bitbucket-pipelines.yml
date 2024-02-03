@@ -1,0 +1,31 @@
+image: maven:3.9.0-eclipse-temurin-11
+
+definitions: 
+  steps:
+    - step: &maven-build
+          name: Maven Build
+          caches:
+            - maven
+            - node
+          script:
+            -  mvn clean install --batch-mode
+    - step: &sync-to-cloud-manager
+        name: Sync Branch $BITBUCKET_BRANCH to Cloud Manager
+        script:
+            - git remote add sync https://$CM_SYNC_USER_NAME:$CM_SYNC_USER_ACCESS_TOKEN@git.cloudmanager.adobe.com/kpmg/kpmg-dot-com
+            - git checkout $BITBUCKET_BRANCH
+            - git pull
+            - git push sync $BITBUCKET_BRANCH
+pipelines:
+  branches:
+    main:
+      - step: *maven-build
+      - step: 
+          <<: *sync-to-cloud-manager
+          name: Sync Branch main to Cloud Manager
+    develop:
+      - step: *maven-build
+      - step: 
+          <<: *sync-to-cloud-manager
+          name: Sync Branch develop to Cloud Manager
+

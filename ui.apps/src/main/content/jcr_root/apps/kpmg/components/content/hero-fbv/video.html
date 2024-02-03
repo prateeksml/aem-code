@@ -1,0 +1,9 @@
+<sly data-sly-template.video="${@ teaser}">
+	<sly data-sly-use.player="${'com.coresecure.brightcove.wrapper.models.VideoPlayer'}" >
+		<video class="cmp-hero-fbv__video" data-video-id="${player.videoID}"
+			data-account="${player.account}" data-player="${player.playerID}"
+			data-embed="default" data-application-id autoplay muted loop>
+		</video>
+		<script	src="https://players.brightcove.net/${player.account}/${player.playerID}_default/index.min.js"></script>
+	</sly>
+</sly>

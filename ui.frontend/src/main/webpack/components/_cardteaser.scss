@@ -1,0 +1,157 @@
+@include light-theme {
+  --cardteaser-border-color: #{$global-color-strokes-cobalt-blue-20-hex};
+  --cardteaser-icon-color: #{$global-color-brand-purple};
+  --cardteaser-text-color: #{$global-color-grayscale-black};
+  --cardteaser-link-color: #{$global-color-brand-cobalt-blue};
+  --cardteaser-link-hover-color: #{$global-color-brand-kpmg-blue};
+}
+@include dark-theme {
+  --cardteaser-border-color: #{$global-color-strokes-white-25-percent};
+  --cardteaser-icon-color: #{$global-color-brand-white};
+  --cardteaser-text-color: #{$global-color-brand-white};
+  --cardteaser-link-color: #{$global-color-brand-white};
+  --cardteaser-link-hover-color: #{$global-color-brand-white};
+}
+
+.cardteaser {
+  //? aliases
+  // text and color related
+  $icon-font-family: $global-fonts-font-family-materialicons-filled;
+  $icon-size: $alias-icon-size-large; //32
+
+  $body-text-size: $global-font-size-0875; //14
+  $font-size-medium: $alias-font-size-x-large; // 1.5rem/24px
+  $margin-x-small: $alias-padding-x-small; // 8px
+  $description-title-margin: $alias-margin-base;
+
+  // size and spacing
+  $cardteaser-height-mobile: 348px;
+  $cardteaser-height-desktop: 306px;
+  $cardteaser-padding: $alias-padding-xx-large; //48
+
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--cardteaser-border-color);
+  margin: 0 -1px -1px 0;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  height: $cardteaser-height-mobile;
+  @include desktop-small {
+    height: $cardteaser-height-desktop;
+  }
+  .cmp-teaser {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  .cmp-teaser__button {
+    margin-right: 0;
+    border: none;
+    background: transparent;
+    position: absolute;
+    right: 54px;
+    top: 54px;
+    padding-right: 0;
+    cursor: pointer;
+  }
+  .cmp-teaser__button-icon {
+    @include button-icon("close");
+    color: var(--cardteaser-link-color);
+    margin: 0;
+    &:hover {
+      color: var(--cardteaser-link-hover-color);
+    }
+  }
+  .cmp-teaser__content {
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 166px $cardteaser-padding 60px;
+    @include desktop-small {
+      padding-top: 124px;
+    }
+  }
+  .cmp-teaser__description {
+    display: none;
+    overflow: hidden;
+    width: 100%;
+    height: $cardteaser-height-mobile;
+    color: var(--cardteaser-text-color);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    @include typography-body-caption;
+    padding: 85px $cardteaser-padding $cardteaser-padding;
+    @include desktop-small {
+      height: $cardteaser-height-desktop;
+      p {
+        @include typography-body-small-regular;
+      }
+    }
+  }
+  .cmp-teaser__content--flipped {
+    .cmp-teaser__icon,
+    .cmp-teaser__custom-icon,
+    .cmp-teaser__title,
+    .cmp-teaser__action-container {
+      display: none;
+    }
+    .cmp-teaser__description {
+      display: block;
+      &-title {
+        display: block;
+      }
+    }
+  }
+  .cmp-teaser__title {
+    @include typography-heading-six-semibold;
+    margin: 18px 0 28px 0;
+    position: relative;
+  }
+  .cmp-teaser__description-title {
+    margin-top: 0;
+    margin-bottom: $description-title-margin;
+  }
+  // user custom icon
+  .cmp-teaser__custom-icon {
+    display: inline-block;
+    height: $icon-size;
+  }
+  // user material icon
+  .cmp-teaser__icon {
+    display: block;
+    font-family: $icon-font-family;
+    font-size: $icon-size;
+    color: var(--cardteaser-icon-color);
+    position: relative;
+    padding-top: 0;
+  }
+  .cmp-teaser__action-link {
+    text-align: left;
+    text-decoration: none;
+    background: transparent;
+    border: none;
+    font-size: $alias-font-size-base;
+    font-family: $alias-fonts-body-default-semibold-font-family;
+    color: var(--cardteaser-link-color);
+    padding-left: 0;
+    cursor: pointer;
+    &:after {
+      font-family: $global-fonts-font-family-materialicons-filled;
+      content: "chevron_right"; //for more codes go to https://fonts.google.com/icons
+      font-size: $font-size-medium;
+      margin-left: $margin-x-small;
+      vertical-align: middle;
+    }
+    &:hover {
+      color: var(--cardteaser-link-hover-color);
+    }
+  }
+}

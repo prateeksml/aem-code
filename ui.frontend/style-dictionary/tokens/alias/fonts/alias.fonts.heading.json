@@ -1,0 +1,88 @@
+{
+  "alias": {
+    "fonts": {
+      "heading": {
+        "one": {
+          "font-family": {
+            "value": "{global.fonts.font-family.opensans-condensed.bold}"
+          },
+          "letter-spacing": {
+            "value": "{global.fonts.letter-spacing.heading}"
+          }
+        },
+        "two": {
+          "font-family": {
+            "value": "{global.fonts.font-family.opensans-condensed.bold}"
+          },
+          "letter-spacing": {
+            "value": "{global.fonts.letter-spacing.heading}"
+          }
+        },
+        "two-semibold": {
+          "font-family": {
+            "value": "{global.fonts.font-family.opensans.semibold}"
+          },
+          "letter-spacing": {
+            "value": "{global.fonts.letter-spacing.heading}"
+          }
+        },
+        "three": {
+          "font-family": {
+            "value": "{global.fonts.font-family.opensans-condensed.bold}"
+          },
+          "letter-spacing": {
+            "value": "{global.fonts.letter-spacing.heading}"
+          }
+        },
+        "four": {
+          "font-family": {
+            "value": "{global.fonts.font-family.opensans.bold}"
+          },
+          "letter-spacing": {
+            "value": "{global.fonts.letter-spacing.heading}"
+          }
+        },
+        "four-semibold": {
+          "font-family": {
+            "value": "{global.fonts.font-family.opensans.semibold}"
+          },
+          "letter-spacing": {
+            "value": "{global.fonts.letter-spacing.heading}"
+          }
+        },
+        "five": {
+          "font-family": {
+            "value": "{global.fonts.font-family.opensans.regular}"
+          },
+          "letter-spacing": {
+            "value": "{global.fonts.letter-spacing.heading}"
+          }
+        },
+        "five-semibold": {
+          "font-family": {
+            "value": "{global.fonts.font-family.opensans.semibold}"
+          },
+          "letter-spacing": {
+            "value": "{global.fonts.letter-spacing.heading}"
+          }
+        },
+        "six": {
+          "font-family": {
+            "value": "{global.fonts.font-family.opensans.regular}"
+          },
+          "letter-spacing": {
+            "value": "{global.fonts.letter-spacing.heading}"
+          }
+        },
+        "six-semibold": {
+          "font-family": {
+            "value": "{global.fonts.font-family.opensans.semibold}"
+          },
+          "letter-spacing": {
+            "value": "{global.fonts.letter-spacing.heading}"
+          }
+        }
+      }
+    }
+  }
+}

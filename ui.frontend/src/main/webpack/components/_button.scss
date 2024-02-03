@@ -1,0 +1,45 @@
+//Primary Style
+
+.button {
+  .cmp-button {
+    @include button-primary;
+  }
+
+  @include style-variation("cmp-button--primary") {
+    .cmp-button {
+      @include button-primary;
+    }
+  }
+
+  //Secondary Style
+  @include style-variation("cmp-button--secondary") {
+    .cmp-button {
+      @include button-secondary;
+    }
+  }
+
+  //Tertiary style
+  @include style-variation("cmp-button--tertiary") {
+    .cmp-button {
+      @include button-tertiary;
+    }
+  }
+
+  @include style-variation("cmp-button--full-width") {
+    .cmp-button {
+      @include button-full-width;
+    }
+  }
+
+  @include style-variation("cmp-button--content-width") {
+    .cmp-button {
+      @include button-content-width;
+    }
+  }
+
+  @include style-variation("cmp-button--standard-width") {
+    .cmp-button {
+      @include button-standard-width;
+    }
+  }
+}

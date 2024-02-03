@@ -1,0 +1,4 @@
+{
+  "getKpmgTestEmail":"kpmgliveservice@gmail.com",
+  "getProduction":"$[env:IS_PRODUCTION]"
+}

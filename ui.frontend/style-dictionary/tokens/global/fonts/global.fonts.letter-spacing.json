@@ -1,0 +1,16 @@
+{
+  "global": {
+    "fonts": {
+      "letter-spacing": {
+        "heading": {
+          "value": "0px",
+          "comment": "0px"
+        },
+        "body": {
+          "value": "0.0275rem",
+          "comment": "0.0275rem"
+        }
+      }
+    }
+  }
+}

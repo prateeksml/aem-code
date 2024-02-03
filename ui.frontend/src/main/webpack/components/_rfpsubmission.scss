@@ -1,0 +1,161 @@
+.cmp-rfp-submission {
+  background: $global-color-brand-white;
+  padding: $alias-padding-4x-large $alias-padding-base $alias-padding-4x-large;
+  @include tablet {
+    padding-right: $alias-padding-large;
+    padding-left: $alias-padding-large;
+  }
+  @include desktop-medium {
+    padding-top: 120px;
+    padding-left: $alias-margin-xx-large;
+    padding-right: $alias-margin-xx-large;
+  }
+  &__request-details,
+  &__contact-info {
+    padding: $alias-padding-base 0;
+  }
+  &__container {
+    border-bottom: 2px solid $global-color-grayscale-neutrals-100;
+    position: relative;
+    @include tablet {
+      padding-left: $alias-icon-size-large + $alias-padding-medium;
+    }
+    @include desktop-medium {
+      padding-left: $alias-icon-size-xx-large + $alias-padding-medium;
+    }
+    h3 {
+      &::before {
+        content: "check_circle_outline";
+        @include material-icons-outlined;
+        font-size: $alias-icon-size-large;
+        color: $global-color-brand-dark-green;
+        vertical-align: sub;
+        padding-right: $alias-padding-x-small;
+        @include tablet {
+          padding: 0;
+          position: absolute;
+          left: 0;
+        }
+        @include desktop-medium {
+          font-size: $alias-icon-size-xx-large;
+          // left: -72px;
+        }
+      }
+      padding: 0;
+      margin: 0;
+      color: $global-color-brand-spectrum-blue;
+      margin-bottom: $alias-margin-base;
+      @include tablet {
+        margin-bottom: $alias-margin-xx-small;
+      }
+    }
+    h6 {
+      padding: 0;
+      margin: 0;
+      color: $global-color-brand-spectrum-blue;
+      margin-bottom: $alias-margin-base;
+    }
+    p {
+      padding: 0;
+      margin: 0;
+      color: $global-color-brand-spectrum-blue;
+    }
+    h5 {
+      padding: 0;
+      margin: 0;
+      margin-top: $alias-margin-large;
+      color: $global-color-brand-spectrum-blue;
+    }
+    &.last {
+      .cmp-rfp-submission__info {
+        span {
+          display: block;
+          margin-bottom: $alias-margin-xx-small;
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+  &__info {
+    padding-top: $alias-padding-base;
+    span.label {
+      @include typography-body-small-semibold;
+    }
+    @include typography-body-small-regular;
+  }
+  &__file-list {
+    margin: 0;
+    margin-top: $alias-margin-xx-small;
+    list-style: none;
+    padding: 0;
+    li {
+      padding-bottom: $alias-padding-x-small;
+      &:last-child {
+        padding-bottom: 0;
+      }
+      &::before {
+        content: "description";
+        @include material-icons-outlined;
+        font-size: $alias-font-size-large;
+        color: $global-color-grayscale-neutrals-400;
+        padding-right: $alias-padding-x-small;
+        vertical-align: sub;
+      }
+    }
+  }
+  &__button {
+    margin-top: $alias-margin-medium;
+    @include tablet {
+      margin-left: $alias-icon-size-large + $alias-padding-medium;
+    }
+    @include desktop-medium {
+      margin-left: $alias-icon-size-xx-large + $alias-padding-medium;
+    }
+    &::before {
+      content: "print";
+      @include material-icons-outlined;
+      font-size: $alias-icon-size-base;
+      padding-right: $alias-padding-base;
+      color: inherit;
+      vertical-align: sub;
+    }
+    @include button-primary;
+    @include button-secondary;
+    width: 100%;
+    padding: $alias-padding-small $alias-padding-medium;
+    @include tablet {
+      width: auto;
+      min-width: 240px;
+    }
+  }
+}
+@media print {
+  .cmp-rfp-submission {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .utils-bleed-color-kpmg-blue,
+  .utils-bleed-color-cobalt-blue,
+  .utils-bleed-color-grey-100,
+  .utils-bleed-color-white {
+    &::after {
+      background-color: transparent;
+    }
+  }
+  @page {
+    size: auto;
+    margin: 5.588mm;
+  }
+  footer,
+  header,
+  .hero-csi,
+  .cmp-rfp-submission__button {
+    display: none;
+  }
+
+  .cmp-rfp-submission__container.last {
+    border-bottom: 0;
+  }
+}

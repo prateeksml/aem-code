@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0"
+	jcr:primaryType="sling:OsgiConfig" componentName="herobleed"
+	renditions="[mobile;;cq5dam-web-720-720;360;360,
+tablet;;cq5dam-web-1536-936;768;468,
+desktopmedium;;cq5dam-web-2732-1088;1366;544,
+desktopsmall;;cq5dam-web-2732-1088;1024;408,
+retinamobile;;cq5dam-web-720-720;720;720,
+retinatablet;;cq5dam-web-536-936;1536;936,
+retinadesktopmedium;;cq5dam-web-2732-1088;2732;1088,
+retinadesktopsmall;;cq5dam-web-2732-1088;2048;816,
+desktophd;;cq5dam-web-3840-1530;3840;1530]"
+ />

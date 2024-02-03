@@ -1,0 +1,62 @@
+{
+  "global": {
+    "size": {
+      "0125": {
+        "value": "0.125rem",
+        "comment": "0.125rem/2px"
+      },
+      "025": {
+        "value": "0.25rem",
+        "comment": "0.25rem/4px"
+      },
+      "05": {
+        "value": "0.5rem",
+        "comment": "0.5rem/8px"
+      },
+      "075": {
+        "value": "0.75rem",
+        "comment": "0.75rem/12px"
+      },
+      "1": {
+        "value": "1rem",
+        "comment": "1rem/16px - Base"
+      },
+      "15": {
+        "value": "1.5rem",
+        "comment": "1.5rem/24px"
+      },
+      "2": {
+        "value": "2rem",
+        "comment": "2rem/32px"
+      },
+      "25": {
+        "value": "2.5rem",
+        "comment": "2.5rem/40px"
+      },
+      "3": {
+        "value": "3rem",
+        "comment": "3rem/48px"
+      },
+      "4": {
+        "value": "4rem",
+        "comment": "4rem/64px"
+      },
+      "5": {
+        "value": "5rem",
+        "comment": "5rem/80px"
+      },
+      "6": {
+        "value": "6rem",
+        "comment": "6rem/96px"
+      },
+      "7": {
+        "value": "7rem",
+        "comment": "7rem/112px"
+      },
+      "10": {
+        "value": "10rem",
+        "comment": "10rem/160px"
+      }
+    }
+  }
+}

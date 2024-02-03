@@ -1,0 +1,4 @@
+dateFormat,separators,isZeroPrefixRequired,timeFormat,hourFormat,caseNotation,date,expectedDate,expectedTime
+"mmm dd, yyyy:Month Day Year"," And, ",TRUE,hh:mm AM or hh:mm PM:USA Standard,12 Hour Format,Camel Case,2015-08-20T16:03:55,"Aug 20, 2015",04:03 PM
+"mmm dd, yyyy:Month Day Year"," And, ",TRUE,hh:mm AM or hh:mm PM:USA Standard,24 Hour Format,Lower Case,2015-08-20T16:03:55,"aug 20, 2015",16:03
+"mm/dd/yyyy:USA Standard",/And/,TRUE,hh.mm:International Standards Organization,12 Hour Format,Camel Case,2015-08-20T16:03:55,"08/20/2015",04.03

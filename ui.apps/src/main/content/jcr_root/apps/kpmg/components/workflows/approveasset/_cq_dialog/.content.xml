@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Asset Selection"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <assetselection
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                        fieldLabel="Action Type"
+                        name="actionType"
+                        value="rejected">
+                        <items jcr:primaryType="nt:unstructured">
+                            <rejected
+                                jcr:primaryType="nt:unstructured"
+                                selected="{Boolean}true"
+                                text="Reject"
+                                value="rejected"/>
+                            <approved
+                                jcr:primaryType="nt:unstructured"
+                                text="Approve"
+                                value="approved"/>
+                        </items>
+                    </assetselection>
+                    <pathselection
+                        granite:class="kpmg-dam-check"
+                        granite:id="kpmg-dam-check"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                        emptyText="/content/dam/kpmgsites"
+                        fieldLabel="Path for Approved Asset"
+                        name="approvedAssetPath"
+                        rootPath="/content/dam/kpmgsites">
+                        <granite:data
+                            jcr:primaryType="nt:unstructured"
+                            error-message="This field should be a path in the format /content/dam/kpmgsites/others"
+                            kpmg-regex-validator="^[/]content[/]dam[/]kpmg/"/>
+                    </pathselection>
+                    <pathselectionblogs
+                        granite:class="kpmgblogs-dam-check"
+                        granite:id="kpmgblogs-dam-check"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                        emptyText="/content/dam/kpmgblogs"
+                        fieldLabel="Path for Approved Asset"
+                        name="approvedAssetPath"
+                        rootPath="/content/dam/kpmgblogs">
+                        <granite:data
+                            jcr:primaryType="nt:unstructured"
+                            error-message="This field should be a path in the format /content/dam/kpmgsites/others"
+                            kpmg-regex-validator="^[/]content[/]dam[/]kpmgblogs/"/>
+                    </pathselectionblogs>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

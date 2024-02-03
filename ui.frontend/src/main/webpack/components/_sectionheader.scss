@@ -1,0 +1,106 @@
+.sectionheader {
+  $mobile-padding: $alias-padding-x-large $alias-padding-medium; // 40px 24px
+  $tablet-padding: $alias-padding-5x-large $alias-padding-xx-large;
+  $desktop-text-margin-top: $alias-margin-small;
+  $desktop-text-margin: $alias-margin-small;
+  $title-description-max-width: 492px;
+  $title-description-width: 50%;
+  margin: 0 auto;
+  @include container;
+  width: 100%;
+  .cmp-title {
+    display: flex;
+    flex-direction: column;
+    padding: $mobile-padding;
+  }
+
+  .cmp-title__text {
+    @at-root {
+      h2#{&} {
+        @include typography-heading-two;
+      }
+
+      h3#{&} {
+        @include typography-heading-three;
+      }
+
+      h4#{&} {
+        @include typography-heading-four;
+      }
+
+      h5#{&} {
+        @include typography-heading-five;
+      }
+
+      h6#{&} {
+        @include typography-heading-six;
+      }
+    }
+  }
+
+  .cmp-title__description {
+    @include typography-body-default-regular;
+  }
+
+  @include tablet {
+    .cmp-title {
+      padding: $tablet-padding;
+    }
+  }
+
+  @include desktop-small {
+    .cmp-title {
+      flex-direction: row;
+      justify-content: center;
+      align-items: stretch;
+    }
+
+    .cmp-title__text {
+      margin-top: $desktop-text-margin-top;
+      margin-right: $desktop-text-margin;
+      max-width: $title-description-max-width;
+      width: $title-description-width;
+      // text-align: right;
+    }
+
+    .cmp-title__text:only-child {
+      max-width: 980px;
+      margin-right: 0;
+    }
+
+    .cmp-title__description {
+      @include typography-body-small-regular;
+      max-width: $title-description-max-width;
+      width: $title-description-width;
+      margin-left: $desktop-text-margin;
+    }
+  }
+
+  .cmp-title__text,
+  .cmp-title__description,
+  .cmp-title__description p {
+    @include text-color;
+  }
+}
+
+@include container-50 {
+  .sectionheader {
+    .cmp-title {
+      flex-direction: column;
+      align-items: start;
+    }
+    .cmp-title__text {
+      max-width: 512px;
+      width: auto;
+      margin-bottom: $alias-margin-base;
+    }
+    .cmp-title__description {
+      max-width: 512px;
+      width: auto;
+      margin-left: 0;
+      p {
+        margin-top: 0;
+      }
+    }
+  }
+}

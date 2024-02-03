@@ -1,0 +1,74 @@
+//MENU LINK DESKTOP MEDIUM
+@include desktop-medium {
+  $parent: ".cmp-menu-link";
+
+  $menu-link-height: calc($alias-size-medium + ($alias-size-base * 2)); //56px
+  $menu-link-height-level-one: calc(
+    $alias-size-large + ($alias-size-medium * 2)
+  ); //80px
+  $menu-link-height-section-nav: calc(
+    $alias-size-medium + ($alias-size-small * 2)
+  ); //48px
+
+  //Common Shared styles
+  #{$parent} {
+    height: $menu-link-height;
+  }
+
+  //Level One Styling
+  #{$parent}--level-one {
+    //Target main container
+    &#{$parent} {
+      @include display-flex-align-center;
+      height: $menu-link-height-level-one;
+      padding: $alias-padding-medium 0;
+      border-bottom: 1px solid $global-color-strokes-white-25-percent;
+    }
+
+    //Target everything in the container
+    #{$parent} {
+      &__inner {
+        @include display-flex-align-center;
+        height: $menu-link-height-level-one;
+        padding: 0 $alias-padding-x-large 0 0;
+
+        &--label {
+          @include display-flex-align-center;
+          @include typography-body-default-regular;
+          color: $global-color-brand-spectrum-blue;
+          height: 100%;
+
+          &:hover {
+            margin-bottom: -4px;
+            border-bottom: 4px solid $global-color-brand-light-green;
+          }
+        }
+
+        &--icon {
+          display: none;
+        }
+      }
+    }
+  }
+
+  //Sub Menu Link Styling
+  #{$parent}--sub-menu {
+    &#{$parent} {
+      padding: $alias-padding-base 0;
+      border-bottom: 1px solid $global-color-strokes-white-25-percent;
+    }
+  }
+
+  //Section Nav Link Styling
+  #{$parent}--section-nav {
+    $menu-link-height: calc(
+      $alias-size-medium + ($alias-size-small * 2)
+    ); //48px
+
+    &#{$parent} {
+      height: $menu-link-height;
+      padding: $alias-padding-small 0;
+      border-bottom: none;
+    }
+  }
+}

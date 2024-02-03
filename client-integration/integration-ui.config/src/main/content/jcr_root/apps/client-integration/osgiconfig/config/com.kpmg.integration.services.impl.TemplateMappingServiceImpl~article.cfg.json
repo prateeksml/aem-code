@@ -1,0 +1,6 @@
+{
+  "getDocumentType":"Insight",
+  "getTemplates":[
+    "/conf/kpmg/settings/wcm/templates/page-article"
+  ]
+}

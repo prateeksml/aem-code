@@ -1,0 +1,41 @@
+:root {
+  --accent-fill-rest: #1e49e2;
+}
+
+.progress {
+  width: $global-size-4;
+  height: $global-size-4;
+}
+
+.background {
+  fill: none;
+  stroke-width: $global-size-0125;
+}
+
+.indeterminate-indicator-1 {
+  stroke: var(--accent-fill-rest);
+  fill: none;
+  stroke-width: $global-size-0125;
+  stroke-linecap: round;
+  transform-origin: 50% 50%;
+  transform: rotate(-90deg);
+  transition: all 0.2s ease-in-out 0s;
+  animation: 2s linear 0s infinite normal none running spin-infinite;
+}
+
+@keyframes spin-infinite {
+  0% {
+    stroke-dasharray: 0.01px, 43.97px;
+    transform: rotate(0deg);
+  }
+
+  50% {
+    stroke-dasharray: 21.99px, 21.99px;
+    transform: rotate(450deg);
+  }
+
+  100% {
+    stroke-dasharray: 0.01px, 43.97px;
+    transform: rotate(1080deg);
+  }
+}

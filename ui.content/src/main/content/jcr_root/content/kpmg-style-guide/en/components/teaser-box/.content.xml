@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2023-08-02T22:14:24.755-05:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/kpmg/settings/wcm/templates/page-content"
+        jcr:description="Teaser Box"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Teaser Box"
+        jcr:uuid="de7d377b-256b-4da0-99b7-5d6577804167"
+        sling:resourceType="kpmg/components/structure/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="kpmg/components/container/container"
+            layout="responsiveGrid">
+            <main
+                jcr:lastModified="{Date}2023-06-03T19:12:45.974-05:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="kpmg/components/container/main"
+                layout="simple">
+                <section
+                    jcr:lastModified="{Date}2023-08-02T22:06:11.334-05:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="kpmg/components/container/section"
+                    layout="simple">
+                    <title
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="kpmg/components/content/title"/>
+                    <title_1598333816
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Contact Card"
+                        sling:resourceType="kpmg/components/content/title"/>
+                    <teaserbox
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="kpmg/components/container/teaserbox"
+                        columnWidth="threeUnEven">
+                        <container-1
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="kpmg/components/container/teaserbox/container">
+                            <contactcard
+                                cq:styleIds="[1687915557564,1686867452322]"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="kpmg/components/content/contactcard"
+                                displayMode="multi"
+                                fragmentPath="/content/dam/kpmg-style-guide/profiles/patricia-bosco"
+                                paragraphScope="all"
+                                searchIndexable="true"
+                                text="Ms Patricia Bosco Supply Chain &amp; Operations Leader United Kingdom mail call"
+                                variationName="master"/>
+                        </container-1>
+                        <container-2
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="kpmg/components/container/teaserbox/container">
+                            <contactcard_copy
+                                cq:styleIds="1686867452322"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="kpmg/components/content/contactcard"
+                                displayMode="multi"
+                                fragmentPath="/content/dam/kpmg-style-guide/profiles/patricia-bosco"
+                                paragraphScope="all"
+                                searchIndexable="true"
+                                text="Ms Patricia Bosco Supply Chain &amp; Operations Leader United Kingdom mail call"
+                                variationName="master"/>
+                            <contactcard_copy_1822037950
+                                cq:styleIds="1686867452322"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="kpmg/components/content/contactcard"
+                                displayMode="multi"
+                                fragmentPath="/content/dam/kpmg-style-guide/profiles/patricia-bosco"
+                                paragraphScope="all"
+                                searchIndexable="true"
+                                text="Ms Patricia Bosco Supply Chain &amp; Operations Leader United Kingdom mail call"
+                                variationName="master"/>
+                        </container-2>
+                        <container-3
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="kpmg/components/container/teaserbox/container">
+                            <contactcard_copy
+                                cq:styleIds="1686867452322"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="kpmg/components/content/contactcard"
+                                displayMode="multi"
+                                fragmentPath="/content/dam/kpmg-style-guide/profiles/patricia-bosco"
+                                paragraphScope="all"
+                                searchIndexable="true"
+                                text="Ms Patricia Bosco Supply Chain &amp; Operations Leader United Kingdom mail call"
+                                variationName="master"/>
+                            <contactcard_copy_1085965557
+                                cq:styleIds="1686867452322"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="kpmg/components/content/contactcard"
+                                displayMode="multi"
+                                fragmentPath="/content/dam/kpmg-style-guide/profiles/patricia-bosco"
+                                paragraphScope="all"
+                                searchIndexable="true"
+                                text="Ms Patricia Bosco Supply Chain &amp; Operations Leader United Kingdom mail call"
+                                variationName="master"/>
+                        </container-3>
+                    </teaserbox>
+                    <title_1598333816_cop
+                        jcr:lastModified="{Date}2023-08-02T22:14:24.750-05:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Topic Teaser"
+                        sling:resourceType="kpmg/components/content/title"/>
+                    <teaserbox_copy
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="kpmg/components/container/teaserbox"
+                        columnWidth="threeUnEven">
+                        <container-1
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="kpmg/components/container/teaserbox/container">
+                            <topicteaser
+                                jcr:description="&lt;p>Lorem Ipsum is a generated text, Lorem Ipsum is a generated text, Lorem Ipsum is a generated text, Lorem Ipsum is a generated text, &lt;/p>&#xd;&#xa;"
+                                jcr:lastModified="{Date}2023-08-02T22:13:14.860-05:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="This is a Title"
+                                sling:resourceType="kpmg/components/content/topicteaser"
+                                alt="topic teaser"
+                                altValueFromDAM="false"
+                                descriptionFromPage="false"
+                                eyebrow="battery_0_bar"
+                                eyebrowType="materialEyebrow"
+                                fileReference="/content/dam/kpmg-style-guide/Promo.jpg"
+                                icon="electric_bolt"
+                                iconType="materialIcon"
+                                imageFromPageImage="false"
+                                isDecorative="false"
+                                pretitle="Pretitle"
+                                textIsRich="true"
+                                titleFromPage="false">
+                                <actions jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        link="#"
+                                        linkTarget="_self"
+                                        text="See More"/>
+                                </actions>
+                            </topicteaser>
+                        </container-1>
+                        <container-2
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="kpmg/components/container/teaserbox/container">
+                            <topicteaser_copy
+                                jcr:description="&lt;p>Lorem Ipsum is a generated text, Lorem Ipsum is a generated text, Lorem Ipsum is a generated text, Lorem Ipsum is a generated text, &lt;/p>&#xd;&#xa;"
+                                jcr:lastModified="{Date}2023-08-02T22:13:14.860-05:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="This is a Title"
+                                sling:resourceType="kpmg/components/content/topicteaser"
+                                alt="topic teaser"
+                                altValueFromDAM="false"
+                                descriptionFromPage="false"
+                                eyebrow="battery_0_bar"
+                                eyebrowType="materialEyebrow"
+                                fileReference="/content/dam/kpmg-style-guide/Promo.jpg"
+                                icon="electric_bolt"
+                                iconType="materialIcon"
+                                imageFromPageImage="false"
+                                isDecorative="false"
+                                pretitle="Pretitle"
+                                textIsRich="true"
+                                titleFromPage="false">
+                                <actions jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        link="#"
+                                        linkTarget="_self"
+                                        text="See More"/>
+                                </actions>
+                            </topicteaser_copy>
+                            <topicteaser_copy_1701328428
+                                jcr:description="&lt;p>Lorem Ipsum is a generated text, Lorem Ipsum is a generated text, Lorem Ipsum is a generated text, Lorem Ipsum is a generated text, &lt;/p>&#xd;&#xa;"
+                                jcr:lastModified="{Date}2023-08-02T22:13:14.860-05:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="This is a Title"
+                                sling:resourceType="kpmg/components/content/topicteaser"
+                                alt="topic teaser"
+                                altValueFromDAM="false"
+                                descriptionFromPage="false"
+                                eyebrow="battery_0_bar"
+                                eyebrowType="materialEyebrow"
+                                fileReference="/content/dam/kpmg-style-guide/Promo.jpg"
+                                icon="electric_bolt"
+                                iconType="materialIcon"
+                                imageFromPageImage="false"
+                                isDecorative="false"
+                                pretitle="Pretitle"
+                                textIsRich="true"
+                                titleFromPage="false">
+                                <actions jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        link="#"
+                                        linkTarget="_self"
+                                        text="See More"/>
+                                </actions>
+                            </topicteaser_copy_1701328428>
+                        </container-2>
+                        <container-3
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="kpmg/components/container/teaserbox/container">
+                            <topicteaser_copy
+                                jcr:description="&lt;p>Lorem Ipsum is a generated text, Lorem Ipsum is a generated text, Lorem Ipsum is a generated text, Lorem Ipsum is a generated text, &lt;/p>&#xd;&#xa;"
+                                jcr:lastModified="{Date}2023-08-02T22:13:14.860-05:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="This is a Title"
+                                sling:resourceType="kpmg/components/content/topicteaser"
+                                alt="topic teaser"
+                                altValueFromDAM="false"
+                                descriptionFromPage="false"
+                                eyebrow="battery_0_bar"
+                                eyebrowType="materialEyebrow"
+                                fileReference="/content/dam/kpmg-style-guide/Promo.jpg"
+                                icon="electric_bolt"
+                                iconType="materialIcon"
+                                imageFromPageImage="false"
+                                isDecorative="false"
+                                pretitle="Pretitle"
+                                textIsRich="true"
+                                titleFromPage="false">
+                                <actions jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        link="#"
+                                        linkTarget="_self"
+                                        text="See More"/>
+                                </actions>
+                            </topicteaser_copy>
+                            <topicteaser_copy_179842248
+                                jcr:description="&lt;p>Lorem Ipsum is a generated text, Lorem Ipsum is a generated text, Lorem Ipsum is a generated text, Lorem Ipsum is a generated text, &lt;/p>&#xd;&#xa;"
+                                jcr:lastModified="{Date}2023-08-02T22:13:14.860-05:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="This is a Title"
+                                sling:resourceType="kpmg/components/content/topicteaser"
+                                alt="topic teaser"
+                                altValueFromDAM="false"
+                                descriptionFromPage="false"
+                                eyebrow="battery_0_bar"
+                                eyebrowType="materialEyebrow"
+                                fileReference="/content/dam/kpmg-style-guide/Promo.jpg"
+                                icon="electric_bolt"
+                                iconType="materialIcon"
+                                imageFromPageImage="false"
+                                isDecorative="false"
+                                pretitle="Pretitle"
+                                textIsRich="true"
+                                titleFromPage="false">
+                                <actions jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        link="#"
+                                        linkTarget="_self"
+                                        text="See More"/>
+                                </actions>
+                            </topicteaser_copy_179842248>
+                        </container-3>
+                    </teaserbox_copy>
+                </section>
+            </main>
+        </root>
+        <cq:featuredimage
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/wcm/components/image/v3/image"
+            fileReference="/content/dam/kpmg"/>
+    </jcr:content>
+</jcr:root>

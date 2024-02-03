@@ -1,0 +1,38 @@
+// Mixins for content width to ensure content max-width consistency.
+
+:root {
+  --content-max-width: #{$global-width-medium}; // default content max-width
+}
+// set max content width based on class; can be used in Page Policy AEM Style System.
+.content-max-width-large {
+  --content-max-width: #{$global-width-large};
+}
+.content-max-width-medium {
+  --content-max-width: #{$global-width-medium};
+}
+.content-max-width-small {
+  --content-max-width: #{$global-width-small};
+}
+
+//Max width
+@mixin content-max-width {
+  max-width: var(--content-max-width);
+  margin: 0 auto; // this is typically used for containers or full width components, and is usually centered.
+}
+
+@mixin content-max-width-large {
+  max-width: $global-width-large;
+  margin: 0 auto; // this is typically used for containers or full width components, and is usually centered.
+}
+
+// Typically, containers have padding, and that affects the true width of the container.
+// Specifically for content that is positioned absoulte, relative to a container with max-width already applied, this helps align the absolute element perfectly.
+@mixin content-max-width-inverse-padding-large {
+  max-width: calc($global-width-large - (var(--container-spacing) * 2));
+  width: calc(100% - (var(--container-spacing) * 2));
+}
+
+@mixin content-full-width {
+  max-width: $global-width-full;
+  margin: 0 auto; // this is typically used for containers or full width components, and is usually centered.
+}

@@ -1,0 +1,4 @@
+{
+  "getSiteKey":"$[env:CAPTCHAV2_SITE_KEY]",
+  "getSiteSecret": "$[secret:CAPTCHAV2_SITE_SECRET]"
+}

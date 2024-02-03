@@ -1,0 +1,102 @@
+// Style Variation -- specifically for AEM style system.
+@mixin style-variation($className) {
+  &.#{$className} {
+    @content;
+  }
+}
+
+//  this mixin should only include CSS variables
+@mixin light-theme {
+  html,
+  .light-theme {
+    @content;
+  }
+}
+
+// this mixin should only include CSS variables
+@mixin dark-theme {
+  .dark-theme {
+    @content;
+  }
+}
+
+$bleed-height: $global-size-6;
+$bleed-z-index: 0;
+// adds a "bleed", which is a banner positioned either at the top or bottom
+// of the parent container.
+// $position can either be "top" or "bottom"
+@mixin vertical-bleed($position) {
+  & {
+    // in order for the bleed absoluto positioning to work
+    // the container must be "positioned", ie either relative, absolute, fixed, or sticky
+    // we chose relative here, but you are free to override it.
+    position: relative;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: $bleed-height;
+    z-index: $bleed-z-index;
+    @if $position == top {
+      top: 0;
+    } @else if $position == bottom {
+      bottom: 0;
+    } @else {
+      @error "Unknown position #{$position}. Allowed options are bottom and top";
+    }
+  }
+}
+
+@mixin horizontal-bleed($position) {
+  & {
+    // in order for the bleed absoluto positioning to work
+    // the container must be "positioned", ie either relative, absolute, fixed, or sticky
+    // we chose relative here, but you are free to override it.
+    position: relative;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: var(--horizontal-bleed-width);
+    z-index: $bleed-z-index + 2;
+    @if $position == left {
+      left: 0;
+    } @else if $position == right {
+      right: 0;
+    } @else {
+      @error "Unknown position #{$position}. Allowed options are bottom and top";
+    }
+  }
+}
+
+// Hides the ":after" psudo element used in the bleed mixin
+@mixin remove-bleed {
+  &::after {
+    content: unset;
+  }
+}
+// assigns color to the ":after" psudo element used in the bleed mixin
+@mixin bleed-color($color) {
+  &::after {
+    background: $color;
+  }
+}
+
+// The element using this mixin will always be in-front-of the bleed.
+@mixin in-front-of-bleed {
+  z-index: $bleed-z-index + 1;
+  position: relative;
+}
+
+// Adds a bottom margin so that bleed does not cover content.
+// it uses the same height as the bleed plus extra for spacing.
+@mixin bleed-bottom-offset {
+  @include desktop-small {
+    margin-bottom: $bleed-height + $global-size-2;
+  }
+}

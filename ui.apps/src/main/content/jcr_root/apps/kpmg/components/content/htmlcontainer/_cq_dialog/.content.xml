@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="HTML Container"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    extraClientlibs="[cq.author.filetype.validator]">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <properties
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Properties"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <alertMessage
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/alert"
+                                                variant="error"
+                                                jcr:title="WARNING: Using this component is NOT ADVISED."
+                                                text="This component affords you a lot of flexibility in authoring and should be used with extreme caution. Only include scripts/styles/html that are 100% verified and trusted. Including malicious scripts can have adverse effects on the site (security and performance)."/>
+                                            <htmlTextArea
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                fieldLabel="HTML Code"
+                                                name="./htmlText"
+                                                resize="both"
+                                                rows="{Long}15"
+                                                value="Enter html here"/>
+                                            <anchorId
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Anchor ID"
+                                                    name="./anchorId"/>
+                                            <cssMulti
+                                                    jcr:primaryType="nt:unstructured"
+                                                    fieldLabel="Css File Path"
+                                                    fieldDescription="Enter Css files to be included for html"
+                                                    composite="{Boolean}true"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/multifield">
+                                                <field
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                        name="./cssItems">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <cssPath
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                                fieldDescription="Select Css file path"
+                                                                fieldLabel="CSS file"
+                                                                rootPath="/content/dam/kpmgsites"
+                                                                name="./cssPath"/>
+                                                    </items>
+                                                </field>
+                                            </cssMulti>
+                                            <jsMulti
+                                                    jcr:primaryType="nt:unstructured"
+                                                    fieldLabel="Js File Path"
+                                                    fieldDescription="Enter Js files to be included for html"
+                                                    composite="{Boolean}true"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/multifield">
+                                                <field
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                        name="./jsItems">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <jsPath
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                                fieldDescription="Select Javascript file path"
+                                                                fieldLabel="Javascript file"
+                                                                rootPath="/content/dam/kpmgsites"
+                                                                name="./jsPath"/>
+                                                    </items>
+                                                </field>
+                                            </jsMulti>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </properties>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

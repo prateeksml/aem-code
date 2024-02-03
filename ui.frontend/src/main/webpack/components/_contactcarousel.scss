@@ -1,0 +1,163 @@
+@include light-theme {
+  --contactcarousel-icon-color: #{$alias-color-contactcard-social-icon-color};
+  --contactcarousel-controls-border: 1px solid #{$alias-color-contactcard-social-icon-color};
+  --contactcarousel-controls-radius: 50%;
+  --contactcarousel-indicator-color-active: #{$alias-color-contactcard-social-icon-color};
+  --contactcarousel-indicator-color: #{$alias-color-contactcard-social-icon-border-color};
+}
+
+@include dark-theme {
+  --contactcarousel-icon-color: #{$global-color-brand-white};
+  --contactcarousel-controls-border: 1px solid #{$global-color-brand-white};
+  --contactcarousel-controls-radius: 50%;
+  --contactcarousel-indicator-color-active: #{$global-color-brand-white};
+  --contactcarousel-indicator-color: #{$global-color-strokes-white-25-percent};
+}
+
+.contact-carousel {
+  $desktop-item-count: 3;
+  $tablet-item-count: 2;
+  $mobile-item-count: 1;
+
+  $desktop-item-width: percentage(1 / $desktop-item-count);
+  $tablet-item-width: percentage(1 / $tablet-item-count);
+  $mobile-item-width: percentage(1 / $mobile-item-count);
+
+  $margin-small: $alias-margin-small;
+  $margin-base: $alias-margin-base;
+  $margin-medium: $alias-margin-medium;
+
+  $padding-small: $alias-padding-small; // 12px
+  $padding-base: $alias-padding-base; // 16px
+  $padding-medium: $alias-padding-medium; // 24px
+
+  .cmp-carousel {
+    padding-bottom: $padding-base;
+  }
+
+  .cmp-carousel__content {
+    height: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    padding-bottom: 71px;
+    display: flex;
+
+    @include tablet {
+      padding: $padding-small;
+      padding-bottom: 67px;
+    }
+
+    @include desktop-small {
+      padding: $padding-medium;
+      padding-bottom: 79px;
+    }
+  }
+
+  .cmp-carousel__item {
+    width: $mobile-item-width;
+    position: relative;
+    display: inline-block;
+    transition: transform 500ms;
+    flex-shrink: 0;
+    flex-grow: 1;
+    margin-bottom: $margin-base;
+
+    .contactcard {
+      height: 100%;
+    }
+
+    .cmp-contact-card {
+      white-space: wrap;
+      margin: $margin-base;
+      height: 100%;
+    }
+
+    @include tablet {
+      width: $tablet-item-width;
+      margin-bottom: $margin-medium;
+
+      .cmp-contact-card {
+        margin: $margin-small;
+        margin-bottom: 0;
+      }
+    }
+
+    @include desktop-small {
+      width: $desktop-item-width;
+
+      .cmp-contact-card {
+        margin: $margin-medium;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .cmp-carousel__actions {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 100%;
+    text-align: center;
+  }
+
+  .cmp-carousel__action {
+    background-color: transparent;
+    border: var(--contactcarousel-controls-border);
+    border-radius: var(--contactcarousel-controls-radius);
+    padding: 15px;
+    cursor: pointer;
+  }
+
+  .cmp-carousel__action-text {
+    display: none;
+  }
+
+  .cmp-carousel__action--previous {
+    .cmp-carousel__action-icon {
+      &:after {
+        @include material-icons-outlined;
+        content: "arrow_back_ios" #{"/*!rtl: 'arrow_forward_ios' */"}; //for more codes go to https://fonts.google.com/icons
+        position: relative;
+        top: 2px;
+        right: 1px;
+        color: var(--contactcarousel-icon-color);
+      }
+    }
+  }
+
+  .cmp-carousel__action--next {
+    .cmp-carousel__action-icon {
+      &:after {
+        @include material-icons-outlined;
+        content: "arrow_forward_ios" #{"/*!rtl: 'arrow_back_ios' */"}; //for more codes go to https://fonts.google.com/icons
+        position: relative;
+        top: 2px;
+        left: 1px;
+        color: var(--contactcarousel-icon-color);
+      }
+    }
+  }
+
+  .cmp-carousel__indicators {
+    align-items: center;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    flex-wrap: nowrap;
+  }
+
+  .cmp-carousel__indicator {
+    cursor: pointer;
+    background-color: var(--contactcarousel-indicator-color);
+    width: 8px;
+    height: 8px;
+  }
+
+  .cmp-carousel__indicator--active {
+    background-color: var(--contactcarousel-indicator-color-active);
+    width: 12px;
+    height: 12px;
+  }
+}

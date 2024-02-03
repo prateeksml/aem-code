@@ -1,0 +1,7 @@
+subject=Your uploaded Asset awaits GSA Approval
+
+message=Your recently uploaded asset ${assetName} is of a file type "${assetType}", is awaiting Approval from GSA.\n \
+
+footer=\n \
+-------------------------------------------------------------------------------------\n \
+This is an automatically generated message. Please do not reply.

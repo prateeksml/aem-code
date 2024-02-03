@@ -1,0 +1,41 @@
+$parent: ".cmp-menu-item-bar";
+#{$parent} {
+  display: none;
+
+  //Default style for mobile
+  &--mobile {
+    $menu-item-bar-height: $alias-size-4x-large; //80px
+    $menu-item-bar-inner-height: $alias-size-xx-large; //48px
+    $fade-speed: 0.3s;
+
+    @include display-flex-align-center;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: $menu-item-bar-height;
+    z-index: 1000;
+    background-color: $global-color-brand-spectrum-blue;
+
+    &#{$parent} {
+      &--open {
+        @include fade-in($fade-speed);
+      }
+    }
+
+    #{$parent} {
+      &--container {
+        width: 100%;
+      }
+
+      &--inner {
+        @include display-flex-align-center;
+        justify-content: space-evenly;
+      }
+    }
+  }
+}
+
+@import "breakpoints/menu-item-bar--tablet";

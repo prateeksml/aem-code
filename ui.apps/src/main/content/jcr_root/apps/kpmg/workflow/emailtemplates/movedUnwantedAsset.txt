@@ -1,0 +1,12 @@
+subject=Asset type not permitted
+
+message=Your recently uploaded Asset ${assetName} is of a file type ${assetType} that is not permitted within the DAM. This has now been automatically moved to the disallowed folder in the following location: \n \
+${hostPrefix}${newAssetPath}\n \
+\n \
+If the asset is required, please seek assistance from the Global Digital Marketing team, otherwise your file will be removed.\
+
+footer=\n \
+-------------------------------------------------------------------------------------\n \
+View the overview in your ${hostPrefix}/aem/inbox\n \
+-------------------------------------------------------------------------------------\n \
+This is an automatically generated message. Please do not reply.

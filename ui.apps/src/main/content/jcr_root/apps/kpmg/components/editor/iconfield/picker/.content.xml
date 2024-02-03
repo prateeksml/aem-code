@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Select Icon"
+          sling:resourceType="granite/ui/components/coral/foundation/picker"
+          searchFormContainsNodeTypes="{Boolean}true"
+          selectionCount="single"
+          targetCollection="#material-icons-picker">
+    <views jcr:primaryType="nt:unstructured">
+        <card
+            granite:id="material-icons-picker"
+            jcr:primaryType="nt:unstructured"
+            jcr:title="Card View"
+            sling:resourceType="granite/ui/components/coral/foundation/masonry"
+            columnWidth="150"
+            icon="viewCard"
+            limit="{Long}100"
+            size="100"
+            selectionCount="${requestPathInfo.selectors[1]}"
+            selectionMode="{Boolean}true"
+            itemResourceType="kpmg/components/editor/iconfield/icon-result"
+            renderItemElement="{Boolean}true"
+            src="/mnt/overlay/kpmg/components/editor/iconfield/picker/search/views/card.result.single{.offset,limit}.html?${querystring}">
+            <datasource
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="kpmg/components/editor/iconfield/icondatasource"/>
+        </card>
+    </views>
+    <search
+        jcr:primaryType="nt:unstructured"
+        name="query"
+        targetCollection="#material-icons-picker-search-collection">
+        <form jcr:primaryType="nt:unstructured">
+            <icon-variant jcr:primaryType="nt:unstructured"
+                sling:resourceType = "granite/ui/components/coral/foundation/form/hidden"
+                name="iconVariant"
+                value="${param.iconVariant}"/>
+        </form>
+        <views jcr:primaryType="nt:unstructured">
+            <card
+                granite:id="material-icons-picker-search-collection"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Card View"
+                sling:resourceType="granite/ui/components/coral/foundation/masonry"
+                columnWidth="150"
+                icon="viewCard"
+                limit="{Long}100"
+                size="100"
+                selectionCount="${requestPathInfo.selectors[1]}"
+                selectionMode="{Boolean}true"
+                itemResourceType="kpmg/components/editor/iconfield/icon-result"
+                renderItemElement="{Boolean}true"
+                src="/mnt/overlay/kpmg/components/editor/iconfield/picker/search/views/card.result.single{.offset,limit}.html?${querystring}">
+                <datasource
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="kpmg/components/editor/iconfield/icondatasource"/>
+            </card>
+        </views>
+    </search>
+</jcr:root>

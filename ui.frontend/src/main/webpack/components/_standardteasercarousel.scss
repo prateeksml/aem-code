@@ -1,0 +1,236 @@
+@include dark-theme {
+  --cmp-carousel-action-color: #{$global-color-brand-white};
+  --cmp-carousel-action-active-bg: #{$global-color-strokes-white-25-percent};
+}
+@include light-theme {
+  --cmp-carousel-action-color: #{$global-color-brand-cobalt-blue};
+  --cmp-carousel-action-active-bg: #{$global-color-strokes-cobalt-blue-20-percent};
+}
+
+:root {
+  --standardteaser-content-width: 75%;
+  --standardteaser-image-max-width: initial;
+  --standardteaser-actions-padding: calc(
+    var(--standardteaser-image-max-width) + 1rem
+  );
+  @include tablet {
+    --standardteaser-image-max-width: 441px;
+  }
+
+  @include desktop-small {
+    --standardteaser-image-max-width: 487px;
+    --standardteaser-content-width: calc(
+      100% - var(--standardteaser-image-max-width)
+    );
+  }
+}
+
+.standardteaser-carousel {
+  @include desktop-small {
+    padding: $alias-padding-xx-large 0 $alias-padding-xx-large 0;
+  }
+  .cmp-carousel {
+    @include content-max-width;
+    padding-bottom: $alias-padding-medium;
+    @include tablet {
+      padding-bottom: $alias-padding-xx-large;
+    }
+
+    @include desktop-small {
+      padding-bottom: 0px;
+      + .utils-bleed-top .cmp-teaser__image {
+        margin-top: 0;
+      }
+    }
+
+    // Specific styles for teaser within carousel
+    .standardteaser {
+      .cmp-teaser {
+        padding: $alias-padding-medium $alias-padding-base;
+        @include tablet {
+          padding: $alias-padding-xx-large $alias-padding-medium;
+        }
+      }
+      .cmp-teaser__title {
+        margin-top: 0;
+      }
+      .cmp-teaser__action-container {
+        margin-bottom: 0;
+      }
+      .cmp-teaser__content {
+        width: var(--standardteaser-content-width);
+      }
+      .cmp-teaser__image {
+        margin-top: $alias-margin-x-large;
+        margin-bottom: 0;
+        max-width: var(--standardteaser-image-max-width);
+
+        @include tablet {
+          margin-top: $alias-margin-xx-large;
+          margin-left: 0;
+        }
+        @include desktop-small {
+          margin-top: 0;
+          margin-left: auto;
+          order: 2 !important; // force image to be on the right for ALL standard teasers in carousel
+        }
+        img {
+          max-width: 100%;
+        }
+      }
+      .cmp-teaser__description {
+        margin-bottom: $alias-margin-large;
+      }
+      @include desktop-small {
+        &.utils-bleed-top .cmp-teaser,
+        &.utils-bleed-bottom .cmp-teaser,
+        .cmp-teaser {
+          padding: 0 0 0 $alias-padding-xx-large;
+        }
+        &.utils-bleed-top .cmp-teaser {
+          .cmp-teaser__image {
+            margin-top: 0;
+          }
+        }
+        .cmp-teaser__image {
+          order: 2 !important;
+        }
+        .cmp-teaser__content {
+          order: 1 !important;
+        }
+      }
+    }
+  }
+
+  // Actions
+  .cmp-carousel__actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 98;
+
+    @include desktop-small {
+      width: 100%;
+      padding-right: var(--standardteaser-actions-padding);
+      padding-left: 0;
+      justify-content: flex-end;
+    }
+
+    @include desktop-small {
+      margin-top: -$alias-margin-5x-large;
+    }
+  }
+
+  .cmp-carousel__action {
+    width: $global-size-3;
+    height: $global-size-3;
+    border-radius: $global-border-radius;
+    padding: 0;
+    background-color: transparent;
+    border: 1px solid var(--cmp-carousel-action-color);
+  }
+  .cmp-carousel__action-text {
+    opacity: 0;
+    visibility: hidden;
+    width: 1px;
+    height: 1px;
+    position: absolute;
+  }
+
+  .cmp-carousel__action-icon {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: $global-size-3;
+    height: $global-size-3;
+    border-radius: $global-border-radius;
+
+    &:after {
+      @include material-icons-outlined;
+      color: var(--cmp-carousel-action-color);
+      margin-left: -3px;
+      vertical-align: middle;
+    }
+  }
+
+  .cmp-carousel__action--next {
+    margin-left: $global-size-075;
+    .cmp-carousel__action-icon {
+      &:after {
+        content: "chevron_right" #{"/*!rtl: 'chevron_left' */"}; //for more codes go to https://fonts.google.com/icons
+      }
+    }
+  }
+  .cmp-carousel__action--previous {
+    margin-right: $global-size-075;
+    .cmp-carousel__action-icon {
+      &:after {
+        content: "chevron_left" #{"/*!rtl: 'chevron_right' */"}; //for more codes go to https://fonts.google.com/icons
+      }
+    }
+  }
+
+  .cmp-carousel__action--pause {
+    display: none;
+  }
+
+  .cmp-carousel__action--play {
+    display: none;
+  }
+
+  // Indicators
+  .cmp-carousel__indicator {
+    width: $global-size-05;
+    height: $global-size-05;
+    background-color: var(--cmp-carousel-action-active-bg);
+    margin: 0 0 0 $global-size-075;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+  .cmp-carousel__indicator--active {
+    background-color: var(--cmp-carousel-action-color);
+    width: $global-size-075;
+    height: $global-size-075;
+    margin-top: -3px;
+  }
+  .cmp-teaser__description {
+    p {
+      &:first-child {
+        margin-top: 0;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  @include style-variation("standardteaser-carousel--image-left") {
+    // force ALL standard teasers to align images to the left
+    @include desktop-small {
+      .standardteaser {
+        .cmp-teaser {
+          padding-top: $alias-padding-xx-large !important;
+          padding-bottom: 0 !important;
+          padding-left: 0 !important;
+        }
+        .cmp-teaser__action-container {
+          margin-bottom: $alias-margin-x-large !important;
+        }
+        .cmp-teaser__image {
+          order: 1 !important;
+        }
+        .cmp-teaser__content {
+          order: 2 !important;
+        }
+      }
+    }
+    .cmp-carousel__actions {
+      @include desktop-small {
+        padding-left: var(--standardteaser-actions-padding);
+        padding-right: 0;
+        justify-content: flex-start;
+      }
+    }
+  }
+}

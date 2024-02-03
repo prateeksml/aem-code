@@ -1,0 +1,65 @@
+{
+  "jcr:primaryType": "dam:Asset",
+  "jcr:mixinTypes": ["mix:referenceable", "mix:versionable"],
+  "jcr:createdBy": "admin",
+  "jcr:versionHistory": "40c8781e-56df-4739-92ee-3e23deaa627e",
+  "jcr:predecessors": ["7f3f6b12-8847-422b-aa97-52ea17762683"],
+  "jcr:created": "Thu Jul 13 2023 17:11:46 GMT+0530",
+  "jcr:baseVersion": "7f3f6b12-8847-422b-aa97-52ea17762683",
+  "jcr:isCheckedOut": true,
+  "jcr:uuid": "01b3696d-4950-42b2-a1e4-28c9230beb0f",
+  "jcr:content": {
+    "jcr:primaryType": "dam:AssetContent",
+    "jcr:title": "Enquiry List",
+    "jcr:lastModifiedBy": "admin",
+    "contentFragment": true,
+    "cq:name": "enquiry-list",
+    "jcr:lastModified": "Mon Jul 17 2023 19:30:46 GMT+0530",
+    "lastFragmentSave": "Mon Jul 17 2023 19:30:46 GMT+0530",
+    "cq:parentPath": "/content/dam/kpmgsites/content-fragment",
+    "renditions": {
+      "jcr:primaryType": "nt:folder",
+      "jcr:createdBy": "admin",
+      "jcr:created": "Thu Jul 13 2023 17:11:46 GMT+0530"
+    },
+    "related": {
+      "jcr:primaryType": "nt:unstructured"
+    },
+    "indexedData": {
+      "jcr:primaryType": "nt:unstructured",
+      "master": {
+        "jcr:primaryType": "nt:unstructured",
+        "jcr:mixinTypes": ["dam:IndexedFragmentData"],
+        "@string@model": "/conf/kpmg/settings/dam/cfm/models/enquiry-list",
+        "string@enquiryLabel": "test 1 label",
+        "@stringArray@variations": [],
+        "string@emailDistributionList": "k@gmail.com , hello@gmail.com",
+        "long@sortorder": 1,
+        "string@value": "name1",
+        "jcr:uuid": "479c8023-b6bc-4113-b807-24507cf75113"
+      }
+    },
+    "metadata": {
+      "jcr:primaryType": "nt:unstructured",
+      "jcr:mixinTypes": ["cq:Taggable"]
+    },
+    "data": {
+      "jcr:primaryType": "nt:unstructured",
+      "_strucVersion": 1,
+      "cq:model": "/conf/kpmg/settings/dam/cfm/models/enquiry-list",
+      "master": {
+        "jcr:primaryType": "nt:unstructured",
+        "jcr:mixinTypes": ["dam:cfVariationNode", "cq:Taggable"],
+        "enquiryLabel": "test 1 label",
+        "emailDistributionList@LastModified": "Mon Jul 17 2023 18:51:27 GMT+0530",
+        "sortorder@LastModified": "Thu Jul 13 2023 18:18:14 GMT+0530",
+        "sortorder": 1,
+        "emailDistributionList": "k@gmail.com , hello@gmail.com",
+        "value": "name1",
+        "enquiryLabel@LastModified": "Thu Jul 13 2023 18:18:14 GMT+0530",
+        "email@ContentType": "text/plain",
+        "emailDistributionList@LastModified": "Mon Jul 17 2023 19:30:46 GMT+0530"
+      }
+    }
+  }
+}

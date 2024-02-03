@@ -1,0 +1,22 @@
+{
+  "global": {
+    "width": {
+      "full": {
+        "value": "100%",
+        "comment": "Full width"
+      },
+      "large": {
+        "value": "100rem",
+        "comment": "Max container width (Large)"
+      },
+      "medium": {
+        "value": "85.375rem",
+        "comment": "Max container width (Medium)"
+      },
+      "small": {
+        "value": "43.75rem",
+        "comment": "Max container width (Small) - Reading width"
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0"
+	jcr:primaryType="sling:OsgiConfig" componentName="heropeople"
+	renditions="[mobile;;cq5dam-web-598-598;240;240,
+tablet;;cq5dam-web-598-598;255;255,
+desktopmedium;;cq5dam-web-598-598;281;281,
+desktopsmall;;cq5dam-web-598-598;299;299,
+retinamobile;;cq5dam-web-598-598;480;480,
+retinatablet;;cq5dam-web-598-598;510;510,
+retinadesktopmedium;;cq5dam-web-598-598;562;562,
+retinadesktopsmall;;cq5dam-web-598-598;598;598]" />

@@ -1,0 +1,91 @@
+<sly data-sly-use.template="core/wcm/components/commons/v1/templates.html"
+    data-sly-test.hasContent="${properties.disablemainnav != null}">
+    <div class="cmp-header">
+
+        <sly data-sly-test.enableLogo="${!properties.disablelogo}" />
+        <sly data-sly-test.enableMainNav="${!properties.disablemainnav}" />
+        <sly data-sly-test.enableSearch="${!properties.disablesearch}" />
+
+        <!--/* Menu Item Bar */-->
+        <sly data-sly-use.menuItemBarTemplate="./menu-item-bar/menu-item-bar.html"
+            data-sly-call="${menuItemBarTemplate.menuItemBar @ menuItemBar=properties }" />
+
+        <sly data-sly-test="${enableLogo || enableMainNav || enableSearch}">
+
+            <!--/* Mobile: Login, RFP, Language Selector  */-->
+            <div class="cmp-header__main-nav-bar" data-cmp-header-main-nav-bar>
+                <div class="cmp-header__main-nav-bar--container">
+                    <div class="cmp-header__main-nav-bar--inner">
+                        <div class="cmp-header__main-nav-bar--column">
+                            <!--/* Mobile/Hamburger Toggle Button  */-->
+                            <sly
+                                data-sly-resource="${'./toggle' @ resourceType='kpmg/components/navigation/header/mobile-toggle'}" />
+                            <!--/* Logo*/-->
+                            <sly data-sly-test="${enableLogo}">
+                                <sly
+                                    data-sly-resource="${'./logo' @ resourceType='kpmg/components/navigation/header/logo'}" />
+                            </sly>
+                        </div>
+
+                        <div class="cmp-header__main-nav-bar--column">
+                            <sly data-sly-test="${enableMainNav}">
+                                <sly data-sly-resource="${'./main-nav' @ resourceType='kpmg/components/navigation/header/main-nav' }" />
+
+                                <!--/* Include menu item bar for mobile only*/-->
+                                <sly data-sly-use.menuItemBarTemplate="./menu-item-bar/menu-item-bar.html"
+                                    data-sly-call="${menuItemBarTemplate.menuItemBar @ menuItemBar=properties, isMobile=true }" />
+                            </sly>
+                        </div>
+
+                        <div class="cmp-header__main-nav-bar--column">
+                            <div class="cmp-header__main-nav-bar--search">
+                                <sly data-sly-test="${enableSearch}">
+                                    <sly data-sly-resource="${'./search' @ resourceType='kpmg/components/structure/search'}" />
+                                </sly>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </sly>
+    </div>
+
+    <!--/* Language Selector */-->
+    <div data-cmp-langselector="side-navbar" class="language-selector__side-navbar">
+        <div class="language-selector__mobile-close">
+            <a href="#" data-cmp-langselector="close-btn" class="language-selector__mobile-close--btn"
+                aria-expanded="false" aria-label="language selector close">
+                <span class="material-icons-outlined">close</span>
+            </a>
+        </div>
+        <div class="language-selector__container">
+            <ul data-sly-list.item="${siteSelector.getRelevantCountryCode}" class="country-list country-list--short">
+                <li data-sly-test="${item.siteLink}">
+                    <a href="${item.siteLink}" title="${item.country} (${item.locale})">${item.country}
+                        (${item.locale})</a>
+                </li>
+            </ul>
+            <div class="cmp-form-text">
+                <label for="fliter-search-input">${"kpmg.search.label" @ i18n}</label>
+                <input class="cmp-form-text__text" data-cmp-hook-form-text="input" type="text" id="fliter-search-input"
+                    placeholder="Enter Keywords" name="fliter-search-input" aria-describedby="enter keywords"
+                    data-cmp-langselector="fliter-search-input" />
+                <span class="material-icons-outlined input-cancel" data-cmp-langselector="fliter-cancel">cancel</span>
+            </div>
+            <div class="filter-message" data-cmp-langselector="fliter-message">${"kpmg.search.datanotfound.message" @
+                i18n}
+            </div>
+            <div class="contry-list-container">
+                <ul class="country-list  country-list--all" data-cmp-langselector="list-of-all-countries">
+                    <sly data-sly-list.item="${siteSelector.getSiteSelectorItems}">
+                        <li>
+                            <a href="${item.siteLink}" title="${item.country} (${item.locale})">${item.country}
+                                (${item.locale})</a>
+                        </li>
+                    </sly>
+                </ul>
+            </div>
+        </div>
+    </div>
+</sly>
+<sly data-sly-call="${template.placeholder @ isEmpty=!hasContent, classAppend='cmp-header cmp-header__empty'}"></sly>

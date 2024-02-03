@@ -1,0 +1,19 @@
+{
+  "jcr:primaryType": "nt:unstructured",
+  "sling:resourceType": "kpmg/components/content/textlistt",
+  "items": {
+    "jcr:primaryType": "nt:unstructured",
+    "item1": {
+      "jcr:primaryType": "nt:unstructured",
+      "text": "item1",
+      "title": "item 1",
+      "icon": "icon1"
+    },
+    "item2": {
+      "jcr:primaryType": "nt:unstructured",
+      "title": "item 2",
+      "text": "item2",
+      "icon": "icon2"
+    }
+  }
+}

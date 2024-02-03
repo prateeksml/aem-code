@@ -1,0 +1,225 @@
+.footer {
+  background-color: $alias-color-footer-background-color;
+  $footer-content-margin-top-mobile: $alias-margin-x-large; // 40px
+  $footer-content-margin-top-tablet: $alias-margin-xxx-large; // 64px
+  $footer-content-margin-top-desktop: $alias-margin-4x-large; // 80px
+
+  .cmp-footer {
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    display: flow-root;
+    @include content-max-width-large;
+  }
+
+  .cmp-footer__content {
+    @include container-horizontal-margin;
+    padding-bottom: $alias-padding-x-large;
+    margin-top: $footer-content-margin-top-mobile;
+
+    @include tablet {
+      margin-top: $footer-content-margin-top-tablet;
+    }
+
+    @include desktop-small {
+      margin-top: $footer-content-margin-top-desktop;
+    }
+  }
+
+  .cmp-footer__logo-container {
+    padding: $alias-padding-medium $alias-padding-medium $alias-padding-small;
+    width: 100%;
+
+    .cmp-footer__logo-container--image {
+      margin: 0;
+      img {
+        width: auto;
+      }
+    }
+  }
+
+  .cmp-footer__container {
+    padding: $alias-padding-small $alias-padding-medium;
+    width: 100%;
+
+    &:first-child {
+      padding-top: $alias-padding-medium;
+    }
+  }
+
+  //Categories/Links
+  .cmp-footer-categories {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: stretch;
+  }
+
+  //Column
+  .cmp-footer-category {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  //Tablet/Desktop
+  .cmp-footer-category__desktop {
+    display: none;
+    //This will show tablet and up
+    @include tablet {
+      display: block;
+    }
+  }
+  //Mobile/Details
+  .cmp-footer-category__mobile {
+    padding: $alias-padding-large 0;
+    border-bottom: 1px solid $alias-color-footer-item-link-border-color;
+
+    details {
+      .cmp-footer-category__expand-arrow:after {
+        @include material-icons-outlined;
+        content: "expand_more";
+        color: $alias-color-footer-item-link-expand-arrow;
+        font-size: $alias-font-size-xxx-large;
+        vertical-align: middle;
+        position: absolute;
+        right: 0;
+      }
+
+      .cmp-footer-category__expand-arrow--more {
+        display: inline;
+      }
+
+      .cmp-footer-category__expand-arrow--less {
+        display: none;
+      }
+    }
+
+    details[open] {
+      .cmp-footer-category__expand-arrow:after {
+        content: "expand_less";
+      }
+
+      .cmp-footer-category__expand-arrow--more {
+        display: none;
+      }
+
+      .cmp-footer-category__expand-arrow--less {
+        display: inline;
+      }
+    }
+
+    summary {
+      position: relative;
+    }
+
+    //This will hide this for anything
+    //tablet and up
+    @include tablet {
+      display: none;
+    }
+  }
+
+  //Column Title
+  .cmp-footer-category__title {
+    @include typography-heading-six-semibold;
+    color: $alias-color-footer-title;
+    margin: $alias-margin-x-small 0;
+  }
+
+  //Unordered List
+  .cmp-footer-category-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+
+  .cmp-footer-category-list__item {
+    @include typography-body-default-regular;
+    color: $alias-color-footer-item;
+    margin: $alias-margin-x-small 0;
+  }
+
+  .cmp-footer-category-list__item-link {
+    color: $alias-color-footer-item-link-color;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  @include tablet {
+    .cmp-footer-categories {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  //Social Icons
+  .cmp-footer-social-icons-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+    height: $alias-icon-size-large;
+  }
+
+  .cmp-footer-social-icons-list__item {
+    padding: 0 $alias-padding-small;
+  }
+
+  .cmp-footer-social-icons-list__item-link {
+    display: inline-block;
+    height: $alias-icon-size-large;
+    vertical-align: middle;
+  }
+
+  //Legal Links
+  .cmp-footer-legal-links-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .cmp-footer-legal-links-list__item {
+    @include typography-body-caption;
+    margin: $alias-margin-x-small $alias-margin-medium;
+  }
+
+  .cmp-footer-legal-links-list__item-link {
+    @include typography-body-caption;
+    color: $alias-color-footer-legal-link-color;
+    text-decoration: underline;
+    background: transparent;
+    outline: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  //Copyright
+  .cmp-footer__copyright-container {
+    @include content-max-width-large;
+    @include container-horizontal-padding;
+    margin: $alias-margin-x-large 0;
+  }
+  .cmp-footer__copyright {
+    p {
+      @include typography-body-caption;
+      color: $alias-color-footer-copyright-color;
+      margin: $alias-margin-x-small 0;
+    }
+
+    a {
+      color: $alias-color-footer-copyright-color;
+    }
+  }
+}

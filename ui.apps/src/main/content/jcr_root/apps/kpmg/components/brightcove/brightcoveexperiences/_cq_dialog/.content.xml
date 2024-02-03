@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Brightcove Experience Selector"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    extraClientlibs="[brightcove.player.dialogs]">
+    <content jcr:primaryType="nt:unstructured">
+        <items jcr:primaryType="nt:unstructured">
+            <tab-video jcr:primaryType="nt:unstructured">
+                <items jcr:primaryType="nt:unstructured">
+                    <column jcr:primaryType="nt:unstructured">
+                        <items jcr:primaryType="nt:unstructured">
+                            <fieldset-account-details jcr:primaryType="nt:unstructured">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <account
+                                        granite:class="brightcove-dialog-account-dropdown"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <experience
+                                        jcr:primaryType="nt:unstructured"
+                                        class="brightcove-dialog-video-autocomplete"/>
+                                    <hidden
+                                        granite:class="brightcove-dialog-player-dropdown"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/hidden"/>
+                                </items>
+                            </fieldset-account-details>
+                            <fieldset-container-attributes
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Component Attributes"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <containerID
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Anchor ID"/>
+                                    <containerClass
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:hideResource="{Boolean}true"/>
+                                </items>
+                            </fieldset-container-attributes>
+                            <fieldset-player-styles jcr:primaryType="nt:unstructured">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <size
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:hideResource="{Boolean}true"/>
+                                </items>
+                            </fieldset-player-styles>
+                        </items>
+                    </column>
+                </items>
+            </tab-video>
+        </items>
+    </content>
+</jcr:root>

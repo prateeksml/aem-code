@@ -1,0 +1,15 @@
+
+subject=${event.EventType}
+
+header= <br/> \
+
+message= <br/> \
+<br/> \
+<table> \
+ <tr> \ <td> \ TITLE </td>\ &nbsp&nbsp \ <td> \ NAME  </td>\ &nbsp&nbsp \ <td> \ MODIFIED DATE-TIME  </td>\  &nbsp&nbsp \ <td> \  MODIFIED BY  </td>\  &nbsp&nbsp \ <td> \ SCHEDULED START DATE  </td>\ &nbsp&nbsp \  <td> \ SCHEDULED END DATE   </td>\ </t> \ </t> \</tr> \
+{{#each hbstest}} <tr> \ <td> \{{this.title}}  </td> \  &nbsp&nbsp \ <td> \<a href="{{this.path}}"> {{this.name}} </a>   &nbsp&nbsp \  {{#if this.masterPath}} <a href="{{this.masterPath}}"> Is Copy of</a>   {{/if}} </td> \ &nbsp&nbsp \  <td> \ {{this.createdDate}} </td> \ &nbsp&nbsp \ <td> \ {{this.createdBy}} </t> \ </td> \ &nbsp&nbsp \ <td> \ {{this.onDate}} </t> \ </t> \ </td> &nbsp&nbsp \<td> \ {{this.offDate}} </t> \ </t> \  </td> \<br\> \ </tr> \ {{/each}}\n \
+</table> \
+
+footer=<br/> \
+-------------------------------------------------------------------------------------<br/> \
+This is an automatically generated message. Please do not reply.

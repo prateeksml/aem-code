@@ -1,0 +1,46 @@
+$parent: ".cmp-menu-link";
+
+#{$parent} {
+  $menu-link-height: calc($alias-size-medium * 3); //72px
+  $menu-link-inner-height: $alias-size-medium; //24px
+
+  height: $menu-link-height;
+  padding: $alias-padding-medium $alias-padding-base;
+  border-bottom: 1px solid $global-color-strokes-cobalt-blue-20-percent;
+
+  &__inner {
+    @include normalize-style;
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    cursor: pointer;
+    background: none;
+    border: none;
+    height: $menu-link-inner-height;
+
+    //Label
+    &--label {
+      @include menu-label;
+    }
+
+    //Icon
+    &--icon {
+      color: $global-color-brand-white;
+
+      &:after {
+        @include material-icons-outlined;
+        vertical-align: middle;
+        font-size: $global-size-15;
+        content: "arrow_forward_ios" #{"/*!rtl: 'arrow_back_ios' */"};
+      }
+    }
+  }
+
+  //Section Nav Link Variant
+  &--section-nav {
+    padding: $alias-padding-medium $alias-padding-base $alias-padding-medium
+      $alias-padding-large;
+  }
+}
+
+@import "breakpoints/menu-link--desktop-medium";

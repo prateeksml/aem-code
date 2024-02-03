@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2023-06-28T11:41:22.225-04:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/kpmg/settings/wcm/templates/page-content"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Hero - Content and Static Image"
+        sling:resourceType="kpmg/components/structure/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="kpmg/components/container/container"
+            layout="responsiveGrid">
+            <main
+                jcr:lastModified="{Date}2023-06-03T19:12:45.974-05:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="kpmg/components/container/main"
+                layout="simple">
+                <hero_csi
+                    jcr:lastModified="{Date}2023-06-28T11:41:13.290-04:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="kpmg/components/content/hero-csi"
+                    heroDescription="&lt;p>73% of company transformations fail to deliver on growth and profitability—so here’s a look at how the winners beat the odds.&lt;/p>&#xd;&#xa;"
+                    heroTitle="The playbook for a successful business transformation"
+                    showarticledate="true"
+                    showbreadcrumb="true"
+                    textIsRich="true">
+                    <heroImage
+                        jcr:lastModified="{Date}2023-06-28T11:41:22.223-04:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="kpmg/components/content/image"
+                        fileReference="/content/dam/kpmg-style-guide/teaser-card-example.png"
+                        imageFromPageImage="false"/>
+                </hero_csi>
+            </main>
+        </root>
+    </jcr:content>
+</jcr:root>

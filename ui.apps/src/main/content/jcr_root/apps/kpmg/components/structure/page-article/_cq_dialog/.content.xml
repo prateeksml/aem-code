@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="nt:unstructured"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    extraClientlibs="[core.kpmg.components.page-article,core.kpmg.components.basepage]">
+    <content jcr:primaryType="nt:unstructured">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs jcr:primaryType="nt:unstructured">
+                <items jcr:primaryType="nt:unstructured">
+                    <basic
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Basic"
+                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <moretitles
+                                        cq:showOnCreate="{Boolean}true"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="More Titles and Description"
+                                        path="/mnt/override/apps/kpmg/components/utilities/basic_description"/>
+                                    <onofftime
+                                        cq:showOnCreate="{Boolean}false"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="On/Off Time"
+                                        path="/mnt/override/apps/kpmg/components/utilities/basic_onofftime"/>
+                                </items>
+                            </column>
+                        </items>
+                    </basic>
+                    <articledetails
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Article Details"
+                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                        <items jcr:primaryType="nt:unstructured">
+                            <include-clientlib
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/includeclientlibs"
+                                js="core.kpmg.components.page-article"/>
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <articletype
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        fieldLabel="Article Type"
+                                        name="./articleType"
+                                        required="{Boolean}true">
+                                        <granite:data
+                                            jcr:primaryType="nt:unstructured"
+                                            cq-msm-lockable="jcr:title"/>
+                                        <datasource
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="kpmg/ca-config/datasource"
+                                            config="article-type"/>
+                                    </articletype>
+                                    <articleprimaryformat
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        fieldLabel="Article primary format"
+                                        name="./articlePrimaryFormat"
+                                        required="{Boolean}true">
+                                        <datasource
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="kpmg/ca-config/datasource"
+                                            config="article-format"/>
+                                    </articleprimaryformat>
+                                    <contactcontributors
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <contactpath
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                fieldLabel="Contant Contributors">
+                                                <granite:data jcr:primaryType="nt:unstructured"/>
+                                                <field
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                    name="./contactPath"
+                                                    required="{Boolean}true"/>
+                                            </contactpath>
+                                        </items>
+                                    </contactcontributors>
+                                    <campaignname
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/form/textarea"
+                                        disabled="{Boolean}true"
+                                        fieldLabel="Campaign Name"
+                                        name="./campaign"
+                                        value="Campaign name">
+                                        <field
+                                            jcr:primaryType="nt:unstructured"
+                                            disabled="{Boolean}true"/>
+                                        <granite:data
+                                            jcr:primaryType="nt:unstructured"
+                                            kpmg-campaign="campaign"/>
+                                    </campaignname>
+                                    <articledate
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/datepicker"
+                                        displayedFormat="MMMM DD, YYYY hh:mm a"
+                                        displayTimezoneMessage="{Boolean}true"
+                                        fieldLabel="Article Date &amp; Time"
+                                        name="./articleTimeAndDate"
+                                        required="{Boolean}true"
+                                        type="datetime"/>
+                                </items>
+                            </column>
+                        </items>
+                    </articledetails>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

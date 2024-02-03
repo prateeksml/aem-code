@@ -1,0 +1,138 @@
+// specifically when column control is a direct child of main container
+.main > .cmp-container > .columncontrol > .cmp-column-control {
+  @include container-horizontal-padding;
+}
+
+@mixin tablet-columns($columns) {
+  @include tablet {
+    grid-template-columns: $columns;
+  }
+}
+
+@mixin desktop-columns($columns) {
+  @include desktop-small {
+    grid-template-columns: $columns;
+  }
+}
+
+.columncontrol {
+  .cmp-column-control {
+    // @include content-max-width;
+    @include in-front-of-bleed;
+    overflow-x: hidden;
+  }
+  .cmp-column-control__row {
+    display: grid;
+  }
+
+  .cmp-column-control__col > .cmp-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cmp-column-control__row--threeUnEvenReverse {
+    @include tablet {
+      grid-template-columns: 1fr 1fr;
+
+      .cmp-column-control__col:last-of-type {
+        grid-row: 2 / 2;
+        grid-column: 1 / span 2;
+      }
+    }
+
+    @include desktop-small {
+      grid-template-rows: 1fr;
+
+      .cmp-column-control__col:last-of-type {
+        grid-row: auto;
+        grid-column: auto;
+      }
+    }
+
+    @include desktop-columns(1fr 1fr 2fr);
+  }
+
+  .cmp-column-control__row--threeUnEven {
+    @include tablet {
+      grid-template-columns: 1fr 1fr;
+
+      .cmp-column-control__col:first-of-type {
+        grid-row: 1 / 1;
+        grid-column: 1 / span 2;
+      }
+    }
+    @include desktop-small {
+      grid-template-rows: 1fr;
+      .cmp-column-control__col:first-of-type {
+        grid-row: auto;
+        grid-column: auto;
+      }
+    }
+    @include desktop-columns(2fr 1fr 1fr);
+  }
+  .cmp-column-control__row--twoEven {
+    @include tablet-columns(1fr 1fr);
+  }
+  .cmp-column-control__row--threeEven {
+    .cmp-container {
+      display: grid;
+      @include tablet-columns(1fr 1fr);
+      @include desktop-columns(1fr 1fr 1fr);
+      & > div {
+        min-width: 0;
+      }
+    }
+  }
+  .cmp-column-control__row--fourEven {
+    .cmp-container {
+      display: grid;
+      @include tablet-columns(1fr 1fr);
+      @include desktop-columns(1fr 1fr 1fr 1fr);
+      & > div {
+        min-width: 0;
+      }
+    }
+  }
+
+  @include style-variation("columncontrol--vertical-align-top") {
+    .cmp-column-control__row {
+      align-items: start;
+    }
+  }
+  @include style-variation("columncontrol--vertical-align-center") {
+    .cmp-column-control__row {
+      align-items: center;
+    }
+  }
+  @include style-variation("columncontrol--vertical-align-bottom") {
+    .cmp-column-control__row {
+      align-items: end;
+    }
+  }
+
+  @include style-variation("columncontrol--column-items-vertical-stretch") {
+    .cmp-column-control__col > .cmp-container {
+      align-items: stretch;
+      > *:not(.newpar) {
+        flex-grow: 1;
+      }
+    }
+  }
+  $gaps: (
+    small: $alias-width-small,
+    base: $alias-width-base,
+    medium: $alias-width-medium,
+    large: $alias-width-large,
+    x-large: $alias-width-x-large,
+    xx-large: $alias-width-xx-large,
+  );
+
+  @each $name, $val in $gaps {
+    @include style-variation("columncontrol--gap-#{$name}") {
+      .cmp-column-control__row {
+        gap: $val;
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+<div data-sly-use.title="com.adobe.cq.wcm.core.components.models.Title"
+  data-sly-use.template="core/wcm/components/commons/v1/templates.html" data-sly-test.text="${properties.title}"
+  data-cmp-data-layer="${title.data.json}" id="${title.id}" class="cmp-title">
+  <h2 class="cmp-title__text" data-sly-element="${title.type}"><a
+      data-sly-unwrap="${!title.link.valid || title.linkDisabled}" class="cmp-title__link"
+      data-sly-attribute="${title.link.htmlAttributes}" data-cmp-clickable="${title.data ? true : false}">${properties.title}</a>
+  </h2>
+  <div data-sly-test.description="${properties.description}" class="cmp-title__description">
+    <p>${properties.description}</p>
+  </div>
+</div>
+<sly data-sly-call="${template.placeholder @ isEmpty=!text, classAppend='cmp-title'}"></sly>

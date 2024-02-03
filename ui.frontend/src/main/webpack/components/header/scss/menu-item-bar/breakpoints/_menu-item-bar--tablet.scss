@@ -1,0 +1,31 @@
+@include tablet {
+  $parent: ".cmp-menu-item-bar";
+  #{$parent} {
+    $menu-item-bar-height: $alias-size-x-large; //40px
+    $menu-item-bar-inner-height: calc(
+      $alias-size-base + $alias-size-xx-small
+    ); //20px
+
+    //Tablet style
+    @include display-flex-align-center;
+    background-color: $global-color-brand-spectrum-blue;
+    width: 100%;
+    flex: auto;
+
+    &--container {
+      @include display-flex-align-center;
+      @include header-horizontal-margin;
+      justify-content: flex-end;
+      width: 100%;
+    }
+
+    &--inner {
+      @include display-flex-align-center;
+    }
+
+    //Hide mobile bar only
+    &--mobile {
+      display: none;
+    }
+  }
+}

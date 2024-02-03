@@ -1,0 +1,16 @@
+subject=Scheduled Deactivation Report for : ${countryCode}
+
+message=<br/> \ Below Pages will expire in next ${noOfDays} days.<br/> \
+<br/> \
+{{#each reportPages}}\n \ <b>{{this.bog}}</b>\n \
+<br/> \
+<br/> \
+<table border="2" width="100%"> \ <tr> \ <th> \ Expiration Date </th>\ <th> \ Publisher URL  </th>\ <th> \ Authoring URL  </th>\ </tr>\
+{{#each this.bogList}} <tr> \ <td> \ {{this.offTime}} </td>\  <td> \ <a href="${dispatcherDomain}{{this.path}}.html">{{this.title}} </a> \  </td>\ <td> \ <a href="${authorDomain}{{this.path}}.html"> {{this.path}}  </a> \ </td>\ </tr> \ {{/each}}\n \
+</table> \
+<br/> \
+<br/> \
+{{/each}} \
+<br/> \
+-------------------------------------------------------------------------------------<br/> \
+This is an automatically generated message. Please do not reply.

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:isDelivered="{Boolean}true"
+        cq:isTransCreated="{Boolean}true"
+        cq:lastModified="{Date}2023-07-26T08:45:14.210Z"
+        cq:lastModifiedBy="reference-adjustment-service"
+        cq:lastReplicated_publish="{Date}2023-06-07T09:33:52.208Z"
+        cq:lastReplicated_scene7="{Date}2023-06-07T09:33:52.208Z"
+        cq:lastReplicatedBy_publish="tec04532@adobe.com"
+        cq:lastReplicatedBy_scene7="tec04532@adobe.com"
+        cq:lastReplicationAction_publish="Activate"
+        cq:lastReplicationAction_scene7="Activate"
+        cq:lastTranslationUpdate="{Date}2023-06-07T09:51:30.826Z"
+        cq:tags="[]"
+        cq:template="/conf/kpmg/settings/wcm/templates/xf-web-variation"
+        cq:translationJob="[/content/projects/kpmg_experience_fragment/kpmg_experience_fragment/jcr:content/dashboard/gadgets/translationjob0]"
+        cq:translationSourcePath="/content/experience-fragments/kpmgpublic/language-masters/en/site/footer/master"
+        cq:translationStatus="DRAFT"
+        cq:xfVariantType="web"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Footer"
+        jcr:uuid="fc02104d-fc1a-4869-a16a-59c656782b3b"
+        sling:resourceType="kpmg/components/structure/xfpage">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="kpmg/components/container/container"
+            layout="simple">
+            <footer_1068540887
+                jcr:lastModified="{Date}2023-06-06T10:09:34.526Z"
+                jcr:lastModifiedBy="cshirodk@adobe.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="kpmg/components/navigation/footer"
+                altText="logo"
+                altValueFromDAM="true"
+                copyrightText="&lt;p>We respectfully acknowledge that KPMG offices across Turtle Island (North America) are located on the traditional, treaty, and unceded territories of First Nations, Inuit and Métis peoples.&lt;/p>&#xd;&#xa;&lt;p>© COPYRIGHT_DYNAMIC_YEAR KPMG LLP, an Ontario limited liability partnership and a member firm of the KPMG global organization of independent member firms affiliated with KPMG International Limited, a private English company limited by guarantee. All rights reserved.&lt;/p>&#xd;&#xa;"
+                fileReference="/content/dam/kpmgsites/logo-white.svg"
+                textIsRich="true">
+                <categories
+                    jcr:lastModified="{Date}2023-06-07T09:18:01.385Z"
+                    jcr:lastModifiedBy="cshirodk@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="kpmg/components/navigation/footer/categories">
+                    <items jcr:primaryType="nt:unstructured">
+                        <contact
+                            jcr:primaryType="nt:unstructured"
+                            title="Contact">
+                            <items jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    linkTarget="_blank"
+                                    linkTitle="Locations"
+                                    linkURL="https://kpmg.com/xx/en/home/about/offices.html"/>
+                                <item1
+                                    jcr:primaryType="nt:unstructured"
+                                    linkTarget="_blank"
+                                    linkTitle="Contact Us"
+                                    linkURL="/content/kpmgpublic/language-masters/en/adobe_qa_testing/regression/regress_15-5"/>
+                                <item2
+                                    jcr:primaryType="nt:unstructured"
+                                    linkTarget="_blank"
+                                    linkTitle="Submit RFP"
+                                    linkURL="/content/kpmgpublic/language-masters/en/adobe_qa_testing/regression/retest_6-jun-2023"/>
+                            </items>
+                        </contact>
+                        <media
+                            jcr:primaryType="nt:unstructured"
+                            title="Media">
+                            <items jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    linkTarget="_self"
+                                    linkTitle="Language Press releases"
+                                    linkURL="https://kpmg.com/xx/en/home/media/press-releases.html"/>
+                                <item1
+                                    jcr:primaryType="nt:unstructured"
+                                    linkTarget="_self"
+                                    linkTitle="Newsroom"
+                                    linkURL="/content/kpmgpublic/language-masters/en/adobe_qa_testing/regression/retest_6-jun-2023"/>
+                                <item2
+                                    jcr:primaryType="nt:unstructured"
+                                    linkTarget="_self"
+                                    linkTitle="Social Media"
+                                    linkURL="/content/kpmgpublic/language-masters/en/adobe_qa_testing"/>
+                                <item3
+                                    jcr:primaryType="nt:unstructured"
+                                    linkTarget="_blank"
+                                    linkTitle="Customer Feedback"
+                                    linkURL="https://kpmg.com/xx/en/home.html"/>
+                            </items>
+                        </media>
+                        <others
+                            jcr:primaryType="nt:unstructured"
+                            title="Company">
+                            <items jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    linkTarget="_self"
+                                    linkTitle="Contact Alumni"
+                                    linkURL="mailto:go-fmglobalalumni@kpmg.com"/>
+                                <item1
+                                    jcr:primaryType="nt:unstructured"
+                                    linkTarget="_blank"
+                                    linkTitle="Careers"
+                                    linkURL="/content/kpmgpublic/language-masters/en/adobe_qa_testing"/>
+                            </items>
+                        </others>
+                    </items>
+                </categories>
+                <social-icons
+                    jcr:lastModified="{Date}2023-06-06T11:21:56.081Z"
+                    jcr:lastModifiedBy="cshirodk@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="kpmg/components/navigation/footer/social-icons">
+                    <items jcr:primaryType="nt:unstructured">
+                        <item0
+                            jcr:primaryType="nt:unstructured"
+                            altText="facebook alt test"
+                            icon="icon-facebook"
+                            linkTarget="_self"
+                            linkURL="https://www.facebook.com/KPMG"/>
+                        <item1
+                            jcr:primaryType="nt:unstructured"
+                            altText="LinkedIn"
+                            icon="icon-linkedin"
+                            linkTarget="_blank"
+                            linkURL="https://www.linkedin.com/company/kpmg"/>
+                        <item2
+                            jcr:primaryType="nt:unstructured"
+                            altText="twitter"
+                            icon="icon-twitter"
+                            linkTarget="_self"
+                            linkURL="https://twitter.com/kpmg"/>
+                        <item3
+                            jcr:primaryType="nt:unstructured"
+                            altText="Youtube test"
+                            icon="icon-youtube"
+                            linkTarget="_self"
+                            linkURL="https://www.youtube.com/kpmg"/>
+                        <item4
+                            jcr:primaryType="nt:unstructured"
+                            altText="pinterest"
+                            icon="icon-pinterest"
+                            linkTarget="_self"
+                            linkURL="https://www.pinterest.com"/>
+                    </items>
+                </social-icons>
+                <legal-links
+                    jcr:lastModified="{Date}2023-06-06T10:41:52.354Z"
+                    jcr:lastModifiedBy="cshirodk@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="kpmg/components/navigation/footer/legal-links">
+                    <items jcr:primaryType="nt:unstructured">
+                        <item0
+                            jcr:primaryType="nt:unstructured"
+                            linkTarget="_self"
+                            linkTitle=" Legal "
+                            linkURL="#"/>
+                        <item1
+                            jcr:primaryType="nt:unstructured"
+                            linkTarget="_self"
+                            linkTitle="Privacy"
+                            linkURL="#"/>
+                        <item2
+                            jcr:primaryType="nt:unstructured"
+                            linkTarget="_self"
+                            linkTitle="Accessibility"
+                            linkURL="#"/>
+                        <item3
+                            jcr:primaryType="nt:unstructured"
+                            linkTarget="_self"
+                            linkTitle="SiteMap"
+                            linkURL="#"/>
+                        <item4
+                            jcr:primaryType="nt:unstructured"
+                            linkTarget="_self"
+                            linkTitle="Help"
+                            linkURL="#"/>
+                        <item5
+                            jcr:primaryType="nt:unstructured"
+                            linkTarget="_self"
+                            linkTitle="Glossary"
+                            linkURL="#"/>
+                        <item6
+                            jcr:primaryType="nt:unstructured"
+                            linkTarget="_self"
+                            linkTitle="Events"
+                            linkURL="#"/>
+                        <item7
+                            jcr:primaryType="nt:unstructured"
+                            linkTarget="_self"
+                            linkTitle="Cookie Preferences"
+                            linkURL="#"/>
+                        <item8
+                            jcr:primaryType="nt:unstructured"
+                            linkTarget="_self"
+                            linkTitle="Imprint"
+                            linkURL="#"/>
+                        <item9
+                            jcr:primaryType="nt:unstructured"
+                            linkTarget="_self"
+                            linkTitle="Cookie Preferences"
+                            linkURL="#"/>
+                        <item10
+                            jcr:primaryType="nt:unstructured"
+                            linkTarget="_blank"
+                            linkTitle="Retest links"
+                            linkURL="https://www.youtube.com/kpmg"/>
+                    </items>
+                </legal-links>
+                <logo
+                    jcr:lastModified="{Date}2023-06-07T09:29:57.910Z"
+                    jcr:lastModifiedBy="cshirodk@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="kpmg/components/content/image"
+                    alt="KPMG footer logo"
+                    altValueFromDAM="false"
+                    displayPopupTitle="true"
+                    fileReference="/content/dam/kpmgsites/es/logo-white.svg"
+                    id="12"
+                    imageFromPageImage="false"
+                    isDecorative="false"
+                    linkTarget="_self"
+                    linkURL="/content/kpmgpublic/language-masters/es"
+                    titleValueFromDAM="false"/>
+            </footer_1068540887>
+        </root>
+    </jcr:content>
+</jcr:root>

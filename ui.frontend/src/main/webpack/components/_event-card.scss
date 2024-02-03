@@ -1,0 +1,112 @@
+@include light-theme {
+  --event-card-icon-color: #{$global-color-brand-cobalt-blue};
+  --event-card-button-color: #{$alias-color-button-color-tertiary-enabled};
+  --event-card-button-color-hover: #{$alias-color-button-color-tertiary-hover};
+}
+
+@include dark-theme {
+  --event-card-icon-color: #{$global-color-brand-light-green};
+  --event-card-button-color: #{$alias-color-button-color-tertiary-dark-enabled};
+  --event-card-button-color-hover: #{$alias-color-button-color-tertiary-dark-hover};
+}
+
+.event-card {
+  $base: $global-size-1; //16px
+  $margin-x-small: $alias-margin-x-small; // 8px
+  $margin-base: $alias-margin-base; // 16px
+  $padding-medium: $alias-padding-medium; // 24px
+  $padding-large: $alias-padding-large; // 32px
+  $light-green: $global-color-brand-light-green;
+  $border-color: $global-color-strokes-cobalt-blue-20-percent;
+
+  .cmp-teaser__image {
+    margin: -1px;
+    line-height: 0;
+    img {
+      max-width: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .cmp-event-card {
+  }
+
+  .cmp-teaser__image div {
+    line-height: 0;
+  }
+
+  .cmp-event-card__content {
+    border: 1px solid $border-color;
+    border-right: none;
+    padding: $padding-large $padding-medium $padding-large 0;
+    display: flex;
+    flex-direction: column;
+    gap: $base;
+  }
+
+  .cmp-event-card__content > * {
+    margin: 0;
+    padding-left: $padding-medium;
+  }
+
+  .cmp-event-card__content > div p {
+    display: flex;
+    align-items: center;
+    margin: 0;
+  }
+
+  .material-icons-outlined {
+    margin-right: $margin-base;
+    color: var(--event-card-icon-color);
+  }
+
+  .cmp-event-card__title {
+    @include typography-heading-six-semibold;
+    margin-top: $margin-base;
+    padding-left: 18px;
+    border-left: 4px solid $light-green;
+  }
+
+  .cmp-event-card__description {
+    display: -webkit-inline-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+  }
+
+  .cmp-event-card__date-container {
+  }
+
+  .cmp-event-card__location-container {
+  }
+
+  .cmp-event-card__time-container {
+  }
+
+  .cmp-event-card__action-container {
+    margin-top: $margin-x-small;
+    margin-bottom: $margin-base;
+  }
+
+  .cmp-event-card__button {
+    @include button-tertiary;
+    min-width: 0;
+    padding: 0;
+    width: auto;
+    color: var(--event-card-button-color);
+
+    &:after {
+      font-family: $global-fonts-font-family-materialicons-filled;
+      content: "chevron_right" #{"/*!rtl: 'chevron_left' */"}; //for more codes go to https://fonts.google.com/icons
+      font-size: $alias-font-size-x-large; // 1.5rem/24px
+      margin-left: $margin-x-small;
+      vertical-align: middle;
+    }
+
+    &:hover {
+      color: var(--event-card-button-color-hover);
+    }
+  }
+}

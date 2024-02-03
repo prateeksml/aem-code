@@ -1,0 +1,28 @@
+{
+"cq.wcm.msm.action.excludedprops":
+	[
+		"jcr:.*","sling:(?!(resourceType|resourceSuperType)$).*", 
+		"cq:(?!(designPath|template|lastTranslationUpdate|targetEngine|robotsTags)$).*", 
+		"publishCampaignId", 
+		"industry",
+		"service",
+		"insight",
+		"sl-industry-zthesid",
+		"sl-service-zthesid",
+		"sl-insight-zthesid",
+		"sl-industry-qualified-name",
+		"sl-service-qualified-name",
+		"sl-insight-qualified-name",
+		"sl-industry-qualified-name-id",
+		"sl-service-qualified-name-id",
+		"sl-insight-qualified-name-id",
+		"sl-industry-hierarchy",
+		"sl-service-hierarchy",
+		"sl-insight-hierarchy",
+		"sl-industry-hierarchy-id",
+		"sl-service-hierarchy-id",
+		"sl-insight-hierarchy-id" 
+	]
+
+
+}

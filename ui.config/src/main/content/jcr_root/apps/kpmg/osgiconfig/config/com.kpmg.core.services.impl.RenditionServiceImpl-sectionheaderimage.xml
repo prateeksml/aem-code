@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0"
+	jcr:primaryType="sling:OsgiConfig" componentName="sectionheaderimage"
+	renditions="[mobile;;cq5dam-web-974-1218;240;136,
+tablet;;cq5dam-web-974-1218;534;300,
+desktopsmall;;cq5dam-web-974-1218;381;214,
+desktopmedium;;cq5dam-web-974-1218;500;281,
+retinamobile;;cq5dam-web-974-1218;480;272,
+retinatablet;;cq5dam-web-974-1218;1068;600,
+retinadesktopsmall;;cq5dam-web-974-1218;762;428,
+retinadesktopmedium;;cq5dam-web-974-1218;1000;562]" />

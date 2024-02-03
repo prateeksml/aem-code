@@ -1,0 +1,15 @@
+<div data-sly-use.container="com.kpmg.core.models.HtmlContainer"
+     data-sly-use.template="core/wcm/components/commons/v1/templates.html"
+     data-sly-test=${container.htmlText}
+     id="${properties.anchorId}"
+     class="cmp-htmlcontainer"
+     data-cmp-data-layer="${container.data.json}">
+    <sly data-sly-list="${container.cssItems}">
+        <link data-sly-test="${item.cssPath}" rel="stylesheet" type="text/css" href="${item.cssPath}">
+    </sly>
+    ${container.htmlText @context='unsafe'}
+    <sly data-sly-list="${container.jsItems}">
+        <script data-sly-test="${item.jsPath}" type="text/javascript" src="${item.jsPath}"></script>
+    </sly>
+</div>
+<sly data-sly-call="${template.placeholder @ isEmpty=!container.htmlText, classAppend='cmp-html-container'}"></sly>

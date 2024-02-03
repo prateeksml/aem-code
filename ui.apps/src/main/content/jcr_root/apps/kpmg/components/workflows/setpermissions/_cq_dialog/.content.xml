@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Set Permission"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/tabs">
+        <items jcr:primaryType="nt:unstructured">
+            <Permissions
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Permissions"
+                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <text
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                composite="{Boolean}true"
+                                fieldDescription="Click &quot;Add&quot; to add more links"
+                                fieldLabel="Permissions">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    name="./text">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <jcrpath
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                    fieldLabel="JCR Path"
+                                                    name="./jcrpath"/>
+                                                <groups
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                    fieldLabel="Groups ">
+                                                    <field
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        name="./groups"/>
+                                                </groups>
+                                                <read
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                    name="./read"
+                                                    text="read"
+                                                    uncheckedValue="false"
+                                                    value="true"/>
+                                                <modify
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                    name="./modify"
+                                                    text="modify"
+                                                    uncheckedValue="false"
+                                                    value="true"/>
+                                                <create
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                    name="./create"
+                                                    text="create"
+                                                    uncheckedValue="false"
+                                                    value="true"/>
+                                                <delete
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                    name="./delete"
+                                                    text="delete"
+                                                    uncheckedValue="false"
+                                                    value="true"/>
+                                                <readACL
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                    name="./readACL"
+                                                    text="Read ACL"
+                                                    uncheckedValue="false"
+                                                    value="true"/>
+                                                <editACL
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                    name="./editACL"
+                                                    text="Edit ACL "
+                                                    uncheckedValue="false"
+                                                    value="true"/>
+                                                <replicate
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                    name="./replicate"
+                                                    text="replicate"
+                                                    uncheckedValue="false"
+                                                    value="true"/>
+                                            </items>
+                                        </column>
+                                    </items>
+                                </field>
+                            </text>
+                        </items>
+                    </column>
+                </items>
+            </Permissions>
+            <Xpath_x0020_Permissions
+                jcr:primaryType="nt:unstructured"
+                jcr:title="XPath Permissions"
+                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <xpath
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Enter XPath Query"
+                                fieldLabel="XPath Query"
+                                name="./xpath"/>
+                            <read
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                fieldLabel="read permission for xpath"
+                                name="./readXpath"
+                                text="read permission for xpath"
+                                uncheckedValue="false"
+                                value="true"/>
+                            <modify
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                fieldLabel="modify permission for xpath"
+                                name="./modifyXpath"
+                                text="modify permission for xpath"
+                                uncheckedValue="false"
+                                value="true"/>
+                            <create
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                fieldLabel="create permission for xpath"
+                                name="./createXpath"
+                                text="create permission for xpath"
+                                uncheckedValue="false"
+                                value="true"/>
+                            <delete
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                fieldLabel="delete permission for xpath"
+                                name="./deleteXpath"
+                                text="delete permission for xpath"
+                                uncheckedValue="false"
+                                value="true"/>
+                            <replicate
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                fieldLabel="replicate permission for xpath"
+                                name="./repXpath"
+                                text="replicate permission for xpath"
+                                uncheckedValue="false"
+                                value="true"/>
+                            <readACL
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                fieldLabel="Read ACL permission for xpath"
+                                name="./readACLXpath"
+                                text="Read ACL permission for xpath"
+                                uncheckedValue="false"
+                                value="true"/>
+                            <editACL
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                fieldLabel="Edit ACL permission for xpath"
+                                name="./editACLXpath"
+                                text="Edit ACL permission for xpath"
+                                uncheckedValue="false"
+                                value="true"/>
+                            <groups
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                fieldLabel="Groups for XPath">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                    name="./groups"/>
+                            </groups>
+                            <additionalAppend
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="This String will be appended to the results of the XPath query"
+                                fieldLabel="Additional String"
+                                name="./append"/>
+                        </items>
+                    </column>
+                </items>
+            </Xpath_x0020_Permissions>
+        </items>
+    </content>
+</jcr:root>

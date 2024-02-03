@@ -1,0 +1,2 @@
+#base=js
+filetype-validator.js

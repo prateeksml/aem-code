@@ -1,0 +1,17 @@
+<div data-sly-use.hero="com.kpmg.core.models.HeroContentStaticImageModel" data-sly-use.imageTemplate="image.html" class="cmp-hero-csi__main-container">
+	<div class="cmp-hero-csi__content-container">
+		<div data-sly-test="${'true' == hero.showbreadcrumb}"
+			data-sly-resource="${'./breadcrumb' @ resourceType='kpmg/components/content/breadcrumb'}"
+			class="cmp-hero-csi__breadcrumbs"></div>
+		<h1 data-sly-test="${hero.heroTitle}" class="cmp-hero-csi__title">${hero.heroTitle}</h1>
+		<div data-sly-test="${hero.heroTitle}"
+			class="cmp-hero-csi__description">${hero.heroDescription @
+			context='html'}</div>		
+		<div data-sly-test="${'true' == hero.showarticledate}" class="cmp-hero-csi__article-date">
+			<span class="material-icons-outlined"> event </span>
+			${hero.articlePublishedDate}
+		</div>		
+		<sly data-sly-test="${'true' == hero.enablesocialshare}" data-sly-resource="${'./share' @ resourceType='kpmg/components/content/social-share', wcmmode='disabled'}" />		
+	</div>
+	<sly data-sly-call="${imageTemplate.image @ hero=hero}" />
+</div>

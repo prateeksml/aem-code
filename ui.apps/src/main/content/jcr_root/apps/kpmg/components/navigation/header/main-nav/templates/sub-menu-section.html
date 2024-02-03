@@ -1,0 +1,38 @@
+<sly data-sly-template.subMenuSection="${@ subMenuSection, subMenuItem }">
+
+     <!--/* Set variables for determining if teriary or secondary*/-->
+     <sly data-sly-test.isSubMenuSecondary="${subMenuItem.secondary}" />
+     <sly data-sly-test.isSubMenuTertiary="${subMenuItem.tertiary}" />
+
+    <section class="cmp-sub-menu__section">
+
+        <sly data-sly-test="${subMenuItem.allLinks.htmlAttributes}">
+
+            <div class="cmp-sub-menu__section-link">
+                <!--/* Submenu Section Link */-->
+                <sly data-sly-use.subMenuLinkTemplate="templates/menu-link.html"
+                    data-sly-call="${subMenuLinkTemplate.link @ item=subMenuItem, hideIcon=true, isSubMenu=true }" />
+            </div>
+        </sly>
+
+        <div class="cmp-sub-menu__section-title" data-sly-test="${subMenuSection.title && isSubMenuTertiary}">
+            <div class="cmp-sub-menu__section-title--container">
+                <p>${subMenuSection.title}</p>
+            </div>
+        </div>
+
+        <nav aria-label="Sub Menu Navigation for ${subMenuSection.title}" class="cmp-sub-menu__section-nav">
+
+            <!--/* Determine which items will build this list */-->
+            <sly data-sly-test="${isSubMenuSecondary}" data-sly-test.subMenuSectionItems="${subMenuItem.items}" />
+            <sly data-sly-test="${isSubMenuTertiary}" data-sly-test.subMenuSectionItems="${subMenuSection.items}" />
+
+            <ul data-sly-list.subMenuSectionItem="${subMenuSectionItems}">
+                <li>
+                    <sly data-sly-use.menuLinkTemplate="templates/menu-link.html"
+                        data-sly-call="${menuLinkTemplate.link @ item=subMenuSectionItem, hideIcon=true, isSectionNav=true }" />
+                </li>
+            </ul>
+        </nav>
+    </section>
+</sly>

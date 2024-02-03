@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2023-09-21T14:30:52.918Z"
+        cq:lastModifiedBy="mommymukherjee@kpmg.com"
+        cq:template="/conf/kpmg/settings/wcm/templates/page-home"
+        jcr:primaryType="cq:PageContent"
+        sling:resourceType="kpmg/components/structure/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="kpmg/components/container/container"
+            layout="responsiveGrid">
+            <hero_fbv
+                cq:styleIds="[1689274232919,1689293530037]"
+                jcr:description="&lt;p>Lorem ipsum dolor sit amet consectetur. Quam diam auctor lectus nunc euismod nunc. Vivamus netus eget lectus at.&lt;/p>&#xd;&#xa;"
+                jcr:lastModified="{Date}2023-09-21T11:38:01.702Z"
+                jcr:lastModifiedBy="mommymukherjee@kpmg.com"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Let’s uncover  a world of opportunity together"
+                sling:resourceType="kpmg/components/content/hero-fbv"
+                alt="Alt"
+                altValueFromDAM="false"
+                descriptionFromPage="false"
+                fileReference="/content/dam/kpmgsites/ch/images/steve-home/mary/Homepage_Hero.png"
+                imageFromPageImage="false"
+                isDecorative="false"
+                selectBackground="image"
+                textIsRich="true"
+                titleFromPage="false">
+                <actions jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        link="#"
+                        linkTarget="_self"
+                        text="Learn more"/>
+                </actions>
+            </hero_fbv>
+            <main
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="kpmg/components/container/main"
+                layout="simple">
+                <section_1344091979
+                    cq:styleIds="[1685975467587]"
+                    jcr:lastModified="{Date}2023-08-21T12:00:02.470Z"
+                    jcr:lastModifiedBy="mommymukherjee@kpmg.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="kpmg/components/container/section">
+                    <section_header_image
+                        cq:styleIds="[1692732745668]"
+                        jcr:created="{Date}2023-09-21T11:58:12.572Z"
+                        jcr:createdBy="mommymukherjee@kpmg.com"
+                        jcr:lastModified="{Date}2023-09-21T12:01:10.447Z"
+                        jcr:lastModifiedBy="mommymukherjee@kpmg.com"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="What sets us apart"
+                        sling:resourceType="kpmg/components/content/section-header-image"
+                        alt="Alt"
+                        altValueFromDAM="false"
+                        fileReference="/content/dam/kpmgsites/ch/images/steve-home/mary/Homepage_What sets us apart.png"
+                        imageFromPageImage="false"
+                        isDecorative="false"
+                        searchIndexable="true"
+                        titleFromPage="false"/>
+                </section_1344091979>
+                <section
+                    cq:styleIds="[1685975467587]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="kpmg/components/container/section"
+                    layout="simple">
+                    <container
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="kpmg/components/container/container">
+                        <columncontrol
+                            cq:styleIds="[1685990641758,1692290827161]"
+                            jcr:created="{Date}2023-09-21T12:05:11.400Z"
+                            jcr:createdBy="mommymukherjee@kpmg.com"
+                            jcr:lastModified="{Date}2023-09-21T12:05:22.066Z"
+                            jcr:lastModifiedBy="mommymukherjee@kpmg.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="kpmg/components/container/columncontrol"
+                            columnWidth="oneEven">
+                            <container-1
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="kpmg/components/container/columncontrol/column">
+                                <title
+                                    jcr:created="{Date}2023-09-21T12:05:49.680Z"
+                                    jcr:createdBy="mommymukherjee@kpmg.com"
+                                    jcr:lastModified="{Date}2023-09-21T12:07:07.639Z"
+                                    jcr:lastModifiedBy="mommymukherjee@kpmg.com"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Unique approach with driven success"
+                                    sling:resourceType="kpmg/components/content/title"
+                                    searchIndexable="true"
+                                    type="h2"/>
+                            </container-1>
+                        </columncontrol>
+                        <columncontrol_734178043
+                            cq:styleIds="[1685990641758,1692290827161]"
+                            jcr:created="{Date}2023-09-21T12:07:53.414Z"
+                            jcr:createdBy="mommymukherjee@kpmg.com"
+                            jcr:lastModified="{Date}2023-09-21T12:08:06.186Z"
+                            jcr:lastModifiedBy="mommymukherjee@kpmg.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="kpmg/components/container/columncontrol"
+                            columnWidth="twoEven">
+                            <container-1
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="kpmg/components/container/columncontrol/column">
+                                <text
+                                    jcr:created="{Date}2023-09-21T12:09:00.161Z"
+                                    jcr:createdBy="mommymukherjee@kpmg.com"
+                                    jcr:lastModified="{Date}2023-09-21T13:40:30.109Z"
+                                    jcr:lastModifiedBy="mommymukherjee@kpmg.com"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="kpmg/components/content/text"
+                                    searchIndexable="true"
+                                    text="&lt;p style=&quot;&#x9;text-align: left;&#xd;&#xa;&quot;>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ornare sem ut imperdiet dapibus. Pellentesque sit amet mi nec lectus pretium scelerisque. Sed a viverra.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <button
+                                    cq:styleIds="[1681328223694]"
+                                    jcr:created="{Date}2023-09-21T12:15:49.949Z"
+                                    jcr:createdBy="mommymukherjee@kpmg.com"
+                                    jcr:lastModified="{Date}2023-09-21T12:40:28.597Z"
+                                    jcr:lastModifiedBy="mommymukherjee@kpmg.com"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Learn more"
+                                    sling:resourceType="kpmg/components/content/button"
+                                    linkTarget="_self"
+                                    linkURL="#"/>
+                            </container-1>
+                            <container-2
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="kpmg/components/container/columncontrol/column">
+                                <text
+                                    jcr:created="{Date}2023-09-21T12:09:08.252Z"
+                                    jcr:createdBy="mommymukherjee@kpmg.com"
+                                    jcr:lastModified="{Date}2023-09-21T13:41:22.661Z"
+                                    jcr:lastModifiedBy="mommymukherjee@kpmg.com"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="kpmg/components/content/text"
+                                    searchIndexable="true"
+                                    text="&lt;p>Consectetur adipiscing elit. Ut ornare sem ut imperdiet dapibus. Pellentesque sit amet mi nec lectus pretium scelerisque. Sed a viverra augue. Lorem ipsum dolor sit.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </container-2>
+                        </columncontrol_734178043>
+                    </container>
+                </section>
+                <section_copy
+                    cq:styleIds="[1685836502714]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="kpmg/components/container/section"
+                    layout="simple">
+                    <sectionheader_1
+	                        jcr:lastModified="{Date}2023-09-22T14:26:21.006+05:30"
+	                        jcr:lastModifiedBy="mommymukherjee@kpmg.com"
+	                        jcr:primaryType="nt:unstructured"
+	                        sling:resourceType="kpmg/components/content/sectionheader"
+	                        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ornare sem ut imperdiet dapibus."
+	                        searchIndexable="true"
+	                        title="Explore our expertise"/>
+                    <columncontrol_146442981
+                        jcr:created="{Date}2023-09-21T13:54:17.320Z"
+                        jcr:createdBy="mommymukherjee@kpmg.com"
+                        jcr:lastModified="{Date}2023-09-21T13:54:25.585Z"
+                        jcr:lastModifiedBy="mommymukherjee@kpmg.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="kpmg/components/container/columncontrol"
+                        columnWidth="twoEven">
+                        <container-1
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="kpmg/components/container/columncontrol/column">
+                            <image
+                                jcr:created="{Date}2023-09-21T13:54:33.248Z"
+                                jcr:createdBy="mommymukherjee@kpmg.com"
+                                jcr:lastModified="{Date}2023-09-21T13:55:59.905Z"
+                                jcr:lastModifiedBy="mommymukherjee@kpmg.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="kpmg/components/content/image"
+                                alt="Alt"
+                                altValueFromDAM="false"
+                                displayPopupTitle="true"
+                                dmPresetType="imagePreset"
+                                fileReference="/content/dam/kpmgsites/ch/images/steve-home/mary/Homepage_Explore our expertise.png"
+                                imageFromPageImage="false"
+                                isDecorative="false"
+                                linkTarget="_self"
+                                titleValueFromDAM="true"/>
+                        </container-1>
+                        <container-2
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="kpmg/components/container/columncontrol/column">
+                            <accordion
+                                jcr:created="{Date}2023-09-21T13:56:08.661Z"
+                                jcr:createdBy="mommymukherjee@kpmg.com"
+                                jcr:lastModified="{Date}2023-09-21T14:12:01.760Z"
+                                jcr:lastModifiedBy="mommymukherjee@kpmg.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="kpmg/components/content/accordion"
+                                expandedItems="[item_2]"
+                                searchIndexable="true"
+                                singleExpansion="false">
+                                <item_1
+                                    cq:panelTitle="ESG Assurance &amp; Reporting"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Item 1"
+                                    sling:resourceType="kpmg/components/container/container"
+                                    layout="responsiveGrid">
+                                    <title
+                                        jcr:created="{Date}2023-09-21T14:02:40.797Z"
+                                        jcr:createdBy="mommymukherjee@kpmg.com"
+                                        jcr:lastModified="{Date}2023-09-21T14:17:12.707Z"
+                                        jcr:lastModifiedBy="mommymukherjee@kpmg.com"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Lorem Ipsum"
+                                        sling:resourceType="kpmg/components/content/title"
+                                        searchIndexable="true"
+                                        type="h4"/>
+                                    <text
+                                        jcr:created="{Date}2023-09-21T14:02:48.825Z"
+                                        jcr:createdBy="mommymukherjee@kpmg.com"
+                                        jcr:lastModified="{Date}2023-09-21T14:03:47.993Z"
+                                        jcr:lastModifiedBy="mommymukherjee@kpmg.com"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="kpmg/components/content/text"
+                                        searchIndexable="true"
+                                        text="&lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Malesuada tristique venenatis pulvinar vestibulum ut et. Ut feugiat velit at purus, congue a ultrices varius. Turpis varius enim mollis scelerisque eget.&lt;/p>&#xd;&#xa;"
+                                        textIsRich="true"/>
+                                    <button
+                                        cq:styleIds="[1681240737516,1681328200520]"
+                                        jcr:created="{Date}2023-09-21T14:02:55.480Z"
+                                        jcr:createdBy="mommymukherjee@kpmg.com"
+                                        jcr:lastModified="{Date}2023-09-21T14:04:30.089Z"
+                                        jcr:lastModifiedBy="mommymukherjee@kpmg.com"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Button"
+                                        sling:resourceType="kpmg/components/content/button"
+                                        linkTarget="_self"
+                                        linkURL="#"/>
+                                </item_1>
+                                <item_2
+                                    cq:panelTitle="Global Mobility"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Item 2"
+                                    sling:resourceType="kpmg/components/container/container"
+                                    layout="responsiveGrid">
+                                    <title
+                                        jcr:created="{Date}2023-09-21T14:02:40.797Z"
+                                        jcr:createdBy="mommymukherjee@kpmg.com"
+                                        jcr:lastModified="{Date}2023-09-21T14:17:26.072Z"
+                                        jcr:lastModifiedBy="mommymukherjee@kpmg.com"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Lorem Ipsum"
+                                        sling:resourceType="kpmg/components/content/title"
+                                        searchIndexable="true"
+                                        type="h4"/>
+                                    <text
+                                        jcr:created="{Date}2023-09-21T14:02:48.825Z"
+                                        jcr:createdBy="mommymukherjee@kpmg.com"
+                                        jcr:lastModified="{Date}2023-09-21T14:03:47.993Z"
+                                        jcr:lastModifiedBy="mommymukherjee@kpmg.com"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="kpmg/components/content/text"
+                                        searchIndexable="true"
+                                        text="&lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Malesuada tristique venenatis pulvinar vestibulum ut et. Ut feugiat velit at purus, congue a ultrices varius. Turpis varius enim mollis scelerisque eget.&lt;/p>&#xd;&#xa;"
+                                        textIsRich="true"/>
+                                    <button
+                                        cq:styleIds="[1681240737516,1681328200520]"
+                                        jcr:created="{Date}2023-09-21T14:02:55.480Z"
+                                        jcr:createdBy="mommymukherjee@kpmg.com"
+                                        jcr:lastModified="{Date}2023-09-21T14:04:30.089Z"
+                                        jcr:lastModifiedBy="mommymukherjee@kpmg.com"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Button"
+                                        sling:resourceType="kpmg/components/content/button"
+                                        linkTarget="_self"
+                                        linkURL="#"/>
+                                </item_2>
+                                <item_3
+                                    cq:panelTitle="M&amp;A Tax"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Item 2"
+                                    sling:resourceType="kpmg/components/container/container"
+                                    layout="responsiveGrid">
+                                    <title
+                                        jcr:created="{Date}2023-09-21T14:02:40.797Z"
+                                        jcr:createdBy="mommymukherjee@kpmg.com"
+                                        jcr:lastModified="{Date}2023-09-21T14:17:37.099Z"
+                                        jcr:lastModifiedBy="mommymukherjee@kpmg.com"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Lorem Ipsum"
+                                        sling:resourceType="kpmg/components/content/title"
+                                        searchIndexable="true"
+                                        type="h4"/>
+                                    <text
+                                        jcr:created="{Date}2023-09-21T14:02:48.825Z"
+                                        jcr:createdBy="mommymukherjee@kpmg.com"
+                                        jcr:lastModified="{Date}2023-09-21T14:03:47.993Z"
+                                        jcr:lastModifiedBy="mommymukherjee@kpmg.com"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="kpmg/components/content/text"
+                                        searchIndexable="true"
+                                        text="&lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Malesuada tristique venenatis pulvinar vestibulum ut et. Ut feugiat velit at purus, congue a ultrices varius. Turpis varius enim mollis scelerisque eget.&lt;/p>&#xd;&#xa;"
+                                        textIsRich="true"/>
+                                    <button
+                                        cq:styleIds="[1681240737516,1681328200520]"
+                                        jcr:created="{Date}2023-09-21T14:02:55.480Z"
+                                        jcr:createdBy="mommymukherjee@kpmg.com"
+                                        jcr:lastModified="{Date}2023-09-21T14:04:30.089Z"
+                                        jcr:lastModifiedBy="mommymukherjee@kpmg.com"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Button"
+                                        sling:resourceType="kpmg/components/content/button"
+                                        linkTarget="_self"
+                                        linkURL="#"/>
+                                </item_3>
+                                <item_4
+                                    cq:panelTitle="State and Local Tax"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Item 2"
+                                    sling:resourceType="kpmg/components/container/container"
+                                    layout="responsiveGrid">
+                                    <title
+                                        jcr:created="{Date}2023-09-21T14:02:40.797Z"
+                                        jcr:createdBy="mommymukherjee@kpmg.com"
+                                        jcr:lastModified="{Date}2023-09-21T14:17:47.594Z"
+                                        jcr:lastModifiedBy="mommymukherjee@kpmg.com"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Lorem Ipsum"
+                                        sling:resourceType="kpmg/components/content/title"
+                                        searchIndexable="true"
+                                        type="h4"/>
+                                    <text
+                                        jcr:created="{Date}2023-09-21T14:02:48.825Z"
+                                        jcr:createdBy="mommymukherjee@kpmg.com"
+                                        jcr:lastModified="{Date}2023-09-21T14:03:47.993Z"
+                                        jcr:lastModifiedBy="mommymukherjee@kpmg.com"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="kpmg/components/content/text"
+                                        searchIndexable="true"
+                                        text="&lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Malesuada tristique venenatis pulvinar vestibulum ut et. Ut feugiat velit at purus, congue a ultrices varius. Turpis varius enim mollis scelerisque eget.&lt;/p>&#xd;&#xa;"
+                                        textIsRich="true"/>
+                                    <button
+                                        cq:styleIds="[1681240737516,1681328200520]"
+                                        jcr:created="{Date}2023-09-21T14:02:55.480Z"
+                                        jcr:createdBy="mommymukherjee@kpmg.com"
+                                        jcr:lastModified="{Date}2023-09-21T14:04:30.089Z"
+                                        jcr:lastModifiedBy="mommymukherjee@kpmg.com"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Button"
+                                        sling:resourceType="kpmg/components/content/button"
+                                        linkTarget="_self"
+                                        linkURL="#"/>
+                                </item_4>
+                            </accordion>
+                        </container-2>
+                    </columncontrol_146442981>
+                </section_copy>
+                <section_245363733
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="kpmg/components/container/section">
+                    <sectionheader_2
+	                        jcr:lastModified="{Date}2023-09-22T14:26:21.006+05:30"
+	                        jcr:lastModifiedBy="mommymukherjee@kpmg.com"
+	                        jcr:primaryType="nt:unstructured"
+	                        sling:resourceType="kpmg/components/content/sectionheader"
+	                        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ornare sem ut imperdiet dapibus."
+	                        searchIndexable="true"
+	                        title="See what our clients have to say"/>
+                </section_245363733>
+                <engagementpromo
+                    cq:styleIds="[1688689275023]"
+                    jcr:description="&lt;p>Lorem ipsum dolor sit amet consectetur. Montes sed leo dui orci massa risus. Sed consectetur semper nunc.&lt;/p>&#xd;&#xa;"
+                    jcr:lastModified="{Date}2023-09-21T14:30:52.910Z"
+                    jcr:lastModifiedBy="mommymukherjee@kpmg.com"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Submit RFP"
+                    sling:resourceType="kpmg/components/content/engagementpromo"
+                    alt="Alt"
+                    altValueFromDAM="false"
+                    descriptionFromPage="false"
+                    dmPresetType="imagePreset"
+                    fileReference="/content/dam/kpmgsites/ch/images/steve-home/mary/Homepage_See what our clients have to say.png"
+                    imageFromPageImage="false"
+                    isDecorative="false"
+                    searchIndexable="true"
+                    textIsRich="true"
+                    titleFromPage="false">
+                    <actions jcr:primaryType="nt:unstructured">
+                        <item0
+                            jcr:primaryType="nt:unstructured"
+                            link="#"
+                            linkTarget="_self"
+                            text="Contact Us"/>
+                    </actions>
+                </engagementpromo>
+                <section_463746824
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="kpmg/components/container/section">
+                    <sectionheader_3
+	                        jcr:lastModified="{Date}2023-09-22T14:26:21.006+05:30"
+	                        jcr:lastModifiedBy="mommymukherjee@kpmg.com"
+	                        jcr:primaryType="nt:unstructured"
+	                        sling:resourceType="kpmg/components/content/sectionheader"
+	                        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ornare sem ut imperdiet dapibus."
+	                        searchIndexable="true"
+	                        title="Core expertise areas"/>
+                    <teaserbox
+                            jcr:created="{Date}2023-09-14T12:43:56.993Z"
+                            jcr:createdBy="mommymukherjee@kpmg.com"
+                            jcr:lastModified="{Date}2023-09-14T12:46:36.612Z"
+                            jcr:lastModifiedBy="mommymukherjee@kpmg.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="kpmg/components/container/teaserbox"
+                            columnWidth="threeEven">
+                            <container-1
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="kpmg/components/container/teaserbox/container">
+                                <topicteaser
+                                    jcr:created="{Date}2023-09-14T12:46:42.976Z"
+                                    jcr:createdBy="mommymukherjee@kpmg.com"
+                                    jcr:description="&lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p>&#xd;&#xa;"
+                                    jcr:lastModified="{Date}2023-09-14T14:18:43.142Z"
+                                    jcr:lastModifiedBy="mommymukherjee@kpmg.com"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Title"
+                                    sling:resourceType="kpmg/components/content/topicteaser"
+                                    alt="Alt Text"
+                                    altValueFromDAM="false"
+                                    descriptionFromPage="false"
+                                    dmPresetType="imagePreset"
+                                    eyebrowType="materialEyebrow"
+                                    fileReference="/content/dam/kpmgsites/ch/images/steve-home/mary/Homepage_Core expertise areas.png"
+                                    iconType="materialIcon"
+                                    imageFromPageImage="false"
+                                    isDecorative="false"
+                                    textIsRich="true"
+                                    titleFromPage="false">
+                                    <actions jcr:primaryType="nt:unstructured">
+                                        <item0
+                                            jcr:primaryType="nt:unstructured"
+                                            link="#"
+                                            linkTarget="_self"
+                                            text="Read More"/>
+                                    </actions>
+                                </topicteaser>
+                            </container-1>
+                            <container-2
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="kpmg/components/container/teaserbox/container">
+                                <topicteaser_copy
+                                    jcr:created="{Date}2023-09-14T12:46:42.976Z"
+                                    jcr:createdBy="mommymukherjee@kpmg.com"
+                                    jcr:description="&lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p>&#xd;&#xa;"
+                                    jcr:lastModified="{Date}2023-09-14T14:18:58.725Z"
+                                    jcr:lastModifiedBy="mommymukherjee@kpmg.com"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Title"
+                                    sling:resourceType="kpmg/components/content/topicteaser"
+                                    alt="Alt Text"
+                                    altValueFromDAM="false"
+                                    descriptionFromPage="false"
+                                    dmPresetType="imagePreset"
+                                    eyebrowType="materialEyebrow"
+                                    fileReference="/content/dam/kpmgsites/ch/images/steve-home/mary/Homepage_Hero.png"
+                                    iconType="materialIcon"
+                                    imageFromPageImage="false"
+                                    isDecorative="false"
+                                    textIsRich="true"
+                                    titleFromPage="false">
+                                    <actions jcr:primaryType="nt:unstructured">
+                                        <item0
+                                            jcr:primaryType="nt:unstructured"
+                                            link="#"
+                                            linkTarget="_self"
+                                            text="Read More"/>
+                                    </actions>
+                                </topicteaser_copy>
+                                <topicteaser
+                                    jcr:created="{Date}2023-09-14T12:46:48.207Z"
+                                    jcr:createdBy="mommymukherjee@kpmg.com"
+                                    jcr:lastModified="{Date}2023-09-14T12:46:48.207Z"
+                                    jcr:lastModifiedBy="mommymukherjee@kpmg.com"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="kpmg/components/content/topicteaser"/>
+                            </container-2>
+                            <container-3
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="kpmg/components/container/teaserbox/container">
+                                <topicteaser_copy
+                                    jcr:created="{Date}2023-09-14T12:46:42.976Z"
+                                    jcr:createdBy="mommymukherjee@kpmg.com"
+                                    jcr:description="&lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p>&#xd;&#xa;"
+                                    jcr:lastModified="{Date}2023-09-14T14:19:53.959Z"
+                                    jcr:lastModifiedBy="mommymukherjee@kpmg.com"
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Title"
+                                    sling:resourceType="kpmg/components/content/topicteaser"
+                                    alt="Alt Text"
+                                    altValueFromDAM="false"
+                                    descriptionFromPage="false"
+                                    dmPresetType="imagePreset"
+                                    eyebrowType="materialEyebrow"
+                                    fileReference="/content/dam/kpmgsites/ch/images/steve-home/mary/Homepage_What sets us apart.png"
+                                    iconType="materialIcon"
+                                    imageFromPageImage="false"
+                                    isDecorative="false"
+                                    textIsRich="true"
+                                    titleFromPage="false">
+                                    <actions jcr:primaryType="nt:unstructured">
+                                        <item0
+                                            jcr:primaryType="nt:unstructured"
+                                            link="#"
+                                            linkTarget="_self"
+                                            text="Read More"/>
+                                    </actions>
+                                </topicteaser_copy>
+                                <topicteaser
+                                    jcr:created="{Date}2023-09-14T12:46:53.468Z"
+                                    jcr:createdBy="mommymukherjee@kpmg.com"
+                                    jcr:lastModified="{Date}2023-09-14T12:46:53.468Z"
+                                    jcr:lastModifiedBy="mommymukherjee@kpmg.com"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="kpmg/components/content/topicteaser"/>
+                            </container-3>
+                        </teaserbox>
+                </section_463746824>
+            </main>
+        </root>
+    </jcr:content>
+</jcr:root>

@@ -1,0 +1,72 @@
+$parent: ".cmp-main-nav";
+
+#{$parent} {
+  $menu-max-width: $global-width-full;
+  $menu-border-color: $global-color-strokes-cobalt-blue-20-percent;
+  $nav-link-padding: $alias-padding-medium;
+  $mobile-close-size: $global-size-3;
+  $fade-speed: 0.3s;
+  $icon-size: $global-size-15;
+
+  //Default Mobile Styling
+  @include fade-out($fade-speed);
+  background-color: $global-color-brand-kpmg-blue;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: $menu-max-width;
+  height: 100%;
+  z-index: 99;
+  display: none;
+
+  @include desktop-medium {
+    @include fade-in(0s);
+    @include display-flex-align-center;
+    position: initial;
+    background-color: transparent;
+  }
+
+  &--open {
+    @include fade-in($fade-speed);
+    display: block;
+    z-index: 2;
+  }
+
+  //MAIN MENU
+  &__main-menu {
+    @include normalize-style;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+
+    @include desktop-medium {
+      flex-direction: initial;
+    }
+  }
+
+  //MOBILE HEADER
+  &__mobile-header {
+    @include normalize-style;
+    @include display-flex-align-center;
+    justify-content: space-between;
+    border-bottom: 1px solid $global-color-strokes-cobalt-blue-20-percent;
+    z-index: 999;
+
+    @include desktop-medium {
+      display: none;
+    }
+
+    &-close {
+      padding: $alias-padding-small;
+      background-color: transparent;
+      border: none;
+      color: $global-color-brand-white;
+      cursor: pointer;
+
+      span {
+        font-size: $icon-size;
+        vertical-align: middle;
+      }
+    }
+  }
+}

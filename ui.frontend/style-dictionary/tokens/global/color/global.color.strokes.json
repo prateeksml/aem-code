@@ -1,0 +1,36 @@
+{
+  "global": {
+    "color": {
+      "strokes": {
+        "cobalt-blue": {
+          "20-percent": {
+            "value": "rgba(30, 73, 226, 0.2)",
+            "comment": "with Opacity"
+          },
+          "20-hex": {
+            "value": "#CDDCFE"
+          }
+        },
+        "white": {
+          "20-percent": {
+            "value": "rgba(255, 255, 255, 0.2)",
+            "comment": "with Opacity"
+          },
+          "25-percent": {
+            "value": "rgba(255, 255, 255, 0.25)",
+            "comment": "with Opacity"
+          }
+        },
+        "pink": {
+          "20-percent": {
+            "value": "rgba(236, 111, 145, 0.2)",
+            "comment": "with Opacity"
+          },
+          "20-hex": {
+            "value": "#FBE2E9"
+          }
+        }
+      }
+    }
+  }
+}

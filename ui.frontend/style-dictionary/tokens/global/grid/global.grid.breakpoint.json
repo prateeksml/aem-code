@@ -1,0 +1,24 @@
+{
+  "global": {
+    "grid": {
+      "breakpoint": {
+        "small": {
+          "value": "360px",
+          "comment": "Mobile Viewport"
+        },
+        "medium": {
+          "value": "768px",
+          "comment": "Tablet Viewport"
+        },
+        "large": {
+          "value": "1024px",
+          "comment": "Desktop Small Viewport"
+        },
+        "x-large": {
+          "value": "1366px",
+          "comment": "Desktop Medium Viewport"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+<sly
+    data-sly-use.template="core/wcm/components/commons/v1/templates.html"
+    data-sly-test.columnType="${properties.columnWidth}"
+    data-sly-use.containerTemplate="columnwidth.html"
+    class="cmp-columncontrol">
+
+    <sly data-sly-test="${properties.columnWidth=='oneEven'}" data-sly-call="${containerTemplate.row @modifier=properties.columnWidth, columns=[1]}" />
+    <sly data-sly-test="${properties.columnWidth=='twoEven'}" data-sly-call="${containerTemplate.row @modifier=properties.columnWidth, columns=[1,2]}" />
+    <sly data-sly-test="${properties.columnWidth=='threeUnEven'}" data-sly-call="${containerTemplate.row @modifier=properties.columnWidth, columns=[1,2,3]}" />
+    <sly data-sly-test="${properties.columnWidth=='threeUnEvenReverse'}" data-sly-call="${containerTemplate.row @modifier=properties.columnWidth, columns=[1,2,3]}" />
+    <sly data-sly-test="${properties.columnWidth=='fourEven'}" data-sly-call="${containerTemplate.row @modifier=properties.columnWidth, columns=[1]}" />
+    <sly data-sly-test="${properties.columnWidth=='threeEven'}" data-sly-call="${containerTemplate.row @modifier=properties.columnWidth, columns=[1]}" />
+
+</sly>
+<sly data-sly-call="${template.placeholder @ isEmpty=!columnType, classAppend='cmp-columncontrol'}"></sly>
+

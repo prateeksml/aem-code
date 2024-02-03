@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:isDelivered="{Boolean}true"
+        cq:isTransCreated="{Boolean}true"
+        cq:lastModified="{Date}2023-06-07T10:20:56.595Z"
+        cq:lastModifiedBy="vsa@adobe.com"
+        cq:lastReplicated_publish="{Date}2023-06-01T11:13:30.685Z"
+        cq:lastReplicated_scene7="{Date}2023-06-01T11:13:30.685Z"
+        cq:lastReplicatedBy_publish="tec04532@adobe.com"
+        cq:lastReplicatedBy_scene7="tec04532@adobe.com"
+        cq:lastReplicationAction_publish="Activate"
+        cq:lastReplicationAction_scene7="Activate"
+        cq:lastRolledout="{Date}2023-06-07T10:20:56.604Z"
+        cq:lastRolledoutBy="vsa@adobe.com"
+        cq:lastTranslationUpdate="{Date}2023-06-07T09:47:04.878Z"
+        cq:tags="[]"
+        cq:template="/libs/cq/experience-fragments/components/experiencefragment/template"
+        cq:translationSourcePath="/content/experience-fragments/kpmgpublic/language-masters/en/site/footer"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[cq:LiveRelationship,cq:LiveSync,mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Footer"
+        jcr:uuid="4b57ad66-f42b-496c-9282-3413de765f86"
+        sling:resourceType="cq/experience-fragments/components/experiencefragment">
+        <cq:LiveSyncConfig
+            cq:isDeep="{Boolean}true"
+            cq:master="/content/experience-fragments/kpmgpublic/language-masters/fr/site/footer"
+            cq:rolloutConfigs="[/libs/msm/wcm/rolloutconfigs/default]"
+            jcr:primaryType="cq:LiveCopy"/>
+    </jcr:content>
+    <master/>
+</jcr:root>

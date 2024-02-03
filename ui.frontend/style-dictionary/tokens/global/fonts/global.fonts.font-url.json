@@ -1,0 +1,78 @@
+{
+  "global": {
+    "fonts": {
+      "font-url": {
+        "opensans": {
+          "regular": {
+            "woff2": {
+              "value": "\"/etc.clientlibs/kpmg/clientlibs/clientlib-site/resources/fonts/OpenSans/OpenSans-Regular.woff2\""
+            }
+          },
+          "semibold": {
+            "woff2": {
+              "value": "\"/etc.clientlibs/kpmg/clientlibs/clientlib-site/resources/fonts/OpenSans/OpenSans-SemiBold.woff2\""
+            }
+          },
+          "bold": {
+            "woff2": {
+              "value": "\"/etc.clientlibs/kpmg/clientlibs/clientlib-site/resources/fonts/OpenSans/OpenSans-Bold.woff2\""
+            }
+          }
+        },
+        "opensans-condensed": {
+          "regular": {
+            "woff2": {
+              "value": "\"/etc.clientlibs/kpmg/clientlibs/clientlib-site/resources/fonts/OpenSans_Condensed/OpenSans_Condensed-Regular.woff2\""
+            }
+          },
+          "bold": {
+            "woff2": {
+              "value": "\"/etc.clientlibs/kpmg/clientlibs/clientlib-site/resources/fonts/OpenSans_Condensed/OpenSans_Condensed-Bold.woff2\""
+            }
+          }
+        },
+        "materialicons": {
+          "filled": {
+            "woff2": {
+              "value": "\"/etc.clientlibs/kpmg/clientlibs/clientlib-site/resources/fonts/Material_Icons/MaterialIcons-Regular.woff2\""
+            }
+          },
+          "outlined": {
+            "woff2": {
+              "value": "\"/etc.clientlibs/kpmg/clientlibs/clientlib-site/resources/fonts/Material_Icons/MaterialIconsOutlined-Regular.woff2\""
+            }
+          },
+          "round": {
+            "woff2": {
+              "value": "\"/etc.clientlibs/kpmg/clientlibs/clientlib-site/resources/fonts/Material_Icons/MaterialIconsRound-Regular.woff2\""
+            }
+          },
+          "sharp": {
+            "woff2": {
+              "value": "\"/etc.clientlibs/kpmg/clientlibs/clientlib-site/resources/fonts/Material_Icons/MaterialIconsSharp-Regular.woff2\""
+            }
+          },
+          "two-tone": {
+            "woff2": {
+              "value": "\"/etc.clientlibs/kpmg/clientlibs/clientlib-site/resources/fonts/Material_Icons/MaterialIconsTwoTone-Regular.woff2\""
+            }
+          }
+        },
+        "icomoonicons": {
+          "eot": {
+            "value": "\"/etc.clientlibs/kpmg/clientlibs/clientlib-site/resources/fonts/Icomoon_Icons/icomoon.eot\""
+          },
+          "svg": {
+            "value": "\"/etc.clientlibs/kpmg/clientlibs/clientlib-site/resources/fonts/Icomoon_Icons/icomoon.svg\""
+          },
+          "ttf": {
+            "value": "\"/etc.clientlibs/kpmg/clientlibs/clientlib-site/resources/fonts/Icomoon_Icons/icomoon.ttf\""
+          },
+          "woff": {
+            "value": "\"/etc.clientlibs/kpmg/clientlibs/clientlib-site/resources/fonts/Icomoon_Icons/icomoon.woff\""
+          }
+        }
+      }
+    }
+  }
+}

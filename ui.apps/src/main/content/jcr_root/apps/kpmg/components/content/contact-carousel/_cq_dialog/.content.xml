@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Contact Card Carousel">
+    <content jcr:primaryType="nt:unstructured">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs jcr:primaryType="nt:unstructured">
+                <items jcr:primaryType="nt:unstructured">
+                    <containerItems jcr:primaryType="nt:unstructured">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns jcr:primaryType="nt:unstructured">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column jcr:primaryType="nt:unstructured">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <alertMessage
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Adding more than 9 cards is NOT ADVISED."
+                                                sling:orderBefore="containerItems"
+                                                sling:resourceType="granite/ui/components/coral/foundation/alert"
+                                                text="We recommend no more than 9 cards in a carousel as users will lose interest with a large number of carousel items and subsequently the cards at the end may not see much engagement"
+                                                variant="warning"/>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </containerItems>
+                    <properties
+                        jcr:primaryType="nt:unstructured"
+                        sling:hideResource="{Boolean}true"
+                        why="We are not using values from properties tab anywhere in the custom component. Hence QA asked to hide Properties tab from dialog."/>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

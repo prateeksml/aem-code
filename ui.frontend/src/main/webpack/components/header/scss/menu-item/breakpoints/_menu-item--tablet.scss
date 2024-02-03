@@ -1,0 +1,6 @@
+@include tablet {
+  $parent: ".cmp-menu-item";
+  #{$parent} {
+    @include menu-item-tablet;
+  }
+}

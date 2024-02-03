@@ -1,0 +1,7 @@
+subject=${subject}
+
+message=A new user ${newuser} has been created, please give the required permissions to that user.
+
+footer=\n \
+-------------------------------------------------------------------------------------\n \
+This is an automatically generated message. Please do not reply.

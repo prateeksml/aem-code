@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Industry and Service Grid"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    extraClientlibs="[cq.author.pathfield,kpmg.components.multifield.showhide,kpmg.linkedpage.validation]">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <properties
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Properties"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <expandView
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                checked="{Boolean}false"
+                                                fieldLabel="Expand/Collapse View"
+                                                name="./expandView"
+                                                text="Enable expand/collapse grid view"
+                                                uncheckedValue="false"
+                                                value="true"/>
+                                            <seeAll
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                emptyText="See all"
+                                                name="./seeAll"/>
+                                            <seeLess
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                emptyText="See less"
+                                                name="./seeLess"/>
+                                            <readMore
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                emptyText="Read More"
+                                                name="./readMore"/>
+                                            <id
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="HTML ID attribute to apply to the component."
+                                                fieldLabel="ID"
+                                                name="./id"
+                                                validation="html-unique-id-validator"/>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </properties>
+                     <data
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Items"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <dataEntryType
+                                jcr:primaryType="nt:unstructured"
+                                granite:class="cq-dialog-dropdown-showhide"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                emptyText="Select Data Population Approach"
+                                fieldDescription="Please choose type by which data can be entered."
+                                fieldLabel="Choose Data Entry Type"
+                                name="./dataEntryType">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <manual
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Manual"
+                                        value="manual"/>
+                                    <automated
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Automated"
+                                        value="automated"/>
+                                </items>
+                                 <granite:data
+                                    jcr:primaryType="nt:unstructured"
+                                    cq-dialog-dropdown-showhide-target=".data-entry-type"/>
+                            </dataEntryType>
+                            <manual
+                                granite:class="hide data-entry-type"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <granite:data
+                                    jcr:primaryType="nt:unstructured"
+                                    showhidetargetvalue="manual"/>
+                                <items jcr:primaryType="nt:unstructured">
+                                    <multi
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                        composite="{Boolean}true">
+                                        <field
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                                            name="./manualItems">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <title
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    emptyText="Title"
+                                                    name="./title"/>
+                                                <description
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                    emptyText="Description"
+                                                    name="./description"/>
+                                                <link
+                                                    jcr:primaryType="nt:unstructured"
+                                                    granite:class="cmp-kpmg-contextual-pathfield-picker"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                    fieldLabel="Linked Page"
+                                                    name="./link"
+                                                    rootPath="/content/kpmgpublic">
+                                                    <granite:data
+                                                        jcr:primaryType="nt:unstructured"
+                                                        kpmg-picker-strategy="child-pages"/>
+                                                </link>
+                                                <iconType
+                                                    granite:class="multifield-cq-dialog-dropdown-showhide"
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                    fieldDescription="Please Icon Type"
+                                                    fieldLabel="Choose Icon Type"
+                                                    name="./iconType">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <materialIcon
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Material Icon"
+                                                            value="materialIcon"/>
+                                                        <customIcon
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Custom Icon"
+                                                            value="customIcon"/>
+                                                    </items>
+                                                    <granite:data
+                                                        jcr:primaryType="nt:unstructured"
+                                                        multifield-cq-dialog-dropdown-showhide-target=".showhide-target-icon"/>
+                                                </iconType>
+                                                <materialIcon
+                                                    granite:class="hide showhide-target-icon"
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <materialIcon
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="/apps/kpmg/components/editor/iconfield"
+                                                            emptyText="Icon"
+                                                            fieldLabel="Icon"
+                                                            name="./icon"
+                                                            required="{Boolean}false"/>
+                                                    </items>
+                                                    <granite:data
+                                                        jcr:primaryType="nt:unstructured"
+                                                        showhidetargetvalue="materialIcon"/>
+                                                </materialIcon>
+                                                <customIcon
+                                                    granite:class="hide showhide-target-icon"
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <customIconAlert
+                                                            jcr:primaryType="nt:unstructured"
+                                                            jcr:title="Note"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/alert"
+                                                            text="The custom icon picker below will only allow you to pick icons from the current sites icon folder in DAM. Example, if this page is in fr site, you should see the fr icons folder"/>
+                                                        <customIcon
+                                                            granite:class="cmp-kpmg-contextual-pathfield-picker"
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                            fieldLabel="Custom Icon"
+                                                            name="./customIcon"
+                                                            required="{Boolean}false"
+                                                            rootPath="/content/dam/kpmgsites">
+                                                            <granite:data
+                                                                jcr:primaryType="nt:unstructured"
+                                                                contextfolder="/icons"/>
+                                                        </customIcon>
+                                                    </items>
+                                                    <granite:data
+                                                        jcr:primaryType="nt:unstructured"
+                                                        showhidetargetvalue="customIcon"/>
+                                                </customIcon>
+                                            </items>
+                                        </field>
+                                    </multi>
+                                </items>
+                            </manual>
+                            <automated
+                                granite:class="hide data-entry-type"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <granite:data
+                                    jcr:primaryType="nt:unstructured"
+                                    showhidetargetvalue="automated"/>
+                                <items jcr:primaryType="nt:unstructured">
+                                    <multi
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                        composite="{Boolean}true">
+                                        <field
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                                            name="./autoMatedItems">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <link
+                                                    granite:class="cmp-kpmg-contextual-pathfield-picker"
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                    fieldLabel="Linked Page"
+                                                    name="./link"
+                                                    rootPath="/content/kpmgpublic">
+                                                    <granite:data
+                                                        jcr:primaryType="nt:unstructured"
+                                                        kpmg-picker-strategy="child-pages"/>
+                                                </link>
+                                                <iconType
+                                                    granite:class="multifield-cq-dialog-dropdown-showhide"
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                    fieldDescription="Please Icon Type"
+                                                    fieldLabel="Choose Icon Type"
+                                                    name="./iconType">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <materialIcon
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Material Icon"
+                                                            value="materialIcon"/>
+                                                        <customIcon
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Custom Icon"
+                                                            value="customIcon"/>
+                                                    </items>
+                                                    <granite:data
+                                                        jcr:primaryType="nt:unstructured"
+                                                        multifield-cq-dialog-dropdown-showhide-target=".showhide-target-icon"/>
+                                                </iconType>
+                                                <materialIcon
+                                                    granite:class="hide showhide-target-icon"
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <materialIcon
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="/apps/kpmg/components/editor/iconfield"
+                                                            emptyText="Icon"
+                                                            fieldLabel="Icon"
+                                                            name="./icon"
+                                                            required="{Boolean}false"/>
+                                                    </items>
+                                                    <granite:data
+                                                        jcr:primaryType="nt:unstructured"
+                                                        showhidetargetvalue="materialIcon"/>
+                                                </materialIcon>
+                                                <customIcon
+                                                    granite:class="hide showhide-target-icon"
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <customIconAlert
+                                                            jcr:primaryType="nt:unstructured"
+                                                            jcr:title="Note"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/alert"
+                                                            text="The custom icon picker below will only allow you to pick icons from the current sites icon folder in DAM. Example, if this page is in fr site, you should see the fr icons folder"/>
+                                                        <customIcon
+                                                            granite:class="cmp-kpmg-contextual-pathfield-picker"
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                            fieldLabel="Custom Icon"
+                                                            name="./customIcon"
+                                                            required="{Boolean}false"
+                                                            rootPath="/content/dam/kpmgsites">
+                                                            <granite:data
+                                                                jcr:primaryType="nt:unstructured"
+                                                                contextfolder="/icons"/>
+                                                        </customIcon>
+                                                    </items>
+                                                    <granite:data
+                                                        jcr:primaryType="nt:unstructured"
+                                                        showhidetargetvalue="customIcon"/>
+                                                </customIcon>
+                                            </items>
+                                        </field>
+                                    </multi>
+                                </items>
+                            </automated>
+                        </items>
+                     </data>
+                    <styletab
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/include"
+                        path="/mnt/overlay/cq/gui/components/authoring/dialog/style/tab_edit/styletab"/>
+                    <indexable
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/include"
+                        path="kpmg/components/utilities/tab_indexable/indexable"/>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

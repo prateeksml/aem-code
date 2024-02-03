@@ -1,0 +1,22 @@
+<div class="cmp-search-results-input" data-sly-use.search="com.kpmg.integration.models.SearchConfig"
+data-search-endpoint="${search.searchEndpoint}" data-pagination-limit="${search.paginationLimit}" 
+data-search-result-page="${search.searchPagePath}" data-run-mode="${search.runMode}"
+data-country-code="${search.countryCode}" data-language-code="${search.languageCode}" data-people-contact-form-url="${search.peopleContactFormPath}"
+data-resource-type="${properties['sling:resourceType']}">
+  <section class="cmp-search-results-input__wrapper">
+      <div class="cmp-search-results-input__input-wrapper">
+          <div class="cmp-search-results-input__autocomplete-wrapper">
+              <label class="cmp-search-results-input__input-label" for="cmp-search-results-input__input-box" data-placeholder="${'kpmg.search.label' @ i18n}"><span class="cmp-search-results-input__input-icon">search</span></label>
+          </div>
+          <div class="cmp-search-results-input__previous-search-wrapper">
+              <div class="cmp-search-results-input__previous-search__screen-reader-only" data-message="${'kpmg.search.previous.accessibility.label' @ i18n}" aria-live="polite" aria-atomic="true"></div>
+              <div class="cmp-search-results-input__previous-search-title">${'kpmg.search.previous.label' @ i18n}</div>
+                  <ul class="cmp-search-results-input__previous-search-items"></ul>
+          </div>
+          <div class="cmp-search-results-input__empty-search-wrapper" aria-live="assertive" aria-atomic="true">
+              <div>${'kpmg.search.short.label' @ i18n}</div>
+              <div>${'kpmg.search.limit.label' @ i18n}</div>
+          </div>
+      </div>
+  </section>
+</div>

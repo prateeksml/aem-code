@@ -1,0 +1,21 @@
+{
+  "emailTemplates":[
+"approval-required|/apps/kpmg/workflow/emailtemplates/approval-required.txt",
+"perform-manual-rollout|/apps/kpmg/workflow/emailtemplates/perform-manual-rollout.txt",
+"approved-activated|/apps/kpmg/workflow/emailtemplates/approved-activated.txt",
+"approved-not-activated|/apps/kpmg/workflow/emailtemplates/approved-not-activated.txt",
+"activation-incomplete|/apps/kpmg/workflow/emailtemplates/activation-incomplete.txt",
+"checkOnOffDateORActivationPermission|/apps/kpmg/workflow/emailtemplates/checkOnOffDateORActivationPermission.txt",
+"approved-scheduled-activation|/apps/kpmg/workflow/emailtemplates/approved-scheduled-activation.txt",
+"perform-manual-rollout-for-activation-workflow|/apps/kpmg/workflow/emailtemplates/perform-manual-rollout-for-activation-workflow.txt",
+"notActivated|/apps/kpmg/workflow/emailtemplates/notActivated.txt",
+"deactivationApproverNotification|/apps/kpmg/workflow/emailtemplates/deactivationApproverNotification.txt",
+"deactivationSiteAdminNotification|/apps/kpmg/workflow/emailtemplates/deactivationSiteAdminNotification.txt",
+"deactivationInitiatorNotification|/apps/kpmg/workflow/emailtemplates/deactivationInitiatorNotification.txt",
+"failurenotification|/apps/kpmg/workflow/schedulertemplates/failurenotification.txt",
+"delegatee-email|/apps/kpmgpublic/workflow/emailtemplates/delegatee-email.txt",
+"stepback-email-intiator|/apps/kpmgpublic/workflow/emailtemplates/stepback-email-intiator.txt",
+"activated|/apps/kpmg/workflow/emailtemplates/activated.txt",
+    "contact-form|/apps/kpmg/components/content/form/emailtemplates/contact-form.txt"
+  ]
+}

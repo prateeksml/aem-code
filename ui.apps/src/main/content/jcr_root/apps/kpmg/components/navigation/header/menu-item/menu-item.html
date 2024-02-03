@@ -1,0 +1,16 @@
+<div class="cmp-menu-item">
+    <button 
+        data-sly-use.menuItem="com.adobe.cq.wcm.core.components.models.Button" 
+        data-sly-use.iconTemplate="icon.html"
+        data-sly-element="${menuItem.buttonLink.valid ? 'a' : 'button'}"
+        type="${menuItem.buttonLink.valid ? '' : 'button'}" 
+        id="${menuItem.id}" class="cmp-menu-item__inner"
+        data-sly-attribute="${menuItem.buttonLink.htmlAttributes}" 
+        aria-label="${menuItem.accessibilityLabel}"
+        data-cmp-clickable="${menuItem.data ? true : false}" 
+        data-cmp-data-layer="${menuItem.data.json}">
+
+        <sly data-sly-call="${iconTemplate.icon @ icon=menuItem.icon}"></sly>
+        <div data-sly-test="${menuItem.text}" class="cmp-menu-item__label">${menuItem.text}</div>
+    </button>
+</div>

@@ -1,0 +1,177 @@
+@include light-theme {
+  --quote-icon-color: #{$global-color-grayscale-black};
+}
+@include dark-theme {
+  --quote-icon-color: #{$global-color-brand-white};
+}
+
+// aliases
+$image-width-mobile: 152px;
+$image-width-tablet: 348px;
+$image-width-desktop: 282px;
+
+$quote-pretitle-font-size: $global-font-size-075;
+
+$quote-width-mobile: 64px;
+$quote-width-tablet: 69px;
+$quote-width-desktop: 61px;
+
+$quote-desktop-minheight: 432px;
+
+$quote-padding-y-mobile-tablet: $alias-padding-large; // 32
+$quote-padding-x-mobile: $alias-padding-base; // 16
+$quote-padding-x-tablet: $alias-padding-medium; //24
+$quote-padding-desktop: $alias-padding-xx-large; //48
+
+$quote-content-spacing: $alias-padding-large; // 32
+$quote-icon-margin-mobile: $alias-padding-large; // 32
+$quote-icon-margin-tablet: $alias-padding-medium; //24
+$quote-icon-margin-desktop: $alias-padding-xx-large; //48
+$quote-img-right-desktop: $alias-padding-xx-large; //48
+$quote-content-desktop-position: calc(
+  $quote-width-desktop + $quote-icon-margin-desktop
+); // 109
+$quote-image-content-gap: 48px;
+
+.quote {
+  @include container;
+  padding: $quote-padding-y-mobile-tablet $quote-padding-x-mobile;
+  @include tablet {
+    padding: $quote-padding-y-mobile-tablet $quote-padding-x-tablet;
+  }
+  @include desktop-small {
+    min-height: $quote-desktop-minheight;
+    padding: $quote-padding-desktop;
+  }
+  .cmp-teaser {
+    display: flex;
+    flex-direction: column;
+    gap: $quote-image-content-gap;
+    @include desktop-small {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+  .cmp-teaser__content {
+    order: 2;
+  }
+  .cmp-teaser__pretitle {
+    @include typography-body-caption;
+    margin-top: 0;
+    margin-bottom: $quote-content-spacing;
+    @include desktop-small {
+      margin-bottom: 0;
+    }
+  }
+  .cmp-teaser__title {
+  }
+  .cmp-teaser__title-link {
+  }
+  .cmp-teaser__description {
+    p {
+      @include typography-heading-four;
+      margin-top: 0;
+      margin-bottom: $quote-content-spacing;
+      @include desktop-small {
+        margin-left: $quote-content-desktop-position;
+      }
+    }
+  }
+  .cmp-teaser__action-container {
+  }
+  .cmp-teaser__action-link {
+  }
+  .cmp-teaser__image {
+    order: 1;
+    @include desktop-small {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+  .cmp-teaser__image {
+    width: $image-width-mobile;
+    height: $image-width-mobile;
+    border-radius: 50%;
+    align-self: center;
+
+    img {
+      border-radius: 50%;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @include tablet {
+      width: $image-width-tablet;
+      height: $image-width-tablet;
+    }
+    @include desktop-small {
+      width: $image-width-desktop;
+      min-width: $image-width-desktop;
+      height: $image-width-desktop;
+      position: relative;
+    }
+  }
+  .cmp-teaser__pretitle-container {
+    display: flex;
+    flex-direction: column;
+    @include desktop-small {
+      flex-direction: row;
+    }
+  }
+  // quote graphic
+  .cmp-teaser__icon {
+    width: $quote-width-mobile;
+    height: auto;
+    fill: var(--quote-icon-color);
+    margin-top: $quote-icon-margin-mobile;
+    margin-bottom: $quote-icon-margin-mobile;
+    @include tablet {
+      width: $quote-width-tablet;
+      margin-bottom: $quote-icon-margin-tablet;
+    }
+    @include desktop-small {
+      width: $quote-width-desktop;
+      margin-bottom: 0;
+      margin-top: 0;
+      margin-right: $quote-icon-margin-desktop;
+    }
+  }
+  .cmp-teaser__author {
+    @include typography-body-default-semibold;
+    margin-bottom: 0;
+    @include desktop-small {
+      margin-left: $quote-content-desktop-position;
+    }
+  }
+  .cmp-teaser__detail {
+    margin: 0;
+    @include desktop-small {
+      margin-left: $quote-content-desktop-position;
+    }
+  }
+}
+@include desktop-small {
+  @include container-50 {
+    .quote {
+      .cmp-teaser {
+        flex-direction: column;
+      }
+      .cmp-teaser__pretitle-container {
+        display: block;
+      }
+      .cmp-teaser__icon {
+        margin-bottom: $quote-icon-margin-mobile;
+        margin-top: $quote-icon-margin-mobile;
+      }
+      .cmp-teaser__pretitle {
+        margin-bottom: $quote-content-spacing;
+      }
+      .cmp-teaser__description p,
+      .cmp-teaser__author,
+      .cmp-teaser__detail {
+        margin-left: 0;
+      }
+    }
+  }
+}

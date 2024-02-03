@@ -1,0 +1,111 @@
+// aliases
+
+$thumbnail-bottom-margin: $alias-margin-medium; //24px;
+$thumbnail-max-width: 4.6875rem; //75px
+$title-bottom-margin: $alias-margin-base; // 16px;
+
+$download-icon-size: $global-font-size-0875;
+$download-btn-width: $global-size-3;
+$download-btn-height: $global-size-3;
+$download-btn-left-margin: $global-size-075; // 12px
+$download-btn-right-margin: $alias-margin-base; // 16px;
+
+$content-margin-right: $alias-padding-medium; //24px;
+
+@include light-theme {
+  --icon-color: #{$global-color-brand-white};
+  --icon-background-color: #{$global-color-brand-cobalt-blue};
+}
+
+@include dark-theme {
+  --icon-color: #{$global-color-brand-cobalt-blue};
+  --icon-background-color: #{$global-color-brand-white};
+}
+.download {
+  padding: $alias-padding-base;
+  @include tablet {
+    padding: $alias-padding-base $alias-padding-medium;
+  }
+  @include desktop-small {
+    padding: $alias-padding-base $alias-padding-large;
+  }
+  @include desktop-medium {
+    padding: $alias-padding-base $alias-padding-xx-large;
+  }
+  .cmp-download {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .cmp-download__content {
+    @include tablet {
+      display: flex;
+    }
+  }
+  .cmp-download__container {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  .cmp-download__title {
+    @include typography-heading-six-semibold;
+    margin-top: 0;
+    margin-right: $content-margin-right;
+    margin-bottom: $title-bottom-margin;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .cmp-download__title-link {
+  }
+  .cmp-download__description {
+    &,
+    p {
+      @include typography-body-small-regular;
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-right: $content-margin-right;
+
+      @include desktop-small {
+        margin-right: $alias-margin-large;
+      }
+
+      @include desktop-medium {
+        margin-right: $alias-margin-xx-large;
+      }
+    }
+  }
+
+  .cmp-download__thumbnail {
+    margin-bottom: $thumbnail-bottom-margin;
+    @include tablet {
+      margin-bottom: 0;
+      margin-right: $content-margin-right;
+    }
+    img {
+      max-width: $thumbnail-max-width;
+      height: auto;
+      display: block;
+    }
+  }
+  .cmp-download__action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 auto;
+    background-color: var(--icon-background-color);
+    border-radius: 50%;
+    width: $download-btn-width;
+    height: $download-btn-height;
+    margin-left: auto;
+    margin-right: $download-btn-right-margin;
+    text-decoration: none;
+  }
+  .cmp-download__action-text {
+    @include button-icon("file_download");
+    font-size: $alias-font-size-xx-large;
+    color: var(--icon-color);
+    margin-right: 0;
+    font-size: $download-icon-size;
+  }
+}

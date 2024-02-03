@@ -1,0 +1,58 @@
+{
+  "global": {
+    "color": {
+      "brand": {
+        "spectrum-blue": {
+          "value": "#0C233C"
+        },
+        "kpmg-blue": {
+          "value": "#00338D",
+          "comment": "Refer to Brand book as Dark Blue"
+        },
+        "cobalt-blue": {
+          "value": "#1E49E2"
+        },
+        "pacific-blue": {
+          "value": "#00B8F5"
+        },
+        "sky-blue": {
+          "value": "#76D2FF",
+          "comment": "Refer to Brand Book as Blue"
+        },
+        "light-blue": {
+          "value": "#ACEAFF"
+        },
+        "dark-purple": {
+          "value": "#510EBC"
+        },
+        "purple": {
+          "value": "#7213EA"
+        },
+        "light-purple": {
+          "value": "#B497FF"
+        },
+        "dark-pink": {
+          "value": "#AB0D82"
+        },
+        "pink": {
+          "value": "#FD349C"
+        },
+        "light-pink": {
+          "value": "#FFA3DA"
+        },
+        "dark-green": {
+          "value": "#098E7E"
+        },
+        "green": {
+          "value": "#00C0AE"
+        },
+        "light-green": {
+          "value": "#63EBDA"
+        },
+        "white": {
+          "value": "#FFFFFF"
+        }
+      }
+    }
+  }
+}

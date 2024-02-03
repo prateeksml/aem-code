@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+<html data-sly-use.page="com.adobe.cq.wcm.core.components.models.Page" lang="${page.language}"
+	  data-sly-use.pwa="com.adobe.cq.wcm.core.components.models.PWA"
+	  data-sly-use.head="head.html"
+	  data-sly-use.footer="footer.html"
+	  data-sly-use.redirect="redirect.html"
+	  data-sly-use.demandbase="com.kpmg.integration.models.DemandBase"
+	  data-sly-use.onetrust="com.kpmg.integration.models.OneTrust"
+	  dir="${page.direction}">
+<head>
+	<meta http-equiv="content-type" content="text/html" charset="UTF-8" >
+	<meta http-equiv="content-encoding" content="text/html">
+	<meta charset="utf-8" class="chrome">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta http-equiv="content-language" content="${page.language}">
+
+	<link rel="preconnect" href="https://assets.kpmg.com" crossorigin=""/>
+
+	<link rel="preload" as="font" type="font/woff2" href="/etc.clientlibs/kpmg/clientlibs/clientlib-site/resources/fonts/OpenSans/OpenSans-Regular.ttf" crossorigin />
+	<link rel="preload" as="font" type="font/woff2" href="/etc.clientlibs/kpmg/clientlibs/clientlib-site/resources/fonts/OpenSans/OpenSans-Regular.woff2" crossorigin />
+	<link rel="preload" as="font" type="font/woff2" href="/etc.clientlibs/kpmg/clientlibs/clientlib-site/resources/fonts/OpenSans/OpenSans-Medium.ttf" crossorigin />
+	<link rel="preload" as="font" type="font/woff2" href="/etc.clientlibs/kpmg/clientlibs/clientlib-site/resources/fonts/OpenSans/OpenSans-Medium.woff2" crossorigin />
+	<link rel="preload" as="font" type="font/woff2" href="/etc.clientlibs/kpmg/clientlibs/clientlib-site/resources/fonts/OpenSans/OpenSans-Medium.ttf" crossorigin />
+	<link rel="preload" as="font" type="font/woff2" href="/etc.clientlibs/kpmg/clientlibs/clientlib-site/resources/fonts/Material_Icons/MaterialIcons-Regular.woff2" crossorigin />
+	<link rel="preload" as="font" type="font/woff2" href="/etc.clientlibs/kpmg/clientlibs/clientlib-site/resources/fonts/Material_Icons/MaterialIcons-Regular.ttf" crossorigin />
+	<link rel="preload" as="font" type="font/woff2" href="/etc.clientlibs/kpmg/clientlibs/clientlib-site/resources/fonts/OpenSans_Condensed/OpenSans_Condensed-Regular.woff2" crossorigin />
+	<link rel="preload" as="font" type="font/woff2" href="/etc.clientlibs/kpmg/clientlibs/clientlib-site/resources/fonts/OpenSans_Condensed/OpenSans_Condensed-Regular.ttf" crossorigin />
+     
+	<link rel="apple-touch-icon" sizes="180x180" href="/etc.clientlibs/kpmg/clientlibs/clientlib-site/resources/images/favicons/apple-touch-icon-180x180-precomposed.png"/>
+	<link rel="apple-touch-icon" sizes="167x167" href="/etc.clientlibs/kpmg/clientlibs/clientlib-site/resources/images/favicons/apple-touch-icon-167x167-precomposed.png"/>
+	<link rel="apple-touch-icon" sizes="152x152" href="/etc.clientlibs/kpmg/clientlibs/clientlib-site/resources/images/favicons/apple-touch-icon-152x152-precomposed.png"/>
+	<link rel="apple-touch-icon" sizes="120x120" href="/etc.clientlibs/kpmg/clientlibs/clientlib-site/resources/images/favicons/apple-touch-icon-120x120-precomposed.png"/>
+	<link rel="apple-touch-icon" sizes="76x76" href="/etc.clientlibs/kpmg/clientlibs/clientlib-site/resources/images/favicons/apple-touch-icon-76x76-precomposed.png"/>
+	<link rel="apple-touch-icon" sizes="60x60" href="/etc.clientlibs/kpmg/clientlibs/clientlib-site/resources/images/favicons/apple-touch-icon-60x60-precomposed.png"/>
+	<link rel="apple-touch-icon" href="/etc.clientlibs/kpmg/clientlibs/clientlib-site/resources/images/favicons/apple-touch-icon-precomposed.png"/>
+
+	<link rel="icon" type="image/png" href="/etc.clientlibs/kpmg/clientlibs/clientlib-site/resources/images/favicons/favicon-32x32.png" sizes="32x32"/>
+	<link rel="icon" type="image/png" href="/etc.clientlibs/kpmg/clientlibs/clientlib-site/resources/images/favicons/android-chrome-192x192.png" sizes="192x192"/>
+	<link rel="icon" type="image/png" href="/etc.clientlibs/kpmg/clientlibs/clientlib-site/resources/images/favicons/favicon-96x96.png" sizes="96x96"/>
+	<link rel="icon" type="image/png" href="/etc.clientlibs/kpmg/clientlibs/clientlib-site/resources/images/favicons/favicon-16x16.png" sizes="16x16"/>
+	<link rel="manifest" href="/etc.clientlibs/kpmg/clientlibs/clientlib-site/resources/images/favicons/manifest.json" />
+
+	<link rel="mask-icon" href="/etc.clientlibs/kpmg/clientlibs/clientlib-site/resources/images/favicons/safari-pinned-tab.svg" color="#00338D" />
+	<link rel="shortcut icon" href="/etc.clientlibs/kpmg/clientlibs/clientlib-site/resources/images/favicons/favicon.ico" />
+	
+	<meta property="og:type" content="${properties.metaOgType}"/>
+	<meta property="og:url" content="${page.pageUrl}"/>
+	<meta property="og:title" content="${properties.metaOgTitle}"/>
+	<meta property="og:description" content="${properties.metaOgDescription}"/>
+	<meta property="og:site_name" content="KPMG"/>
+	<meta property="og:image" content="${properties.metaOgImage}"/>
+	<meta property="og:locale" content="${properties.metaOgLanguage}"/>
+	<sly data-sly-use.keywords = "${'kpmg/components/structure/page/clientlibs/editor/js/helper.js'}">
+	<sly data-sly-test="${keywords}"><meta name="keywords" content="${keywords}"/></sly>
+	<meta property="twitter:url" content="${page.pageUrl}"/>
+	<meta property="twitter:title" content="${properties.metaOgTitle}"/>
+	<meta property="twitter:description" content="${properties.metaOgDescription}"/>
+	<meta property="twitter:creator" content="@KPMG"/>
+	<meta property="twitter:card" content="summary_large_image"/>
+	<meta property="twitter:image" content="${properties.metaOgImage}"/>
+	<sly data-sly-call="${head.head @ page = page, pwa = pwa}"/>
+</head>
+<body class="${page.cssClassNames}"
+	  id="${page.id}"
+	  data-cmp-link-accessibility-enabled
+	  data-cmp-link-accessibility-text="${'opens in a new tab' @ i18n}"
+	  data-cmp-data-layer-enabled="${page.data ? true : false}">
+	  <sly data-sly-test="${wcmmode.disabled || wcmmode.preview}">
+		<sly data-sly-test="${demandbase.demandbaseCurl}">
+			<script src="${demandbase.demandbaseCurl}"></script>
+		</sly>
+		<sly data-sly-test="${demandbase.demandbaseURL}">
+			<script>
+				window.kpmgPersonalize = window.kpmgPersonalize || {};
+				window.kpmgPersonalize.db = window.kpmgPersonalize.db || {};
+				window.kpmgPersonalize.db.CDCWrapper = window.kpmgPersonalize.db.CDCWrapper || function (){};
+			</script>
+		</sly>
+		<!-- One Trust Enabled Start (One Trust Script)-->
+		<sly data-sly-test ="${onetrust.oneTrustScript}" >
+			${onetrust.oneTrustScript @ context="unsafe"}
+			<script type="text/javascript">
+				var oneTrustEnabled = true;
+				/* OneTrust Script - Start  * OptanonWrapper function will be called by OneTrust after the page load
+				* This has to be placed after OneTrust script in the order
+				*/
+				function OptanonWrapper() {
+					var evt = document.createEvent("CustomEvent"), cookiesSettingsButton = document.getElementById('ot-sdk-btn');
+					evt.initCustomEvent('oneTrustEvent', false, false, {activeGroups: OptanonActiveGroups, groups: Optanon.GetDomainData()});
+					document.dispatchEvent(evt);
+					window.oneTrustObj = window.oneTrustObj || {};
+					window.oneTrustObj.isScriptLoaded = true;
+	
+					//Show the Cookie-Settings button at the bottom only after User provides the consent
+					if(Optanon  && typeof Optanon.IsAlertBoxClosed === 'function'  && Optanon.IsAlertBoxClosed()  && cookiesSettingsButton !== null) {
+						cookiesSettingsButton.style.display = "block";
+					}
+				}
+			</script>
+			<sly data-sly-test="${demandbase.demandbaseURL}">
+				<sly data-sly-test.category ="${onetrust.mapOptions['dmdbase']}"></sly>
+				<script type="text/${category ? 'plain': 'javascript'}" class="${category ? ['optanon-category', category]: '' @ join = '-'}" async src="${demandbase.demandbaseURL}"></script>
+			</sly>
+		</sly>
+
+		<!-- One Trust Enabled End (One Trust Script)-->
+		<!-- One Trust Disabled Start (One Trust Script)-->
+		<sly data-sly-test ="${!onetrust.oneTrustScript}" >
+			<script type="text/javascript">
+				var oneTrustEnabled = false;
+			</script>
+			<sly data-sly-test="${demandbase.demandbaseURL}">
+				<script async src="${demandbase.demandbaseURL}"></script>
+			</sly>
+		</sly>
+		<!-- One Trust Disabled End (One Trust Script)-->
+	</sly>
+	<script data-sly-test.dataLayerEnabled="${page.data}">
+		window.adobeDataLayer = window.adobeDataLayer || [];
+		adobeDataLayer.push({
+			page: JSON.parse("${page.data.json @ context='scriptString'}"),
+			event:'cmp:show',
+			eventInfo: {
+				path: 'page.${page.id @ context="scriptString"}'
+			}
+		});
+	</script>
+<sly data-sly-test.isRedirectPage="${page.redirectTarget && (wcmmode.edit || wcmmode.preview)}"
+	 data-sly-call="${redirect.redirect @ redirectTarget = page.redirectTarget}"></sly>
+<sly data-sly-test="${!isRedirectPage}">
+	<sly data-sly-include="body.skiptomaincontent.html"></sly>
+	<sly data-sly-include="body.html"></sly>
+	<sly data-sly-call="${footer.footer @ page = page, pwa = pwa}"></sly>
+</sly>
+</body>
+</html>

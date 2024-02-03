@@ -1,0 +1,25 @@
+- group_config:
+
+  - KPMG_DEV_ADMIN:
+    - isMemberOf:
+        - administrators
+    description: Dev administrators.
+    externalId: "KPMG_DEV_ADMIN;ims"
+  
+  - KPMG_QA_ADMIN:
+    - isMemberOf:
+        - administrators
+    description: QA administrators.
+    externalId: "KPMG_QA_ADMIN;ims"
+  
+  - KPMG_STAGE_ADMIN:
+    - isMemberOf:
+        - administrators
+    description: STAGE administrators.
+    externalId: "KPMG_STAGE_ADMIN;ims"
+
+  - KPMG_PROD_ADMIN:
+    - isMemberOf:
+        - administrators
+    description: PROD administrators.
+    externalId: "KPMG_PROD_ADMIN;ims"

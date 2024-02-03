@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2023-08-08T15:49:56.195-04:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/kpmg/settings/wcm/templates/page-content"
+        jcr:description="Event Card Page"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Event Card"
+        sling:resourceType="kpmg/components/structure/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="kpmg/components/container/container"
+            layout="responsiveGrid">
+            <main
+                jcr:lastModified="{Date}2023-06-03T19:12:45.974-05:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="kpmg/components/container/main"
+                layout="simple">
+                <section
+                    jcr:lastModified="{Date}2023-06-03T18:53:29.854-05:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="kpmg/components/container/section"
+                    layout="simple">
+                    <event_card
+                        cq:styleIds="[1691524126149]"
+                        jcr:lastModified="{Date}2023-08-08T15:47:49.510-04:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="kpmg/components/content/event-card"
+                        alt="alt"
+                        altValueFromDAM="false"
+                        altValueFromPageImage="false"
+                        buttonLabel="Register"
+                        eventDescription="Event Details Page Description"
+                        eventEndTimeAndDate="{Date}2023-09-01T11:17:00.000-04:00"
+                        eventLocation="Toronto, ON, Canada"
+                        eventStartTimeAndDate="{Date}2023-08-31T11:17:00.000-04:00"
+                        eventTitle="Event Details Page"
+                        fileReference="/content/dam/kpmg-style-guide/Promo.jpg"
+                        imageFromPageImage="false"
+                        isDecorative="false"
+                        linkURL="/content/kpmg-style-guide/en/components/event-details-page"
+                        overrideDescription="true"
+                        overrideTitle="false"
+                        searchIndexable="true"
+                        showButton="true"
+                        showEventLocation="true"
+                        showEventTime="true"
+                        showImage="true"/>
+                </section>
+            </main>
+        </root>
+        <cq:featuredimage
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/wcm/components/image/v3/image"
+            fileReference="/content/dam/kpmgsites/logo.svg"/>
+    </jcr:content>
+</jcr:root>

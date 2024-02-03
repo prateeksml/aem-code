@@ -1,0 +1,76 @@
+- global_config:
+
+    vars:
+      - DEF kpmgContentPath="/content/kpmgpublic"
+      - DEF kpmgLanguageMasterPath="/content/kpmgpublic/language-masters"
+      - DEF kpmgLanguageSiteXFPath="/content/experience-fragments/kpmgpublic"
+      - DEF kpmgDAMPath="/content/dam/kpmgsites"
+      
+- group_config:
+  - FOR site IN CHILDREN OF /content/kpmgpublic:
+    - IF ${length(site.name) == 2}:
+      - aem-${site.name}-livecopy-contributor:
+        - name:  ${upperCase(site.name)} Livecopy Site Contributors
+          isMemberOf: contributor,workflow-users
+          description: "Users in this group can edit the relative site under /content/kpmgpublic/${site.name}"
+          externalId: aem-${site.name}-livecopy-contributor;ims
+      - aem-${site.name}-livecopy-admin:
+        - name:  ${upperCase(site.name)} Livecopy Site Administrators
+          isMemberOf: contributor,workflow-users
+          description: "Users in this group can edit and delete the relative site under /content/kpmgpublic/${site.name}"
+          externalId: aem-${site.name}-livecopy-admin;ims
+      - aem-${site.name}-livecopy-deleter:
+        - name:  ${upperCase(site.name)} Livecopy Content Deleters
+          isMemberOf: contributor
+          description:  "Users in this group delete the relative site pages under /content/kpmgpublic/${site.name}"
+          externalId: aem-${site.name}-livecopy-deleter;ims
+
+- ace_config:
+    - FOR country IN CHILDREN OF /content/kpmgpublic:
+        - FOR site IN CHILDREN OF /content/kpmgpublic/${country.name}:
+            - IF ${length(country.name) == 2}:
+                - aem-${country.name}-livecopy-contributor:
+                    - path: ${kpmgContentPath}/${country.name}/${site.name}/home
+                      permission: allow
+                      privileges: jcr:versionManagement,jcr:read,rep:write,jcr:lockManagement,jcr:addChildNodes,crx:replicate
+                    - path: ${kpmgLanguageSiteXFPath}/${country.name}
+                      permission: allow
+                      privileges: jcr:versionManagement,jcr:read,rep:write,jcr:lockManagement
+                    - path: ${kpmgLanguageSiteXFPath}/${country.name} # editing rights also gives deletion rights for the XF
+                      permission: deny
+                      privileges: jcr:removeChildNodes,jcr:removeNode
+                      keepOrder: true
+                      restrictions: 
+                       rep:ntNames: cq:Page,sling:OrderedFolder
+                    - path: ${kpmgDAMPath}/${country.name}
+                      permission: allow
+                      privileges: jcr:read,jcr:modifyProperties,jcr:lockManagement,jcr:versionManagement,jcr:addChildNodes,jcr:nodeTypeManagement,crx:replicate
+         
+                - aem-${country.name}-livecopy-admin:
+                    - path: "${kpmgContentPath}/${country.name}"
+                      permission: allow
+                      privileges: jcr:all
+          
+                    - path: "${kpmgLanguageSiteXFPath}/${country.name}"
+                      permission: allow
+                      privileges: jcr:all
+                     
+                    - path: "${kpmgDAMPath}/${country.name}"
+                      permission: allow
+                      privileges: jcr:all
+                      
+     
+                - aem-${country.name}-livecopy-deleter:
+                    - path: "${kpmgContentPath}/${country.name}"
+                      permission: allow
+                      privileges: jcr:read,jcr:removeChildNodes,jcr:removeNode
+          
+                    - path: "${kpmgLanguageSiteXFPath}/${country.name}"
+                      permission: allow
+                      privileges: jcr:read,jcr:removeChildNodes,jcr:removeNode
+                      
+                    - path: "${kpmgDAMPath}/${country.name}"
+                      permission: allow
+                      privileges: jcr:read,jcr:removeChildNodes,jcr:removeNode
+                     
+          

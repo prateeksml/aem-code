@@ -1,0 +1,9 @@
+<sly data-sly-template.description="${@ teaser}">
+  <div
+    class="cmp-hero-fbv__description"
+    data-sly-test.description="${teaser.description}"
+  >
+    <!-- must wrap content in another div to truncate text -->
+    <div>${description @ context="html"}</div>
+  </div>
+</sly>

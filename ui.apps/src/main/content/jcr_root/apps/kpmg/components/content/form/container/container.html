@@ -1,0 +1,85 @@
+<form data-sly-use.container="com.kpmg.integration.models.FormContainer"
+    data-sly-use.onetrust="com.kpmg.integration.models.OneTrust" data-sly-use.recaptchav3="${'recaptchav3.html'}"
+    data-sly-use.recaptchav2="${'recaptchav2.html'}"
+    data-sly-use.grid="com.day.cq.wcm.foundation.model.responsivegrid.ResponsiveGrid" method="${container.method}"
+    data-action="${container.action}" id="${container.id}" name="${container.name}" enctype="${container.enctype}"
+    class="cmp-digital-form ${(!wcmmode.edit || wcmmode.preview) ? 'publisher' : ''} ${container.formType == 'rfp' ? 'cmp-digital-form__rfp' : ''} ${grid.cssClass}"
+    data-form-type="${container.formType}" data-redirect="${container.responseType=='redirect' ? 'true' : ''}" data-redirect-value="${container.responseType=='redirect' ? container.redirect : ''}" data-form-title="${container.formTitle}"
+    data-close-button-title="${container.closeButtonTitle}"
+    data-country-id="${container.formType =='rfp' ? container.countryId :''}"
+    data-analytic-id="${container.formType =='rfp' ? container.analyticId :''}"
+    data-mapping="${container.formfieldMappingConfig}"
+    data-captcha-version="${container.captchaVersion}"
+    data-captcha-sitekey="${container.captchaVersion == 'V2' ? container.siteKeyV2 : container.siteKeyV3}"
+    data-captcha-enabled="${container.isCaptchaEnabled ?'true' :'false'}" data-captcha-script="${container.captchaScript}"
+    data-captcha-size="${container.captchaSize}"
+    data-resource-type="${properties['sling:resourceType']}">
+    <div data-sly-test="${container.formType =='rfp'}" class="loading-spinner-container">
+        <div class="loading-spinner">
+            <h4>${container.loadingTitle}</h4>
+            <h6>${container.loadingSubtitle}</h6>
+            <div class="loading-spinner__icon"></div>
+            <p>${container.loadingText}</p>
+        </div>
+    </div>
+    <div class="warning-overlay-msg" aria-hidden="true" style="display: none;">
+        <div class="text" data-button-text-cancel="${properties.cancelButtonText @ context='html'}"
+            data-button-text-continue="${properties.continueButtonText @ context='html'}">
+            <div class="cmp-text">
+                ${properties.warningMessage @ context='html'}
+            </div>
+        </div>
+    </div>
+    <div class="submit-error-message" aria-hidden="true" style="display: none;">
+        <div class="text-msg">
+            <div>
+                <span class="material-icons-outlined" aria-hidden="true">error_outline</span>
+            </div>
+            <div class="text" data-button-text-close="${properties.closeButtonText}">
+                <div class="cmp-text">
+                    ${properties.errorMessage @ context='html'}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div data-sly-test="${container.errorMessages}" data-sly-list.item="${container.errorMessages}"
+        class="cmp-form-error">
+        <p class="cmp-form-error__item">${item}</p>
+    </div>
+    <input type="hidden" name=":formstart" value="${resource.path}" />
+    <input type="hidden" name=":formstartpage" value="${currentPage.path}" />
+    <input type="hidden" name="_charset_" value="utf-8" />
+    <input data-sly-test="${container.redirect}" type="hidden" name=":redirect"
+        value="${container.redirect @ extension='html'}" />
+        <sly data-sly-repeat.paragraph="${grid.paragraphs}"
+            data-sly-resource="${paragraph.path @ resourceType=paragraph.resourceType, decorationTagName='div', cssClassName=paragraph.cssClass}">
+        </sly>
+
+        <sly data-sly-resource="${resource.path @ resourceType=container.resourceTypeForDropArea, appendPath='/*', decorationTagName='div', cssClassName='new section aem-Grid-newComponent'}"
+        data-sly-test="${wcmmode.edit || wcmmode.preview}"></sly>
+
+    <sly data-sly-test="${container.isCaptchaEnabled  && container.formType !='rfp'}">
+        <sly data-sly-call="${recaptchav3.v3 @ container=container,onetrust=onetrust}"></sly>
+    </sly>
+
+    <sly data-sly-test="${container.isCaptchaEnabled  && container.formType =='rfp'}">
+        <sly data-sly-call="${recaptchav2.v2 @ container=container,onetrust=onetrust}"></sly>
+    </sly>
+
+</form>
+<section class="form-result-container" data-sly-test="${!wcmmode.edit || wcmmode.preview}">
+    <span class="material-icons-outlined icon" aria-hidden="true">
+        check_circle
+    </span>
+    <h2 class="cmp-title__text">${container.successTitle}</h2>
+    <div class="cmp-title__paragraph">
+        ${container.successDescription}
+    </div>
+    <button data-sly-test="${container.formType == 'peopleContact'}" class="close-btn-bottom">
+        ${container.closeButtonTitle}
+    </button>
+    <a data-sly-test="${container.formType == 'contact'}" class="button" href="${container.ctaPublishLink}" target="${container.ctaTarget}">
+        ${container.ctaLabel}
+    </a>
+
+</section>

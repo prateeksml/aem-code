@@ -1,0 +1,662 @@
+{
+  "jcr:primaryType": "cq:Page",
+  "jcr:createdBy": "admin",
+  "jcr:created": "Wed May 31 2023 14:35:03 GMT-0400",
+  "ch": {
+    "jcr:primaryType": "cq:Page",
+    "jcr:createdBy": "admin",
+    "jcr:created": "Wed May 31 2023 14:35:03 GMT-0400",
+    "jcr:content": {
+      "jcr:primaryType": "cq:PageContent",
+      "jcr:createdBy": "admin",
+      "jcr:title": "Swiss",
+      "cq:template": "/conf/kpmg/settings/wcm/templates/page-content",
+      "documentId": "42b22db5-7e69-4899-8079-c83aad6fd6be",
+      "jcr:created": "Wed May 31 2023 14:35:03 GMT-0400",
+      "cq:lastModified": "Thu May 25 2023 15:46:55 GMT-0400",
+      "sling:resourceType": "kpmg/components/structure/page",
+      "cq:lastModifiedBy": "admin",
+      "root": {
+        "jcr:primaryType": "nt:unstructured",
+        "layout": "responsiveGrid",
+        "sling:resourceType": "kpmg/components/container/container",
+        "container": {
+          "jcr:primaryType": "nt:unstructured",
+          "layout": "responsiveGrid",
+          "sling:resourceType": "kpmg/components/container/container",
+          "title": {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType": "kpmg/components/content/title"
+          },
+          "container": {
+            "jcr:primaryType": "nt:unstructured",
+            "layout": "responsiveGrid",
+            "sling:resourceType": "kpmg/components/container/container"
+          }
+        }
+      }
+    },
+    "en": {
+      "jcr:primaryType": "cq:Page",
+      "jcr:createdBy": "admin",
+      "jcr:created": "Wed May 31 2023 14:35:03 GMT-0400",
+      "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "jcr:mixinTypes": [
+          "cq:LiveRelationship",
+          "cq:LiveSync"
+        ],
+        "jcr:createdBy": "admin",
+        "jcr:title": "English",
+        "cq:template": "/conf/kpmg/settings/wcm/templates/page-content",
+        "cq:lastRolledout": "Thu May 25 2023 16:16:55 GMT-0400",
+        "documentId": "0d653fda-24da-4efa-834c-ad1a5d2e75bc",
+        "sling:configRef": "/conf/kpmg/wcm-io-configs/ch/en",
+        "cq:contextHubSegmentsPath": "/etc/segmentation/contexthub",
+        "jcr:created": "Wed May 31 2023 14:35:03 GMT-0400",
+        "cq:lastModified": "Thu May 25 2023 16:16:55 GMT-0400",
+        "pageTitle": "KPMG.com",
+        "sling:resourceType": "kpmg/components/structure/page",
+        "cq:contextHubPath": "/etc/cloudsettings/default/contexthub",
+        "cq:lastRolledoutBy": "admin",
+        "cq:lastModifiedBy": "admin",
+        "root": {
+          "jcr:primaryType": "nt:unstructured",
+          "jcr:mixinTypes": [
+            "cq:LiveRelationship"
+          ],
+          "layout": "responsiveGrid",
+          "cq:lastRolledout": "Thu May 25 2023 16:16:55 GMT-0400",
+          "sling:resourceType": "kpmg/components/container/container",
+          "cq:lastRolledoutBy": "admin",
+          "container": {
+            "jcr:primaryType": "nt:unstructured",
+            "jcr:mixinTypes": [
+              "cq:LiveRelationship"
+            ],
+            "cq:lastRolledout": "Thu May 25 2023 16:16:55 GMT-0400",
+            "sling:resourceType": "kpmg/components/container/container",
+            "cq:lastRolledoutBy": "admin",
+            "title": {
+              "jcr:primaryType": "nt:unstructured",
+              "jcr:mixinTypes": [
+                "cq:LiveRelationship"
+              ],
+              "cq:lastRolledout": "Thu May 25 2023 16:16:55 GMT-0400",
+              "sling:resourceType": "kpmg/components/content/title",
+              "cq:lastRolledoutBy": "admin"
+            },
+            "container": {
+              "jcr:primaryType": "nt:unstructured",
+              "jcr:mixinTypes": [
+                "cq:LiveRelationship"
+              ],
+              "layout": "responsiveGrid",
+              "cq:lastRolledout": "Thu May 25 2023 16:16:55 GMT-0400",
+              "sling:resourceType": "kpmg/components/container/container",
+              "cq:lastRolledoutBy": "admin",
+              "teaser": {
+                "jcr:primaryType": "nt:unstructured",
+                "jcr:mixinTypes": [
+                  "cq:LiveRelationship"
+                ],
+                "jcr:title": "Epic Journey",
+                "actionsEnabled": "false",
+                "cq:lastRolledout": "Thu May 25 2023 16:16:55 GMT-0400",
+                "titleFromPage": "false",
+                "jcr:description": "<p>Don't stop half way, go for the top!</p>\r\n",
+                "descriptionFromPage": "false",
+                "sling:resourceType": "kpmg/components/content/teaser",
+                "textIsRich": "true",
+                "cq:lastRolledoutBy": "admin",
+                "cq:responsive": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "jcr:mixinTypes": [
+                    "cq:LiveRelationship"
+                  ],
+                  "cq:lastRolledout": "Thu May 25 2023 16:16:55 GMT-0400",
+                  "cq:lastRolledoutBy": "admin",
+                  "default": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "jcr:mixinTypes": [
+                      "cq:LiveRelationship"
+                    ],
+                    "offset": "0",
+                    "cq:lastRolledout": "Thu May 25 2023 16:16:55 GMT-0400",
+                    "width": "4",
+                    "cq:lastRolledoutBy": "admin"
+                  }
+                }
+              },
+              "teaser_copy": {
+                "jcr:primaryType": "nt:unstructured",
+                "jcr:mixinTypes": [
+                  "cq:LiveRelationship"
+                ],
+                "jcr:title": "Epic Journey",
+                "actionsEnabled": "false",
+                "cq:lastRolledout": "Thu May 25 2023 16:16:55 GMT-0400",
+                "titleFromPage": "false",
+                "jcr:description": "<p>Don't stop half way, go for the top!</p>\r\n",
+                "descriptionFromPage": "false",
+                "sling:resourceType": "kpmg/components/content/teaser",
+                "textIsRich": "true",
+                "cq:lastRolledoutBy": "admin",
+                "cq:responsive": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "jcr:mixinTypes": [
+                    "cq:LiveRelationship"
+                  ],
+                  "cq:lastRolledout": "Thu May 25 2023 16:16:55 GMT-0400",
+                  "cq:lastRolledoutBy": "admin",
+                  "default": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "jcr:mixinTypes": [
+                      "cq:LiveRelationship"
+                    ],
+                    "offset": "0",
+                    "cq:lastRolledout": "Thu May 25 2023 16:16:55 GMT-0400",
+                    "width": "4",
+                    "cq:lastRolledoutBy": "admin"
+                  }
+                }
+              },
+              "teaser_copy_1579324932": {
+                "jcr:primaryType": "nt:unstructured",
+                "jcr:mixinTypes": [
+                  "cq:LiveRelationship"
+                ],
+                "jcr:title": "Epic Journey",
+                "actionsEnabled": "false",
+                "cq:lastRolledout": "Thu May 25 2023 16:16:55 GMT-0400",
+                "titleFromPage": "false",
+                "jcr:description": "<p>Don't stop half way, go for the top!</p>\r\n",
+                "descriptionFromPage": "false",
+                "sling:resourceType": "kpmg/components/content/teaser",
+                "textIsRich": "true",
+                "cq:lastRolledoutBy": "admin",
+                "cq:responsive": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "jcr:mixinTypes": [
+                    "cq:LiveRelationship"
+                  ],
+                  "cq:lastRolledout": "Thu May 25 2023 16:16:55 GMT-0400",
+                  "cq:lastRolledoutBy": "admin",
+                  "default": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "jcr:mixinTypes": [
+                      "cq:LiveRelationship"
+                    ],
+                    "offset": "0",
+                    "cq:lastRolledout": "Thu May 25 2023 16:16:55 GMT-0400",
+                    "width": "4",
+                    "cq:lastRolledoutBy": "admin"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "cq:LiveSyncConfig": {
+          "jcr:primaryType": "cq:LiveCopy",
+          "cq:rolloutConfigs": [
+            "/libs/msm/wcm/rolloutconfigs/default"
+          ],
+          "cq:isDeep": true,
+          "cq:master": "/content/kpmgpublic/language-masters/en",
+          "cq:excludedPaths": [
+            "home/sample-content"
+          ]
+        }
+      },
+      "home": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:createdBy": "admin",
+        "jcr:created": "Wed May 31 2023 15:22:05 GMT-0400",
+        "jcr:content": {
+          "jcr:primaryType": "cq:PageContent",
+          "jcr:createdBy": "admin",
+          "jcr:title": "Search Result",
+          "cq:template": "/conf/kpmg/settings/wcm/templates/page-content",
+          "documentId": "59003f39-066e-47d3-a83d-7120900a62d7",
+          "jcr:created": "Wed May 31 2023 15:22:05 GMT-0400",
+          "cq:lastModified": "Wed May 31 2023 15:22:43 GMT-0400",
+          "sling:resourceType": "kpmg/components/structure/page",
+          "cq:lastModifiedBy": "admin",
+          "root": {
+            "jcr:primaryType": "nt:unstructured",
+            "layout": "responsiveGrid",
+            "sling:resourceType": "kpmg/components/container/container",
+            "container": {
+              "jcr:primaryType": "nt:unstructured",
+              "layout": "responsiveGrid",
+              "sling:resourceType": "kpmg/components/container/container",
+              "title": {
+                "jcr:primaryType": "nt:unstructured",
+                "sling:resourceType": "kpmg/components/content/title"
+              },
+              "container": {
+                "jcr:primaryType": "nt:unstructured",
+                "layout": "responsiveGrid",
+                "sling:resourceType": "kpmg/components/container/container",
+                "search_input": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "jcr:createdBy": "admin",
+                  "jcr:lastModifiedBy": "admin",
+                  "jcr:created": "Wed May 31 2023 15:22:39 GMT-0400",
+                  "jcr:lastModified": "Wed May 31 2023 15:22:39 GMT-0400",
+                  "sling:resourceType": "kpmg/components/content/search-input"
+                },
+                "search_results": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "jcr:createdBy": "admin",
+                  "jcr:lastModifiedBy": "admin",
+                  "jcr:created": "Wed May 31 2023 15:22:43 GMT-0400",
+                  "jcr:lastModified": "Wed May 31 2023 15:22:43 GMT-0400",
+                  "sling:resourceType": "kpmg/components/content/search-results"
+                }
+              }
+            }
+          },
+          "cq:featuredimage": {
+            "jcr:primaryType": "nt:unstructured",
+            "fileReference": "/content/dam/kpmgsites/logo.svg"
+          }
+        },
+        "search-results": {
+          "jcr:primaryType": "cq:Page",
+          "jcr:createdBy": "admin",
+          "jcr:created": "Wed May 31 2023 15:27:55 GMT-0400",
+          "jcr:content": {
+            "jcr:primaryType": "cq:PageContent",
+            "jcr:createdBy": "admin",
+            "jcr:title": "Search Results",
+            "cq:template": "/conf/kpmg/settings/wcm/templates/search-results",
+            "documentId": "93ccf776-9dfd-4f11-827d-71bfd442e693",
+            "jcr:created": "Wed May 31 2023 15:27:55 GMT-0400",
+            "cq:lastModified": "Wed May 31 2023 15:27:55 GMT-0400",
+            "sling:resourceType": "kpmg/components/structure/page",
+            "cq:lastModifiedBy": "admin",
+            "root": {
+              "jcr:primaryType": "nt:unstructured",
+              "layout": "responsiveGrid",
+              "sling:resourceType": "kpmg/components/container/container",
+              "container": {
+                "jcr:primaryType": "nt:unstructured",
+                "layout": "responsiveGrid",
+                "sling:resourceType": "kpmg/components/container/container"
+              }
+            },
+            "cq:featuredimage": {
+              "jcr:primaryType": "nt:unstructured",
+              "fileReference": "/content/dam/kpmgsites/logo.svg"
+            }
+          }
+        }
+      },
+      "site-settings": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:createdBy": "admin",
+        "jcr:created": "Thu Jun 01 2023 15:23:09 GMT-0400",
+        "jcr:content": {
+          "jcr:primaryType": "cq:PageContent",
+          "jcr:createdBy": "admin",
+          "jcr:title": "Site Settings",
+          "cq:template": "/apps/wcm-io/caconfig/editor-package/templates/editor",
+          "documentId": "5277849c-0feb-4634-8631-a6f3dd3c6051",
+          "jcr:created": "Thu Jun 01 2023 15:23:09 GMT-0400",
+          "cq:lastModified": "Thu Jun 01 2023 15:23:09 GMT-0400",
+          "hideInNav": true,
+          "sling:resourceType": "wcm-io/caconfig/editor/components/page/editor",
+          "cq:lastModifiedBy": "admin"
+        }
+      }
+    },
+    "fr": {
+      "jcr:primaryType": "cq:Page",
+      "jcr:createdBy": "admin",
+      "jcr:created": "Wed May 31 2023 14:35:03 GMT-0400",
+      "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "jcr:mixinTypes": [
+          "cq:LiveRelationship",
+          "cq:LiveSync"
+        ],
+        "jcr:createdBy": "admin",
+        "jcr:title": "French",
+        "cq:template": "/conf/kpmg/settings/wcm/templates/page-content",
+        "cq:lastRolledout": "Thu May 25 2023 16:17:18 GMT-0400",
+        "documentId": "f4be2779-c791-4dd8-972d-809281d37d17",
+        "sling:configRef": "/conf/kpmg/wcm-io-configs/ch/fr",
+        "cq:contextHubSegmentsPath": "/etc/segmentation/contexthub",
+        "jcr:created": "Wed May 31 2023 14:35:03 GMT-0400",
+        "cq:lastModified": "Thu May 25 2023 16:17:18 GMT-0400",
+        "pageTitle": "KPMG.com",
+        "sling:resourceType": "kpmg/components/structure/page",
+        "cq:contextHubPath": "/etc/cloudsettings/default/contexthub",
+        "cq:lastRolledoutBy": "admin",
+        "cq:lastModifiedBy": "admin",
+        "root": {
+          "jcr:primaryType": "nt:unstructured",
+          "jcr:mixinTypes": [
+            "cq:LiveRelationship"
+          ],
+          "layout": "responsiveGrid",
+          "cq:lastRolledout": "Thu May 25 2023 16:17:18 GMT-0400",
+          "sling:resourceType": "kpmg/components/container/container",
+          "cq:lastRolledoutBy": "admin",
+          "container": {
+            "jcr:primaryType": "nt:unstructured",
+            "jcr:mixinTypes": [
+              "cq:LiveRelationship"
+            ],
+            "cq:lastRolledout": "Thu May 25 2023 16:17:18 GMT-0400",
+            "sling:resourceType": "kpmg/components/container/container",
+            "cq:lastRolledoutBy": "admin",
+            "title": {
+              "jcr:primaryType": "nt:unstructured",
+              "jcr:mixinTypes": [
+                "cq:LiveRelationship"
+              ],
+              "cq:lastRolledout": "Thu May 25 2023 16:17:18 GMT-0400",
+              "sling:resourceType": "kpmg/components/content/title",
+              "cq:lastRolledoutBy": "admin"
+            },
+            "container": {
+              "jcr:primaryType": "nt:unstructured",
+              "jcr:mixinTypes": [
+                "cq:LiveRelationship"
+              ],
+              "layout": "responsiveGrid",
+              "cq:lastRolledout": "Thu May 25 2023 16:17:18 GMT-0400",
+              "sling:resourceType": "kpmg/components/container/container",
+              "cq:lastRolledoutBy": "admin",
+              "teaser": {
+                "jcr:primaryType": "nt:unstructured",
+                "jcr:mixinTypes": [
+                  "cq:LiveRelationship"
+                ],
+                "jcr:title": "Epic Journey",
+                "actionsEnabled": "false",
+                "cq:lastRolledout": "Thu May 25 2023 16:17:18 GMT-0400",
+                "titleFromPage": "false",
+                "jcr:description": "<p>Don't stop half way, go for the top!</p>\r\n",
+                "descriptionFromPage": "false",
+                "sling:resourceType": "kpmg/components/content/teaser",
+                "textIsRich": "true",
+                "cq:lastRolledoutBy": "admin",
+                "cq:responsive": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "jcr:mixinTypes": [
+                    "cq:LiveRelationship"
+                  ],
+                  "cq:lastRolledout": "Thu May 25 2023 16:17:18 GMT-0400",
+                  "cq:lastRolledoutBy": "admin",
+                  "default": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "jcr:mixinTypes": [
+                      "cq:LiveRelationship"
+                    ],
+                    "offset": "0",
+                    "cq:lastRolledout": "Thu May 25 2023 16:17:18 GMT-0400",
+                    "width": "4",
+                    "cq:lastRolledoutBy": "admin"
+                  }
+                }
+              },
+              "teaser_copy": {
+                "jcr:primaryType": "nt:unstructured",
+                "jcr:mixinTypes": [
+                  "cq:LiveRelationship"
+                ],
+                "jcr:title": "Epic Journey",
+                "actionsEnabled": "false",
+                "cq:lastRolledout": "Thu May 25 2023 16:17:18 GMT-0400",
+                "titleFromPage": "false",
+                "jcr:description": "<p>Don't stop half way, go for the top!</p>\r\n",
+                "descriptionFromPage": "false",
+                "sling:resourceType": "kpmg/components/content/teaser",
+                "textIsRich": "true",
+                "cq:lastRolledoutBy": "admin",
+                "cq:responsive": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "jcr:mixinTypes": [
+                    "cq:LiveRelationship"
+                  ],
+                  "cq:lastRolledout": "Thu May 25 2023 16:17:18 GMT-0400",
+                  "cq:lastRolledoutBy": "admin",
+                  "default": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "jcr:mixinTypes": [
+                      "cq:LiveRelationship"
+                    ],
+                    "offset": "0",
+                    "cq:lastRolledout": "Thu May 25 2023 16:17:18 GMT-0400",
+                    "width": "4",
+                    "cq:lastRolledoutBy": "admin"
+                  }
+                }
+              },
+              "teaser_copy_1579324932": {
+                "jcr:primaryType": "nt:unstructured",
+                "jcr:mixinTypes": [
+                  "cq:LiveRelationship"
+                ],
+                "jcr:title": "Epic Journey",
+                "actionsEnabled": "false",
+                "cq:lastRolledout": "Thu May 25 2023 16:17:18 GMT-0400",
+                "titleFromPage": "false",
+                "jcr:description": "<p>Don't stop half way, go for the top!</p>\r\n",
+                "descriptionFromPage": "false",
+                "sling:resourceType": "kpmg/components/content/teaser",
+                "textIsRich": "true",
+                "cq:lastRolledoutBy": "admin",
+                "cq:responsive": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "jcr:mixinTypes": [
+                    "cq:LiveRelationship"
+                  ],
+                  "cq:lastRolledout": "Thu May 25 2023 16:17:18 GMT-0400",
+                  "cq:lastRolledoutBy": "admin",
+                  "default": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "jcr:mixinTypes": [
+                      "cq:LiveRelationship"
+                    ],
+                    "offset": "0",
+                    "cq:lastRolledout": "Thu May 25 2023 16:17:18 GMT-0400",
+                    "width": "4",
+                    "cq:lastRolledoutBy": "admin"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "cq:LiveSyncConfig": {
+          "jcr:primaryType": "cq:LiveCopy",
+          "cq:rolloutConfigs": [
+            "/libs/msm/wcm/rolloutconfigs/default"
+          ],
+          "cq:isDeep": true,
+          "cq:master": "/content/kpmgpublic/language-masters/fr"
+        }
+      }
+    },
+    "de": {
+      "jcr:primaryType": "cq:Page",
+      "jcr:createdBy": "admin",
+      "jcr:created": "Wed May 31 2023 14:35:03 GMT-0400",
+      "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "jcr:mixinTypes": [
+          "cq:LiveRelationship",
+          "cq:LiveSync"
+        ],
+        "jcr:createdBy": "admin",
+        "jcr:title": "German",
+        "cq:template": "/conf/kpmg/settings/wcm/templates/page-content",
+        "cq:lastRolledout": "Thu May 25 2023 16:17:41 GMT-0400",
+        "documentId": "6651620f-6e71-4611-a220-ad76edefd4e2",
+        "sling:configRef": "/conf/kpmg/wcm-io-configs/ch/de",
+        "cq:contextHubSegmentsPath": "/etc/segmentation/contexthub",
+        "jcr:created": "Wed May 31 2023 14:35:03 GMT-0400",
+        "cq:lastModified": "Thu May 25 2023 16:17:41 GMT-0400",
+        "pageTitle": "KPMG.com",
+        "sling:resourceType": "kpmg/components/structure/page",
+        "cq:contextHubPath": "/etc/cloudsettings/default/contexthub",
+        "cq:lastRolledoutBy": "admin",
+        "cq:lastModifiedBy": "admin",
+        "root": {
+          "jcr:primaryType": "nt:unstructured",
+          "jcr:mixinTypes": [
+            "cq:LiveRelationship"
+          ],
+          "layout": "responsiveGrid",
+          "cq:lastRolledout": "Thu May 25 2023 16:17:41 GMT-0400",
+          "sling:resourceType": "kpmg/components/container/container",
+          "cq:lastRolledoutBy": "admin",
+          "container": {
+            "jcr:primaryType": "nt:unstructured",
+            "jcr:mixinTypes": [
+              "cq:LiveRelationship"
+            ],
+            "cq:lastRolledout": "Thu May 25 2023 16:17:41 GMT-0400",
+            "sling:resourceType": "kpmg/components/container/container",
+            "cq:lastRolledoutBy": "admin",
+            "title": {
+              "jcr:primaryType": "nt:unstructured",
+              "jcr:mixinTypes": [
+                "cq:LiveRelationship"
+              ],
+              "cq:lastRolledout": "Thu May 25 2023 16:17:41 GMT-0400",
+              "sling:resourceType": "kpmg/components/content/title",
+              "cq:lastRolledoutBy": "admin"
+            },
+            "container": {
+              "jcr:primaryType": "nt:unstructured",
+              "jcr:mixinTypes": [
+                "cq:LiveRelationship"
+              ],
+              "layout": "responsiveGrid",
+              "cq:lastRolledout": "Thu May 25 2023 16:17:41 GMT-0400",
+              "sling:resourceType": "kpmg/components/container/container",
+              "cq:lastRolledoutBy": "admin",
+              "teaser": {
+                "jcr:primaryType": "nt:unstructured",
+                "jcr:mixinTypes": [
+                  "cq:LiveRelationship"
+                ],
+                "jcr:title": "Epic Journey",
+                "actionsEnabled": "false",
+                "cq:lastRolledout": "Thu May 25 2023 16:17:41 GMT-0400",
+                "titleFromPage": "false",
+                "jcr:description": "<p>Don't stop half way, go for the top!</p>\r\n",
+                "descriptionFromPage": "false",
+                "sling:resourceType": "kpmg/components/content/teaser",
+                "textIsRich": "true",
+                "cq:lastRolledoutBy": "admin",
+                "cq:responsive": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "jcr:mixinTypes": [
+                    "cq:LiveRelationship"
+                  ],
+                  "cq:lastRolledout": "Thu May 25 2023 16:17:41 GMT-0400",
+                  "cq:lastRolledoutBy": "admin",
+                  "default": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "jcr:mixinTypes": [
+                      "cq:LiveRelationship"
+                    ],
+                    "offset": "0",
+                    "cq:lastRolledout": "Thu May 25 2023 16:17:41 GMT-0400",
+                    "width": "4",
+                    "cq:lastRolledoutBy": "admin"
+                  }
+                }
+              },
+              "teaser_copy": {
+                "jcr:primaryType": "nt:unstructured",
+                "jcr:mixinTypes": [
+                  "cq:LiveRelationship"
+                ],
+                "jcr:title": "Epic Journey",
+                "actionsEnabled": "false",
+                "cq:lastRolledout": "Thu May 25 2023 16:17:41 GMT-0400",
+                "titleFromPage": "false",
+                "jcr:description": "<p>Don't stop half way, go for the top!</p>\r\n",
+                "descriptionFromPage": "false",
+                "sling:resourceType": "kpmg/components/content/teaser",
+                "textIsRich": "true",
+                "cq:lastRolledoutBy": "admin",
+                "cq:responsive": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "jcr:mixinTypes": [
+                    "cq:LiveRelationship"
+                  ],
+                  "cq:lastRolledout": "Thu May 25 2023 16:17:41 GMT-0400",
+                  "cq:lastRolledoutBy": "admin",
+                  "default": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "jcr:mixinTypes": [
+                      "cq:LiveRelationship"
+                    ],
+                    "offset": "0",
+                    "cq:lastRolledout": "Thu May 25 2023 16:17:41 GMT-0400",
+                    "width": "4",
+                    "cq:lastRolledoutBy": "admin"
+                  }
+                }
+              },
+              "teaser_copy_1579324932": {
+                "jcr:primaryType": "nt:unstructured",
+                "jcr:mixinTypes": [
+                  "cq:LiveRelationship"
+                ],
+                "jcr:title": "Epic Journey",
+                "actionsEnabled": "false",
+                "cq:lastRolledout": "Thu May 25 2023 16:17:41 GMT-0400",
+                "titleFromPage": "false",
+                "jcr:description": "<p>Don't stop half way, go for the top!</p>\r\n",
+                "descriptionFromPage": "false",
+                "sling:resourceType": "kpmg/components/content/teaser",
+                "textIsRich": "true",
+                "cq:lastRolledoutBy": "admin",
+                "cq:responsive": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "jcr:mixinTypes": [
+                    "cq:LiveRelationship"
+                  ],
+                  "cq:lastRolledout": "Thu May 25 2023 16:17:41 GMT-0400",
+                  "cq:lastRolledoutBy": "admin",
+                  "default": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "jcr:mixinTypes": [
+                      "cq:LiveRelationship"
+                    ],
+                    "offset": "0",
+                    "cq:lastRolledout": "Thu May 25 2023 16:17:41 GMT-0400",
+                    "width": "4",
+                    "cq:lastRolledoutBy": "admin"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "cq:LiveSyncConfig": {
+          "jcr:primaryType": "cq:LiveCopy",
+          "cq:rolloutConfigs": [
+            "/libs/msm/wcm/rolloutconfigs/default"
+          ],
+          "cq:isDeep": true,
+          "cq:master": "/content/kpmgpublic/language-masters/de"
+        }
+      }
+    }
+  },
+  "fr": {},
+  "jcr:content": {},
+  "language-masters": {},
+  "us": {}
+}

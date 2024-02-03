@@ -1,0 +1,70 @@
+//TODO - refactor to use proper BEM scoping
+$height-of-header-sm: 50px;
+$height-of-header-md: 90px;
+$height-of-header-lg: 120px;
+
+.container {
+  .cmp-container {
+    display: flow-root;
+    @include content-max-width;
+  }
+
+  @include style-variation("cmp-container--full-bleed") {
+    @include content-full-width;
+  }
+  &.root {
+    //margin-top: $height-of-header-sm;
+    // @include tablet {
+    //   margin-top: $height-of-header-md;
+    // }
+    // @include desktop-small {
+    //   margin-top: $height-of-header-lg;
+    // }
+    // @include desktop-medium {
+    //   margin-top: $height-of-header-lg;
+    // }
+  }
+}
+
+.section > .cmp-container {
+  @include in-front-of-bleed;
+}
+
+.section > .cmp-container {
+  @include container-horizontal-padding;
+}
+
+// exceptions that need to always be full width of viewport
+.root.container,
+.cmp-experiencefragment,
+main.container,
+.main.container,
+.cmp-col {
+  & > .cmp-container {
+    @include content-full-width;
+    padding: 0;
+  }
+}
+
+.content-right {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+    width: 100%;
+    height: 1px;
+  }
+  .cmp-container {
+    width: 100%;
+    margin: initial;
+    max-width: initial;
+    padding: 0;
+    .container {
+      margin: 0;
+    }
+  }
+  > .cmp-container {
+    width: calc(100% - 112px);
+    float: right;
+  }
+}

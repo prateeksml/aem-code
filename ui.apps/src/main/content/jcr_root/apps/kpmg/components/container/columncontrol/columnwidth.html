@@ -1,0 +1,11 @@
+<template data-sly-template.row="${@ modifier, columns}">
+    <div class="cmp-column-control" id="${properties.anchorId}">
+        <div class="cmp-column-control__row cmp-column-control__row--${modifier}">
+            <div class="cmp-column-control__col" data-sly-repeat.column="${columns}">
+                <sly 
+                    data-sly-set.columnPath="./container-${column}"
+                    data-sly-resource="${columnPath @ resourceType='kpmg/components/container/columncontrol/column'}"></sly>
+            </div>
+        </div>
+    </div>
+</template>

@@ -1,0 +1,35 @@
+<div data-sly-use.model="com.kpmg.core.models.IndustryServiceGrid"
+    data-sly-use.template="core/wcm/components/commons/v1/templates.html" data-sly-test="${model.dataEntryType}"
+    class="cmp-industryservicegrid" data-show="${model.expandView}" data-cmp-data-layer="${model.data.json}">
+    <div class="cmp-row cmp-row--fourEvenCards" data-sly-list="${model.items}">
+        <div class="cmp-col">
+            <div class="cmp-container">
+                <div class="industryservicegridteaser teaser">
+                    <div class="cmp-teaser">
+                        <div class="cmp-teaser__content">
+                            <span class="cmp-teaser__icon" data-sly-test="${item.iconType=='materialIcon'}">${item.icon}</span>
+                            <img
+                                    class="cmp-teaser__custom-icon"
+                                    alt=""
+                                    data-sly-test="${item.iconType=='customIcon'}"
+                                    src="${item.customIcon}"
+                                    loading="lazy"
+                            />
+                            <h2 class="cmp-teaser__title" data-sly-test="${item.title}">${item.title}</h2>
+                            <div class="cmp-teaser__description" data-sly-test="${item.description}">${item.description}</div>
+                            <div class="cmp-teaser__action-container">
+                                <a class="cmp-teaser__action-link" href="${item.link @ extension='html'}">${model.readMore || 'Read More'}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="button cmp-button--secondary cmp-button--content-width light-theme">
+        <button type="button" class="cmp-button button-view-all" data-cmp-clickable="true" data-show="${model.seeAll || 'See all'}" data-less="${model.seeLess || 'See less'}">
+            <span class="cmp-button__text">${model.seeAll|| 'See all'}</span>
+        </button>
+    </div>
+</div>
+<sly data-sly-call="${template.placeholder @ isEmpty=!model.seeAll, classAppend='cmp-html-industryservicegrid'}"></sly>

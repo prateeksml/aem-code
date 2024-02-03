@@ -1,0 +1,18 @@
+{
+  "allow.hosts":[
+    "cloud.dev.kpmg.com",
+    "cloud.qa.kpmg.com",
+    "cloud.stg.kpmg.com",
+    "cloud.kpmg.com",
+    "dev.kpmg.com",
+    "qa.kpmg.com",
+    "stg.kpmg.com",
+    "launch.kpmg.com",
+    "kpmg.com"
+  ],
+  "filter.methods":[
+    "POST",
+    "GET"
+  ],
+  "allow.empty":true
+}

@@ -1,0 +1,5 @@
+// Configuration created by Apache Sling JCR Installer
+{
+  "getDemandbaseURL":"https://api.company-target.com/api/v2/ip.json?key=ayvX8Uwe2cyBesSxvt3tP0Il8VinNdyO0JGjawE7&callback=window.kpmgPersonalize.db.CDCWrapper",
+  "getDemandbaseCurl":"https://scripts.demandbase.com/adobeanalytics/pZy5a2F8.min.js"
+}

@@ -1,0 +1,26 @@
+.cmp-mobile-toggle {
+  $toggle-size: $global-size-2;
+
+  width: $toggle-size;
+  height: $toggle-size;
+
+  @include desktop-medium {
+    display: none;
+  }
+
+  &__inner,
+  button {
+    @include normalize-style;
+    background: none;
+    border: none;
+    width: $toggle-size;
+    height: $toggle-size;
+    cursor: pointer;
+  }
+
+  &__icon {
+    @include material-icons-outlined;
+    font-size: $global-font-size-15;
+    vertical-align: middle;
+  }
+}

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:isTransCreated="{Boolean}true"
+        cq:lastModified="{Date}2023-05-08T12:46:54.152-05:00"
+        cq:lastModifiedBy="admin"
+        cq:lastTranslationUpdate="{Date}2023-05-08T12:46:05.046-05:00"
+        cq:template="/conf/kpmg/settings/wcm/templates/page-content"
+        cq:translationSourcePath="/content/kpmg-style-guide/en/components/teaser"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="teaser"
+        sling:resourceType="kpmg/components/structure/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="kpmg/components/container/container"
+            layout="responsiveGrid">
+            <container
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="kpmg/components/container/container"
+                layout="responsiveGrid">
+                <title
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="kpmg/components/content/title"/>
+                <container
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="kpmg/components/container/container"
+                    layout="responsiveGrid">
+                    <teaser
+                        jcr:description="&lt;p>KPMG has market-leading alliances with many of the world&amp;#39;s leading software and services vendors.&lt;/p>&#xd;&#xa;"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="KPMG Strategic Alliances"
+                        sling:resourceType="kpmg/components/content/teaser"
+                        alt="alt test"
+                        altValueFromDAM="false"
+                        descriptionFromPage="false"
+                        disableLazyLoading="false"
+                        fileReference="/content/dam/kpmg-style-guide/ayo-ogunseinde-237739.jpeg"
+                        imageFromPageImage="false"
+                        isDecorative="false"
+                        linkTarget="_self"
+                        pretitle="Lorem Ipsum"
+                        textIsRich="true"
+                        titleFromPage="false">
+                        <actions jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                link="/content/kpmg-style-guide/en/components/button"
+                                linkTarget="_self"
+                                text="Learn Mode"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                link="/content/kpmg-style-guide/en/components/button"
+                                linkTarget="_self"
+                                text="Find a Location"/>
+                        </actions>
+                    </teaser>
+                </container>
+            </container>
+        </root>
+    </jcr:content>
+</jcr:root>

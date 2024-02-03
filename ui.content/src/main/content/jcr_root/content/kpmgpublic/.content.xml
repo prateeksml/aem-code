@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="cq:Page">
+    <jcr:content
+            cq:allowedTemplates="[/conf/kpmg/settings/wcm/templates/(?!xf-).*,/apps/wcm-io/(?!xf-).*]"
+            cq:conf="/conf/kpmg"
+            cq:redirectTarget="/content/kpmgpublic/us/en"
+            cq:template="/conf/kpmg/settings/wcm/templates/page-content"
+            jcr:primaryType="cq:PageContent"
+            jcr:title="KPMG.com"
+            sling:configRef="/conf/kpmg"
+            sling:redirect="{Boolean}true"
+            sling:redirectStatus="{Long}302"
+            sling:resourceType="kpmg/components/structure/page">
+        <image jcr:primaryType="nt:unstructured">
+            <file/>
+        </image>
+    </jcr:content>
+    <language-masters/>
+    <us/>
+</jcr:root>

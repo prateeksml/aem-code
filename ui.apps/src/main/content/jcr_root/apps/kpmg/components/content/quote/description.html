@@ -1,0 +1,11 @@
+<sly data-sly-template.description>
+  <div
+    class="cmp-teaser__description"
+    data-sly-test.description="${properties.customDescription}"
+  >
+    <p>${description @ context="html"}</p>
+  </div>
+  <p class="cmp-teaser__author"><strong>${properties.authorLabel}</strong></p>
+  <p class="cmp-teaser__detail">${properties.authorDetail1}</p>
+  <p class="cmp-teaser__detail">${properties.authorDetail2}</p>
+</sly>

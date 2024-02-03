@@ -1,0 +1,22 @@
+<sly data-sly-template.menuItemBar="${@ menuItemBar, isMobile}">
+
+    <sly data-sly-test.enableLogin="${!menuItemBar.disablelogin}" />
+    <sly data-sly-test.enableRFP="${!menuItemBar.disablerpf}" />
+    <sly data-sly-test.enableLangSelector="${!menuItemBar.disablelangselector}" />
+
+    <div class="${isMobile ? ' cmp-menu-item-bar--mobile' : 'cmp-menu-item-bar'}" data-sly-attribute.data-cmp-menu-item-bar-mobile="${isMobile ? 'true' : 'false'}">
+        <div class="cmp-menu-item-bar--container">
+            <div class="cmp-menu-item-bar--inner">
+                <sly data-sly-test="${enableLogin}">
+                    <sly data-sly-resource="${'./login' @ resourceType='kpmg/components/navigation/header/menu-item'}" />
+                </sly>
+                <sly data-sly-test="${enableRFP}">
+                    <sly data-sly-resource="${'./rfp' @ resourceType='kpmg/components/navigation/header/menu-item'}" />
+                </sly>
+                <sly data-sly-use.siteSelector="com.kpmg.core.models.SiteSelector" data-sly-test="${enableLangSelector}">
+                    <sly data-sly-resource="${'./langselector' @ resourceType='kpmg/components/navigation/header/lang-selector'}" />
+                </sly>
+            </div>
+        </div>
+    </div>
+</sly>

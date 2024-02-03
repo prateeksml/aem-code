@@ -1,0 +1,149 @@
+@include light-theme {
+  --accordion-background-color: #{$global-color-brand-white};
+  --accordion-color: inherit;
+}
+
+@include dark-theme {
+  --accordion-background-color: #{$global-color-brand-kpmg-blue};
+  --accordion-color: #{$global-color-brand-white};
+}
+.accordion {
+  .cmp-accordion {
+    margin-bottom: $alias-margin-xx-large;
+    @include content-max-width;
+    @include in-front-of-bleed;
+  }
+
+  .cmp-accordion__item {
+    position: relative;
+    &:not(:first-child) {
+      .cmp-accordion__button {
+        border-top: 0;
+      }
+    }
+    &:before {
+      content: "";
+      display: inline-block;
+      width: $global-size-025;
+      height: 100%;
+      background-color: $global-color-brand-light-green;
+      left: 0;
+      top: 0;
+      position: absolute;
+      z-index: 2;
+      opacity: 0;
+      transition: opacity 0.15s ease-in-out;
+    }
+  }
+  .cmp-accordion__item[data-cmp-expanded] {
+    &:before {
+      opacity: 1;
+    }
+  }
+
+  .cmp-accordion__button {
+    cursor: pointer;
+    border: 1px solid $global-color-strokes-cobalt-blue-20-percent;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: var(--accordion-background-color);
+    text-align: inherit;
+    padding: $alias-padding-large $alias-padding-medium;
+    @include tablet {
+      padding: $alias-padding-x-large $alias-padding-xx-large;
+    }
+    @include desktop-small {
+      padding: $alias-padding-x-large $alias-padding-xx-large;
+    }
+    @include desktop-medium {
+      padding: $alias-padding-x-large $alias-padding-xx-large;
+    }
+  }
+
+  .cmp-accordion__icon {
+    @include button-icon("expand_more");
+    @include text-color;
+    font-size: $alias-font-size-x-large; // 1.5rem/24px
+    margin-right: 0;
+  }
+
+  .cmp-accordion__button--expanded {
+    padding-bottom: $alias-padding-medium;
+    border-bottom: 0;
+    position: relative;
+
+    .cmp-accordion__icon {
+      @include button-icon("expand_less");
+      @include text-color;
+      font-size: $alias-font-size-x-large; // 1.5rem/24px
+      margin-right: 0;
+    }
+  }
+
+  .cmp-accordion__title {
+    @include typography-heading-six-semibold;
+    margin-right: $alias-margin-medium;
+  }
+
+  .cmp-accordion__panel {
+    font-size: $alias-font-size-base;
+    line-height: $alias-fonts-line-height-x-large; // 1.5em/24px
+    letter-spacing: $alias-fonts-body-default-link-letter-spacing;
+    background-color: var(--accordion-background-color);
+    color: var(--accordion-color);
+    padding: 0 $alias-padding-xx-large $alias-padding-large
+      $alias-padding-medium;
+    overflow: auto;
+    @include tablet {
+      padding: 0 $alias-padding-xx-large $alias-padding-xxx-large
+        $alias-padding-xx-large;
+    }
+    @include desktop-small {
+      padding: 0 $alias-padding-xx-large $alias-padding-xxx-large
+        $alias-padding-xx-large;
+    }
+    @include desktop-medium {
+      padding: 0 $alias-padding-xx-large $alias-padding-xxx-large
+        $alias-padding-xx-large;
+    }
+    // text component specific styling
+    .text .cmp-text {
+      margin: 0;
+      padding: 0;
+      p {
+        @include typography-body-small-regular;
+      }
+      b {
+        @include typography-body-small-bold;
+      }
+    }
+  }
+
+  .cmp-accordion__title {
+    @include text-color;
+  }
+
+  .cmp-accordion__panel--expanded {
+    display: block;
+    border-bottom: 1px solid $global-color-strokes-cobalt-blue-20-percent;
+    border-right: 1px solid $global-color-strokes-cobalt-blue-20-percent;
+    padding-bottom: $alias-padding-x-large;
+    overflow: auto;
+
+    @include tablet {
+      padding-bottom: $alias-padding-xxx-large;
+    }
+
+    @include desktop-small {
+      padding-bottom: $alias-padding-xxx-large;
+    }
+    @include desktop-medium {
+      padding-bottom: $alias-padding-xxx-large;
+    }
+  }
+
+  .cmp-accordion__panel--hidden {
+    display: none;
+  }
+}

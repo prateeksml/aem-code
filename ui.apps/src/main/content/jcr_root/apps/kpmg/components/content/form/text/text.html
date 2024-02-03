@@ -1,0 +1,73 @@
+<div data-sly-use.text="com.adobe.cq.wcm.core.components.models.form.Text"
+	 data-sly-use.textnew="com.kpmg.integration.models.FormText"
+	 class="cmp-form-text"
+     data-cmp-is="formText"
+	 data-cmp-constraint-message="${textnew.regexCheckbox ? textnew.regexMessage : text.constraintMessage}"
+     data-cmp-required-message="${text.requiredMessage}" >
+	<label class = "cmp-form-text__label ${text.type == 'textarea' ? 'has-char-count' : ''}" for="${text.id}" data-sly-test="${text.title && !text.hideTitle}">
+            <span>${text.title}<sup data-sly-test="${text.required}" >*</sup></span>
+            <p data-sly-test= "${text.type == 'textarea'}" class="char-count">
+                <span class="used">0</span>/<span class="limit">${textnew.maxCharLength}</span>
+            </p>
+	</label>
+	<textarea data-sly-test.useTextarea="${text.type == 'textarea'}"
+              data-cmp-hook-form-text="input"
+			  class="cmp-form-text__textarea"
+              aria-label="${text.title}"
+              id="${text.id}"
+              placeholder="${text.placeholder}"
+              name="${text.name}"
+              readonly="${text.readOnly}"
+              required="${text.required}"
+              rows="${text.rows}"
+			  maxlength="${textnew.maxCharLength}"
+			  data-pattern = "${textnew.regexCheckbox ? textnew.customRegex : textnew.regex}"
+              data-sly-attribute.aria-describedby="${text.helpMessage ? [text.id, 'helpMessage'] : '' @ join = '-'}">${text.value}</textarea>
+	<p id="${text.id}-helpMessage" data-sly-test="${!text.placeholder && text.helpMessage}"
+       class="cmp-form-text__help-block">${text.helpMessage}</p>
+
+    <input data-sly-test="${text.type == 'text'}"
+           class="cmp-form-text__text"
+           data-cmp-hook-form-text="input"
+           aria-label="${text.title}"
+           type="${text.type}"
+           id="${text.id}"
+           placeholder="${text.placeholder}"
+           name="${text.name}"
+           value="${text.value}"
+           readonly="${text.readOnly}"
+           required="${text.required}"
+           maxlength="${textnew.maxCharLength}"
+           data-sly-attribute.aria-describedby="${text.helpMessage ? [text.id, 'helpMessage'] : '' @ join = '-'}"
+		   pattern = "${textnew.regexCheckbox ? textnew.customRegex : textnew.regex}"/>
+ <input data-sly-test="${text.type == 'email'}"
+           class="cmp-form-text__text"
+           data-cmp-hook-form-text="input"
+           aria-label="${text.title}"
+           type="${text.type}"
+           id="${text.id}"
+           placeholder="${text.placeholder}"
+           name="${text.name}"
+           value="${text.value}"
+           readonly="${text.readOnly}"
+           required="${text.required}"
+           maxlength="${textnew.maxCharLength}"
+           data-sly-attribute.aria-describedby="${text.helpMessage ? [text.id, 'helpMessage'] : '' @ join = '-'}"
+		   pattern = "${textnew.regexCheckbox ? textnew.customRegex : textnew.regex }" />
+
+ <input data-sly-test="${text.type == 'tel'}"
+           class="cmp-form-text__text"
+           data-cmp-hook-form-text="input"
+           aria-label="${text.title}"
+           type="${text.type}"
+           id="${text.id}"
+           placeholder="${text.placeholder}"
+           name="${text.name}"
+           value="${text.value}"
+           readonly="${text.readOnly}"
+           required="${text.required}"
+           maxlength="${textnew.maxCharLength}"
+           data-sly-attribute.aria-describedby="${text.helpMessage ? [text.id, 'helpMessage'] : '' @ join = '-'}"
+		   pattern = "${textnew.regexCheckbox ? textnew.customRegex  :textnew.regex}" />
+	<div class="err-msg" data-help-message-id="${text.helpMessage ? [text.id, 'helpMessage'] : '' @ join = '-'}" id="${text.id}-err-msg" aria-hidden="true"></div>
+</div>

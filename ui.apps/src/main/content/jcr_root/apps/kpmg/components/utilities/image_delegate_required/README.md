@@ -1,0 +1,1 @@
+This is an override of the image delegate tab that makes the asset required.

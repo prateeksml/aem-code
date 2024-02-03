@@ -1,0 +1,42 @@
+
+<sly data-sly-use.socialMedia="com.kpmg.core.models.SocialShareModel" />
+
+<div data-sly-test="${socialMedia.socialMediaEnabled}"
+	role="contentinfo" class="cmp-social-share" data-cmp-data-layer="${socialMedia.data.json}">
+
+	<p class="cmp-social-share__label">${socialMedia.label}</p>
+	
+	<ul class="cmp-social-share__list">
+
+		<li data-sly-test="${socialMedia.linkedinEnabled}"
+			class="cmp-social-share-list__item">
+			<a
+			href="https://www.linkedin.com/shareArticle?mini=true&url=${socialMedia.pageUrl}&title=${socialMedia.metaOgTitle}"
+			rel="noopener noreferrer" target="_blank" data-title="linkedin"
+			data-cmp-clickable="true">
+				<span class="icon-linkedin-square cmp-social-share-list__item--icon"></span>
+			</a>
+		</li>
+
+		<li data-sly-test="${socialMedia.twitterEnabled}"
+			class="cmp-social-share-list__item">
+			<a
+			href="http://twitter.com/share?text=${socialMedia.metaOgTitle}&url=${socialMedia.pageUrl}"
+			rel="noopener noreferrer" target="_blank" data-title="twitter"
+			data-cmp-clickable="true"> <span
+				class="icon-twitter cmp-social-share-list__item--icon"></span>
+			</a>
+		</li>
+
+		<li data-sly-test="${socialMedia.facebookEnabled}"
+			class="cmp-social-share-list__item">
+			<a
+			href="http://www.facebook.com/sharer.php?u=${socialMedia.pageUrl}&p[title]=${socialMedia.metaOgTitle}"
+			rel="noopener noreferrer" target="_blank" data-title="facebook"
+			data-cmp-clickable="true">
+				<span class="icon-facebook cmp-social-share-list__item--icon"></span>
+			</a>
+		</li>
+	</ul>
+
+</div>

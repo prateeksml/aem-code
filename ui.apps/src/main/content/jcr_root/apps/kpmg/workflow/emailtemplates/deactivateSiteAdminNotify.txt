@@ -1,0 +1,3 @@
+subject=Page Deactivated
+
+message=The following page has been deactivated: \n ${pageurl}  \n Please access the link below to expiration report. \n  ${pageurl}

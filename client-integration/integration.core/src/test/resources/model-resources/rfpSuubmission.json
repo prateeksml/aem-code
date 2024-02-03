@@ -1,0 +1,14 @@
+{
+  "jcr:primaryType": "nt:unstructured",
+  "jcr:createdBy": "admin",
+  "requestDetailTitle": "Request",
+  "jcr:lastModifiedBy": "admin",
+  "jcr:created": "Wed Aug 02 2023 17:55:56 GMT+0530",
+  "rfpReference": "Thanks you Description",
+  "buttonText": "Print Button",
+  "rfpTitle": "Thank You",
+  "belowListMessage": "List Title",
+  "jcr:lastModified": "Thu Aug 03 2023 12:07:21 GMT+0530",
+  "contactInfoTitle": "Contact Title",
+  "sling:resourceType": "kpmg/components/content/rfpsubmission"
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Insights"
+    allLinksText="All Insights"
+    type="secondary">
+    <items jcr:primaryType="nt:unstructured">
+        <item0
+            jcr:primaryType="nt:unstructured"
+            jcr:title="Insight Link 1"
+            linkURL="/content/kpmgpublic/us/en"/>
+        <item1
+            jcr:primaryType="nt:unstructured"
+            jcr:title="Insight Link 2"
+            linkURL="/content/kpmgpublic/us/en"/>
+        <item2
+            jcr:primaryType="nt:unstructured"
+            jcr:title="Insight Link 3"
+            linkURL="/content/kpmgpublic/us/en"/>
+        <item3
+            jcr:primaryType="nt:unstructured"
+            jcr:title="Insight External Link"
+            linkURL="https://en.wikipedia.org/wiki/Main_Page"/>
+    </items>
+</jcr:root>

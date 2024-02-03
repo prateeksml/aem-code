@@ -1,0 +1,54 @@
+//SUB MENU DESKTOP MEDIUM
+@include desktop-medium {
+  #{$parent} {
+    $sub-menu-top-offset-medium: calc($global-size-5 + $global-size-25);
+    $sub-menu-section-max-width: 25rem;
+
+    display: none;
+    height: auto;
+
+    &--active {
+      display: block;
+      position: absolute;
+      left: 0;
+      top: $sub-menu-top-offset-medium;
+      animation: none;
+    }
+
+    //BACK BUTTON
+    &__back-button {
+      display: none;
+    }
+
+    &__container {
+      @include header-horizontal-margin;
+      display: flex;
+      padding: $alias-padding-medium;
+    }
+
+    &__link {
+      display: none;
+    }
+
+    &__section {
+      flex: auto;
+      max-width: $sub-menu-section-max-width;
+      padding-right: $alias-size-xx-large;
+
+      //Show Submenu All Link on first section
+      &:first-of-type {
+        #{$parent}__section-link {
+          display: block;
+        }
+      }
+
+      &-title {
+        &--container {
+          height: calc($alias-size-medium + ($alias-size-base * 2));
+          padding: $alias-padding-base 0;
+          border-bottom: 1px solid $global-color-strokes-white-25-percent;
+        }
+      }
+    }
+  }
+}

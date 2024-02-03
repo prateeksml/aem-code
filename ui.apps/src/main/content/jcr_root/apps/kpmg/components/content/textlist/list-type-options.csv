@@ -1,0 +1,47 @@
+Arabic-Indic numbers,arabic-indic
+Bengali numbering,bengali
+Cambodian/Khmer numbering,cambodian/khmer
+Decimal numbers beginning with 1,decimal
+Decimal numbers padded by initial zeros,decimal-leading-zero
+Devanagari numbering,devanagari
+Dictionary-order hiragana lettering,hiragana
+Dictionary-order katakana lettering,katakana
+Ethiopic numbering,ethiopic-numeric
+Formal Korean Han numbering,korean-hanja-formal
+Gujarati numbering,gujarati
+Gurmukhi numbering,gurmukhi
+Han 'Earthly Branch' ordinals,cjk-earthly-branch
+Han 'Heavenly Stem' ordinals,cjk-heavenly-stem
+Han decimal numbers,cjk-decimal
+Identical to trad-chinese-informal,cjk-ideographic
+Iroha-order hiragana lettering,hiragana-iroha
+Iroha-order katakana lettering,katakana-iroha
+Japanese formal,japanese-formal
+Japanese informal numbering,japanese-informal
+Kannada numbering,kannada
+Korean hangul numbering,korean-hangul-formal
+Korean hanja numbering,korean-hanja-informal
+Laotian numbering,lao
+Lowercase Armenian numbering,lower-armenian
+Lowercase ASCII letters,lower-latin
+Lowercase classical Greek,lower-greek
+Lowercase roman numerals,lower-roman
+Malayalam numbering,malayalam
+Mongolian numbering,mongolian
+Myanmar (Burmese) numbering,myanmar
+Oriya numbering,oriya
+Persian numbering,persian
+Simplified Chinese formal numbering,simp-chinese-formal
+Simplified Chinese informal numbering,simp-chinese-informal
+Tamil numbering,tamil
+Telugu numbering,telugu
+Thai numbering,thai
+Tibetan numbering,tibetan
+Traditional Armenian numbering,armenian
+Traditional Chinese formal numbering,trad-chinese-formal
+Traditional Chinese informal numbering,trad-chinese-informal
+Traditional Georgian numbering,georgian
+Traditional Hebrew numbering,hebrew
+Traditional uppercase Armenian numbering,upper-armenian
+Uppercase ASCII letters,upper-latin
+Uppercase roman numerals,upper-roman

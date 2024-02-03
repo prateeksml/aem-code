@@ -1,0 +1,52 @@
+{
+  "kpmg.footer.category.contact.label": "Contact",
+
+  "kpmg.footer.category.media.label": "Media",
+  "kpmg.search.label": "Search KPMG",
+
+  "kpmg.search.previous.label": "Your Previous Searches",
+
+  "kpmg.search.short.label": "Search too short",
+
+  "kpmg.search.limit.label": "Should be 3 characters or more.",
+
+  "kpmg.search.button.label": "Search",
+
+  "kpmg.search.cancel.button.label": "Cancel",
+
+  "kpmg.search.upcoming.label": "Upcoming",
+
+  "kpmg.search.pastevent.label": "Past Event",
+
+  "kpmg.search.showing.results.label": "Showing {current_page} of {total_results} results",
+
+  "kpmg.search.previous.accessibility.label": "You have {number} previous search Terms",
+
+  "kpmg.search.datanotfound.message": "Data not found",
+
+  "kpmg.filterby.label": "Filter by",
+
+  "kpmg.filter.label": "Filter",
+
+  "kpmg.loadMore.label": "Load More",
+
+  "kpmg.clearAll.label": "Clear All",
+
+  "kpmg.tags.label": "tags",
+
+  "kpmg.readMore.label": "Read More",
+
+  "kpmg.loading.label": "Loading..",
+  
+  "kpmg.noResultTitle.label": "No results found!",
+
+  "kpmg.noResultMessage.label": "We couldn't find what you searched for. Try searching again.",
+
+  "kpmg.serverErrorTitle.label": "A Server error occurred!",
+
+  "kpmg.serverErrorMessage.label": "We're sorry, a server error occurred. Please wait a bit and try again.",
+
+  "kpmg.filterError.label" : "Something went wrong please try again",
+
+  "kpmg.applyFilter.label": "Apply Filter"
+}

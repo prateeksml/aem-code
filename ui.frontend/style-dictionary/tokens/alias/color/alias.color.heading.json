@@ -1,0 +1,35 @@
+{
+  "alias": {
+    "color": {
+      "heading": {
+        "one": {
+          "value": "{global.color.grayscale.black}"
+        },
+        "two": {
+          "value": "{global.color.grayscale.black}"
+        },
+        "two-semibold": {
+          "value": "{global.color.grayscale.black}"
+        },
+        "three": {
+          "value": "{global.color.grayscale.black}"
+        },
+        "four": {
+          "value": "{global.color.grayscale.black}"
+        },
+        "five": {
+          "value": "{global.color.grayscale.black}"
+        },
+        "five-semibold": {
+          "value": "{global.color.grayscale.black}"
+        },
+        "six": {
+          "value": "{global.color.grayscale.black}"
+        },
+        "six-semibold": {
+          "value": "{global.color.grayscale.black}"
+        }
+      }
+    }
+  }
+}

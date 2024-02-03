@@ -1,0 +1,24 @@
+{
+  "alias": {
+    "color": {
+      "social-share": {
+        "icon": {
+          "light": {
+            "value": "{global.color.brand.cobalt-blue}"
+          },
+          "dark": {
+            "value": "{global.color.brand.white}"
+          }
+        },
+        "border": {
+          "light": {
+            "value": "{global.color.strokes.cobalt-blue.20-percent}"
+          },
+          "dark": {
+            "value": "{global.color.strokes.white.25-percent}"
+          }
+        }
+      }
+    }
+  }
+}

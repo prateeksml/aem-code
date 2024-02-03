@@ -1,0 +1,31 @@
+$parent: ".cmp-logo";
+
+#{$parent} {
+  $logo-height: $global-size-2;
+  $logo-height-medium: $global-size-5;
+
+  @include display-flex-align-center;
+  height: $logo-height;
+
+  @include desktop-medium {
+    height: $logo-height-medium;
+  }
+
+  &__inner {
+    @include display-flex-align-center;
+    margin-left: $alias-margin-x-small;
+
+    @include desktop-medium {
+      margin-right: $alias-margin-x-large;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    height: $logo-height;
+  }
+
+  &__image {
+    height: $logo-height;
+  }
+}

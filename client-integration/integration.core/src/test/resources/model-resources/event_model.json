@@ -1,0 +1,53 @@
+{
+  "jcr:created": "Fri Jun 23 2023 10:13:33 GMT+0000",
+  "jcr:createdBy": "kunal.dhak@publicissapient.com",
+  "jcr:primaryType": "cq:Page",
+  "jcr:content": {
+    "pwaDisplay": "standalone",
+    "sling:resourceType": "kpmg/components/structure/page-event",
+    "jcr:title": "Event Test Page",
+    "cq:contextHubPath": "/etc/cloudsettings/default/contexthub",
+    "eventStartTimeAndDate": "Sat Jun 24 2023 15:48:00 GMT+0530",
+    "eventEndTimeAndDate": "Thu Jun 29 2023 15:48:00 GMT+0530",
+    "cq:contextHubSegmentsPath": "/etc/segmentation/contexthub",
+    "pwaCachestrategy": "staleWhileRevalidate",
+    "metaOgTitle": "Event Test Page",
+    "cq:lastModifiedBy": "kunal.dhak@publicissapient.com",
+    "cq:template": "/conf/kpmg/settings/wcm/templates/page-event",
+    "owner": "en-global-audit",
+    "jcr:created": "Fri Jun 23 2023 10:13:33 GMT+0000",
+    "hideInSearch": "false",
+    "jcr:createdBy": "kunal.dhak@publicissapient.com",
+    "timeZone": "Pacific/Midway (UTC-11:00)",
+    "pwaOrientation": "any",
+    "metaOgImage": "/content/dam/kpmg-brand/ayo-ogunseinde-237739.jpeg",
+    "eventType": "training",
+    "jcr:description": "Description",
+    "metaOgSiteSettings": "KPMG",
+    "cq:lastModified": "Fri Jun 23 2023 10:19:46 GMT+0000",
+    "jcr:primaryType": "cq:PageContent",
+    "documentId": "614a3e36-d788-4749-b686-cd4ebafeb0e8",
+    "offTime": "Fri Jun 30 2023 15:49:00 GMT+0530",
+    "metaOgType": "website",
+    "root": {
+      "layout": "responsiveGrid",
+      "sling:resourceType": "kpmg/components/container/container",
+      "jcr:primaryType": "nt:unstructured",
+      "main": {
+        "layout": "simple",
+        "sling:resourceType": "kpmg/components/container/main",
+        "jcr:primaryType": "nt:unstructured",
+        "section": {
+          "layout": "simple",
+          "sling:resourceType": "kpmg/components/container/section",
+          "jcr:primaryType": "nt:unstructured"
+        }
+      }
+    },
+    "cq:featuredimage": {
+      "jcr:primaryType": "nt:unstructured",
+      "fileReference": "/content/dam/kpmg-brand/ayo-ogunseinde-237739.jpeg",
+      "imgDescRequired": "false"
+    }
+  }
+}

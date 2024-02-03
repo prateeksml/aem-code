@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:policy="kpmg/components/structure/page/policy"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="wcm/core/components/policies/mappings">
+        <root
+            cq:policy="kpmg/components/container/container/policy_1574695586800"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/core/components/policies/mapping">
+            <main
+                cq:policy="kpmg/components/container/main/policy_86242760979375"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/core/components/policies/mapping"/>
+			<container
+                cq:policy="kpmg/components/container/container/policy_77084598613791"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/core/components/policies/mapping">
+                <kpmg jcr:primaryType="nt:unstructured">
+                    <components jcr:primaryType="nt:unstructured">
+                        <content jcr:primaryType="nt:unstructured">
+                            <hero-fbv
+                                cq:policy="kpmg/components/content/hero-fbv/policy_1689274203611"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/core/components/policies/mapping"/>
+                            <hero-csi
+                                cq:policy="kpmg/components/content/hero-csi/policy_1687848869780"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/core/components/policies/mapping"/>
+                            <event-card
+                                    cq:policy="kpmg/components/content/event-card/policy_1691557062055"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/core/components/policies/mapping"/>
+                            <standardteaser-carousel
+                                    cq:policy="kpmg/components/content/standardteaser-carousel/policy_1688047333712"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/core/components/policies/mapping"/>
+                        </content>
+                    </components>
+                </kpmg>
+            </container>
+        </root>
+    </jcr:content>
+</jcr:root>

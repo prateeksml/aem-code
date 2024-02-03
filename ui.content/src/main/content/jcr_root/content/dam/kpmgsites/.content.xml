@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:dam="http://www.day.com/dam/1.0"
+    jcr:primaryType="sling:OrderedFolder">
+    <logo.svg/>
+    <jcr:content
+        cq:conf="/conf/kpmg"
+        dam:disableColorExtraction="{Boolean}true"
+        dam:disableImageSmartTag="{Boolean}true"
+        dam:disableTextSmartTag="{Boolean}true"
+        dam:disableVideoSmartTag="{Boolean}true"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="KPMG.com">
+        <folderThumbnail/>
+    </jcr:content>
+    <profile.png/>
+    <profiles/>
+</jcr:root>

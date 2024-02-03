@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ |  Copyright 2017 Adobe Systems Incorporated
+ |
+ |  Licensed under the Apache License, Version 2.0 (the "License");
+ |  you may not use this file except in compliance with the License.
+ |  You may obtain a copy of the License at
+ |
+ |      http://www.apache.org/licenses/LICENSE-2.0
+ |
+ |  Unless required by applicable law or agreed to in writing, software
+ |  distributed under the License is distributed on an "AS IS" BASIS,
+ |  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ |  See the License for the specific language governing permissions and
+ |  limitations under the License.
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.kpmg</groupId>
+        <artifactId>client-integration</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+<!--        <relativePath>../pom.xml</relativePath>-->
+    </parent>
+    <groupId>com.kpmg</groupId>
+    <artifactId>integration.core</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <description>Core bundle for client integration</description>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.sling</groupId>
+                <artifactId>sling-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>biz.aQute.bnd</groupId>
+                <artifactId>bnd-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>bnd-process</id>
+                        <goals>
+                            <goal>bnd-process</goal>
+                        </goals>
+                        <configuration>
+                            <bnd><![CDATA[
+Import-Package: javax.annotation;version=0.0.0,*
+Sling-Model-Packages: com.kpmg.integration.models
+
+-includeresource: grpc-context-1.0.1.jar;lib:=true,opencensus-api-0.31.1.jar;lib:=true,google-http-client-apache-v2-1.42.3.jar;lib:=true,opencensus-contrib-http-util-0.31.1.jar;lib:=true,google-http-client-gson-1.43.3.jar;lib:=true,google-http-client-1.43.3.jar;lib:=true,google-oauth-client-1.34.1.jar;lib:=true,api-common-2.14.1.jar;lib:=true,google-api-client-2.2.0.jar;lib:=true,edgegrid-signer-google-http-client-5.0.0.jar;lib:=true,edgegrid-signer-core-5.0.0.jar;lib:=true,jsoup-1.14.3.jar;lib:=true,elasticsearch-java-8.7.0.jar;lib:=true,jakarta.json-2.0.1.jar;lib:=true,elasticsearch-rest-client-7.17.7.jar;lib:=true,httpasyncclient-4.1.2.jar;lib:=true,jakarta.json.bind-api-3.0.0.jar;lib:=true,yasson-1.0.8.jar;lib:=true,javax.json.bind-api-1.0.jar;lib:=true,cdi-api-2.0.jar;lib:=true,javax.interceptor-api-1.2.jar;lib:=true,javax.el-api-3.0.0.jar;lib:=true,Semaphore-SES-Client-Semaphore-5.0.0.jar;lib:=true,Semaphore-CS-Client-Semaphore-5.0.0.jar;lib:=true,icu4j-72.1.jar;lib:=true
+                                ]]></bnd>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>biz.aQute.bnd</groupId>
+                <artifactId>bnd-baseline-maven-plugin</artifactId>
+                <configuration>
+                    <failOnMissing>false</failOnMissing>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>baseline</id>
+                        <goals>
+                            <goal>baseline</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <configuration>
+                    <archive>
+                        <manifestFile>${project.build.outputDirectory}/META-INF/MANIFEST.MF</manifestFile>
+                    </archive>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <executions>
+                    <!-- uncomment when coverage of this bundle is ubove 50% -->
+                    <!-- <execution>
+                        <id>check</id>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                        <configuration>
+                            <rules>
+                                <rule>
+                                    <element>CLASS</element>
+                                    <limits>
+                                        <limit>
+                                            <counter>LINE</counter>
+                                            <value>COVEREDRATIO</value>
+                                            <minimum>0.50</minimum>
+                                        </limit>
+                                    </limits>
+                                </rule>
+                            </rules>
+                        </configuration>
+                    </execution> -->
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <!-- Elastic Search Dependencies -->
+        <dependency>
+            <groupId>co.elastic.clients</groupId>
+            <artifactId>elasticsearch-java</artifactId>
+            <version>8.7.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.json</groupId>
+            <artifactId>jakarta.json-api</artifactId>
+            <version>2.0.1</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.json.bind</groupId>
+            <artifactId>jakarta.json.bind-api</artifactId>
+            <version>3.0.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.elasticsearch.client</groupId>
+            <artifactId>elasticsearch-rest-high-level-client</artifactId>
+            <version>7.17.8</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpasyncclient</artifactId>
+            <version>4.1.2</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish</groupId>
+            <artifactId>jakarta.json</artifactId>
+            <version>2.0.1</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.elasticsearch.client</groupId>
+            <artifactId>elasticsearch-rest-client</artifactId>
+            <version>7.17.7</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+			<groupId>com.smartlogic.csclient</groupId>
+			<artifactId>Semaphore-CS-Client</artifactId>
+			<version>Semaphore-5.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.smartlogic.sesclient</groupId>
+			<artifactId>Semaphore-SES-Client</artifactId>
+			<version>Semaphore-5.0.0</version>
+		</dependency>
+		<dependency>
+		    <groupId>com.ibm.icu</groupId>
+		    <artifactId>icu4j</artifactId>
+		    <version>72.1</version>
+		</dependency>
+        <dependency>
+            <groupId>org.eclipse</groupId>
+            <artifactId>yasson</artifactId>
+            <version>1.0.8</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.json.bind</groupId>
+            <artifactId>javax.json.bind-api</artifactId>
+            <version>1.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.enterprise</groupId>
+            <artifactId>cdi-api</artifactId>
+            <version>2.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.interceptor</groupId>
+            <artifactId>javax.interceptor-api</artifactId>
+            <version>1.2</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.el</groupId>
+            <artifactId>javax.el-api</artifactId>
+            <version>3.0.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.kpmg</groupId>
+            <artifactId>kpmg.core</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.26</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.adobe.acs</groupId>
+            <artifactId>acs-aem-commons-bundle</artifactId>
+            <version>${acs.commos.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>uk.org.lidalia</groupId>
+            <artifactId>slf4j-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.adobe.aem</groupId>
+            <artifactId>aem-sdk-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.adobe.cq</groupId>
+            <artifactId>core.wcm.components.core</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.jsoup</groupId>
+            <artifactId>jsoup</artifactId>
+            <version>1.14.3</version>
+        </dependency>
+<dependency>
+    <groupId>com.google.api-client</groupId>
+    <artifactId>google-api-client</artifactId>
+    <version>2.2.0</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/com.akamai.edgegrid/edgegrid-signer-core -->
+<dependency>
+    <groupId>com.akamai.edgegrid</groupId>
+    <artifactId>edgegrid-signer-core</artifactId>
+    <version>5.0.0</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/com.akamai.edgegrid/edgegrid-signer-google-http-client -->
+<dependency>
+    <groupId>com.akamai.edgegrid</groupId>
+    <artifactId>edgegrid-signer-google-http-client</artifactId>
+    <version>5.0.0</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/com.google.api/api-common -->
+<dependency>
+    <groupId>com.google.api</groupId>
+    <artifactId>api-common</artifactId>
+    <version>2.14.1</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/com.google.oauth-client/google-oauth-client -->
+<dependency>
+    <groupId>com.google.oauth-client</groupId>
+    <artifactId>google-oauth-client</artifactId>
+    <version>1.34.1</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/com.google.http-client/google-http-client -->
+<dependency>
+    <groupId>com.google.http-client</groupId>
+    <artifactId>google-http-client</artifactId>
+    <version>1.43.3</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/com.google.http-client/google-http-client-gson -->
+<dependency>
+    <groupId>com.google.http-client</groupId>
+    <artifactId>google-http-client-gson</artifactId>
+    <version>1.43.3</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/io.opencensus/opencensus-api -->
+<dependency>
+    <groupId>io.opencensus</groupId>
+    <artifactId>opencensus-api</artifactId>
+    <version>0.31.1</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+<dependency>
+    <groupId>com.google.guava</groupId>
+    <artifactId>guava</artifactId>
+    <version>32.1.1-jre</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/com.google.http-client/google-http-client-apache-v2 -->
+<dependency>
+    <groupId>com.google.http-client</groupId>
+    <artifactId>google-http-client-apache-v2</artifactId>
+    <version>1.42.3</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/io.grpc/grpc-context -->
+<dependency>
+    <groupId>io.grpc</groupId>
+    <artifactId>grpc-context</artifactId>
+    <version>1.0.1</version>
+</dependency>
+
+
+        <!-- Testing -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-junit-jupiter</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.wcm</groupId>
+            <artifactId>io.wcm.testing.wcm-io-mock.sling</artifactId>
+            <version>1.2.0</version>
+        </dependency>
+        <dependency>
+            <groupId>io.wcm</groupId>
+            <artifactId>io.wcm.testing.wcm-io-mock.caconfig</artifactId>
+            <version>1.1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>io.wcm</groupId>
+            <artifactId>io.wcm.testing.aem-mock.junit5</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.sling</groupId>
+            <artifactId>org.apache.sling.testing.caconfig-mock-plugin</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.adobe.cq</groupId>
+            <artifactId>core.wcm.components.testing.aem-mock-plugin</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <!-- Required to be able to support injection with @Self and @Via -->
+        <dependency>
+            <groupId>org.apache.sling</groupId>
+            <artifactId>org.apache.sling.models.impl</artifactId>
+            <version>1.4.4</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.adobe.cq</groupId>
+            <artifactId>core.wcm.components.core</artifactId>
+            <scope>test</scope>
+        </dependency>
+         <dependency>
+            <artifactId>gson</artifactId>
+            <version>2.8.9</version>
+            <groupId>com.google.code.gson</groupId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.adobe.cq</groupId>
+            <artifactId>core.wcm.components.core</artifactId>
+        </dependency>
+    </dependencies>
+</project>

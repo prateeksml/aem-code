@@ -1,0 +1,9 @@
+{
+  "alias": {
+    "border": {
+      "radius": {
+        "value": "{global.border.radius}"
+      }
+    }
+  }
+}

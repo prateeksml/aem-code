@@ -1,0 +1,70 @@
+//See https://easings.net/ for more custom easing examples
+@use "sass:map";
+$easing: (
+  expoIn: cubic-bezier(0.7, 0, 0.84, 0),
+  expoOut: ubic-bezier(0.16, 1, 0.3, 1),
+  expoInOut: cubic-bezier(0.87, 0, 0.13, 1),
+);
+
+//Fade In
+@mixin fade-in($time: 0.5s) {
+  animation: fadeIn $time linear forwards;
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+//Fade Out
+@mixin fade-out($time: 0.5s) {
+  animation: fadeOut $time linear forwards;
+
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+}
+
+//Slide Left
+@mixin slide-left-in($time: 0.5s, $displayType: block) {
+  animation: slideIn $time;
+  animation-timing-function: map.get($easing, "expoOut");
+  animation-fill-mode: forwards;
+
+  @keyframes slideIn {
+    0% {
+      left: 100%;
+      display: block;
+    }
+
+    100% {
+      left: 0;
+    }
+  }
+}
+
+@mixin slide-left-out($time: 0.5s) {
+  animation: slideOut $time;
+  animation-timing-function: map.get($easing, "expoIn");
+  animation-fill-mode: backwards;
+
+  @keyframes slideOut {
+    0% {
+      left: 0;
+    }
+
+    100% {
+      left: 100%;
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,90 @@
+- global_config:
+
+    vars:
+      - DEF kpmgDamPath="/content/dam/kpmgsites"
+      - DEF gatedDamPath="/content/dam/gated"
+      
+      
+- group_config:
+  - FOR site IN CHILDREN OF /content/dam/kpmgsites:
+    - IF ${length(site.name) == 2 || (site.name) == "platform"}:
+      - aem-${site.name}-asset-admin:
+        - name: KPMG ${upperCase(site.name)} Dam Admin
+          isMemberOf: contributor
+          description: "Users in this group can edit the relative dam under /content/dam/kpmgsites/${site.name}"
+          externalId: aem-${site.name}-asset-admin;ims
+      - aem-${site.name}-asset-contributor:
+        - name: KPMG ${upperCase(site.name)} Dam Contributor
+          isMemberOf: contributor
+          description: "Users in this group can edit the relative dam under /content/dam/kpmgsites/${site.name}"
+          externalId: aem-${site.name}-asset-contributor;ims
+      - aem-${site.name}-asset-deleters:
+        - name: KPMG ${upperCase(site.name)} Dam Deleters
+          isMemberOf: contributor
+          description: "Users in this group can edit the relative dam under /content/dam/kpmgsites/${site.name}"
+          externalId: aem-${site.name}-asset-deleters;ims
+  - FOR site IN CHILDREN OF /content/dam/gated:
+    - IF ${(site.name) == "informative"}:
+      - aem-${site.name}-asset-admin:
+        - name: KPMG ${upperCase(site.name)} Dam Admin
+          isMemberOf: contributor
+          description: "Users in this group can edit the relative dam under /content/dam/kpmgsites/${site.name}"
+          externalId: aem-${site.name}-asset-admin;ims
+      - aem-${site.name}-asset-contributor:
+        - name: KPMG ${upperCase(site.name)} Dam Contributor
+          isMemberOf: contributor
+          path: kpmg/dam/${site.name} # if relative, /home/groups is automatically prefixed
+          description: "Users in this group can edit the relative dam under /content/dam/kpmgsites/${site.name}"
+          externalId: aem-${site.name}-asset-contributor;ims
+      - aem-${site.name}-asset-deleters:
+        - name: KPMG ${upperCase(site.name)} Dam Deleters
+          isMemberOf: contributor
+          path: kpmg/dam/${site.name} # if relative, /home/groups is automatically prefixed
+          description: "Users in this group can edit the relative dam under /content/dam/kpmgsites/${site.name}"
+          externalId: aem-${site.name}-asset-deleters;ims
+
+- ace_config:
+    - FOR site IN CHILDREN OF /content/dam/kpmgsites:
+        - IF ${length(site.name) == 2 || (site.name) == "platform"}:
+            - aem-${site.name}-asset-admin:
+                - path: ${kpmgDamPath}/${site.name}/${folder}
+                  permission: allow
+                  repGlob: /*
+                  privileges: jcr:all, crx:replicate
+            - aem-${site.name}-asset-contributor:
+                - path: ${kpmgDamPath}/${site.name}/${folder}
+                  permission: allow
+                  repGlob: /*
+                  privileges: jcr:versionManagement,jcr:modifyAccessControl,jcr:modifyProperties,jcr:read,jcr:addChildNodes,jcr:readAccessControl,jcr:nodeTypeDefinitionManagement,jcr:lockManagement,jcr:nodeTypeManagement,crx:replicate
+                  keepOrder: true
+                - path: ${kpmgDamPath}/${site.name}/${folder}
+                  permission: deny
+                  repGlob: /*
+                  privileges: jcr:removeChildNodes,jcr:removeNode
+                  keepOrder: true
+            - aem-${site.name}-asset-deleters:
+                - path: ${kpmgDamPath}/${site.name}/${folder}
+                  permission: allow
+                  privileges: jcr:read,jcr:removeNode,jcr:removeChildNodes
+    - FOR site IN CHILDREN OF /content/dam/gated:
+        - IF ${length(site.name) == 2 || (site.name) == "informative"}:
+            - aem-${site.name}-asset-admin:
+                - path: ${gatedDamPath}/${site.name}
+                  permission: allow
+                  repGlob: /*
+                  privileges: jcr:all, crx:replicate
+            - aem-${site.name}-asset-contributor:
+               - path: ${gatedDamPath}/${site.name}
+                 permission: allow
+                 repGlob: /*
+                 privileges: jcr:versionManagement,jcr:modifyAccessControl,jcr:modifyProperties,jcr:read,jcr:addChildNodes,jcr:readAccessControl,jcr:nodeTypeDefinitionManagement,jcr:lockManagement,jcr:nodeTypeManagement,crx:replicate
+                 keepOrder: true
+               - path: ${gatedDamPath}/${site.name}/${folder}
+                 permission: deny
+                 repGlob: /*
+                 privileges: jcr:removeChildNodes,jcr:removeNode
+                 keepOrder: true
+            - aem-${site.name}-asset-deleters:
+                - path: ${gatedDamPath}/${site.name}
+                  permission: allow
+                  privileges: jcr:read,jcr:removeNode,jcr:removeChildNodes

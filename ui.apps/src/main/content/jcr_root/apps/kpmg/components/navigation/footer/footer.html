@@ -1,0 +1,19 @@
+<footer role="contentinfo" class="cmp-footer"
+        data-sly-use.footer="com.kpmg.core.models.Footer">
+    <div class="cmp-footer__content">
+      <div class="cmp-footer__logo-container">
+        <sly data-sly-resource="${'./logo' @ resourceType='kpmg/components/content/image', decorationTagName='div', cssClassName='cmp-footer__logo-container--image'}"></sly>
+      </div>
+      <!--/* Categories Section */-->
+      <sly data-sly-resource="${'categories' @ resourceType='kpmg/components/navigation/footer/categories', decorationTagName='div', cssClassName='cmp-footer__container'}"></sly>
+      <!--/* Icons Section */-->
+      <sly data-sly-resource="${'social-icons' @ resourceType='kpmg/components/navigation/footer/social-icons', decorationTagName='div', cssClassName='cmp-footer__container'}"></sly>
+      <!--/* Legal Links Section */-->
+      <sly data-sly-resource="${'legal-links' @ resourceType='kpmg/components/navigation/footer/legal-links', decorationTagName='div', cssClassName='cmp-footer__container'}"></sly>
+      <!-- Copyright -->
+    </div>
+
+    <div class="cmp-footer__copyright-container">
+        <div class="cmp-footer__copyright">${footer.copyrightText @ context='html'}</div>
+    </div>
+</footer>

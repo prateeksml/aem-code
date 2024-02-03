@@ -1,0 +1,82 @@
+{
+  "jcr:primaryType": "nt:unstructured",
+  "jcr:lastModifiedBy": "admin",
+  "seeAll": "See All",
+  "readMore": "Read More",
+  "expandView": "true",
+  "jcr:lastModified": "Wed Jul 19 2023 13:28:04 GMT+0530",
+  "sling:resourceType": "kpmg/components/content/industryservicegrid",
+  "searchIndexable": "true",
+  "seeLess": "See Less",
+  "cq:styleIds": ["1689591768253"],
+  "dataEntryType": "automated",
+  "manualItems": {
+    "jcr:primaryType": "nt:unstructured",
+    "item0": {
+      "jcr:primaryType": "nt:unstructured",
+      "description": "Description 1 Description 1 Description 1 Description 1 Description 1 Description 1 Description 1 Description 1 ",
+      "customIcon": "/content/dam/kpmgsites/xx/icons/icons8-home-48.png",
+      "iconType": "customIcon",
+      "icon": "10k",
+      "link": "/content/kpmgpublic/language-masters/en/adobe_qa_testing/articaltemp",
+      "title": "Title 1"
+    },
+    "item1": {
+      "jcr:primaryType": "nt:unstructured",
+      "description": "Description 2Description 2 Description 2 Description 2 Description 2 Description 2 Description 2 Description 2 Description 2 Description 2 Description 2 Description 2 Description 2 ",
+      "customIcon": "/content/dam/kpmgsites/xx/icons/icons8-block-microphone-50.png",
+      "iconType": "customIcon",
+      "icon": "10mp",
+      "link": "/content/kpmgpublic/language-masters/en/adobe_qa_testing/articaltemp",
+      "title": "Title 2"
+    },
+    "item2": {
+      "jcr:primaryType": "nt:unstructured",
+      "description": "Description 3 Description 3 Description 3 Description 3 ",
+      "customIcon": "/content/dam/kpmgsites/xx/icons/icons8-home-48.png",
+      "iconType": "materialIcon",
+      "icon": "emoji_objects",
+      "link": "/content/kpmgpublic/language-masters/en/adobe_qa_testing/articaltemp",
+      "title": "Title 3"
+    }
+  },
+  "autoMatedItems": {
+    "jcr:primaryType": "nt:unstructured",
+    "item0": {
+      "jcr:primaryType": "nt:unstructured",
+      "iconType": "materialIcon",
+      "icon": "10k",
+      "link": "/content/kpmgpublic/language-masters/en/adobe_qa_testing/articaltemp"
+    },
+    "item1": {
+      "jcr:primaryType": "nt:unstructured",
+      "customIcon": "/content/dam/kpmgsites/xx/icons/icons8-idea.svg",
+      "iconType": "customIcon",
+      "link": "/content/kpmgpublic/language-masters/en/adobe_qa_testing/articaltemp"
+    },
+    "item2": {
+      "jcr:primaryType": "nt:unstructured",
+      "iconType": "materialIcon",
+      "icon": "10mp",
+      "link": "/content/kpmgpublic/language-masters/en/adobe_qa_testing/articaltemp"
+    },
+    "item3": {
+      "jcr:primaryType": "nt:unstructured",
+      "customIcon": "/content/dam/kpmgsites/xx/icons/icons8-idea.svg",
+      "iconType": "customIcon",
+      "link": "/content/kpmgpublic/language-masters/en/adobe_qa_testing/articaltemp"
+    },
+    "item4": {
+      "jcr:primaryType": "nt:unstructured",
+      "iconType": "materialIcon",
+      "icon": "30fps",
+      "link": "/content/kpmgpublic/language-masters/en/adobe_qa_testing/articaltemp"
+    },
+    "item5": {
+      "jcr:primaryType": "nt:unstructured",
+      "iconType": "materialIcon",
+      "icon": "1k_plus",
+      "link": "/content/kpmgpublic/language-masters/en/adobe_qa_testing/articaltemp"
+    }
+  }
+}

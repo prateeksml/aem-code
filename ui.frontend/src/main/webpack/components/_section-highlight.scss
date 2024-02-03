@@ -1,0 +1,123 @@
+$colors: (
+  kpmg-blue: $global-color-brand-kpmg-blue,
+  cobalt-blue: $global-color-brand-cobalt-blue,
+  grey-100: $global-color-grayscale-neutrals-100,
+  white: $global-color-brand-white,
+);
+
+@mixin background-helpers($prefix, $element) {
+  @each $name, $val in $colors {
+    #{$prefix + "-" + $name} {
+      #{$element} {
+        background-color: $val;
+      }
+    }
+  }
+}
+
+@mixin bleed-helpers($prefix) {
+  @each $name, $val in $colors {
+    #{$prefix + "-" + $name} {
+      background-color: $val;
+    }
+  }
+}
+
+@include bleed-helpers(".highlight-bleed");
+@include background-helpers(".highlight-background", ".cmp-section-highlight");
+
+.section-highlight {
+  $padding-base: $alias-padding-base; // 16px
+  $margin-base: $alias-margin-base; // 16px
+  $margin-medium: $alias-margin-medium; // 24px
+  $margin-large: $alias-margin-large; // 32px
+  $margin-7x-large: 7rem; // 112px
+  $content-container-padding: $alias-padding-4x-large; // 80px
+
+  .cmp-section-highlight {
+    @include desktop-medium {
+      padding: 0 $content-container-padding;
+    }
+  }
+
+  .cmp-section-highlight__content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: $margin-medium;
+    padding: $content-container-padding $padding-base;
+
+    @include tablet {
+      padding: $content-container-padding;
+    }
+
+    @include desktop-medium {
+      max-width: var(--content-max-width);
+      margin: 0 auto;
+    }
+  }
+
+  .cmp-title__text {
+    margin: 0;
+
+    @at-root {
+      h2#{&} {
+        @include typography-heading-two;
+      }
+
+      h3#{&} {
+        @include typography-heading-three;
+      }
+
+      h4#{&} {
+        @include typography-heading-four;
+      }
+
+      h5#{&} {
+        @include typography-heading-five;
+      }
+
+      h6#{&} {
+        @include typography-heading-six;
+      }
+    }
+  }
+
+  .cmp-section-highlight__content-container {
+    p {
+      margin: 0;
+      max-width: 700px;
+    }
+  }
+
+  .cmp-section-highlight__content-container--two-columns {
+    display: flex;
+    flex-direction: column;
+    gap: $margin-large;
+
+    @include tablet {
+      flex-direction: row;
+      p {
+        flex-basis: 50%;
+      }
+    }
+  }
+
+  @include style-variation("cmp-section-highlight--bleed-left") {
+    .cmp-section-highlight {
+      margin-left: $margin-base;
+
+      @include tablet {
+        margin-left: $margin-7x-large;
+      }
+    }
+  }
+  @include style-variation("cmp-section-highlight--bleed-right") {
+    .cmp-section-highlight {
+      margin-right: $margin-base;
+
+      @include tablet {
+        margin-right: $margin-7x-large;
+      }
+    }
+  }
+}

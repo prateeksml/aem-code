@@ -1,0 +1,7 @@
+{
+  "org.apache.sling.commons.log.names": [
+    "com.kpmg.core",
+    "com.kpmg.integration"
+  ],
+  "org.apache.sling.commons.log.level": "$[env:PLATFORM_LOG_LEVEL]"
+}

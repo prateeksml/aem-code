@@ -1,0 +1,77 @@
+<jcr:root
+    xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="${{label}}"
+    sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+    <items jcr:primaryType="nt:unstructured">
+       <iconType
+            granite:class="cq-dialog-dropdown-showhide"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+            fieldDescription="Please Icon Type"
+            fieldLabel="Choose Icon Type"
+            name="./${{iconTypeName}}">
+            <items jcr:primaryType="nt:unstructured">
+                <materialIcon
+                    jcr:primaryType="nt:unstructured"
+                    text="Material Icon"
+                    value="${{materialIconValue}}"/>
+                <customIcon
+                    jcr:primaryType="nt:unstructured"
+                    text="Custom Icon"
+                    value="${{customIconValue}}"/>
+            </items>
+            <granite:data
+                jcr:primaryType="nt:unstructured"
+                cq-dialog-dropdown-showhide-target=".showhide-target-${{uniqueId}}"/>
+        </iconType>
+        <materialIcon
+            granite:class="hide showhide-target-${{uniqueId}}"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/container">
+            <items jcr:primaryType="nt:unstructured">
+                <materialIcon
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="/apps/kpmg/components/editor/iconfield"
+                    emptyText="Icon"
+                    fieldLabel="Icon"
+                    name="./${{materialIconName}}"
+                    required="{Boolean}false"/>
+            </items>
+            <granite:data
+                jcr:primaryType="nt:unstructured"
+                showhidetargetvalue="${{materialIconValue}}"/>
+        </materialIcon>
+
+        <customIcon
+            granite:class="hide showhide-target-${{uniqueId}}"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/container">
+            <items jcr:primaryType="nt:unstructured">
+                <customIconAlert
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/alert"
+                    jcr:title="Note"
+                    text="The custom icon picker below will only allow you to pick icons from the current sites icon folder in DAM. Example, if this page is in fr site, you should see the fr icons folder"/>
+                <customIcon
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                    fieldLabel="Custom Icon"
+                    name="./${{customIconName}}"
+                    granite:class="cmp-kpmg-contextual-pathfield-picker"
+                    required="{Boolean}false"
+                    rootPath="/content/dam/kpmgsites">
+                    <granite:data
+                      jcr:primaryType="nt:unstructured"
+                      contextfolder="/icons"/>
+                </customIcon>
+            </items>
+            <granite:data
+                jcr:primaryType="nt:unstructured"
+                showhidetargetvalue="${{customIconValue}}"/>
+        </customIcon>
+    </items>
+</jcr:root>

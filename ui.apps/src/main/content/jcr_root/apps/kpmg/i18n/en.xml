@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:language="en"
+    jcr:mixinTypes="[mix:language]"
+    jcr:primaryType="sling:Folder">
+    <approverDeactivationDescription
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:message="You have been requested to approve the deactivation of a page"/>
+    <blueprintOwnerDescription
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:message="Approval was completed on your page, and a minor version has been created. You may now perform a manual rollout."/>
+    <kpmg.activateRollout.blueprintOwnerDescription
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:message="A minor version has been created for your page. You may now perform a manual rollout."/>
+    <kpmg.workflow.aar.stepbackEmail.inboxNotification
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:message="Activation incomplete - page unlocked"/>
+    <kpmg.workflow.activate.manualRollout
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:message="Perform manual rollout"/>
+    <kpmg.workflow.activate.manualRollout.message1
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:message="A minor version has been created for the following page:"/>
+    <kpmg.workflow.activate.pageActivated
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:message="Page activated"/>
+    <kpmg.workflow.activate.pageActivated.message1
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:message="Page is activated and a major version has been created for the following page:"/>
+    <kpmg.workflow.activate.pageNotActivated
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:message="Page is not activated"/>
+    <kpmg.workflow.activate.pageNotActivated.message1
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:message="Page is not activated and a minor version has been created for the following page: "/>
+    <kpmg.workflow.approvalRequired
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:message="Approval required"/>
+    <kpmg.workflow.approvalRequired.message1
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:message="You have been requested by"/>
+    <kpmg.workflow.approvalRequired.message2
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:message="to review and approve the following page:"/>
+    <kpmg.workflow.approvalRequired.message3
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:message="If you cannot approve this page, please contact"/>
+    <kpmg.workflow.approvalRequired.message4
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:message="to review and approve the deactivation of the following page"/>
+    <kpmg.workflow.approvedActivated
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:message="Approval complete - page activated"/>
+    <kpmg.workflow.approvedActivated.message1
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:message="Approval was completed and a major version has been created for the following page:"/>
+    <kpmg.workflow.approvedNotActivated
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:message="Approval complete - page is not activated"/>
+    <kpmg.workflow.approvedNotActivated.message1
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:message="Approval was completed and a minor version has been created for the following page:"/>
+    <kpmg.workflow.approvedScheduledActivation
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:message="Approval complete - page is scheduled for activation"/>
+    <kpmg.workflow.approvedScheduledActivation.message1
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:message="Activation complete for the following page:"/>
+    <kpmg.workflow.approvedScheduledActivation.message2
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:message="Your page is currently awaiting its scheduled activation date of"/>
+    <kpmg.workflow.approvedScheduleTimeExpired
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:message="Activation incomplete - expiration date has passed"/>
+    <kpmg.workflow.approvedScheduleTimeExpired.message1
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:message="Activation cannot be completed for the following page:"/>
+    <kpmg.workflow.approvedScheduleTimeExpired.message2
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:message="Your page expiration date has already passed. Please ensure that the correct expiration date is set."/>
+    <kpmg.workflow.assetUploadActivate.assetAwaitsApproval
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:message="Approve/Reject disallowed content"/>
+    <kpmg.workflow.assetUploadActivate.assetPushedToFolder
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:message="Asset pushed to proper folder"/>
+    <kpmg.workflow.assetUploadActivate.movedToDisallowed
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:message="Your recently uploaded asset was of a file type that is not permitted within the DAM. This has been automatically moved to the disallowed folder."/>
+    <kpmg.workflow.assetUploadActivate.pendingApproval
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:message="A recently uploaded asset was of a file type that is not permitted within the DAM and is awaiting GSA approval."/>
+    <kpmg.workflow.assetUploadActivate.pushedToProperFolder
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:message="Your recently uploaded asset was placed in the incorrect folder. This has now been automatically moved to the correct folder."/>
+    <kpmg.workflow.autoGeneratedText
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:message="This is an automatically generated message. Please do not reply."/>
+    <kpmg.workflow.deact.stepbackEmail.inboxNotificatio
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:key="kpmg.workflow.deact.stepbackEmail.inboxNotification"
+        sling:message="Activation incomplete - page unlocked"/>
+    <kpmg.workflow.deactivateApprovalRequired
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:message="Deactivation approval required"/>
+    <kpmg.workflow.deactivateMessage1
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:message="The reference URL to The following page has been deactivated, and will No longer be active."/>
+    <kpmg.workflow.deactivateMessage2
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:message="The following page has been deactivated"/>
+    <kpmg.workflow.deactivateSubject1
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:message="Page reference is no longer active"/>
+    <kpmg.workflow.deactivateSubject2
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:message="Page is deactivated"/>
+    <kpmg.workflow.delegateeEmail
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:message="You have been selected - proceed with workflow"/>
+    <kpmg.workflow.delegateeEmail.message1
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:message="The following page has been assigned to you:"/>
+    <kpmg.workflow.delegateeEmail.message2
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:message="Please proceed with workflow."/>
+    <kpmg.workflow.manualRollout
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:message="Approval complete - perform manual rollout"/>
+    <kpmg.workflow.manualRollout.message1
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:message="Approval was completed and a minor version has been created for the following page:"/>
+    <kpmg.workflow.manualRollout.message2
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:message="You may now perform a rollout on this page to make the update available to any copies."/>
+    <kpmg.workflow.manualRollout.message3
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:message="Please ensure that you complete this workflow item by going to your workflow inbox:"/>
+    <kpmg.workflow.rollout.message
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:message="The following page has been rolled out"/>
+    <kpmg.workflow.rollout.subject
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:message="Page rolled out"/>
+    <kpmg.workflow.stepbackEmail
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:message="Step back notification"/>
+    <kpmg.workflow.stepbackEmail.message1
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:message="your page has not been approved yet and is un-locked and available for editing"/>
+    <kpmg.workflow.viewInboxText
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:message="View the overview in your"/>
+    <reviewerDescription
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:message="You have been requested to approve a Page"/>
+    <selectDeactivationApproverDescription
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:message="Select approver"/>
+    <selectReviewer
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:message="Select reviewer"/>
+     <kpmg.workflow.ScheduleTimeMissing
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:message="Activation incomplete - START/EXPIRATION date is mandatory"/>
+    <kpmg.workflow.ScheduleTimeMissing.message
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:message="Your page doesn't have a start/expiration date. Please ensure the correct start/expiration date is set."/>
+</jcr:root>

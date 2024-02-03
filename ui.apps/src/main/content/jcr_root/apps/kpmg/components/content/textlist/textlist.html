@@ -1,0 +1,20 @@
+<ol 
+  data-sly-use.textList="com.kpmg.core.models.TextList"
+  data-sly-use.template="core/wcm/components/commons/v1/templates.html"
+  data-sly-use.itemTemplate="item.html"
+  id="${textList.id}"
+  class="cmp-text-list"
+  data-sly-list.item="${textList.listItems}">
+  <li 
+    data-icon="${item.icon}"
+    class="cmp-text-list__item"
+    data-sly-call="${itemTemplate.item @ list = list, item = item}">
+  </li>
+</ol>
+<!--/* Style this list item specifically with this ID */-->
+<style>
+  .textlist:not(.cmp-text-list--icon) #${textList.id @context='unsafe'} li.cmp-text-list__item::before {
+    content: counter(step-counter, ${textList.listType @context='styleToken'});
+  }
+</style>
+<sly data-sly-call="${template.placeholder @ isEmpty=textList.listItems.size == 0, classAppend='cmp-list'}"></sly>

@@ -1,0 +1,158 @@
+@include light-theme {
+  --standardteaser-icon-color: #{$global-color-brand-purple};
+  --standardteaser-icon-border-color: #{$global-color-strokes-cobalt-blue-20-percent};
+  --standardteaser-pretitle-color: #{$global-color-brand-purple};
+  --standardteaser-action-color: #{$global-color-brand-cobalt-blue};
+}
+
+@include dark-theme {
+  --standardteaser-icon-color: #{$global-color-brand-light-green};
+  --standardteaser-icon-border-color: #{$global-color-strokes-white-25-percent};
+  --standardteaser-pretitle-color: #{$global-color-brand-light-green};
+  --standardteaser-action-color: #{$global-color-brand-white};
+}
+
+.topicteaser {
+  $font-size-medium: $alias-font-size-x-large; // 1.5rem/24px
+  $margin-x-small: $alias-padding-x-small; // 8px
+  $margin-base: $alias-margin-base; // 16px
+  $margin-medium: $alias-margin-medium; // 24px
+  $margin-large: $alias-margin-large; // 32px
+  $cta-margin-bottom: $alias-margin-x-large; //40px
+  $padding-x-small: $alias-padding-x-small; //8px
+  $padding-base: $alias-padding-base; // 16px
+  $padding-medium: $alias-padding-medium; // 24px
+  $border-color: $global-color-strokes-cobalt-blue-20-percent; // #1E49E2
+  $light-green: $global-color-brand-light-green;
+  $min-height-25: 280px;
+  $min-height-33: 373px;
+  $min-height-50: 560px;
+
+  // Component specific mixins
+  @mixin padding-left-right {
+    padding: 0 $padding-medium;
+  }
+
+  .cmp-teaser {
+    display: flex;
+    flex-direction: column-reverse;
+    border: 1px solid $border-color;
+    justify-content: flex-end;
+    height: 100%;
+  }
+
+  .cmp-teaser__content {
+    div:only-of-type {
+      padding-bottom: $padding-base;
+
+      @include tablet {
+        padding-bottom: $padding-medium;
+      }
+    }
+  }
+
+  .cmp-teaser__icon {
+    display: inline-block;
+    @include material-icons-filled;
+    font-size: $font-size-medium;
+    color: var(--standardteaser-icon-color);
+    margin: $margin-base 0 0 $margin-medium;
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--standardteaser-icon-border-color);
+    border-radius: 50px;
+    padding: $padding-base;
+  }
+
+  .cmp-teaser__custom-icon {
+    display: inline-block;
+    height: 48px;
+    margin: $margin-base 0 0 $margin-medium;
+  }
+
+  .cmp-teaser__eyebrow {
+    @include material-icons-filled;
+    padding-right: $padding-x-small;
+  }
+
+  .cmp-teaser__custom-eyebrow {
+    height: 14px;
+    padding-right: $padding-x-small;
+  }
+
+  .cmp-teaser__pretitle {
+    @include typography-body-caption;
+    @include padding-left-right;
+    color: var(--standardteaser-pretitle-color);
+    margin-top: $margin-medium;
+    margin-bottom: 0;
+  }
+
+  .cmp-teaser__title {
+    @include typography-heading-six-semibold;
+    @include padding-left-right;
+    @include text-color;
+    font-weight: 600;
+    padding-left: 18px;
+    border-left: 4px solid $light-green;
+    margin: $margin-base 0 0;
+  }
+
+  .cmp-teaser__title-link {
+  }
+
+  .cmp-teaser__description {
+    margin: $margin-base 0 0;
+    @include padding-left-right;
+    @include text-color;
+    p {
+      margin: 0;
+    }
+  }
+
+  .cmp-teaser__action-container {
+    margin: $margin-large 0 $cta-margin-bottom;
+    @include padding-left-right;
+  }
+
+  .cmp-teaser__action-link {
+    text-decoration: none;
+    color: var(--standardteaser-action-color);
+  }
+
+  .cmp-teaser__action-link::after {
+    font-family: $global-fonts-font-family-materialicons-filled;
+    content: "chevron_right"; //for more codes go to https://fonts.google.com/icons
+    font-size: $font-size-medium;
+    margin-left: $margin-x-small;
+    vertical-align: middle;
+  }
+
+  .cmp-teaser__image {
+    margin: -1px;
+    line-height: 0;
+    img {
+      max-width: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  @include style-variation("topicteaser-25") {
+    .cmp-teaser__content {
+      min-height: $min-height-25;
+    }
+  }
+
+  @include style-variation("topicteaser-33") {
+    .cmp-teaser__content {
+      min-height: $min-height-33;
+    }
+  }
+
+  @include style-variation("topicteaser-50") {
+    .cmp-teaser__content {
+      min-height: $min-height-50;
+    }
+  }
+}

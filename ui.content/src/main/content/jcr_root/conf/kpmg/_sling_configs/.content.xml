@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+  jcr:primaryType="nt:unstructured">
+    <com.adobe.cq.wcm.core.components.internal.DataLayerConfig
+      jcr:primaryType="nt:unstructured"
+        enabled="{Boolean}true"
+        />
+    <com.adobe.cq.wcm.core.components.internal.services.pdfviewer.PdfViewerCaConfig
+      jcr:primaryType="nt:unstructured"
+      clientId="28b07c6be4d544f188dc2f36e33b196b"
+      reportSuiteId=""/>
+    <com.kpmg.core.caconfig.ArticlePrimaryFormatConfig
+      jcr:primaryType="nt:unstructured"/>
+     <com.kpmg.core.caconfig.ArticleTypeConfig
+      jcr:primaryType="nt:unstructured"/>
+    <com.kpmg.core.caconfig.BusinessGroupConfig
+      jcr:primaryType="nt:unstructured"/>
+    <com.kpmg.core.caconfig.ContactTypeConfig
+      jcr:primaryType="nt:unstructured"/>
+    <com.kpmg.core.caconfig.CountryConfig
+      jcr:primaryType="nt:unstructured"/>
+    <com.kpmg.core.caconfig.DisclaimerConfig
+      jcr:primaryType="nt:unstructured"/>
+    <com.kpmg.core.caconfig.EventTypeConfig
+      jcr:primaryType="nt:unstructured"/>
+    <com.kpmg.core.caconfig.MemberFirmConfig
+      jcr:primaryType="nt:unstructured"/>
+        <com.kpmg.core.caconfig.SocialIconsConfig
+      jcr:primaryType="nt:unstructured"/>
+    <com.kpmg.core.caconfig.SiteSettingsConfig
+            jcr:primaryType="nt:unstructured"/>
+	<com.kpmg.core.caconfig.FormfieldMappingConfig
+        jcr:primaryType="nt:unstructured"/>
+    <com.kpmg.core.caconfig.RegexMappingConifg
+        jcr:primaryType="nt:unstructured"/>
+    </jcr:root>

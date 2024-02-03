@@ -1,0 +1,45 @@
+- group_config:
+
+  - aem-global-site-administrators:
+    - isMemberOf:
+        - content-authors
+        - tag-administrators
+        - user-administrators
+        - workflow-editors
+        - dam-users
+    description: Users in this group have access to most of the platform and can perform actions not allowed to country users. This group is restricted to GDM due to the high risk of accidentally damaging the platform’s content. This group also pertains to Assets.
+    externalId: aem-global-site-administrators;ims
+  
+  - partners:
+    - isMemberOf: contributor
+      description: Users in this group have access to most of the platform, but cannot perform any actions. This group is intended for users that should be able to view content before it is published, but should not have the ability to create, modify, or delete content.
+      externalId: partners;ims
+  - aem-global-asset-administrators:
+    - isMemberOf: 
+        - dam-users
+      description: Users in this group have access to most of the platform and can perform actions not allowed to country users. This group is restricted to GDM due to the high risk of accidentally damaging the platform’s content. This group pertains to Assets only.
+      externalId: aem-global-asset-administrators;ims
+
+
+# ACE LIST
+- ace_config:
+  - aem-global-site-administrators:
+    - path: /
+      permission: allow
+      privileges: jcr:versionManagement,jcr:modifyAccessControl,jcr:read,jcr:readAccessControl,crx:replicate,rep:write,jcr:lockManagement
+    - path: /content
+      permission: allow
+      privileges: jcr:all
+    - path: /var
+      permission: allow
+      privileges: jcr:versionManagement, jcr:modifyAccessControl, jcr:read, jcr:readAccessControl, crx:replicate, rep:write, jcr:lockManagement
+  - aem-global-asset-administrators:
+    - path: /content/dam
+      permission: allow
+      privileges: jcr:read
+    - path: /content/dam/kpmgsites
+      permission: allow
+      privileges: jcr:all, crx:replicate
+    - path: /content/dam/gated
+      permission: allow
+      privileges: jcr:all, crx:replicate

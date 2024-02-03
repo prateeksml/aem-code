@@ -1,0 +1,140 @@
+//Background
+$background-colors: (
+  kpmg-blue: $global-color-brand-kpmg-blue,
+  cobalt-blue: $global-color-brand-cobalt-blue,
+  grey-100: $global-color-grayscale-neutrals-100,
+  white: $global-color-brand-white,
+);
+
+@mixin background-utils($prefix, $childSelector) {
+  @each $name, $val in $background-colors {
+    #{$prefix + "-" + $name + $childSelector} {
+      background: $val;
+    }
+  }
+}
+
+@include background-utils(".utils-background", "");
+@include background-utils(".utils-bleed-color", "::after");
+@include background-utils(".utils-bleed-color", "::before");
+
+//Bleed
+.utils-bleed-bottom {
+  @include vertical-bleed("bottom");
+}
+
+.utils-bleed-top {
+  @include vertical-bleed("top");
+}
+
+.utils-bleed-left {
+  @include horizontal-bleed("left");
+}
+
+.utils-bleed-right {
+  @include horizontal-bleed("right");
+}
+
+.utils-content-max-width {
+  & > * {
+    // first immediate child - can be used for style policy in addition to other style policies (if the content-max-width was not used already)
+    @include content-max-width;
+  }
+}
+
+//Spacing
+$sizes: (
+  small: $alias-margin-small,
+  base: $alias-margin-base,
+  medium: $alias-margin-medium,
+  large: $alias-margin-large,
+  x-large: $alias-margin-x-large,
+  xx-large: $alias-margin-xx-large,
+  xxx-large: $alias-margin-xxx-large,
+  4x-large: $alias-margin-4x-large,
+  5x-large: $alias-margin-5x-large,
+  10x-large: $alias-margin-10x-large,
+);
+
+@mixin spacing-utils($property, $id) {
+  $prefix: "-#{$id}";
+  @if $id == "" {
+    $prefix: "";
+  }
+
+  @each $name, $val in $sizes {
+    //Around
+    .utils#{$prefix}-#{$property}--#{$name} {
+      #{$property}: $val !important;
+    }
+    //Horizontal
+    .utils#{$prefix}-#{$property}-horizontal--#{$name} {
+      #{$property}-left: $val !important;
+      #{$property}-right: $val !important;
+    }
+
+    //Vertical
+    .utils#{$prefix}-#{$property}-vertical--#{$name} {
+      #{$property}-top: $val !important;
+      #{$property}-bottom: $val !important;
+    }
+
+    //Top
+    .utils#{$prefix}-#{$property}-top--#{$name} {
+      #{$property}-top: $val !important;
+    }
+
+    //Right
+    .utils#{$prefix}-#{$property}-right--#{$name} {
+      #{$property}-right: $val !important;
+    }
+
+    //Bottom
+    .utils#{$prefix}-#{$property}-bottom--#{$name} {
+      #{$property}-bottom: $val !important;
+    }
+
+    //Left
+    .utils#{$prefix}-#{$property}-left--#{$name} {
+      #{$property}-left: $val !important;
+    }
+  }
+}
+
+@include spacing-utils("margin", "");
+@include spacing-utils("padding", "");
+
+@include tablet {
+  @include spacing-utils("margin", "md");
+  @include spacing-utils("padding", "md");
+}
+
+@include desktop-small {
+  @include spacing-utils("margin", "lg");
+  @include spacing-utils("padding", "lg");
+}
+
+//Font Size
+$font-sizes: (
+  x-small: $alias-font-size-x-small,
+  small: $alias-font-size-small,
+  base: $alias-font-size-base,
+  medium: $alias-font-size-medium,
+  large: $alias-font-size-large,
+  x-large: $alias-font-size-x-large,
+  xx-large: $alias-font-size-xx-large,
+  xxx-large: $alias-font-size-xxx-large,
+  4x-large: $alias-font-size-4x-large,
+  5x-large: $alias-font-size-5x-large,
+  6x-large: $alias-font-size-6x-large,
+);
+
+@mixin size-utils($property, $sizes, $prefix: "utils") {
+  @each $name, $val in $sizes {
+    .#{$prefix}-#{$property}--#{$name} {
+      #{$property}: $val;
+    }
+  }
+}
+
+@include size-utils("font-size", $font-sizes);

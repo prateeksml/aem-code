@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2023-06-30T22:39:42.129-04:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/kpmg/settings/wcm/templates/page-content"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Contact Carousel"
+        sling:resourceType="kpmg/components/structure/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="kpmg/components/container/container"
+            layout="responsiveGrid">
+            <main
+                jcr:lastModified="{Date}2023-06-03T19:12:45.974-05:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="kpmg/components/container/main"
+                layout="simple">
+                <section
+                    jcr:lastModified="{Date}2023-06-03T18:53:29.854-05:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="kpmg/components/container/section"
+                    layout="simple">
+                    <contact_carousel
+                        cq:styleIds="[1688175502858]"
+                        jcr:lastModified="{Date}2023-06-27T15:18:46.077-05:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="kpmg/components/content/contact-carousel"
+                        accessibilityAutoItemTitles="false"
+                        autopauseDisabled="false"
+                        autoplay="false"
+                        delay="5000">
+                        <contactcard
+                            cq:panelTitle="Contact Card 1"
+                            jcr:lastModified="{Date}2023-06-30T21:34:03.884-04:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="kpmg/components/content/contactcard"
+                            fragmentPath="/content/dam/kpmg-style-guide/profiles/patricia-bosco"
+                            searchIndexable="false"
+                            text="Ms Patricia Bosco Supply Chain &amp; Operations Leader United Kingdom mail call">
+                            <par1
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/foundation/components/responsivegrid"/>
+                        </contactcard>
+                        <item_1687897109067
+                            cq:panelTitle="Contact Card 2"
+                            jcr:lastModified="{Date}2023-06-30T21:34:18.326-04:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="kpmg/components/content/contactcard"
+                            fragmentPath="/content/dam/kpmg-style-guide/profiles/patricia-bosco"
+                            searchIndexable="true"
+                            text="Ms Patricia Bosco Supply Chain &amp; Operations Leader United Kingdom mail call">
+                            <par1
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/foundation/components/responsivegrid"/>
+                        </item_1687897109067>
+                        <item_1687897112065
+                            cq:panelTitle="Contact Card 3"
+                            jcr:lastModified="{Date}2023-06-30T21:34:27.520-04:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="kpmg/components/content/contactcard"
+                            fragmentPath="/content/dam/kpmg-style-guide/profiles/patricia-bosco"
+                            searchIndexable="true"
+                            text="Ms Patricia Bosco Supply Chain &amp; Operations Leader United Kingdom mail call">
+                            <par1
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/foundation/components/responsivegrid"/>
+                        </item_1687897112065>
+                        <item_1687897114450
+                            cq:panelTitle="Contact Card 4"
+                            jcr:lastModified="{Date}2023-06-30T21:34:52.403-04:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="kpmg/components/content/contactcard"
+                            fragmentPath="/content/dam/kpmg-style-guide/profiles/patricia-bosco"
+                            searchIndexable="true"
+                            text="Ms Patricia Bosco Supply Chain &amp; Operations Leader United Kingdom mail call">
+                            <par1
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/foundation/components/responsivegrid"/>
+                        </item_1687897114450>
+                        <item_1687897116977
+                            cq:panelTitle="Contact Card 5"
+                            jcr:lastModified="{Date}2023-06-30T21:35:03.329-04:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="kpmg/components/content/contactcard"
+                            fragmentPath="/content/dam/kpmg-style-guide/profiles/patricia-bosco"
+                            searchIndexable="true"
+                            text="Ms Patricia Bosco Supply Chain &amp; Operations Leader United Kingdom mail call">
+                            <par1
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/foundation/components/responsivegrid"/>
+                        </item_1687897116977>
+                    </contact_carousel>
+                    <separator
+                        jcr:lastModified="{Date}2023-06-30T21:35:08.978-04:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="kpmg/components/content/separator"/>
+                    <contact_carousel_cop
+                        jcr:lastModified="{Date}2023-06-27T15:18:46.077-05:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="kpmg/components/content/contact-carousel"
+                        accessibilityAutoItemTitles="false"
+                        autopauseDisabled="false"
+                        autoplay="false"
+                        delay="5000">
+                        <contactcard
+                            cq:panelTitle="Contact Card 1"
+                            cq:styleIds="[1686601636871,1686867452322]"
+                            jcr:lastModified="{Date}2023-06-30T21:34:03.884-04:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="kpmg/components/content/contactcard"
+                            fragmentPath="/content/dam/kpmg-style-guide/profiles/patricia-bosco"
+                            searchIndexable="false"
+                            text="Ms Patricia Bosco Supply Chain &amp; Operations Leader United Kingdom mail call">
+                            <par1
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/foundation/components/responsivegrid"/>
+                        </contactcard>
+                        <item_1687897109067
+                            cq:panelTitle="Contact Card 2"
+                            cq:styleIds="[1686601636871,1686867452322]"
+                            jcr:lastModified="{Date}2023-06-30T21:35:32.351-04:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="kpmg/components/content/contactcard"
+                            fragmentPath="/content/dam/kpmg-style-guide/profiles/patricia-bosco"
+                            searchIndexable="true"
+                            text="Ms Patricia Bosco Supply Chain &amp; Operations Leader United Kingdom mail call"
+                            variationName="master">
+                            <par1
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/foundation/components/responsivegrid"/>
+                        </item_1687897109067>
+                        <item_1687897112065
+                            cq:panelTitle="Contact Card 3"
+                            cq:styleIds="[1686601636871,1686867452322]"
+                            jcr:lastModified="{Date}2023-06-30T21:35:44.736-04:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="kpmg/components/content/contactcard"
+                            fragmentPath="/content/dam/kpmg-style-guide/profiles/patricia-bosco"
+                            searchIndexable="true"
+                            text="Ms Patricia Bosco Supply Chain &amp; Operations Leader United Kingdom mail call"
+                            variationName="master">
+                            <par1
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/foundation/components/responsivegrid"/>
+                        </item_1687897112065>
+                        <item_1687897114450
+                            cq:panelTitle="Contact Card 4"
+                            cq:styleIds="[1686601636871,1686867452322]"
+                            jcr:lastModified="{Date}2023-06-30T21:36:17.542-04:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="kpmg/components/content/contactcard"
+                            fragmentPath="/content/dam/kpmg-style-guide/profiles/patricia-bosco"
+                            searchIndexable="true"
+                            text="Ms Patricia Bosco Supply Chain &amp; Operations Leader United Kingdom mail call"
+                            variationName="master">
+                            <par1
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/foundation/components/responsivegrid"/>
+                        </item_1687897114450>
+                        <item_1687897116977
+                            cq:panelTitle="Contact Card 5"
+                            cq:styleIds="[1686601636871,1686867452322]"
+                            jcr:lastModified="{Date}2023-06-30T22:39:42.078-04:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="kpmg/components/content/contactcard"
+                            fragmentPath="/content/dam/kpmg-style-guide/profiles/patricia-bosco"
+                            searchIndexable="true"
+                            text="Ms Patricia Bosco Supply Chain &amp; Operations Leader United Kingdom mail call"
+                            variationName="master">
+                            <par1
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/foundation/components/responsivegrid"/>
+                        </item_1687897116977>
+                    </contact_carousel_cop>
+                    <separator_copy
+                        jcr:lastModified="{Date}2023-06-30T21:35:08.978-04:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="kpmg/components/content/separator"/>
+                    <contact_carousel_cop_610127570
+                        jcr:lastModified="{Date}2023-06-27T15:18:46.077-05:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="kpmg/components/content/contact-carousel"
+                        accessibilityAutoItemTitles="false"
+                        autopauseDisabled="false"
+                        autoplay="false"
+                        delay="5000">
+                        <contactcard
+                            cq:panelTitle="Contact Card 1"
+                            cq:styleIds="[1687915557564]"
+                            jcr:lastModified="{Date}2023-06-30T21:34:03.884-04:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="kpmg/components/content/contactcard"
+                            fragmentPath="/content/dam/kpmg-style-guide/profiles/patricia-bosco"
+                            searchIndexable="false"
+                            text="Ms Patricia Bosco Supply Chain &amp; Operations Leader United Kingdom mail call">
+                            <par1
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/foundation/components/responsivegrid"/>
+                        </contactcard>
+                        <item_1687897109067
+                            cq:panelTitle="Contact Card 2"
+                            cq:styleIds="[1687915557564]"
+                            jcr:lastModified="{Date}2023-06-30T21:35:32.351-04:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="kpmg/components/content/contactcard"
+                            fragmentPath="/content/dam/kpmg-style-guide/profiles/patricia-bosco"
+                            searchIndexable="true"
+                            text="Ms Patricia Bosco Supply Chain &amp; Operations Leader United Kingdom mail call"
+                            variationName="master">
+                            <par1
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/foundation/components/responsivegrid"/>
+                        </item_1687897109067>
+                        <item_1687897112065
+                            cq:panelTitle="Contact Card 3"
+                            cq:styleIds="[1687915557564]"
+                            jcr:lastModified="{Date}2023-06-30T21:37:11.339-04:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="kpmg/components/content/contactcard"
+                            fragmentPath="/content/dam/kpmg-style-guide/profiles/patricia-bosco"
+                            searchIndexable="true"
+                            text="Ms Patricia Bosco Supply Chain &amp; Operations Leader United Kingdom mail call"
+                            variationName="master">
+                            <par1
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/foundation/components/responsivegrid"/>
+                        </item_1687897112065>
+                        <item_1687897114450
+                            cq:panelTitle="Contact Card 4"
+                            cq:styleIds="[1687915557564]"
+                            jcr:lastModified="{Date}2023-06-30T21:37:20.214-04:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="kpmg/components/content/contactcard"
+                            fragmentPath="/content/dam/kpmg-style-guide/profiles/patricia-bosco"
+                            searchIndexable="true"
+                            text="Ms Patricia Bosco Supply Chain &amp; Operations Leader United Kingdom mail call"
+                            variationName="master">
+                            <par1
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/foundation/components/responsivegrid"/>
+                        </item_1687897114450>
+                        <item_1687897116977
+                            cq:panelTitle="Contact Card 5"
+                            cq:styleIds="[1687915557564]"
+                            jcr:lastModified="{Date}2023-06-30T21:37:31.832-04:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="kpmg/components/content/contactcard"
+                            fragmentPath="/content/dam/kpmg-style-guide/profiles/patricia-bosco"
+                            searchIndexable="true"
+                            text="Ms Patricia Bosco Supply Chain &amp; Operations Leader United Kingdom mail call"
+                            variationName="master">
+                            <par1
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/foundation/components/responsivegrid"/>
+                        </item_1687897116977>
+                    </contact_carousel_cop_610127570>
+                </section>
+            </main>
+        </root>
+        <cq:featuredimage
+            jcr:primaryType="nt:unstructured"
+            fileReference="/content/dam/kpmg-style-guide/ayo-ogunseinde-237739.jpeg"/>
+    </jcr:content>
+</jcr:root>

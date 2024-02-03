@@ -1,0 +1,50 @@
+{
+  "alias": {
+    "font-size": {
+      "x-small": {
+        "value": "{global.font-size.075}",
+        "comment": "0.75rem/12px"
+      },
+      "small": {
+        "value": "{global.font-size.0875}",
+        "comment": "0.875rem/14px"
+      },
+      "base": {
+        "value": "{global.font-size.1}",
+        "comment": "1rem/16px"
+      },
+      "medium": {
+        "value": "{global.font-size.1125}",
+        "comment": "1.125rem/18px"
+      },
+      "large": {
+        "value": "{global.font-size.125}",
+        "comment": "1.25rem/20px"
+      },
+      "x-large": {
+        "value": "{global.font-size.15}",
+        "comment": "1.5rem/24px"
+      },
+      "xx-large": {
+        "value": "{global.font-size.175}",
+        "comment": "1.75rem/28px"
+      },
+      "xxx-large": {
+        "value": "{global.font-size.2}",
+        "comment": "2rem/32px"
+      },
+      "4x-large": {
+        "value": "{global.font-size.25}",
+        "comment": "2.5rem/40px"
+      },
+      "5x-large": {
+        "value": "{global.font-size.3}",
+        "comment": "3rem/48px"
+      },
+      "6x-large": {
+        "value": "{global.font-size.375}",
+        "comment": "3.75rem/60px"
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+<template data-sly-template.tocColumns="${@ modifier, columns}">
+    <section class="toc-grid-wrapper toc-grid-wrapper--${modifier}">
+        <div class="toc-grid-item" data-sly-repeat.column="${columns}">
+            <sly 
+                data-sly-set.columnPath="./container-${column}"
+                data-sly-resource="${columnPath @ resourceType='kpmg/components/container/teaserbox/container'}"></sly>
+        </div>
+    </section>
+</template>

@@ -1,0 +1,146 @@
+@include light-theme {
+  --textlist-numbered-icon-color: #{$global-color-brand-purple};
+  --texlist-rounded-icon-color: #{$global-color-brand-purple};
+  --texlist-rounded-icon-border-color: #{$global-color-strokes-cobalt-blue-20-percent};
+  --texlist-title-color: #{$global-color-brand-spectrum-blue};
+  --texlist-item-color: #{$global-color-brand-spectrum-blue};
+}
+
+@include dark-theme {
+  --textlist-numbered-icon-color: #{$global-color-brand-light-blue};
+  --texlist-rounded-icon-color: #{$global-color-brand-white};
+  --texlist-rounded-icon-border-color: #{$global-color-strokes-white-20-percent};
+  --texlist-title-color: #{$global-color-brand-white};
+  --texlist-item-color: #{$global-color-brand-white};
+}
+
+.textlist {
+  // aliases
+  $item-circle-size: $alias-icon-size-x-large;
+  $item-circle-size-desktop: $alias-icon-size-xxx-large;
+  $list-top-bottom-padding-mobile: $alias-margin-x-large;
+  $list-top-bottom-padding-desktop: 3.5rem;
+  $list-left-padding: $alias-padding-medium;
+  $list-left-padding-desktop: $alias-padding-xx-large;
+  $list-icon-left-position: $list-left-padding + $alias-padding-small;
+  $list-icon-left-position-desktop: $list-left-padding-desktop +
+    $alias-padding-x-small;
+  $list-icon-text-left-padding: $item-circle-size + $alias-padding-base +
+    $alias-padding-small;
+  $list-icon-text-left-padding-desktop: $item-circle-size-desktop +
+    $alias-padding-medium + $alias-padding-x-small;
+  $item-icon-font-size: $alias-font-size-x-large;
+  $item-icon-font-size-tablet: $alias-font-size-xxx-large; // 2rem/32px
+  display: flex;
+  .cmp-text-list {
+    position: relative;
+    counter-reset: section;
+    padding: $list-top-bottom-padding-mobile $list-left-padding;
+    margin: 0;
+    @include tablet {
+      padding: $list-top-bottom-padding-mobile $list-left-padding-desktop;
+    }
+    @include desktop-small {
+      padding: $list-top-bottom-padding-desktop $list-left-padding-desktop;
+    }
+    @include desktop-medium {
+      padding: $list-top-bottom-padding-desktop $list-left-padding-desktop;
+    }
+    li.cmp-text-list__item {
+      list-style: none;
+      margin-bottom: $alias-margin-medium;
+      counter-increment: step-counter;
+      @include desktop-small {
+        margin-bottom: $alias-margin-large;
+      }
+      @include desktop-medium {
+        margin-bottom: $alias-margin-large;
+      }
+
+      &::before {
+        display: block;
+        @include typography-heading-six-semibold;
+        margin-bottom: $alias-margin-base;
+        color: var(--textlist-numbered-icon-color);
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .cmp-text-list__item-title {
+        margin-top: 0;
+        margin-bottom: $alias-margin-x-small;
+        @include typography-heading-six-semibold;
+        color: var(--texlist-title-color);
+      }
+      .cmp-text-list__item-text {
+        @include typography-body-default-regular;
+        display: block;
+        color: var(--texlist-item-color);
+      }
+    }
+  }
+  // Mixins
+  @mixin rounded-icon-text-padding() {
+    padding-left: $list-icon-text-left-padding;
+    @include tablet {
+      padding-left: $list-icon-text-left-padding-desktop;
+    }
+    @include desktop-small {
+      padding-left: $list-icon-text-left-padding-desktop;
+    }
+    @include desktop-medium {
+      padding-left: $list-icon-text-left-padding-desktop;
+    }
+  }
+  @mixin rounded-icon() {
+    @include typography-body-default-semibold;
+    width: $item-circle-size;
+    height: $item-circle-size;
+    border-radius: 50%;
+    text-align: center;
+    line-height: $item-circle-size;
+    position: absolute;
+    left: $list-icon-left-position;
+    color: var(--texlist-rounded-icon-color);
+    border: solid 1px var(--texlist-rounded-icon-border-color);
+    @include tablet {
+      width: $item-circle-size-desktop;
+      height: $item-circle-size-desktop;
+      line-height: $item-circle-size-desktop;
+      left: $list-icon-left-position-desktop;
+    }
+  }
+  // Variations
+  @include style-variation("cmp-text-list--icon") {
+    li.cmp-text-list__item {
+      @include rounded-icon-text-padding;
+      &::before {
+        content: attr(data-icon);
+        @include rounded-icon;
+        @include material-icons-outlined;
+        line-height: $item-circle-size; // required to center vertically
+        font-size: $item-icon-font-size;
+        color: var(--texlist-rounded-icon-color);
+        @include tablet {
+          font-size: $item-icon-font-size-tablet;
+        }
+      }
+    }
+  }
+  @include style-variation("cmp-text-list--numbers-left") {
+    li.cmp-text-list__item {
+      &:last-child {
+        min-height: $item-circle-size;
+        @include tablet {
+          min-height: $item-circle-size-desktop;
+        }
+      }
+      @include rounded-icon-text-padding;
+      &::before {
+        @include rounded-icon;
+      }
+    }
+  }
+}

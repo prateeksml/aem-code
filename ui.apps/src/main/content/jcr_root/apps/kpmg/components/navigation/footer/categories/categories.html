@@ -1,0 +1,12 @@
+<div role="contentinfo" class="cmp-footer-categories"
+     data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-use.footerCategories="com.kpmg.core.models.FooterCategories"
+     data-sly-use.categoryTemplates="templates.html"
+     data-sly-test.hasContent="${footerCategories.items.size > 0}">
+
+    <sly data-sly-list.category="${footerCategories.items}">
+      <sly data-sly-call="${categoryTemplates.links @ title=category.title, linkItems=category.linkItems}"></sly>
+    </sly>
+
+</div>
+<sly data-sly-call="${templates.placeholder @ isEmpty=!hasContent, classAppend='cmp-footer-categories'}"></sly>

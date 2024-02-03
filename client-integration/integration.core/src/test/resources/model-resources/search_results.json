@@ -1,0 +1,35 @@
+{
+  "jcr:primaryType": "nt:unstructured",
+  "altValueFromPageImage": "false",
+  "noResultsSuggestionMessage": "No Results Check",
+  "imageFromPageImage": "false",
+  "fileReference": "/content/dam/kpmg-style-guide/Promo.jpg",
+  "jcr:lastModifiedBy": "admin",
+  "noResultsSuggestionTitle": "NO Results Suggestion",
+  "noResultsMessage": "No Results",
+  "pastEventLabel": "Past Event",
+  "alt": ["Hello Worlddd"],
+  "upcomingLabel": "Upcoming",
+  "jcr:lastModified": "Sat Jul 15 2023 19:53:38 GMT+0530",
+  "noResultsSuggestionMesage": "No Rsults Check Message",
+  "sling:resourceType": "kpmg/components/content/search-results",
+  "isDecorative": "false",
+  "mResultsCountMessage": "Results",
+  "altValueFromDAM": "false",
+  "resultsCountMessage": "Desktop Count",
+  "cancelButtonText" : "cancel",
+  "systemErrorMessage" : "error message",
+  "filterList": {
+    "jcr:primaryType": "nt:unstructured",
+    "item0": {
+      "jcr:primaryType": "nt:unstructured",
+      "filterType": "all",
+      "filterLabel": "All"
+    },
+    "item1": {
+      "jcr:primaryType": "nt:unstructured",
+      "filterType": "insight",
+      "filterLabel": "branchen"
+    }
+  }
+}

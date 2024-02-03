@@ -1,0 +1,219 @@
+@import "theme";
+
+@include light-theme {
+  --heading-1-color: #{$alias-color-heading-one};
+  --heading-2-color: #{$alias-color-heading-two};
+  --heading-3-color: #{$alias-color-heading-three};
+  --heading-4-color: #{$alias-color-heading-four};
+  --heading-5-color: #{$alias-color-heading-three};
+  --heading-6-color: #{$alias-color-heading-three};
+  --regular-text-color: #{$alias-color-body-regular};
+  --link-color: #{$global-color-brand-cobalt-blue};
+}
+
+@include dark-theme {
+  --heading-1-color: #{$global-color-brand-white};
+  --heading-2-color: #{$global-color-brand-white};
+  --heading-3-color: #{$global-color-brand-white};
+  --heading-4-color: #{$global-color-brand-white};
+  --heading-5-color: #{$global-color-brand-white};
+  --heading-6-color: #{$global-color-brand-white};
+  --regular-text-color: #{$global-color-brand-white};
+  --link-color: #{$global-color-brand-white};
+}
+
+@mixin text-color {
+  color: var(--regular-text-color);
+}
+
+//TYPOGRAPHY
+@mixin typography-heading-one {
+  //Default style
+
+  //Mobile
+  font-family: $alias-fonts-heading-one-font-family;
+  color: var(--heading-1-color);
+  font-size: $alias-font-size-4x-large; // 2.5rem/40px
+  line-height: $alias-fonts-line-height-6x-large; // 3rem/48px
+  letter-spacing: $alias-fonts-heading-one-letter-spacing;
+
+  //Desktop
+  @include desktop-small {
+    font-size: $alias-font-size-6x-large; // 3.75rem/60px
+    line-height: $alias-fonts-line-height-8x-large; // 4.5rem/72px
+  }
+}
+
+@mixin typography-heading-two {
+  font-family: $alias-fonts-heading-two-font-family;
+  color: var(--heading-2-color);
+  font-size: $alias-font-size-xxx-large; // 2rem/32px
+  line-height: $alias-fonts-line-height-5x-large; // 2.75rem/44px
+  letter-spacing: $alias-fonts-heading-two-letter-spacing;
+
+  @include desktop-small {
+    font-size: $alias-font-size-5x-large; // 3rem/48px
+    line-height: $alias-fonts-line-height-7x-large; // 3.5rem/56px
+  }
+}
+
+@mixin typography-heading-two-semibold {
+  font-family: $alias-fonts-heading-two-semibold-font-family;
+  color: var(--heading-2-color);
+  font-size: $alias-font-size-xxx-large; // 2rem/32px
+  line-height: $alias-fonts-line-height-5x-large; // 2.75rem/44px
+  letter-spacing: $alias-fonts-heading-two-semibold-letter-spacing;
+
+  @include desktop-small {
+    font-size: $alias-font-size-5x-large; // 3rem/48px
+    line-height: $alias-fonts-line-height-7x-large; // 3.5rem/56px
+  }
+}
+
+@mixin typography-heading-three {
+  font-family: $alias-fonts-heading-three-font-family;
+  color: var(--heading-3-color);
+  font-size: $alias-font-size-xx-large; // 1.75rem/28px
+  line-height: $alias-fonts-line-height-4x-large; // 2.25rem/36px
+  letter-spacing: $alias-fonts-heading-three-letter-spacing;
+
+  @include desktop-small {
+    font-size: $alias-font-size-4x-large; // 2.5rem/40px
+    line-height: $alias-fonts-line-height-6x-large; // 3rem/48px
+  }
+}
+
+@mixin typography-heading-four {
+  font-family: $alias-fonts-heading-four-semibold-font-family;
+  color: var(--heading-4-color);
+  font-size: $alias-font-size-x-large; // 1.5rem/24px
+  line-height: $alias-fonts-line-height-xxx-large; // 2rem/32px
+  letter-spacing: $alias-fonts-heading-four-letter-spacing;
+
+  @include desktop-small {
+    font-size: $alias-font-size-xxx-large; // 2rem/32px
+    line-height: $alias-fonts-line-height-5x-large; // 2.75rem/44px
+  }
+}
+
+@mixin typography-heading-five {
+  font-family: $alias-fonts-heading-five-font-family;
+  color: var(--heading-5-color);
+  font-size: $alias-font-size-large; // 1.25rem/20px
+  line-height: $alias-font-size-xx-large; // 1.75rem/28px
+  letter-spacing: $alias-fonts-heading-five-letter-spacing;
+
+  @include desktop-small {
+    font-size: $alias-font-size-x-large; // 1.5rem/24px
+    line-height: $alias-fonts-line-height-xxx-large; // 2rem/32px
+  }
+}
+
+@mixin typography-heading-five-semibold {
+  font-family: $alias-fonts-heading-five-semibold-font-family;
+  color: var(--heading-5-color);
+  font-size: $alias-font-size-large; // 1.25rem/20px
+  line-height: $alias-font-size-xx-large; // 1.75rem/28px
+  letter-spacing: $alias-fonts-heading-five-semibold-letter-spacing;
+
+  @include desktop-small {
+    font-size: $alias-font-size-x-large; // 1.5rem/24px
+    line-height: $alias-fonts-line-height-xxx-large; // 2rem/32px
+  }
+}
+
+@mixin typography-heading-six {
+  font-family: $alias-fonts-heading-six-font-family;
+  color: var(--heading-6-color);
+  font-size: $alias-font-size-medium; // 1.125rem/18px
+  line-height: $alias-fonts-line-height-x-large; // 1.5em/24px
+  letter-spacing: $alias-fonts-heading-six-letter-spacing;
+}
+
+@mixin typography-heading-six-semibold {
+  font-family: $alias-fonts-heading-six-semibold-font-family;
+  color: var(--heading-6-color);
+  font-size: $alias-font-size-medium; // 1.125rem/18px
+  line-height: $alias-fonts-line-height-x-large; // 1.5em/24px
+  letter-spacing: $alias-fonts-heading-six-semibold-letter-spacing;
+}
+
+@mixin typography-body-default-regular {
+  font-family: $alias-fonts-body-default-regular-font-family, sans-serif;
+  color: var(--regular-text-color);
+  font-size: $alias-font-size-base; // 1rem/16px
+  line-height: $alias-fonts-line-height-x-large; // 1.5em/24px
+  letter-spacing: $alias-fonts-body-default-regular-letter-spacing;
+}
+
+@mixin typography-body-default-link {
+  font-family: $alias-fonts-body-default-link-font-family;
+  color: var(--link-color);
+  font-size: $alias-font-size-base; // 1rem/16px
+  line-height: $alias-fonts-line-height-x-large; // 1.5em/24px
+  letter-spacing: $alias-fonts-body-default-link-letter-spacing;
+}
+
+@mixin typography-body-default-semibold {
+  font-family: $alias-fonts-body-default-semibold-font-family, sans-serif;
+  color: var(--regular-text-color);
+  font-size: $alias-font-size-base; // 1rem/16px
+  line-height: $alias-fonts-line-height-x-large; // 1.5em/24px
+  letter-spacing: $alias-fonts-body-default-semibold-letter-spacing;
+}
+
+@mixin typography-body-default-bold {
+  font-family: $alias-fonts-body-default-bold-font-family;
+  color: var(--regular-text-color);
+  font-size: $alias-font-size-base; // 1rem/16px
+  line-height: $alias-fonts-line-height-x-large; // 1.5em/24px
+  letter-spacing: $alias-fonts-body-default-bold-letter-spacing;
+}
+
+@mixin typography-body-small-regular {
+  font-family: $alias-fonts-body-small-regular-font-family;
+  color: var(--regular-text-color);
+  font-size: $alias-font-size-small; // 0.875rem/14px
+  line-height: $alias-fonts-line-height-large; // 1.25em/20px
+  letter-spacing: $alias-fonts-body-small-regular-letter-spacing;
+}
+
+@mixin typography-body-small-semibold {
+  font-family: $alias-fonts-body-small-semibold-font-family;
+  color: var(--regular-text-color);
+  font-size: $alias-font-size-small; // 0.875rem/14px
+  line-height: $alias-fonts-line-height-large; // 1.25em/20px
+  letter-spacing: $alias-fonts-body-small-semibold-letter-spacing;
+}
+
+@mixin typography-body-small-bold {
+  font-family: $alias-fonts-body-small-bold-font-family;
+  color: var(--regular-text-color);
+  font-size: $alias-font-size-small; // 0.875rem/14px
+  line-height: $alias-fonts-line-height-large; // 1.25em/20px
+  letter-spacing: $alias-fonts-body-small-bold-letter-spacing;
+}
+
+@mixin typography-body-headings-tags {
+  font-family: $alias-fonts-body-headings-tags-font-family;
+  color: var(--regular-text-color);
+  font-size: $alias-font-size-x-small; // 0.75rem/12px
+  line-height: $alias-fonts-line-height-medium; // 1.125em/18px
+  letter-spacing: $alias-fonts-body-headings-tags-letter-spacing;
+}
+
+@mixin typography-body-caption {
+  font-family: $alias-fonts-body-caption-font-family;
+  color: var(--regular-text-color);
+  font-size: $alias-font-size-x-small; // 0.75rem/12px
+  line-height: $alias-fonts-line-height-medium; // 1.125em/18px
+  letter-spacing: $alias-fonts-body-caption-letter-spacing;
+}
+
+@mixin line-clamp($limit) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-line-clamp: $limit;
+  overflow: hidden;
+}

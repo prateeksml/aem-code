@@ -1,0 +1,32 @@
+@import (once) "/libs/wcm/foundation/clientlibs/grid/grid_base.less";
+
+// maximum amount of grid cells to be provided
+@max_col: 12;
+// breakpoints
+@tablet: 768px;
+@desktop: 1024px;
+
+// default breakpoint. AKA larger than @desktop breakpoint
+.aem-Grid {
+  .generate-grid(default, @max_col);
+}
+
+// tablet breakpoint
+@media (min-width: @tablet) and (max-width: (@desktop - 1)) {
+  .aem-Grid {
+    .generate-grid(tablet, @max_col);
+  }
+}
+
+// phone breakpoint
+@media (max-width: (@tablet - 1)) {
+  .aem-Grid {
+    .generate-grid(phone, @max_col);
+  }
+}
+
+// force showing hidden components in unhide mode
+.aem-GridShowHidden > .cmp-container > .aem-Grid > .aem-GridColumn {
+  display: block !important;
+}
+

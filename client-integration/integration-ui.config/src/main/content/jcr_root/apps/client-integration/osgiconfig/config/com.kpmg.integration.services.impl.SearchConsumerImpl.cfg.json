@@ -1,0 +1,6 @@
+{
+  "getSearchEndpoint":"$[env:ES_SEARCH_ENDPOINT;default='']",
+  "getPagination": 10,
+  "getWcmMode": "$[env:ES_WCMMODE;default='']",
+  "getSuggestEndpoint": "$[env:ES_SUGGEST_ENDPOINT;default='']"
+}

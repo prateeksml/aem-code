@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0"
+	jcr:primaryType="sling:OsgiConfig" componentName="contactcard"
+	renditions="[mobile;;cq5dam-web-320-320;160;160,
+tablet;;cq5dam-web-320-320;160;160,
+desktopmedium;;cq5dam-web-320-320;160;160,
+desktopsmall;;cq5dam-web-320-320;80;80,
+retinamobile;;cq5dam-web-320-320;320;320,
+retinatablet;;cq5dam-web-320-320;320;320,
+retinadesktopmedium;;cq5dam-web-320-320;320;320,
+retinadesktopsmall;;cq5dam-web-320-320;160;160]" />

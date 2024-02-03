@@ -1,0 +1,8 @@
+subject=Uploaded Asset has been ${status}
+
+message=Your recently uploaded asset ${assetName} is of a file type "${assetType}", has been ${status} by GSA and is available in the following path.\n \
+${hostPrefix}${assetPath}\
+
+footer=\n \
+-------------------------------------------------------------------------------------\n \
+This is an automatically generated message. Please do not reply.

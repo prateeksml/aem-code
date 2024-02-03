@@ -1,0 +1,7 @@
+{
+    "scripts": [
+        "create path (sling:OrderedFolder) /content/dam/kpmgsites",
+        "create path (nt:unstructured) /content/dam/kpmgsites/jcr:content",
+        "set properties on /content/dam/kpmgsites/jcr:content\n  set cq:conf{String} to /conf/kpmg\n  set jcr:title{String} to \"KPMG.com\"\n set dam:disableImageSmartTag{Boolean} to true\n set dam:disableTextSmartTag{Boolean} to true\n set dam:disableColorExtraction{Boolean} to true\n set dam:disableVideoSmartTag{Boolean} to true\n set imageProfile{String} to \"/conf/global/settings/dam/adminui-extension/imageprofile/KPMG-Smart-Crop-Profile\"\n end"
+    ]
+}

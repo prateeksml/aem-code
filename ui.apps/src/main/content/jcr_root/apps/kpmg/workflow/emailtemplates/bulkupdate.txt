@@ -1,0 +1,7 @@
+subject=${topic.subject}
+
+header=Bulk Update has been done successfully for the below given query parameters and sent for content approval to publish : \n \
+	Smartlogic Id : ${SmartlogicId}\n \
+	Rootpage Path : ${SearchPath}\n \
+
+

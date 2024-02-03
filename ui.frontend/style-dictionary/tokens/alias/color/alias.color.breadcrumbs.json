@@ -1,0 +1,32 @@
+{
+  "alias": {
+    "color": {
+      "breadcrumbs": {
+        "link": {
+          "light": {
+            "value": "{global.color.brand.cobalt-blue}"
+          },
+          "dark": {
+            "value": "{global.color.brand.white}"
+          }
+        },
+        "current-page": {
+          "light": {
+            "value": "{global.color.brand.kpmg-blue}"
+          },
+          "dark": {
+            "value": "{global.color.brand.white}"
+          }
+        },
+        "chevron": {
+          "light": {
+            "value": "{global.color.grayscale.neutrals.500}"
+          },
+          "dark": {
+            "value": "{global.color.brand.white}"
+          }
+        }
+      }
+    }
+  }
+}

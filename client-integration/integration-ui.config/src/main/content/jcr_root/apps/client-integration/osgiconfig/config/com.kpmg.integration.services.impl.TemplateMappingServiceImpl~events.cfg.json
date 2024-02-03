@@ -1,0 +1,6 @@
+{
+  "getDocumentType":"Event",
+  "getTemplates":[
+    "/conf/kpmg/settings/wcm/templates/page-event"
+  ]
+}

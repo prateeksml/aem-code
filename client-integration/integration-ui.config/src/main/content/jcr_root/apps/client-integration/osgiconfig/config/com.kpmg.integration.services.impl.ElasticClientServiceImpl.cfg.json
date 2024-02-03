@@ -1,0 +1,6 @@
+{
+  "getElasticSearchHost":"$[env:ES_HOST]",
+  "getElasticSearchPort" : 443,
+  "getEsApiKey" : "$[secret:ES_API_KEY]",
+  "getEsCertsAlias" : "$[env:ES_CERT_ALIAS]"
+}

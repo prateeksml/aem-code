@@ -1,0 +1,8 @@
+subject=Missing Renditions in your uploaded Asset
+
+message=Your recently uploaded asset ${assetName} is of a file type Image, available in the below path is missing required renditions count and hence the workflow is terminated.\n \
+${hostPrefix}${assetPath}\n \
+
+footer=\n \
+-------------------------------------------------------------------------------------\n \
+This is an automatically generated message. Please do not reply.

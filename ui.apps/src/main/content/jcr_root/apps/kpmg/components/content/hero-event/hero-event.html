@@ -1,0 +1,31 @@
+<div class="cmp-hero-event__main-container">
+   <div class="cmp-hero-event__left-container">
+      <div data-sly-test="${!properties.hideBreadcrumb}" data-sly-resource="${'./breadcrumb' @ resourceType='kpmg/components/content/breadcrumb'}" class="cmp-hero-event__breadcrumbs"></div>
+      <h1 data-sly-test="${!properties.hideEventTitle}" class="cmp-hero-event__title">${pageProperties.jcr:title}</h1>
+      <div data-sly-test="${!properties.hideEventDescription}" class="cmp-hero-event__description">
+         ${pageProperties.jcr:description}
+      </div>
+      <div class="cmp-hero-event__wrapper">
+         <div data-sly-test="${!properties.hideDate}" class="cmp-hero-event__detail">
+            <span class="cmp-hero-event__icon material-icons-outlined">mail</span>
+            ${'dd MMM yyyy' @format=pageProperties.eventStartTimeAndDate}
+         </div>
+         <div data-sly-test="${!properties.hideEventLocation && pageProperties.eventLocation}" class="cmp-hero-event__detail">
+            <span class="cmp-hero-event__icon material-icons-outlined">bookmark_add</span>
+            ${pageProperties.eventLocation}
+         </div>
+         <div data-sly-test="${!properties.hideEventTime}" class="cmp-hero-event__detail">
+            <span class="cmp-hero-event__icon material-icons-outlined">visibility</span>
+            ${'hh:mma' @format=pageProperties.eventStartTimeAndDate} - ${'hh:mma' @format=pageProperties.eventEndTimeAndDate} ${pageProperties.timeZone}
+         </div>
+      </div>
+      <sly data-sly-test="${!properties.enablesocialshare}" data-sly-resource="${'./share' @ resourceType='kpmg/components/content/social-share', decorationTagName='div', cssClassName='cmp-hero-event__share', wcmmode='disabled'}" />
+      <div data-sly-test="${!properties.hideButton}" data-sly-resource="${'./button' @ resourceType='kpmg/components/content/button'}" class="cmp-hero-event__button"></div>
+      </sly>
+   </div>
+   <div class="cmp-hero-event__right-container">
+      <sly data-sly-test="${!properties.hideImage}">
+         <sly data-sly-use.imageTemplate="image.html" data-sly-call="${imageTemplate.image}" />
+      </sly>
+   </div>
+</div>

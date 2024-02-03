@@ -1,0 +1,86 @@
+{
+  "jcr:primaryType": "nt:unstructured",
+  "jcr:createdBy": "admin",
+  "jcr:lastModifiedBy": "admin",
+  "altText": "logo",
+  "copyrightText": "COPYRIGHT_DYNAMIC_YEAR is the best year",
+  "jcr:created": "Fri May 12 2023 15:07:44 GMT+0530",
+  "jcr:lastModified": "Mon May 15 2023 18:33:05 GMT+0530",
+  "sling:resourceType": "kpmg/components/navigation/footer",
+  "textIsRich": "true",
+  "altValueFromDAM": "true",
+  "id": "test",
+  "fileReference": "test",
+  "legal-links": {
+    "items": {
+      "link1": {
+        "jcr:primaryType": "nt:unstructured",
+        "linkTitle": "legalLinks Links1",
+        "linkUrl": "/content/kpmgpublic/us/en/legalLinks",
+        "linkTarget": "_self",
+        "linkText": "legalLinks Links1"
+      }
+    }
+  },
+  "social-icons": {
+    "items": {
+      "link1": {
+        "jcr:primaryType": "nt:unstructured",
+        "linkTitle": "socialIcons Links1",
+        "linkUrl": "/content/kpmgpublic/us/en/socialIcons",
+        "linkTarget": "_self",
+        "linkText": "socialIcons Links1"
+      }
+    }
+  },
+  "categories": {
+    "sling:resourceType": "kpmg/components/navigation/footer/categories",
+    "items": {
+      "category1": {
+        "title": "Contact",
+        "items": {
+          "item0": {
+            "linkTitle": "test",
+            "linkURL": "test",
+            "linkTarget": "_self"
+          },
+          "item1": {
+            "linkTitle": "link2",
+            "linkURL": "www.google.com",
+            "linkTarget": "_self"
+          },
+          "item2": {
+            "linkTitle": "link3",
+            "linkURL": "www.google.com",
+            "linkTarget": "_self"
+          },
+          "item3": {
+            "linkTitle": "test",
+            "linkURL": "www.google.com",
+            "linkTarget": "_self"
+          }
+        }
+      },
+      "category2": {
+        "title": "Others",
+        "items": {
+          "item0": {
+            "linkTitle": "test",
+            "linkURL": "www.google.com",
+            "linkTarget": "_self"
+          }
+        }
+      },
+      "category3": {
+        "title": "Media",
+        "items": {
+          "item0": {
+            "linkTitle": "media",
+            "linkURL": "media",
+            "linkTarget": "_self"
+          }
+        }
+      }
+    }
+  }
+}

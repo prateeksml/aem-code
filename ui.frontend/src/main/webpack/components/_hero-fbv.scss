@@ -1,0 +1,207 @@
+@include light-theme {
+  --hero-fbv-title-color: #{$alias-color-hero-title-light};
+  --hero-fbv-description-color: #{$alias-color-hero-description-light};
+}
+
+@include dark-theme {
+  --hero-fbv-title-color: #{$alias-color-hero-title-dark};
+  --hero-fbv-description-color: #{$alias-color-hero-description-dark};
+}
+
+.hero-fbv {
+  $hero-overlay-bg-one: $global-color-brand-kpmg-blue;
+  $hero-overlay-bg-two: $global-color-brand-cobalt-blue;
+  $hero-overlay-bg-three: $global-color-grayscale-neutrals-100;
+  $hero-overlay-bg-four: $global-color-brand-white;
+
+  $default-line-clamp: 5;
+  $reduced-line-clamp: 3;
+
+  @include tablet {
+    @include hero-fixed-height;
+    overflow: hidden;
+  }
+
+  .cmp-hero-fbv {
+    height: 100%;
+
+    @include tablet {
+      position: relative;
+    }
+  }
+
+  .cmp-hero-fbv__content {
+    width: 100%;
+
+    @include tablet {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      z-index: 1;
+      padding: 0 $alias-padding-medium;
+    }
+
+    @include desktop-small {
+      padding: 0 $alias-padding-large;
+    }
+
+    @include desktop-medium {
+      padding: 0 $alias-padding-xx-large;
+    }
+  }
+
+  .cmp-hero-fbv__content--no-bg {
+    position: initial;
+  }
+
+  .cmp-hero-fbv__content-container {
+    @include tablet {
+      @include content-max-width;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      height: 100%;
+    }
+
+    @include desktop-small {
+      grid-template-columns: minmax(40%, min-content);
+    }
+
+    @include desktop-medium {
+      grid-template-columns: 10% 30% 1fr;
+    }
+  }
+
+  .cmp-hero-fbv__content-overlay {
+    display: grid;
+    padding: $alias-padding-large $alias-padding-base;
+
+    @include tablet {
+      padding: $alias-padding-xx-large $alias-padding-medium;
+    }
+
+    @include desktop-medium {
+      //Put the overlay in the 2nd
+      //column in this viewport
+      grid-column-start: 2;
+      padding: $alias-padding-xx-large;
+    }
+  }
+
+  .cmp-hero-fbv__content-overlay-inner {
+    align-self: center;
+  }
+
+  .cmp-hero-fbv__title {
+    margin: 0;
+    padding: 0 0 $alias-padding-large;
+
+    @include tablet {
+      padding: 0 0 $alias-padding-medium;
+    }
+
+    h1 {
+      @include typography-heading-one;
+      @include line-clamp($default-line-clamp);
+      margin: 0;
+
+      @include desktop-small {
+        @include typography-heading-two;
+      }
+    }
+  }
+
+  .cmp-hero-fbv__description {
+    // cannot use bottom padding on text to be truncated, thus use margin
+    margin: 0 0 $alias-margin-large;
+    // text-color mixin determines the color of ellipses
+    @include text-color;
+    @include line-clamp($default-line-clamp);
+
+    p {
+      @include typography-heading-five-semibold;
+      margin: 0;
+      // children must display inline for truncating
+      display: inline;
+
+      @include tablet {
+        @include typography-heading-six-semibold;
+      }
+    }
+  }
+
+  .cmp-hero-fbv__action-link {
+    @include button-primary;
+  }
+
+  //CTA
+  @include style-variation("cmp-button--full-width") {
+    .cmp-hero-fbv__action-link {
+      @include button-full-width;
+    }
+  }
+
+  @include style-variation("cmp-button--content-width") {
+    .cmp-hero-fbv__action-link {
+      @include button-content-width;
+    }
+  }
+
+  @include style-variation("cmp-button--standard-width") {
+    .cmp-hero-fbv__action-link {
+      @include button-standard-width;
+    }
+  }
+
+  //OVERLAY
+  @include style-variation("cmp-hero-fbv__overlay-bg--kpmg-blue") {
+    .cmp-hero-fbv__content-overlay {
+      background-color: $hero-overlay-bg-one;
+    }
+  }
+
+  @include style-variation("cmp-hero-fbv__overlay-bg--cobalt-blue") {
+    .cmp-hero-fbv__content-overlay {
+      background-color: $hero-overlay-bg-two;
+    }
+  }
+
+  @include style-variation("cmp-hero-fbv__overlay-bg--grey100") {
+    .cmp-hero-fbv__content-overlay {
+      background-color: $hero-overlay-bg-three;
+    }
+  }
+
+  @include style-variation("cmp-hero-fbv__overlay-bg--white") {
+    .cmp-hero-fbv__content-overlay {
+      background-color: $hero-overlay-bg-four;
+    }
+  }
+
+  .cmp-hero-fbv__video,
+  .cmp-hero-fbv__image {
+    @include hero;
+    @include hero-fixed-height;
+  }
+
+  //Policy Style Class that will be applied to reduce height of hero
+  &--reduced-height {
+    @include tablet {
+      @include hero-fixed-height(true);
+    }
+
+    .cmp-hero-fbv__title {
+      h1 {
+        @include line-clamp($reduced-line-clamp);
+      }
+    }
+
+    .cmp-hero-fbv__description {
+      @include line-clamp($reduced-line-clamp);
+    }
+
+    .cmp-hero-fbv__video,
+    .cmp-hero-fbv__image {
+      @include hero-fixed-height(true);
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "alias": {
+    "fonts": {
+      "line-height": {
+        "medium": {
+          "value": "{global.fonts.line-height.1125}",
+          "comment": "1.125em/18px"
+        },
+        "large": {
+          "value": "{global.fonts.line-height.125}",
+          "comment": "1.25em/20px"
+        },
+        "x-large": {
+          "value": "{global.fonts.line-height.15}",
+          "comment": "1.5em/24px"
+        },
+        "xx-large": {
+          "value": "{global.fonts.line-height.175}",
+          "comment": "1.75em/28px"
+        },
+        "xxx-large": {
+          "value": "{global.fonts.line-height.2}",
+          "comment": "2rem/32px"
+        },
+        "4x-large": {
+          "value": "{global.fonts.line-height.225}",
+          "comment": "2.25rem/36px"
+        },
+        "5x-large": {
+          "value": "{global.fonts.line-height.275}",
+          "comment": "2.75rem/44px"
+        },
+        "6x-large": {
+          "value": "{global.fonts.line-height.3}",
+          "comment": "3rem/48px"
+        },
+        "7x-large": {
+          "value": "{global.fonts.line-height.35}",
+          "comment": "3.5rem/56px"
+        },
+        "8x-large": {
+          "value": "{global.fonts.line-height.45}",
+          "comment": "4.5rem/72px"
+        }
+      }
+    }
+  }
+}

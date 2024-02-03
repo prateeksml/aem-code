@@ -1,0 +1,54 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "start",
+			"path": "ui.frontend",
+			"label": "$(rocket) FE | Start"
+		},
+		{
+			"type": "npm",
+			"script": "format",
+			"path": "ui.frontend",
+			"label": "$(code) FE | Format"
+		},
+		{
+			"label": "$(code) Java | Format",
+			"type": "shell",
+			"command": "mvn com.spotify.fmt:fmt-maven-plugin:format",
+		},
+		{
+			"label": "$(play) AEM | All",
+			"type": "shell",
+			"dependsOn": ["$(code) Java | Format"],
+			"command": "mvn com.spotify.fmt:fmt-maven-plugin:format && mvn clean install -PautoInstallSinglePackage -DskipScriptPrecompilation=true -Daem.port=4502",
+		},
+		{
+			"label": "$(zap) AEM | All | Quick",
+			"type": "shell",
+			"dependsOn": ["$(code) Java | Format"],
+			"command": "mvn clean install -PautoInstallSinglePackage -DskipScriptPrecompilation=true -Daem.port=4502 -Daem.analyser.skip=true -Dskip.npm -DskipTests",
+		},
+		{
+			"label": "$(flame) AEM | Bundle",
+			"type": "shell",
+			"command": "./helper-scripts/install-bundle.sh",
+		},
+		{
+			"label": "$(chevron-down) Pull Content & Policies",
+			"type": "shell",
+			"command": "./helper-scripts/pull-content-and-policies.sh",
+		},
+		{
+			"label": "$(chevron-up) Push Content & Policies",
+			"type": "shell",
+			"command": "./helper-scripts/push-content-and-policies.sh",
+		},
+		{
+			"label": "$(chevron-up) Push Components",
+			"type": "shell",
+			"command": "./helper-scripts/push-components.sh",
+		}
+	]
+}

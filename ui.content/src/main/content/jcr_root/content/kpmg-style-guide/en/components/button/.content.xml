@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2023-05-31T14:08:56.709-05:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/kpmg/settings/wcm/templates/page-content"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="button"
+        jcr:uuid="968cba90-3417-41fa-9cac-3a01e079f294"
+        sling:resourceType="kpmg/components/structure/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="kpmg/components/container/container"
+            layout="responsiveGrid">
+            <main
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="kpmg/components/container/main"
+                layout="responsiveGrid">
+                <section
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="kpmg/components/container/section"
+                    layout="responsiveGrid">
+                    <title
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="kpmg/components/content/title"/>
+                    <title_868324553
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Variations"
+                        sling:resourceType="kpmg/components/content/title"
+                        searchIndexable="true"
+                        type="h3"/>
+                    <button
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Primary Button"
+                        sling:resourceType="kpmg/components/content/button"
+                        accessibilityLabel="button label"
+                        linkTarget="_self"
+                        linkURL="/content/kpmgpublic/us"/>
+                    <button_1256351307
+                        cq:styleIds="[1681240731653,1683298147379]"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Secondary Button"
+                        sling:resourceType="kpmg/components/content/button"
+                        linkTarget="_self"
+                        linkURL="/content/kpmgpublic/us"/>
+                    <button_2123238208
+                        cq:styleIds="[1681240737516]"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Tertiary Button"
+                        sling:resourceType="kpmg/components/content/button"
+                        linkTarget="_self"/>
+                    <separator_756907593
+                        cq:styleIds="[1685108328366]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="kpmg/components/content/separator"/>
+                    <text_1553837087
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="kpmg/components/content/text"
+                        text="&lt;p>&lt;b>Width Styles (Can be applied to any variation, defaults to full width)&lt;/b>&lt;/p>&#xd;&#xa;"
+                        textIsRich="true"/>
+                    <text
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="kpmg/components/content/text"
+                        text="&lt;p>Content Width Style - button width fits the button text&lt;/p>&#xd;&#xa;"
+                        textIsRich="true"/>
+                    <button_copy
+                        cq:styleIds="[1681328200520]"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Content"
+                        sling:resourceType="kpmg/components/content/button"
+                        accessibilityLabel="button label"
+                        linkTarget="_self"
+                        linkURL="/content/kpmgpublic/us"/>
+                    <button_copy_copy_1134945780
+                        cq:styleIds="[1681328200520,1683298147379]"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Content With long text"
+                        sling:resourceType="kpmg/components/content/button"
+                        accessibilityLabel="button label"
+                        linkTarget="_self"
+                        linkURL="/content/kpmgpublic/us"/>
+                    <text_copy
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="kpmg/components/content/text"
+                        searchIndexable="false"
+                        text="&lt;p>Standard Width Style - button width starts at a predefined width, but extends larger if the button text is larger&lt;/p>&#xd;&#xa;"
+                        textIsRich="true"/>
+                    <button_copy_copy
+                        cq:styleIds="[1681328223694]"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Standard"
+                        sling:resourceType="kpmg/components/content/button"
+                        accessibilityLabel="button label"
+                        linkTarget="_self"
+                        linkURL="/content/kpmgpublic/us"/>
+                    <button_copy_copy_cop
+                        cq:styleIds="[1681328223694,1683298147379]"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Standard With long text"
+                        sling:resourceType="kpmg/components/content/button"
+                        accessibilityLabel="button label"
+                        linkTarget="_self"
+                        linkURL="/content/kpmgpublic/us"/>
+                </section>
+            </main>
+        </root>
+    </jcr:content>
+</jcr:root>

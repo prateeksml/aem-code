@@ -1,0 +1,46 @@
+{
+  "alias": {
+    "color": {
+      "footer": {
+        "background-color": {
+          "value": "{global.color.brand.kpmg-blue}"
+        },
+        "title": {
+          "value": "{global.color.brand.white}"
+        },
+        "item": {
+          "value": "{global.color.brand.white}"
+        },
+        "item-link": {
+          "color": {
+            "value": "{global.color.brand.white}"
+          },
+          "border-color": {
+            "value": "{global.color.strokes.cobalt-blue.20-percent}"
+          },
+          "expand-arrow": {
+            "value": "{global.color.brand.white}"
+          }
+        },
+        "legal-link": {
+          "color": {
+            "value": "{global.color.brand.white}"
+          }
+        },
+        "copyright": {
+          "color": {
+            "value": "{global.color.brand.white}"
+          }
+        },
+        "social-icon": {
+          "color": {
+            "value": "{global.color.brand.white}"
+          },
+          "border-color": {
+            "value": "{global.color.brand.white}"
+          }
+        }
+      }
+    }
+  }
+}

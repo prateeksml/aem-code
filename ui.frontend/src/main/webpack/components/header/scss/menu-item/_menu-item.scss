@@ -1,0 +1,7 @@
+$parent: ".cmp-menu-item";
+
+#{$parent} {
+  @include menu-item;
+}
+
+@import "breakpoints/menu-item--tablet";

@@ -1,0 +1,143 @@
+@include light-theme {
+  --hero-event-title-color: #{$alias-color-hero-title-light};
+  --hero-event-description-color: #{$alias-color-hero-description-light};
+  --hero-event-article-date-color: #{$alias-color-hero-date-light};
+  --hero-event-article-icon: #{$global-color-brand-cobalt-blue};
+}
+
+@include dark-theme {
+  --hero-event-title-color: #{$alias-color-hero-title-dark};
+  --hero-event-description-color: #{$alias-color-hero-description-dark};
+  --hero-event-article-date-color: #{$alias-color-hero-date-dark};
+  --hero-event-article-icon: #{$global-color-brand-white};
+}
+
+.hero-event {
+  //Note: All breadcrumb styles can be found in
+  //ui.frontend/src/main/webpack/components/_breadcrumb.scss
+  .cmp-hero-event__main-container {
+    @include content-max-width;
+
+    display: block;
+    justify-content: space-between;
+    padding: $alias-padding-medium $alias-padding-base 0;
+
+    @include tablet {
+      display: flex;
+      padding: $alias-padding-medium $alias-padding-medium 0;
+    }
+
+    @include desktop-small {
+      padding: $alias-padding-medium $alias-padding-large 0;
+    }
+
+    @include desktop-medium {
+      padding: $alias-padding-xxx-large $alias-padding-xx-large 0;
+    }
+  }
+
+  .cmp-hero-event__left-container {
+    padding: $alias-padding-medium 0;
+
+    @include tablet {
+      flex: 1;
+      padding: $alias-padding-large 0;
+    }
+
+    @include desktop-small {
+      flex: 2;
+      max-width: 620px;
+    }
+
+    @include desktop-medium {
+      padding: $alias-padding-xx-large 0;
+      max-width: 830px;
+    }
+  }
+
+  .cmp-hero-event__wrapper {
+    @include desktop-small {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  .cmp-hero-event__title {
+    @include typography-heading-one;
+    color: var(--hero-event-title-color);
+    margin: 0;
+    padding: $alias-padding-base 0 $alias-padding-x-small;
+  }
+
+  .cmp-hero-event__description {
+    @include typography-body-default-regular;
+    color: var(--hero-event-description-color);
+    margin: 0;
+    padding: $alias-padding-x-small 0 $alias-padding-base 0;
+
+    p {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  .cmp-hero-event__detail {
+    @include typography-body-small-semibold;
+    color: var(--hero-event-article-date-color);
+    padding-bottom: $alias-padding-base;
+    display: flex;
+    @include desktop-small {
+      padding-right: $alias-padding-medium;
+    }
+  }
+
+  .cmp-hero-event__icon {
+    vertical-align: middle;
+    color: var(--hero-event-article-icon);
+    margin-right: $alias-margin-base;
+    margin-top: 2px;
+  }
+
+  .cmp-hero-event__button {
+    a,
+    button {
+      @include button-primary;
+      width: auto;
+      span:after {
+        content: none;
+      }
+    }
+  }
+
+  .cmp-hero-event__share {
+    padding-bottom: $alias-padding-base;
+  }
+
+  //If container has image div container
+  //set flex to 1
+  .cmp-hero-event__right-container:has(div) {
+    @include tablet {
+      // max-width: 347px;
+      padding-left: $alias-padding-medium;
+      flex: 1;
+      align-self: flex-end;
+    }
+    @include desktop-small {
+      padding-left: $alias-padding-large;
+      // max-width: 299px;
+    }
+    @include desktop-medium {
+      padding-left: $alias-padding-xx-large;
+      // max-width: 391px;
+    }
+    img {
+      display: flex;
+      width: 100%;
+      // aspect ratio is a fallback for using square img rendition which will not appear locally
+      aspect-ratio: 1/1;
+      @include tablet {
+        aspect-ratio: auto;
+      }
+    }
+  }
+}

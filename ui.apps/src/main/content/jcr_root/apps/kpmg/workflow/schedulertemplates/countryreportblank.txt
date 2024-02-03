@@ -1,0 +1,10 @@
+
+subject=${event.EventType}
+
+header=${event.ListSize} <br/> \
+
+message= <br/> \
+
+footer=<br/> \
+-------------------------------------------------------------------------------------<br/> \
+This is an automatically generated message. Please do not reply.

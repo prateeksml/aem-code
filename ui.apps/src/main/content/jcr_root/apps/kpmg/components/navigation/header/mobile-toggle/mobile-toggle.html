@@ -1,0 +1,17 @@
+<div class="cmp-mobile-toggle">
+    <button 
+        data-cmp-mobile-toggle
+        data-sly-use.toggle="com.adobe.cq.wcm.core.components.models.Button" 
+        data-sly-use.iconTemplate="icon.html"
+        data-sly-element="${toggle.buttonLink.valid ? 'a' : 'button'}"
+        type="${toggle.buttonLink.valid ? '' : 'button'}" 
+        id="${toggle.id}" class="cmp-mobile-toggle__inner"
+        data-sly-attribute="${toggle.buttonLink.htmlAttributes}" 
+        aria-label="${toggle.accessibilityLabel}"
+        data-cmp-clickable="${toggle.data ? true : false}" 
+        data-cmp-data-layer="${toggle.data.json}">
+
+        <span class="cmp-mobile-toggle__icon" aria-hidden="true">menu</span>
+
+    </button>
+</div>

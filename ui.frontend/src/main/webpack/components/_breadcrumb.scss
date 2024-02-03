@@ -1,0 +1,42 @@
+@include light-theme {
+  --breadcrumbs-link-color: #{$alias-color-breadcrumbs-link-light};
+  --breadcrumbs-current-page-color: #{$alias-color-breadcrumbs-current-page-light};
+  --breadcrums-chevron-color: #{$alias-color-breadcrumbs-chevron-light};
+}
+
+@include dark-theme {
+  --breadcrumbs-link-color: #{$alias-color-breadcrumbs-link-dark};
+  --breadcrumbs-current-page-color: #{$alias-color-breadcrumbs-current-page-dark};
+  --breadcrums-chevron-color: #{$alias-color-breadcrumbs-chevron-dark};
+}
+
+.cmp-breadcrumb {
+  @include typography-body-caption;
+}
+.cmp-breadcrumb__list {
+  margin: 0;
+  padding: 0;
+}
+.cmp-breadcrumb__item {
+}
+.cmp-breadcrumb__item--active {
+  color: var(--breadcrumbs-current-page-color);
+}
+.cmp-breadcrumb__item-link {
+  color: var(--breadcrumbs-link-color);
+  text-decoration: none;
+
+  & span {
+    display: flex;
+    vertical-align: middle;
+    height: $alias-font-size-base;
+  }
+
+  & span:after {
+    @include material-icons-outlined;
+    content: "chevron_right";
+    font-size: $alias-font-size-base;
+    height: $alias-font-size-base;
+    color: var(--breadcrums-chevron-color);
+  }
+}

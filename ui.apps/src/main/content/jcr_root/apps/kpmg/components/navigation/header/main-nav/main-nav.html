@@ -1,0 +1,31 @@
+<sly data-sly-use.template="core/wcm/components/commons/v1/templates.html"
+  data-sly-use.nav="com.kpmg.core.models.HeaderNavigation"
+  data-sly-test.hasContent="${nav.items && nav.items.size > 0}">
+
+  <!--/* Main Navigation */-->
+  <nav class="cmp-main-nav" data-cmp-main-nav>
+
+    <!--/* Mobile Header */-->
+    <div class="cmp-main-nav__mobile-header" data-cmp-main-nav-mobile-header>
+      <div class="cmp-main-nav__mobile-header-container">
+        <button class="cmp-main-nav__mobile-header-close" type="button" aria-expanded="false" aria-label="close"
+          data-cmp-main-nav-mobile-header-close>
+          <span class="material-icons-outlined">close</span>
+        </button>
+      </div>
+    </div>
+
+    <!--/* Main Menu */-->
+    <ul class="cmp-main-nav__main-menu">
+      <sly data-sly-list.mainMenuItem="${nav.items}">
+        <li class="cmp-main-nav__main-menu--list-item" data-cmp-main-nav-list-item>
+          <!--/* Sub Menu */-->
+          <sly data-sly-use.subMenuTemplate="templates/sub-menu.html"
+            data-sly-call="${subMenuTemplate.subMenu @ subMenuItem=mainMenuItem }" />
+        </li>
+      </sly>
+    </ul>
+  </nav>
+</sly>
+
+<sly data-sly-call="${template.placeholder @ isEmpty=!hasContent, classAppend='cmp-main-nav--empty'}"></sly>

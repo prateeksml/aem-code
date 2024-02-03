@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="File Upload"
+          sling:resourceType="cq/gui/components/authoring/dialog"
+          trackingFeature="core-components:text:v2">
+    <content
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                    maximized="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <properties
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Properties"
+                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                            margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                    margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                            granite:class="cq-RichText-FixedColumn-column"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <label
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Label of this field"
+                                                    fieldLabel="Label"
+                                                    name="./filetitle"
+                                                    required="{Boolean}true"/>
+                                            <hideLabel
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                    fieldDescription="Needed if the label is required only for accessibility purpose and does not impart any additional visual information about the field"
+                                                    name="./filehideTitle"
+                                                    text="Hide the label from being displayed"
+                                                    value="true"/>
+                                            <name
+                                                    granite:class="cmp-text-name-selection"
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                    fieldDescription="The name of the field, which is submitted with the form data."
+                                                    fieldLabel="Name"
+                                                    name="./filename"
+                                                    required="{Boolean}true">
+                                                <datasource
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="/bin/kpmg/newmapping"/>
+                                                <granite:data
+                                                        jcr:primaryType="nt:unstructured"
+                                                        cq-dialog-dropdown-showhide-target=".text-name-dialog"/>
+                                            </name>
+                                            <desktoptitle
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Default value of the field"
+                                                    fieldLabel="Desktop Title"
+                                                    name="./desktoptitle"
+                                                    required="{Boolean}true"/>
+                                            <desktoptitlelink
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Default value of the field"
+                                                    fieldLabel="Desktop Title Link"
+                                                    name="./desktoptitlelink"
+                                                    required="{Boolean}true"/>
+                                            <mobiletitle
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Default value of the field"
+                                                    fieldLabel="Mobile Title"
+                                                    name="./mobiletitle"/>
+                                            <mobiletitlelink
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Default value of the field"
+                                                    fieldLabel="Mobile Title Link"
+                                                    name="./mobiletitlelink"/>
+                                            <fileDropMessage
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="HTML ID attribute to apply to the component."
+                                                    fieldLabel="File Drop Message"
+                                                    name="./fileDropMessage"
+                                                    required="{Boolean}true"/>
+                                            <message
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="HTML ID attribute to apply to the component."
+                                                    fieldLabel="File Upload Information"
+                                                    name="./filemessage"
+                                                    required="{Boolean}true"/>
+                                            <maxfileSize
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/numberfield"
+                                                    fieldDescription="Default value of the field"
+                                                    fieldLabel="Maximum File Size in MB"
+                                                    max="{Long}15"
+                                                    name="./maxfilesize"
+                                                    required="{Boolean}true"/>
+                                            <maxfiles
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/numberfield"
+                                                    fieldDescription="Add the count of number of file attachments user wants to add"
+                                                    fieldLabel="Maximum Number of Files"
+                                                    max="{Long}5"
+                                                    name="./maxfiles"
+                                                    required="{Boolean}true"/>
+                                            <arai-label
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="HTML ID attribute to apply to the component."
+                                                    fieldLabel="Aria-Label"
+                                                    name="./arialabel"
+                                                    required="{Boolean}true"/>
+                                            <id
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="HTML ID attribute to apply to the component."
+                                                    fieldLabel="ID"
+                                                    name="./id"/>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </properties>
+                    <about
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="About"
+                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                            margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                    margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <helpMessage
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="A hint to the user of what can be entered in the field"
+                                                    fieldLabel="Help Message"
+                                                    name="./filehelpMessage"/>
+                                            <usePlaceholder
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                    fieldDescription="Whether to display the help message inside the form input when it is empty and not focused"
+                                                    name="./fileusePlaceholder"
+                                                    text="Display help message as placeholder"
+                                                    value="true"/>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </about>
+                    <constraints
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Constraints"
+                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                            margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                    margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <required
+                                                    granite:class="cmp-form-options__required"
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                    fieldDescription="Whether the user must fill in a value before submitting the form"
+                                                    name="./filerequired"
+                                                    text="Required"
+                                                    value="true"/>
+                                            <requiredMessage
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                    fieldDescription="Message displayed as tooltip when submitting the form if the value is left empty"
+                                                    fieldLabel="Required Message"
+                                                    name="./filerequiredMessage"
+                                                    wrapperClass="cmp-form-options__requiredmessage"/>
+                                            <maxFilesReached
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Maximum number of files reached! Message"
+                                                    fieldLabel="Maximum Files Reached Message"
+                                                    name="./maxFilesReached"
+                                                    required="{Boolean}true"/>
+                                            <noDuplicates
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="No duplicates Files allowed Message"
+                                                    fieldLabel="No Duplicate Files Message"
+                                                    name="./noDuplicates"
+                                                    required="{Boolean}true"/>
+                                            <supportedFiles
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Supported file types: .doc, .docx, .mpp, .mppx, .pdf, .ppt, .pptx, .xls, .xlsx, .zip, .msg"
+                                                    fieldLabel="Supported Files Message"
+                                                    name="./supportedFileMessage"
+                                                    required="{Boolean}true"/>
+                                            <fileSizeExceeds
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="File size exceeds the limit of 15MB"
+                                                    fieldLabel="File Size Exceeds Message"
+                                                    name="./fileSizeExceeds"
+                                                    required="{Boolean}true"/>
+
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </constraints>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

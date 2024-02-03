@@ -1,0 +1,11 @@
+{
+  "configPathPatterns":[
+    "/conf/kpmg$1"
+  ],
+  "levels:int[]":[
+    2,
+    3,
+    4
+  ],
+  "contextPathRegex":""
+}

@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:isDelivered="{Boolean}true"
+        cq:isTransCreated="{Boolean}true"
+        cq:lastModified="{Date}2023-06-15T19:09:50.771Z"
+        cq:lastModifiedBy="musallam@adobe.com"
+        cq:lastReplicated_publish="{Date}2023-06-15T07:44:37.854Z"
+        cq:lastReplicated_scene7="{Date}2023-06-12T17:31:38.283Z"
+        cq:lastReplicatedBy_publish="kunal.dhak@publicissapient.com"
+        cq:lastReplicatedBy_scene7="kunal.dhak@publicissapient.com"
+        cq:lastReplicationAction_publish="Activate"
+        cq:lastReplicationAction_scene7="Activate"
+        cq:lastTranslationUpdate="{Date}2023-06-15T19:09:09.048Z"
+        cq:tags="[]"
+        cq:template="/conf/kpmg/settings/wcm/templates/xf-web-variation"
+        cq:translationSourcePath="/content/experience-fragments/kpmgpublic/language-masters/en/site/header/master"
+        cq:xfVariantType="web"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Header"
+        jcr:uuid="a1f22b73-7cbb-46c0-8ecf-573e12174496"
+        sling:resourceType="kpmg/components/structure/xfpage">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="kpmg/components/container/container"
+            layout="simple">
+            <header
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="kpmg/components/structure/header" />
+            <header_1172118877
+                jcr:lastModified="{Date}2023-06-05T14:41:43.008Z"
+                jcr:lastModifiedBy="vsa@adobe.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="kpmg/components/structure/header"
+                disablelangselector="false"
+                disablelogin="false"
+                disablelogo="false"
+                disablemainnav="false"
+                disablerpf="false"
+                disablesearch="false">
+                <login
+                    jcr:lastModified="{Date}2023-06-05T14:42:07.913Z"
+                    jcr:lastModifiedBy="vsa@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Login"
+                    sling:resourceType="kpmg/components/content/button"
+                    linkTarget="_self" />
+                <submitrpf
+                    jcr:lastModified="{Date}2023-06-05T14:42:22.672Z"
+                    jcr:lastModifiedBy="vsa@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Submit RFP"
+                    sling:resourceType="kpmg/components/content/button"
+                    linkTarget="_self" />
+                <langselector
+                    jcr:lastModified="{Date}2023-06-05T14:42:35.358Z"
+                    jcr:lastModifiedBy="vsa@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="English (US)"
+                    sling:resourceType="kpmg/components/content/button"
+                    linkTarget="_self" />
+                <logo
+                    jcr:lastModified="{Date}2023-06-07T10:11:16.252Z"
+                    jcr:lastModifiedBy="cshirodk@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="kpmg/components/content/image"
+                    alt="Logo"
+                    altValueFromDAM="false"
+                    displayPopupTitle="true"
+                    fileReference="/content/dam/kpmg/logo.svg"
+                    imageFromPageImage="false"
+                    isDecorative="false"
+                    linkTarget="_self"
+                    linkURL="/content/kpmgpublic/language-masters/en"
+                    titleValueFromDAM="true" />
+                <mainnavigation
+                    jcr:lastModified="{Date}2023-06-12T16:00:44.541Z"
+                    jcr:lastModifiedBy="musallam@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="kpmg/components/content/mainnavigation"
+                    linkPath4="https://kpmg.com/xx/en/home/services/kpmg-client-stories.html"
+                    linkPath5="https://kpmg.com"
+                    linkPath6="https://kpmg.com"
+                    navName4="Client Stories"
+                    navName5="Careers"
+                    navName6="About Us"
+                    optionsType1="option2-1"
+                    optionsType2="option3-2"
+                    optionsType3="option2-3"
+                    optionsType4="option2-4"
+                    optionsType5="option1-5"
+                    optionsType6="option1-6">
+                    <secondaryLinksWithChild1 jcr:primaryType="nt:unstructured">
+                        <item0
+                            jcr:primaryType="nt:unstructured"
+                            name="Audit &amp; Assurance">
+                            <childlinks1 jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    linkName="Financial statement audit"
+                                    linkPath="#" />
+                                <item1
+                                    jcr:primaryType="nt:unstructured"
+                                    linkName="KPMG Clara" />
+                                <item2
+                                    jcr:primaryType="nt:unstructured"
+                                    linkName="Audit data &amp; analytics" />
+                                <item3
+                                    jcr:primaryType="nt:unstructured"
+                                    linkName="Sixth Menu Item Example" />
+                                <item4
+                                    jcr:primaryType="nt:unstructured"
+                                    linkName="Strengthening your Business"
+                                    linkPath="Tax transformation" />
+                                <item5
+                                    jcr:primaryType="nt:unstructured"
+                                    linkName="Innovation in Audit" />
+                            </childlinks1>
+                        </item0>
+                        <item1
+                            jcr:primaryType="nt:unstructured"
+                            name="Tax">
+                            <childlinks1 jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    linkName="Managing Consulting" />
+                                <item1
+                                    jcr:primaryType="nt:unstructured"
+                                    linkName="Deal Advisory" />
+                                <item2
+                                    jcr:primaryType="nt:unstructured"
+                                    linkName="Audit data &amp; analytics" />
+                                <item3
+                                    jcr:primaryType="nt:unstructured"
+                                    linkName="Global Mobility Services" />
+                                <item4
+                                    jcr:primaryType="nt:unstructured"
+                                    linkName="Strengthening your Business" />
+                            </childlinks1>
+                        </item1>
+                        <item2
+                            jcr:primaryType="nt:unstructured"
+                            name="Advisory">
+                            <childlinks1 jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    linkName="Managing Consulting" />
+                                <item1
+                                    jcr:primaryType="nt:unstructured"
+                                    linkName="Risk Consulting" />
+                                <item2
+                                    jcr:primaryType="nt:unstructured"
+                                    linkName="Deal Advisory" />
+                                <item3
+                                    jcr:primaryType="nt:unstructured"
+                                    linkName="Deal Advisory" />
+                            </childlinks1>
+                        </item2>
+                        <item3
+                            jcr:primaryType="nt:unstructured"
+                            name="Financial statement audit">
+                            <childlinks1 jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    linkName="Financial statement audit" />
+                                <item1
+                                    jcr:primaryType="nt:unstructured"
+                                    linkName="Financial statement audit" />
+                                <item2
+                                    jcr:primaryType="nt:unstructured"
+                                    linkName="Financial statement audit" />
+                                <item3
+                                    jcr:primaryType="nt:unstructured"
+                                    linkName="Financial statement audit" />
+                                <item4
+                                    jcr:primaryType="nt:unstructured"
+                                    linkName="Financial statement audit" />
+                                <item5
+                                    jcr:primaryType="nt:unstructured"
+                                    linkName="Financial statement audit" />
+                            </childlinks1>
+                        </item3>
+                        <item4
+                            jcr:primaryType="nt:unstructured"
+                            name="Financial statement audit">
+                            <childlinks1 jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    linkName="Financial statement audit" />
+                                <item1
+                                    jcr:primaryType="nt:unstructured"
+                                    linkName="Financial statement audit" />
+                                <item2
+                                    jcr:primaryType="nt:unstructured"
+                                    linkName="Financial statement audit" />
+                                <item3
+                                    jcr:primaryType="nt:unstructured"
+                                    linkName="Financial statement audit" />
+                                <item4
+                                    jcr:primaryType="nt:unstructured"
+                                    linkName="Financial statement audit" />
+                                <item5
+                                    jcr:primaryType="nt:unstructured"
+                                    linkName="Financial statement audit" />
+                            </childlinks1>
+                        </item4>
+                        <item5
+                            jcr:primaryType="nt:unstructured"
+                            name="Financial statement audit">
+                            <childlinks1 jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    linkName="Financial statement audit" />
+                                <item1
+                                    jcr:primaryType="nt:unstructured"
+                                    linkName="Financial statement audit" />
+                                <item2
+                                    jcr:primaryType="nt:unstructured"
+                                    linkName="Financial statement audit" />
+                                <item3
+                                    jcr:primaryType="nt:unstructured"
+                                    linkName="Financial statement audit" />
+                                <item4
+                                    jcr:primaryType="nt:unstructured"
+                                    linkName="Financial statement audit" />
+                                <item5
+                                    jcr:primaryType="nt:unstructured"
+                                    linkName="Financial statement audit" />
+                            </childlinks1>
+                        </item5>
+                    </secondaryLinksWithChild1>
+                    <secondaryLinks1 jcr:primaryType="nt:unstructured">
+                        <item0
+                            jcr:primaryType="nt:unstructured"
+                            linkName="Secondary 1"
+                            linkPath="https:kpmg.com" />
+                    </secondaryLinks1>
+                    <secondaryLinks2 jcr:primaryType="nt:unstructured">
+                        <item0
+                            jcr:primaryType="nt:unstructured"
+                            linkName="Financial statement audit" />
+                        <item1
+                            jcr:primaryType="nt:unstructured"
+                            linkName="KPMG Clara" />
+                        <item2
+                            jcr:primaryType="nt:unstructured"
+                            linkName="Audit data &amp; analytics" />
+                        <item3
+                            jcr:primaryType="nt:unstructured"
+                            linkName="Sixth Menu Item Example" />
+                        <item4
+                            jcr:primaryType="nt:unstructured"
+                            linkName="Strengthening your Business" />
+                        <item5
+                            jcr:primaryType="nt:unstructured"
+                            linkName="Tax transformation" />
+                        <item6
+                            jcr:primaryType="nt:unstructured"
+                            linkName="Managing Consulting" />
+                        <item7
+                            jcr:primaryType="nt:unstructured"
+                            linkName="Deal Advisory" />
+                        <item8
+                            jcr:primaryType="nt:unstructured"
+                            linkName="Audit data &amp; analytics" />
+                        <item9
+                            jcr:primaryType="nt:unstructured"
+                            linkName="Sixth Menu Item Example" />
+                        <item10
+                            jcr:primaryType="nt:unstructured"
+                            linkName="Strengthening your Business" />
+                    </secondaryLinks2>
+                    <secondaryLinksWithChild4 jcr:primaryType="nt:unstructured">
+                        <item0
+                            jcr:primaryType="nt:unstructured"
+                            name="Link One">
+                            <childlinks4 jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    linkName="Link name"
+                                    linkPath="https://kpmg.com" />
+                            </childlinks4>
+                        </item0>
+                    </secondaryLinksWithChild4>
+                </mainnavigation>
+                <rfp
+                    jcr:lastModified="{Date}2023-06-06T14:34:29.589Z"
+                    jcr:lastModifiedBy="akatiukha@kpmg.ca"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Submit RPF"
+                    sling:resourceType="kpmg/components/structure/rfp-link"
+                    icon="article"
+                    linkTarget="_self"
+                    linkURL="#" />
+            </header_1172118877>
+            <header_1089290250
+                jcr:lastModified="{Date}2023-06-15T05:53:42.381Z"
+                jcr:lastModifiedBy="ashut@adobe.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="kpmg/components/navigation/header"
+                disablelangselector="false"
+                disablelogin="false"
+                disablelogo="false"
+                disablemainnav="false"
+                disablerpf="false"
+                disablesearch="false">
+                <login
+                    jcr:lastModified="{Date}2023-06-30T10:31:25.594Z"
+                    jcr:lastModifiedBy="ashut@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Login"
+                    sling:resourceType="kpmg/components/navigation/header/menu-item"
+                    icon="login"
+                    linkTarget="_self"
+                    linkURL="/content/kpmgpublic/language-masters/en" />
+                <rfp
+                    jcr:lastModified="{Date}2023-08-21T14:51:01.811-04:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Submit RFP"
+                    sling:resourceType="kpmg/components/navigation/header/menu-item"
+                    icon="assessment"
+                    linkTarget="_self"
+                    linkURL="/content/kpmgpublic/language-masters/en" />
+                <langselector
+                    jcr:lastModified="{Date}2023-06-19T11:25:28.764Z"
+                    jcr:lastModifiedBy="chinnann@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Language Selector"
+                    sling:resourceType="kpmg/components/navigation/header/menu-item"
+                    icon="visibility"
+                    linkTarget="_self" />
+                <logo
+                    jcr:lastModified="{Date}2023-06-15T06:04:55.634Z"
+                    jcr:lastModifiedBy="ashut@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="kpmg/components/content/image"
+                    alt="logo"
+                    altValueFromDAM="false"
+                    displayPopupTitle="true"
+                    fileReference="/content/dam/kpmg/logo.svg"
+                    imageFromPageImage="false"
+                    isDecorative="false"
+                    linkTarget="_self"
+                    linkURL="/content/kpmgpublic/language-masters/en"
+                    titleValueFromDAM="true" />
+                <mainnavigation
+                    jcr:lastModified="{Date}2023-06-15T19:09:50.520Z"
+                    jcr:lastModifiedBy="musallam@adobe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="kpmg/components/navigation/header/main-navigation">
+                    <nav1
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Insights"
+                        type="tertiary">
+                        <items jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="[First Tab,First Tab]">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="First Title"
+                                        linkURL="/content/kpmgpublic/language-masters/en/adobe_qa_testing/contact-template" />
+                                </items>
+                            </item0>
+                        </items>
+                    </nav1>
+                    <nav2
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Industries"
+                        type="tertiary">
+                        <items jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="[First tab,First tab]"
+                                linkURL="/content/kpmgpublic/language-masters/en/adobe_qa_testing/contact-template">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="First title"
+                                        linkURL="https://www.google.com/" />
+                                </items>
+                            </item0>
+                        </items>
+                    </nav2>
+                    <nav3
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Services"
+                        type="tertiary">
+                        <items jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="[Title,Title]"
+                                linkURL="https://www.google.com/">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Second Title"
+                                        linkURL="https://www.google.com/" />
+                                </items>
+                            </item0>
+                        </items>
+                    </nav3>
+                    <nav4
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Arabic"
+                        linkURL="https://www.google.com/"
+                        type="direct" />
+                    <nav5
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Link 5"
+                        linkURL="https://www.google.com/"
+                        type="direct" />
+                    <nav6
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Link 6"
+                        linkURL="https://www.google.com/"
+                        type="direct" />
+                </mainnavigation>
+            </header_1089290250>
+            <logo />
+        </root>
+    </jcr:content>
+</jcr:root>

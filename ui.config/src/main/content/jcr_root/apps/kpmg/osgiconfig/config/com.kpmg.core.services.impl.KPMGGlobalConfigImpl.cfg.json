@@ -1,0 +1,7 @@
+{
+  "getGenericContactFormEmailFromAddress":"$[env:CONTACT_EMAIL;default=noreply@mailkpmg.com]",
+  "getDomainName":"https://author-p92310-e1039993.adobeaemcloud.com",
+  "getEnableEmailNotifications":"true",
+  "getPeopleContactFormEmailFromAddress":"$[env:PEOPLE_CONTACT_EMAIL;default=noreply-contactus@mailkpmg.com]",
+  "getSocailMediaAdminGroups":"$[env:SOCIAL_MEDIA_ADMIN]"
+}

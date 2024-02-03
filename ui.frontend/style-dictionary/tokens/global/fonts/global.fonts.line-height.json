@@ -1,0 +1,48 @@
+{
+  "global": {
+    "fonts": {
+      "line-height": {
+        "45": {
+          "value": "4.5rem",
+          "comment": "4.5rem/72px"
+        },
+        "35": {
+          "value": "3.5rem",
+          "comment": "3.5rem/56px"
+        },
+        "3": {
+          "value": "3rem",
+          "comment": "3rem/48px"
+        },
+        "275": {
+          "value": "2.75rem",
+          "comment": "2.75rem/44px"
+        },
+        "225": {
+          "value": "2.25rem",
+          "comment": "2.25rem/36px"
+        },
+        "2": {
+          "value": "2rem",
+          "comment": "2rem/32px"
+        },
+        "175": {
+          "value": "1.75rem",
+          "comment": "1.75rem/28px"
+        },
+        "15": {
+          "value": "1.5rem",
+          "comment": "1.5rem/24px"
+        },
+        "125": {
+          "value": "1.25rem",
+          "comment": "1.25rem/20px"
+        },
+        "1125": {
+          "value": "1.125rem",
+          "comment": "1.125rem/18px"
+        }
+      }
+    }
+  }
+}

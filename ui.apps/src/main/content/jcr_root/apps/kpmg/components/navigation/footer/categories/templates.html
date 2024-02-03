@@ -1,0 +1,35 @@
+<template data-sly-template.link="${@ title, link}">
+    <a data-sly-attribute="${link.htmlAttributes}" data-cmp-clickable="true"
+        class="cmp-footer-category-list__item-link">
+       <span data-sly-test="${title}">${title}</span>
+    </a>
+</template>
+
+<template data-sly-template.links="${@ title, linkItems}">
+    <div class="cmp-footer-category">
+        <div class="cmp-footer-category__desktop">
+            <h6 class="cmp-footer-category__title">${title}</h6>
+            <ul class="cmp-footer-category-list" data-sly-list.linkItem="${linkItems}">
+                <li class="cmp-footer-category-list__item">
+                    <sly data-sly-call="${link @title=linkItem.linkTitle, link=linkItem.link}"></sly>
+                </li>
+            </ul>
+        </div>
+        <div class="cmp-footer-category__mobile">
+            <details>
+                <summary>
+                    <h6 class="cmp-footer-category__title">${title}</h6>
+                    <span class="cmp-footer-category__expand-arrow cmp-footer-category__expand-arrow--more"></span>
+                    <span class="cmp-footer-category__expand-arrow cmp-footer-category__expand-arrow--less"></span>
+                </summary>
+                <div>
+                    <ul class="cmp-footer-category-list" data-sly-list.linkItem="${linkItems}">
+                        <li class="cmp-footer-category-list__item">
+                            <sly data-sly-call="${link @title=linkItem.linkTitle, link=linkItem.link}"></sly>
+                        </li>
+                    </ul>
+                </div>
+            </details>
+        </div>
+    </div>
+</template>

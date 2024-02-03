@@ -1,0 +1,130 @@
+//== Base
+
+// box sizing reset
+//see: https://www.joshwcomeau.com/css/custom-css-reset/#one-box-sizing-model-2
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  @include typography-body-default-regular;
+  margin: 0;
+
+  &.no-scroll {
+    overflow: hidden;
+    scrollbar-gutter: stable;
+  }
+}
+
+//Typography
+h1 {
+  @include typography-heading-one;
+}
+
+h2 {
+  @include typography-heading-two;
+}
+
+h3 {
+  @include typography-heading-three;
+}
+
+h4 {
+  @include typography-heading-four;
+}
+
+h5 {
+  @include typography-heading-five;
+}
+
+h6 {
+  @include typography-heading-six;
+}
+
+p {
+  @include typography-body-default-regular;
+}
+
+//Details
+details summary {
+  cursor: pointer;
+}
+
+details summary > * {
+  display: inline-block;
+}
+
+details > summary {
+  list-style: none;
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+//Button
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+
+button {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+  * Show the overflow in IE.
+  * 1. Show the overflow in Edge.
+  */
+
+button {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+  * Remove the inheritance of text transform in Edge, Firefox, and IE.
+  * 1. Remove the inheritance of text transform in Firefox.
+  */
+
+button {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+  * Correct the inability to style clickable types in iOS and Safari.
+  */
+
+button,
+[type="button"] {
+  -webkit-appearance: button;
+}
+
+/**
+  * Remove the inner border and padding in Firefox.
+  */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+//This is being added here since there are multiple
+//components using this class
+.cmp-link__screen-reader-only {
+  @include aria-invisible;
+}
+
+.page-error {
+  a {
+    text-decoration: none;
+  }
+}

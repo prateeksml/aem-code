@@ -1,0 +1,33 @@
+<sly data-sly-use.file="com.kpmg.integration.models.FormFileUpload"
+	 data-sly-use.template="core/wcm/components/commons/v1/templates.html">
+	 <div>
+		<label class = "cmp-form-text__label" for="${file.id ? file.id : 'file-attachments'}" data-sly-test="${file.fileLabel && !file.hideLabel}">
+			<span>${file.fileLabel}<sup data-sly-test="${file.fileRequired}" >*</sup></span>
+		</label>
+		<input required="${file.fileRequired}" aria-label="${file.fileLabel}" type="file" class="file-attachments" name="${file.fileName}" id="${file.id ? file.id : 'file-attachments'}" multiple accept=".doc, .docx, .mpp, .mppx, .pdf, .ppt, .pptx, .xls, .xlsx, .zip, .msg" style="display: none;">
+		<button type="button" id="file-upload-container" data-sly-attribute.aria-describedby="${file.fileHelpMessage ? [file.id, 'helpMessage'] : '' @ join = '-'}" data-max-file-size="${file.maxFileSize}" data-max-files="${file.maxFiles}" data-max-files-error="${file.maxFilesMessage}" data-duplicate-error="${file.noDuplicatesMessage}" data-required-message="${file.fileRequiredMessage}" data-invalid-type-error="${file.supportedFilesMessage}" data-max-size-error="${file.fileSizeMessage}">
+			<div class="file-upload__input-message">
+				<div class="file-upload__input-message--desktop">
+					${file.desktopTitle}
+					<span>${file.desktopTitleLink}</span>
+				</div>
+				<div class="file-upload__input-message--mobile">
+					${file.mobileTitle}
+					<span>${file.mobileTitleLink}</span>
+				</div>
+			</div>
+			<div class="file-upload__help-message">
+				${file.fileMessage}
+			</div>
+			<div class="file-upload__drop-message">
+				<span>file_upload</span>
+				${file.fileDropMessage}
+			</div>
+		</button>
+		<div class="err-msg" aria-hidden="true" aria-live="assertive" aria-atomic="true"></div>
+		<div id="file-list-container">
+			<ul id="file-list"></ul>
+		</div>
+		<sly data-sly-call="${template.placeholder @ isEmpty=!isNotEmpty, classAppend='cmp-form-options'}"></sly>
+	</div>
+</sly>

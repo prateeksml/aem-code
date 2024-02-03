@@ -1,0 +1,15 @@
+<div class="cmp-lang-selector">
+    <button 
+        data-sly-use.langSelector="com.adobe.cq.wcm.core.components.models.Button" 
+        data-sly-use.iconTemplate="icon.html"
+        type="button" 
+        id="${langSelector.id}" class="cmp-lang-selector__inner"
+        data-sly-attribute="${langSelector.buttonLink.htmlAttributes}" 
+        aria-label="${langSelector.accessibilityLabel}"
+        data-cmp-clickable="${langSelector.data ? true : false}" 
+        data-cmp-data-layer="${langSelector.data.json}">
+
+        <sly data-sly-call="${iconTemplate.icon @ icon=langSelector.icon}"></sly>
+        <div data-sly-test="${langSelector.text}" class="cmp-lang-selector__label">${langSelector.text}</div>
+    </button>
+</div>

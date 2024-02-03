@@ -1,0 +1,46 @@
+@include light-theme {
+  --social-share-icon-color: #{$alias-color-social-share-icon-light};
+  --social-share-border-color: #{$alias-color-social-share-border-light};
+}
+
+@include dark-theme {
+  --social-share-icon-color: #{$alias-color-social-share-icon-dark};
+  --social-share-border-color: #{$alias-color-social-share-border-dark};
+}
+
+.cmp-social-share {
+  $icon-container-size: $alias-icon-size-xx-large; //48px
+  $icon-size: $alias-font-size-x-large; //24px
+
+  display: flex;
+  align-items: center;
+
+  .cmp-social-share__list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .cmp-social-share-list__item {
+    @include typography-body-caption;
+    margin: 0 $alias-margin-xx-small;
+  }
+
+  .cmp-social-share-list__item--icon {
+    border-color: var(--social-share-border-color);
+    width: $icon-container-size;
+    height: $icon-container-size;
+  }
+
+  .cmp-social-share-list__item--icon:before {
+    color: var(--social-share-icon-color);
+    font-size: $icon-size;
+  }
+
+  .cmp-social-share__label {
+    @include typography-body-default-regular;
+    margin: 0;
+    padding-right: $alias-padding-base;
+  }
+}

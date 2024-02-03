@@ -1,0 +1,62 @@
+{
+  "alias": {
+    "margin": {
+      "xxx-small": {
+        "value": "{global.size.0125}",
+        "comment": "2px"
+      },
+      "xx-small": {
+        "value": "{global.size.025}",
+        "comment": "4px"
+      },
+      "x-small": {
+        "value": "{global.size.05}",
+        "comment": "8px"
+      },
+      "small": {
+        "value": "{global.size.075}",
+        "comment": "12px"
+      },
+      "base": {
+        "value": "{global.size.1}",
+        "comment": "16px"
+      },
+      "medium": {
+        "value": "{global.size.15}",
+        "comment": "24px"
+      },
+      "large": {
+        "value": "{global.size.2}",
+        "comment": "32px"
+      },
+      "x-large": {
+        "value": "{global.size.25}",
+        "comment": "40px"
+      },
+      "xx-large": {
+        "value": "{global.size.3}",
+        "comment": "48px"
+      },
+      "xxx-large": {
+        "value": "{global.size.4}",
+        "comment": "64px"
+      },
+      "4x-large": {
+        "value": "{global.size.5}",
+        "comment": "80px"
+      },
+      "5x-large": {
+        "value": "{global.size.6}",
+        "comment": "96px"
+      },
+      "6x-large": {
+        "value": "{global.size.7}",
+        "comment": "112px"
+      },
+      "10x-large": {
+        "value": "{global.size.10}",
+        "comment": "160px"
+      }
+    }
+  }
+}

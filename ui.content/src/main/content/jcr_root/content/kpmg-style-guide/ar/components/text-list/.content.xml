@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2023-05-04T13:58:08.806-05:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/kpmg/settings/wcm/templates/page-content"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Text List"
+        sling:resourceType="kpmg/components/structure/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="kpmg/components/container/container"
+            layout="responsiveGrid">
+            <container
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="kpmg/components/container/container"
+                layout="responsiveGrid">
+                <title
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="kpmg/components/content/title"/>
+                <container
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="kpmg/components/container/container"
+                    layout="responsiveGrid">
+                    <title
+                        jcr:lastModified="{Date}2023-05-04T13:55:02.893-05:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Default"
+                        sling:resourceType="kpmg/components/content/title"
+                        type="h3"/>
+                    <textlist
+                        jcr:lastModified="{Date}2023-05-04T13:32:18.876-05:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="kpmg/components/content/textlist">
+                        <items jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                icon="bar_chart"
+                                text="Drive cultural change, starting from the top. This might include change-management programs that train workers at all levels and making sure C-suite executives are demonstrating their buy-in to the new ways of thinking in their daily work lives."
+                                title="Data-driven"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                icon="auto_graph"
+                                text="Drive cultural change, starting from the top. This might include change-management programs that train workers at all levels and making sure C-suite executives are demonstrating their buy-in to the new ways of thinking in their daily work lives."
+                                title="Data-driven"/>
+                        </items>
+                    </textlist>
+                    <title_copy_134596587
+                        jcr:lastModified="{Date}2023-05-04T13:57:53.579-05:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Numbers to the Left"
+                        sling:resourceType="kpmg/components/content/title"
+                        type="h3"/>
+                    <textlist_copy_1627543132
+                        cq:styleIds="[1683226431477]"
+                        jcr:lastModified="{Date}2023-05-04T13:32:18.876-05:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="kpmg/components/content/textlist">
+                        <items jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                icon="bar_chart"
+                                text="Drive cultural change, starting from the top. This might include change-management programs that train workers at all levels and making sure C-suite executives are demonstrating their buy-in to the new ways of thinking in their daily work lives."
+                                title="Data-driven"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                icon="auto_graph"
+                                text="Drive cultural change, starting from the top. This might include change-management programs that train workers at all levels and making sure C-suite executives are demonstrating their buy-in to the new ways of thinking in their daily work lives."
+                                title="Data-driven"/>
+                        </items>
+                    </textlist_copy_1627543132>
+                    <title_copy
+                        jcr:lastModified="{Date}2023-05-04T13:50:35.651-05:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="With Icons"
+                        sling:resourceType="kpmg/components/content/title"
+                        type="h3"/>
+                    <textlist_copy
+                        cq:styleIds="[1683225304882]"
+                        jcr:lastModified="{Date}2023-05-04T13:32:18.876-05:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="kpmg/components/content/textlist">
+                        <items jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                icon="bar_chart"
+                                text="Drive cultural change, starting from the top. This might include change-management programs that train workers at all levels and making sure C-suite executives are demonstrating their buy-in to the new ways of thinking in their daily work lives."
+                                title="Data-driven"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                icon="auto_graph"
+                                text="Drive cultural change, starting from the top. This might include change-management programs that train workers at all levels and making sure C-suite executives are demonstrating their buy-in to the new ways of thinking in their daily work lives."
+                                title="Data-driven"/>
+                        </items>
+                    </textlist_copy>
+                </container>
+            </container>
+        </root>
+    </jcr:content>
+</jcr:root>

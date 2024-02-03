@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:dam="http://www.day.com/dam/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    jcr:isCheckedOut="{Boolean}true"
+    jcr:mixinTypes="[mix:referenceable,mix:versionable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="581ecf68-7281-48d5-8e66-446090d0d8d8">
+    <jcr:content
+        cq:name="patricia-bosco"
+        cq:parentPath="/content/dam/kpmg-style-guide/profiles"
+        jcr:lastModified="{Date}2023-06-12T13:54:44.948-04:00"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent"
+        jcr:title="Patricia Bosco"
+        contentFragment="{Boolean}true"
+        lastFragmentSave="{Date}2023-06-12T13:54:44.948-04:00">
+        <data
+            cq:model="/conf/kpmg/settings/dam/cfm/models/contact"
+            jcr:primaryType="nt:unstructured"
+            _strucVersion="{Long}1">
+            <master
+                jcr:mixinTypes="[cq:Taggable,dam:cfVariationNode]"
+                jcr:primaryType="nt:unstructured"
+                biography="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eget vehicula ante. Nulla blandit leo et metus cursus, eu vehicula odio pulvinar. Praesent sagittis sem quis leo fringilla pretium. "
+                biography_x0040_ContentType="text/plain"
+                biography_x0040_LastModified="{Date}2023-05-22T21:19:37.375-05:00"
+                city="Mpls"
+                city_x0040_LastModified="{Date}2023-05-22T15:52:30.626-05:00"
+                contactType="Leadership"
+                contactType_x0040_LastModified="{Date}2023-06-12T13:54:15.511-04:00"
+                country="United Kingdom"
+                country_x0040_LastModified="{Date}2023-06-12T13:16:05.819-04:00"
+                email="email@email.com"
+                email_x0040_LastModified="{Date}2023-05-22T15:52:30.625-05:00"
+                firstName="Patricia"
+                firstName_x0040_LastModified="{Date}2023-05-22T21:19:37.371-05:00"
+                image="/content/dam/kpmg-style-guide/profile.png"
+                image_x0040_LastModified="{Date}2023-06-05T11:47:24.241-05:00"
+                imageAltText="alt text"
+                imageAltText_x0040_LastModified="{Date}2023-05-22T15:52:30.621-05:00"
+                imageDescription="Description"
+                imageDescription_x0040_ContentType="text/plain"
+                imageDescription_x0040_LastModified="{Date}2023-05-22T15:52:30.620-05:00"
+                jobTitle="Supply Chain &amp; Operations Leader"
+                jobTitle_x0040_LastModified="{Date}2023-06-12T13:54:44.936-04:00"
+                lastName="Bosco"
+                lastName_x0040_LastModified="{Date}2023-05-22T21:19:37.372-05:00"
+                memberFirm="United Kingdom"
+                memberFirm_x0040_LastModified="{Date}2023-06-12T13:16:05.818-04:00"
+                middleInitial_x0040_LastModified="{Date}2023-06-12T13:30:33.372-04:00"
+                phoneNumber="1231231234"
+                phoneNumber_x0040_LastModified="{Date}2023-05-22T15:52:30.626-05:00"
+                placeholder_x0040_LastModified="{Date}2023-05-22T15:51:42.052-05:00"
+                salutation="Ms"
+                salutation_x0040_LastModified="{Date}2023-06-12T13:30:19.517-04:00"
+                state="MN"
+                state_x0040_LastModified="{Date}2023-05-22T15:52:30.627-05:00"
+                suffix_x0040_LastModified="{Date}2023-05-22T21:19:37.373-05:00"/>
+        </data>
+        <indexedData jcr:primaryType="nt:unstructured">
+            <master
+                jcr:mixinTypes="[dam:IndexedFragmentData]"
+                jcr:primaryType="nt:unstructured"
+                jcr:uuid="a77ea4cb-7ece-4ed3-9c84-18584c10befb"
+                _x0040_string_x0040_model="/conf/kpmg/settings/dam/cfm/models/contact"
+                _x0040_stringArray_x0040_variations="[]"
+                string_x0040_biography="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eget vehicula ante. Nulla blandit leo et metus cursus, eu vehicula odio pulvinar. Praesent sagittis sem quis leo fringilla pretium. "
+                string_x0040_city="Mpls"
+                string_x0040_contactType="Leadership"
+                string_x0040_country="United Kingdom"
+                string_x0040_email="email@email.com"
+                string_x0040_firstName="Patricia"
+                string_x0040_imageAltText="alt text"
+                string_x0040_imageDescription="Description"
+                string_x0040_jobTitle="Supply Chain &amp; Operations Leader"
+                string_x0040_lastName="Bosco"
+                string_x0040_memberFirm="United Kingdom"
+                string_x0040_phoneNumber="1231231234"
+                string_x0040_salutation="Ms"
+                string_x0040_state="MN"/>
+        </indexedData>
+        <metadata
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"/>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

@@ -1,0 +1,23 @@
+<sly data-sly-template.description>
+  <div
+    class="cmp-teaser__description"
+    data-sly-test.description="${properties.customDescription}"
+  >
+    <button
+      data-sly-test.description="${properties.customDescription}"
+      class="cmp-teaser__button cmp-teaser__button-close"
+    >
+      <span class="cmp-teaser__button-icon" aria-hidden="true"></span>
+      <span class="cmp-link__screen-reader-only">Close</span>
+    </button>
+    <h2
+      class="cmp-teaser__title cmp-teaser__description-title"
+      data-sly-test.title="${properties.customTitle}"
+      data-sly-element="${teaser.titleType}"
+    >
+      ${title}
+    </h2>
+
+    ${description @ context="html"}
+  </div>
+</sly>

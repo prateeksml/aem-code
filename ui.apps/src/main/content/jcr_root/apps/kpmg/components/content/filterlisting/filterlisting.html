@@ -1,0 +1,123 @@
+<sly data-sly-use.filterModel="com.kpmg.core.models.impl.FilterListingImpl" />
+<div class="cmp-filterlist"
+    id="${filterModel.id}"
+    data-filterlist
+    data-filter-category='["Services","Insights","Industries"]'
+    data-country-code="${filterModel.countryCode}"
+    data-lang-code="${filterModel.langCode}"
+    data-list-document-type="INSIGHT"
+    data-list-url="${filterModel.listingEndpoint}"
+    data-filter-url="${filterModel.filterEndpoint}"
+    data-list-size="${filterModel.pagination}"
+    data-cmp-data-layer="${filterModel.data.json}">
+    
+    <div class="cmp-filterlist__header">
+        <div class="title">${'kpmg.filterby.label' @ i18n}:&nbsp;<span data-filterlist-checkbox-count>0</span>&nbsp;${'kpmg.tags.label' @ i18n}</div>
+        <div class="button cmp-filterlist__toggle-button">
+            <span class="count-badge" data-filterlist-checkbox-count></span>
+            <button data-filterlist-filter-toggle-button type="button" class="cmp-button"><span class="cmp-button__text"
+                    data-filterlist-filter-toggle-button>${'kpmg.filter.label' @ i18n}</span>
+            </button>
+        </div>
+    </div>
+    <div class="cmp-filterlist__intro">
+        <h2>
+            ${filterModel.title}
+        </h2>
+        <p>
+            ${filterModel.description}
+        </p>
+    </div>
+    <div class="cmp-filterlist__main-container">
+        <div class="spinner-overlay" cmp-filterlist-spinner>
+        <div class="spinner-container">
+            <svg class="progress" part="progress" viewBox="0 0 16 16">
+                <circle class="background" part="background" cx="8px" cy="8px" r="7px"></circle>
+                <circle class="indeterminate-indicator-1" part="indeterminate-indicator-1" cx="8px" cy="8px" r="7px"></circle>
+            </svg>
+            <span>${'kpmg.loading.label' @ i18n}</span>
+        </div>
+        </div>
+        <div class="error-message" cmp-filterlist-error-message>
+            <span class="material-icons-outlined">info</span>
+            <div class="hide" error-message-noresult>
+                <h3>${'kpmg.noResultTitle.label' @ i18n}</h3>
+                <p>${'kpmg.noResultMessage.label' @ i18n}</p>
+            </div>
+            <div class="hide" error-message-failure>
+                <h3>${'kpmg.serverErrorTitle.label' @ i18n}</h3>
+                <p>${'kpmg.serverErrorMessage.label' @ i18n}</p>
+            </div>
+        </div>
+        <section class="toc-grid-wrapper toc-grid-wrapper--25 cmp-filterlist__result-container" cmp_filterlist_result_container></section>
+        <div class="button cmp-button--secondary cmp-button--content-width light-theme cmp-filterlist__load-more">
+            <button type="button" id="button-2665517bd0" class="cmp-button" data-filterlist-load-more-button>
+                <span class="cmp-button__text" data-filterlist-load-more-button>${'kpmg.loadMore.label' @ i18n}</span>
+            </button>
+        </div>
+        <div class="cmp-filterlist__pagination active" data-filterlist-pagination>
+            <ul>
+                <li class="cmp-filterlist__pagination--prev"><a href="#" class="nav-btn prev disabled"><span
+                            class="material-icons-outlined">chevron_left</span></a></li>
+                <li class="cmp-filterlist__pagination--next"><a href="#" class="nav-btn next"><span class="material-icons-outlined">chevron_right</span></a></li>
+            </ul>
+        </div>
+        <div class="button cmp-filterlist__toggle-button">
+            <span class="count-badge" data-filterlist-checkbox-count></span>
+            <button data-filterlist-filter-toggle-button type="button" class="cmp-button"><span class="cmp-button__text"
+                    data-filterlist-filter-toggle-button>${'kpmg.filter.label' @ i18n}</span>
+            </button>
+        </div>
+    </div>
+    <div class="cmp-filterlist__overlay cmp-filterlist__overlay" data-filterlist-overlay>
+        <div class="cmp-filterlist__overlay-main-container">
+            <div class="cmp-filterlist__overlay-header">
+                <a href="#" data-filterlist-close-button>
+                    <span class="material-icons-outlined">close</span>
+                </a>
+            </div>
+            <div class="checkbox-error-message">
+                <span class="material-icons-outlined">info</span>
+                ${'kpmg.filterError.label' @ i18n}
+            </div>
+            <div class="filter-only" data-filterlist-filter-only>
+                <div class="cmp-filterlist__overlay-list-container" id="list_container">
+                </div>
+                <div class="cmp-filterlist__overlay-cta-container">
+                    <a href="#" class="clear-all" data-filterlist-clear-button data-cmp-clickable>${'kpmg.clearAll.label' @ i18n}</a>
+                    <div class="button">
+                        <button type="button" id="1s" class="cmp-button" data-filterlist-submit-button><span
+                                class="cmp-button__text">${'kpmg.applyFilter.label' @ i18n}</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<template cmp_filterlist_card_template>
+    <div class="toc-grid-item">
+        <div id="" class="cmp-container">
+            <div class="topicteaser teaser">
+                <div id="" class="cmp-teaser">
+                    <div class="cmp-teaser__content">
+                        <h2 class="cmp-teaser__title" id="title"></h2>
+                        <div class="cmp-teaser__description">
+                            <p id="description"></p>
+                        </div>
+                        <div class="cmp-teaser__action-container">
+                            <a class="cmp-teaser__action-link" id="cta_link" href="#" target="_blank">${'kpmg.readMore.label' @i18n}</a>
+                        </div>
+                    </div>
+                    <div class="cmp-teaser__image">
+                        <picture>
+                            <source media="(min-width: 1366px)" id="img_xl" srcset="">
+                            <source media="(min-width: 1024px)" id="img_md" srcset="">
+                            <img itemprop="contentUrl" id="img_sm" loading="lazy" src="" alt="" title="">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

@@ -1,0 +1,9 @@
+{
+"getAkamaiAccessToken":"$[secret:AKAMAI_ACCESS_TOKEN]",
+"getAkamaiClientSecret":"$[secret:AKAMAI_CLIENT_SECRET]",
+"getAkamaiHostToken":"$[secret:AKAMAI_HOST_TOKEN]",
+"getAkamaiClientToken":"$[secret:AKAMAI_CLIENT_TOKEN]",
+"getDefaultAkamaiDomain":"Production",
+"getAssetPurgeURLPrefix":"$[env:ASSETS_DOMAIN]",
+"getHtmlPurgeURLPrefix":"$[env:HTML_DOMAIN]"
+}

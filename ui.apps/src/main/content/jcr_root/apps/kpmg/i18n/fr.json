@@ -1,0 +1,49 @@
+{
+  "kpmg.search.label": "Rechercher KPMG",
+
+  "kpmg.search.previous.label": "Vos recherches précédentes",
+
+  "kpmg.search.short.label": "Recherche trop courte",
+
+  "kpmg.search.limit.label": "Doit être de 3 caractères ou plus.",
+
+  "kpmg.search.button.label": "Recherche",
+
+  "kpmg.search.cancel.button.label": "Annuler",
+
+  "kpmg.search.upcoming.label": "A venir",
+
+  "kpmg.search.pastevent.label": "Évènement passé",
+
+  "kpmg.search.showing.results.label": "Affichage de {current_page} résultats sur {total_results}",
+
+  "kpmg.search.previous.accessibility.label": "Vous avez {number} termes de recherche précédents",
+
+  "kpmg.search.datanotfound.message": "données introuvables",
+
+  "kpmg.filterby.label": "Filtrer par",
+
+  "kpmg.filter.label": "Filtrer",
+
+  "kpmg.loadMore.label": "Charger plus",
+
+  "kpmg.clearAll.label": "Tout effacer",
+
+  "kpmg.tags.label": "Mots clés",
+
+  "kpmg.readMore.label": "En savoir plus",
+
+  "kpmg.loading.label": "Chargement..",
+
+  "kpmg.noResultTitle.label": "Aucun résultat trouvé!",
+
+  "kpmg.noResultMessage.label": "Nous n'avons pas trouvé ce que vous cherchiez. Essayez à nouveau de rechercher.",
+
+  "kpmg.serverErrorTitle.label": "Une erreur de serveur s'est produite!",
+
+  "kpmg.serverErrorMessage.label": "Nous sommes désolés, une erreur de serveur s'est produite. Veuillez patienter un peu et réessayer.",
+
+  "kpmg.filterError.label": "Une erreur s'est produite. Veuillez réessayer",
+
+  "kpmg.applyFilter.label": "Appliquer le filtre"
+}

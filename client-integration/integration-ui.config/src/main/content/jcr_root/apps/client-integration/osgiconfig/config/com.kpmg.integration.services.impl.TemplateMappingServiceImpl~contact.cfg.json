@@ -1,0 +1,6 @@
+{
+  "getDocumentType":"Contact",
+  "getTemplates":[
+    "/conf/kpmg/settings/wcm/templates/page-contact"
+  ]
+}

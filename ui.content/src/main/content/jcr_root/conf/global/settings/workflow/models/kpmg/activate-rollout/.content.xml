@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:mixinTypes="[rep:AccessControllable]"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/libs/settings/wcm/designs/default"
+        cq:lastModified="{Date}2023-03-30T12:32:19.407+05:30"
+        cq:lastModifiedBy="admin"
+        cq:template="/libs/cq/workflow/templates/model"
+        jcr:description="This workflow either activates a page and references in it or sends an email notification to respective owner to roll-out the page from master site."
+        jcr:primaryType="cq:PageContent"
+        jcr:title="KPMG : Activate Rollout"
+        sling:resourceType="cq/workflow/components/pages/model"
+        lastSynced="{Date}2023-03-30T12:32:21.911+05:30">
+        <flow
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <process
+                jcr:description="Check for the Start/Expiry date on the payload."
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Check for the Start/Expiry date on the payload"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.kpmg.core.workflow.process.CheckDateExistenceAndActivationPermission"/>
+            </process>
+            <or
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="cq/workflow/components/model/or"
+                branches="2"
+                orSplit="true">
+                <_x0031_
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="cq/flow/components/parsys">
+                    <process
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Email Process"
+                        sling:resourceType="cq/workflow/components/model/process">
+                        <metaData
+                            jcr:primaryType="nt:unstructured"
+                            PROCESS="com.kpmg.core.workflow.process.SendEmailProcess"
+                            PROCESS_ARGS="page-date-missing"
+                            PROCESS_AUTO_ADVANCE="true"/>
+                    </process>
+                </_x0031_>
+                <_x0032_
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="cq/flow/components/parsys">
+                    <process
+                        jcr:description="Check the page is a blue print and select a route."
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Blue Print Process Check"
+                        sling:resourceType="cq/workflow/components/model/process">
+                        <metaData
+                            jcr:primaryType="nt:unstructured"
+                            PROCESS="com.kpmg.core.workflow.deactivate.BluePrint"/>
+                    </process>
+                    <or
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/workflow/components/model/or"
+                        branches="2"
+                        orSplit="true">
+                        <_x0031_
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="cq/flow/components/parsys">
+                            <process
+                                jcr:description="Creates a minor version after approval from reviewer."
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Minor Version"
+                                sling:resourceType="cq/workflow/components/model/process">
+                                <metaData
+                                    jcr:primaryType="nt:unstructured"
+                                    PROCESS="com.kpmg.core.workflow.process.CustomCreateVersionProcess"
+                                    PROCESS_ARGS="minor"
+                                    PROCESS_AUTO_ADVANCE="true"/>
+                            </process>
+                            <process_0
+                                jcr:description="Send manual roll out email to live copy content authors."
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Send Manual Roll-Out Email To Live Copy Authors"
+                                sling:resourceType="cq/workflow/components/model/process">
+                                <metaData
+                                    jcr:primaryType="nt:unstructured"
+                                    PROCESS="com.kpmg.core.workflow.process.SendEmailProcess"
+                                    PROCESS_ARGS="activate-blueprint-owner-email"
+                                    PROCESS_AUTO_ADVANCE="true"/>
+                            </process_0>
+                            <dynamic_participant
+                                jcr:description="kpmg.activateRollout.blueprintOwnerDescription"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Blueprint Owner"
+                                sling:resourceType="cq/workflow/components/model/dynamic_participant">
+                                <metaData
+                                    jcr:primaryType="nt:unstructured"
+                                    DIALOG_PATH="/apps/kpmg/components/workflows/performrollout/cq:dialog"
+                                    DYNAMIC_PARTICIPANT="com.kpmg.core.workflow.process.DynamicInitiator"
+                                    PROCESS_ARGS="CREATEDBY"/>
+                            </dynamic_participant>
+                        </_x0031_>
+                        <_x0032_
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="cq/flow/components/parsys">
+                            <process
+                                jcr:description="Schedule Off Time Check"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Schedule Off Time Check"
+                                sling:resourceType="cq/workflow/components/model/process">
+                                <metaData
+                                    jcr:primaryType="nt:unstructured"
+                                    PROCESS="com.kpmg.core.workflow.process.ScheduleOffTimeCheckProcess"/>
+                            </process>
+                            <or
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="cq/workflow/components/model/or"
+                                branches="3"
+                                orSplit="true">
+                                <_x0031_
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="cq/flow/components/parsys">
+                                    <noopprocess
+                                        jcr:description="A no operation process"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Scheduled Off Time Expired"
+                                        sling:resourceType="cq/workflow/components/workflow/noopprocess"
+                                        PROCESS="/etc/workflow/scripts/noop.ecma"
+                                        PROCESS_AUTO_ADVANCE="true">
+                                        <metaData
+                                            jcr:primaryType="nt:unstructured"
+                                            PROCESS="/etc/workflow/scripts/noop.ecma"
+                                            PROCESS_AUTO_ADVANCE="true"/>
+                                    </noopprocess>
+                                    <process
+                                        jcr:description="Scheduled Off Time Expired Mail Notification"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Scheduled Off Time Expired Mail Notification"
+                                        sling:resourceType="cq/workflow/components/model/process">
+                                        <metaData
+                                            jcr:primaryType="nt:unstructured"
+                                            PROCESS="com.kpmg.core.workflow.process.SendEmailProcess"
+                                            PROCESS_ARGS="page-expired"
+                                            PROCESS_AUTO_ADVANCE="true"/>
+                                    </process>
+                                </_x0031_>
+                                <_x0032_
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="cq/flow/components/parsys">
+                                    <noopprocess
+                                        jcr:description="A no operation process"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Activation"
+                                        sling:resourceType="cq/workflow/components/workflow/noopprocess"
+                                        PROCESS="/etc/workflow/scripts/noop.ecma"
+                                        PROCESS_AUTO_ADVANCE="true">
+                                        <metaData
+                                            jcr:primaryType="nt:unstructured"
+                                            PROCESS="/etc/workflow/scripts/noop.ecma"
+                                            PROCESS_AUTO_ADVANCE="true"/>
+                                    </noopprocess>
+                                    <process_1
+                                        jcr:description="Creates a major version after approval from reviewer."
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Create Major Version"
+                                        sling:resourceType="cq/workflow/components/model/process">
+                                        <metaData
+                                            jcr:primaryType="nt:unstructured"
+                                            PROCESS="com.kpmg.core.workflow.process.CustomCreateVersionProcess"
+                                            PROCESS_ARGS="major"
+                                            PROCESS_AUTO_ADVANCE="true"/>
+                                    </process_1>
+                                    <activateresourceproc
+                                        jcr:description="A process to activate a page or asset"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Activate Page/Asset"
+                                        sling:resourceType="wcm/workflow/components/workflow/activateresourceprocess">
+                                        <metaData
+                                            jcr:primaryType="nt:unstructured"
+                                            PROCESS="com.day.cq.wcm.workflow.process.ActivatePageProcess"
+                                            PROCESS_AUTO_ADVANCE="true"/>
+                                    </activateresourceproc>
+                                    <process_313054920
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Add Audit"
+                                        sling:resourceType="cq/workflow/components/model/process">
+                                        <metaData
+                                            jcr:primaryType="nt:unstructured"
+                                            PROCESS="com.kpmg.core.workflow.process.CustomAuditLogProcess"
+                                            PROCESS_AUTO_ADVANCE="true"/>
+                                    </process_313054920>
+                                    <process
+                                        jcr:description="Page activation email notification"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Activated Email notifcation"
+                                        sling:resourceType="cq/workflow/components/model/process">
+                                        <metaData
+                                            jcr:primaryType="nt:unstructured"
+                                            PROCESS="com.kpmg.core.workflow.process.SendEmailProcess"
+                                            PROCESS_ARGS="activated"
+                                            PROCESS_AUTO_ADVANCE="true"/>
+                                    </process>
+                                </_x0032_>
+                                <_x0033_
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="cq/flow/components/parsys">
+                                    <process_1
+                                        jcr:description="Creates a major version after approval from reviewer."
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Create Major version"
+                                        sling:resourceType="cq/workflow/components/model/process">
+                                        <metaData
+                                            jcr:primaryType="nt:unstructured"
+                                            PROCESS="com.kpmg.core.workflow.process.CustomCreateVersionProcess"
+                                            PROCESS_ARGS="major"
+                                            PROCESS_AUTO_ADVANCE="true"/>
+                                    </process_1>
+                                    <process
+                                        jcr:description="Send an email for scheduled activation"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Send Activation Email"
+                                        sling:resourceType="cq/workflow/components/model/process">
+                                        <metaData
+                                            jcr:primaryType="nt:unstructured"
+                                            PROCESS="com.kpmg.core.workflow.process.SendEmailProcess"
+                                            PROCESS_ARGS="scheduled-for-activation"
+                                            PROCESS_AUTO_ADVANCE="true"/>
+                                    </process>
+                                </_x0033_>
+                            </or>
+                        </_x0032_>
+                    </or>
+                </_x0032_>
+            </or>
+        </flow>
+    </jcr:content>
+    <rep:policy/>
+</jcr:root>

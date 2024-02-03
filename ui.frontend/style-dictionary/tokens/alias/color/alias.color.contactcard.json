@@ -1,0 +1,16 @@
+{
+  "alias": {
+    "color": {
+      "contactcard": {
+        "social-icon": {
+          "color": {
+            "value": "{global.color.brand.cobalt-blue}"
+          },
+          "border-color": {
+            "value": "{global.color.strokes.cobalt-blue.20-percent}"
+          }
+        }
+      }
+    }
+  }
+}

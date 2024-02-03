@@ -1,0 +1,20 @@
+<sly data-sly-template.actions="${@ teaser}">
+  <div
+    class="cmp-teaser__action-container"
+    data-sly-use.actionTemplate="action.html"
+  >
+    <!--/* CTA */-->
+<sly data-sly-test.customActions="${teaser.overridenActions}" />
+    <sly
+      data-sly-test.flip="${!properties.flip && teaser.actionsEnabled}"
+      data-sly-repeat="${teaser.actions}"
+      <sly data-sly-call="${actionTemplate.action @ action=item, customAction=customActions[itemList.index]}"></sly>
+    <!--/* Teaser Flip button */-->
+    <button
+      data-sly-test.flip="${properties.flip && properties.flipButtonLabel}"
+      class="cmp-teaser__action-link cmp-teaser__action-flip"
+    >
+      ${properties.flipButtonLabel}
+    </button>
+  </div>
+</sly>

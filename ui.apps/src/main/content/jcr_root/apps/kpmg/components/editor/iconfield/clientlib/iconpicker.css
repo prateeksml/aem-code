@@ -1,0 +1,139 @@
+
+@font-face {
+    font-family: Material_Icons--Filled;
+    font-style: normal;
+    font-weight: 400;
+    src: url(/etc.clientlibs/kpmg/clientlibs/clientlib-site/resources/fonts/Material_Icons/MaterialIcons-Regular.woff2) format("woff2")
+}
+
+@font-face {
+    font-family: Material_Icons--Outlined;
+    font-style: normal;
+    font-weight: 400;
+    src: url(/etc.clientlibs/kpmg/clientlibs/clientlib-site/resources/fonts/Material_Icons/MaterialIconsOutlined-Regular.woff2) format("woff2")
+}
+
+@font-face {
+    font-family: Material_Icons--Round;
+    font-style: normal;
+    font-weight: 400;
+    src: url(/etc.clientlibs/kpmg/clientlibs/clientlib-site/resources/fonts/Material_Icons/MaterialIconsRound-Regular.woff2) format("woff2")
+}
+
+@font-face {
+    font-family: Material_Icons--Sharp;
+    font-style: normal;
+    font-weight: 400;
+    src: url(/etc.clientlibs/kpmg/clientlibs/clientlib-site/resources/fonts/Material_Icons/MaterialIconsSharp-Regular.woff2) format("woff2")
+}
+
+@font-face {
+    font-family: Material_Icons--Two-Tone;
+    font-style: normal;
+    font-weight: 400;
+    src: url(/etc.clientlibs/kpmg/clientlibs/clientlib-site/resources/fonts/Material_Icons/MaterialIconsTwoTone-Regular.woff2) format("woff2")
+}
+#material-icons-picker-search-collection {
+
+}
+
+.icon-result-filled {
+    -webkit-font-feature-settings: "liga";
+    font-feature-settings: "liga";
+    font-family: Material_Icons--Filled;
+}
+
+.icon-result-filled,.icon-result-outlined {
+    word-wrap: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    direction: ltr;
+    display: inline-block;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 1;
+    text-rendering: optimizeLegibility;
+    text-transform: none;
+    white-space: nowrap;
+    font-size: 42px;
+    max-width: 100px;
+}
+
+.icon-result-outlined {
+    -webkit-font-feature-settings: "liga";
+    font-feature-settings: "liga";
+    font-family: Material_Icons--Outlined
+}
+
+.icon-result-round {
+    -webkit-font-feature-settings: "liga";
+    font-feature-settings: "liga";
+    font-family: Material_Icons--Round;
+}
+
+.icon-result-round,.icon-result-sharp {
+    word-wrap: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    direction: ltr;
+    display: inline-block;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 1;
+    text-rendering: optimizeLegibility;
+    text-transform: none;
+    white-space: nowrap;
+    font-size: 42px;
+}
+
+.icon-result-sharp {
+    -webkit-font-feature-settings: "liga";
+    font-feature-settings: "liga";
+    font-family: Material_Icons--Sharp
+}
+
+.icon-result-two-tone {
+    word-wrap: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-feature-settings: "liga";
+    font-feature-settings: "liga";
+    direction: ltr;
+    display: inline-block;
+    font-family: Material_Icons--Two-Tone;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 1;
+    text-rendering: optimizeLegibility;
+    text-transform: none;
+    white-space: nowrap
+}
+
+.icon-result {
+    text-align: center;
+    border: 1px solid #e1e1e1;
+    padding: 1em;
+}
+
+#material-icons-picker-search-collection ._coral-Masonry-item-quickActions {
+    top: 0;
+    left: 0;
+}
+
+.icon-picker {
+    border: 1px dashed rgba(0,0,0,0.2);
+    text-align: center;
+    padding: 1em;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,38 @@
+- global_config:
+    vars:
+      - DEF kpmgContentPath="/content/kpmgpublic"
+      - DEF kpmgLanguageMasterPath="/content/kpmgpublic/language-masters"
+      - DEF kpmgLanguageMasterXFPath="/content/experience-fragments/kpmgpublic/language-masters"
+- group_config:
+  - FOR site IN CHILDREN OF ${kpmgLanguageMasterPath}:
+    - IF ${length(site.name) == 2}:
+      - aem-${site.name}-master-contributor:
+        - name: ${upperCase(site.name)} Language Master Contributors
+          isMemberOf: contributor,workflow-users
+          description: "Users in this group can edit the relative langage blueprint under /content/kpmgpublic/master_languages"
+          externalId: aem-${site.name}-master-contributor;ims
+
+
+- ace_config:
+  - FOR site IN CHILDREN OF ${kpmgLanguageMasterPath}:
+    - IF ${length(site.name) == 2}:
+      - aem-${site.name}-master-contributor:
+        # Language Path
+        - path: "${kpmgLanguageMasterPath}/${site.name}"
+          permission: allow
+          privileges: rep:write,jcr:lockManagement,jcr:versionManagement,jcr:nodeTypeManagement
+        - path: "${kpmgLanguageMasterPath}/${site.name}" # editing rights also gives deletion rights for the pages
+          permission: deny
+          privileges: jcr:removeChildNodes,jcr:removeNode
+          keepOrder: true
+          restrictions: 
+           rep:ntNames: cq:Page
+        # L2 Pages 
+        - path: "${kpmgLanguageMasterPath}/${site.name}/home"
+          permission: allow
+          privileges: jcr:removeChildNodes,jcr:removeNode
+          repGlob: /*/* # only apply to non-direct children of the path
+        # XF Path
+        - path: "${kpmgLanguageMasterXFPath}/${site.name}"
+          permission: allow
+          privileges: jcr:modifyProperties,jcr:lockManagement,jcr:versionManagement,jcr:addChildNodes,jcr:nodeTypeManagement,jcr:removeChildNodes,jcr:removeNode

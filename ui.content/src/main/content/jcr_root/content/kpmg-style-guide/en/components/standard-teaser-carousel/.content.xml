@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2023-07-14T11:12:01.336-05:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/kpmg/settings/wcm/templates/page-content"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Standard Teaser Carousel"
+        sling:resourceType="kpmg/components/structure/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="kpmg/components/container/container"
+            layout="responsiveGrid">
+            <main
+                jcr:lastModified="{Date}2023-06-03T19:12:45.974-05:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="kpmg/components/container/main"
+                layout="simple">
+                <section
+                    jcr:lastModified="{Date}2023-06-03T18:53:29.854-05:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="kpmg/components/container/section"
+                    layout="simple">
+                    <standardteaser_carou
+                        jcr:lastModified="{Date}2023-07-14T11:12:01.332-05:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="kpmg/components/content/standardteaser-carousel"
+                        accessibilityAutoItemTitles="false"
+                        autopauseDisabled="false"
+                        autoplay="false"
+                        delay="5000">
+                        <standardteaser_copy_311152701
+                            cq:panelTitle="KPMG Strategic Alliances"
+                            jcr:description="&lt;p>&lt;b>KPMG has market-leading alliances with many of the world&amp;#39;s leading software and services vendors.&lt;/b>&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;KPMG has market-leading alliances with many of the world&amp;#39;s leading software and services vendors.&lt;/p>&#xd;&#xa;"
+                            jcr:lastModified="{Date}2023-07-14T11:10:33.511-05:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="KPMG Strategic Alliances"
+                            sling:resourceType="kpmg/components/content/standardteaser"
+                            alt="Alt Text"
+                            altValueFromDAM="false"
+                            descriptionFromPage="false"
+                            dmPresetType="imagePreset"
+                            fileReference="/content/dam/kpmg-style-guide/teaser-card-example.png"
+                            imageFromPageImage="false"
+                            isDecorative="false"
+                            searchIndexable="true"
+                            textIsRich="true"
+                            titleFromPage="false">
+                            <actions jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    link="https://kpmg.com"
+                                    linkTarget="_self"
+                                    text="Learn More "/>
+                            </actions>
+                        </standardteaser_copy_311152701>
+                        <standardteaser_copy
+                            cq:panelTitle="KPMG Strategic Alliances"
+                            jcr:description="&lt;p>&lt;b>KPMG has market-leading alliances with many of the world's leading software and services vendors.&lt;/b>&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;KPMG has market-leading alliances with many of the world's leading software and services vendors.&lt;/p>&#xd;&#xa;"
+                            jcr:lastModified="{Date}2023-07-14T10:34:40.758-05:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="KPMG Strategic Alliances"
+                            sling:resourceType="kpmg/components/content/standardteaser"
+                            alt="Alt Text"
+                            altValueFromDAM="false"
+                            descriptionFromPage="false"
+                            dmPresetType="imagePreset"
+                            fileReference="/content/dam/kpmg-style-guide/teaser-card-example.png"
+                            imageFromPageImage="false"
+                            isDecorative="false"
+                            searchIndexable="true"
+                            textIsRich="true"
+                            titleFromPage="false">
+                            <actions jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    link="https://kpmg.com"
+                                    linkTarget="_self"
+                                    text="Learn More "/>
+                            </actions>
+                        </standardteaser_copy>
+                        <standardteaser
+                            cq:panelTitle="KPMG Strategic Alliances"
+                            jcr:description="&lt;p>&lt;b>KPMG has market-leading alliances with many of the world's leading software and services vendors.&lt;/b>&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;KPMG has market-leading alliances with many of the world's leading software and services vendors.&lt;/p>&#xd;&#xa;"
+                            jcr:lastModified="{Date}2023-07-14T10:34:40.758-05:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="KPMG Strategic Alliances"
+                            sling:resourceType="kpmg/components/content/standardteaser"
+                            alt="Alt Text"
+                            altValueFromDAM="false"
+                            descriptionFromPage="false"
+                            dmPresetType="imagePreset"
+                            fileReference="/content/dam/kpmg-style-guide/teaser-card-example.png"
+                            imageFromPageImage="false"
+                            isDecorative="false"
+                            searchIndexable="true"
+                            textIsRich="true"
+                            titleFromPage="false">
+                            <actions jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    link="https://kpmg.com"
+                                    linkTarget="_self"
+                                    text="Learn More "/>
+                            </actions>
+                        </standardteaser>
+                        <item_1689350672069
+                            cq:panelTitle="test"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="kpmg/components/content/standardteaser"/>
+                    </standardteaser_carou>
+                </section>
+            </main>
+        </root>
+        <cq:featuredimage
+            jcr:primaryType="nt:unstructured"
+            fileReference="/content/dam/kpmgsites"/>
+    </jcr:content>
+</jcr:root>

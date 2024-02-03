@@ -1,0 +1,18 @@
+<div class="cmp-rfp-submission" data-sly-use.rfp="com.kpmg.integration.models.RFPSubmission" data-resource-type="${properties['sling:resourceType']}">
+    <div class="cmp-rfp-submission__container">
+        <h3 data-sly-test="${rfp.rfpTitle}">${rfp.rfpTitle} <span class="cmp-rfp-submission__name"></span></h3>
+        <h6 data-sly-test="${rfp.rfpReference}">${rfp.rfpReference} <span class="cmp-rfp-submission__ref-no"></span>.</h6>
+        <p data-sly-test="${rfp.belowListMessage}">${rfp.belowListMessage}</p>
+        <h5 data-sly-test="${rfp.contactInfoTitle}">${rfp.contactInfoTitle}</h5>
+        <div class="cmp-rfp-submission__contact-info">
+            
+        </div>
+    </div>
+    <div class="cmp-rfp-submission__container last">
+        <h5 data-sly-test="${rfp.requestDetailTitle}">${rfp.requestDetailTitle}</h5>
+        <div class="cmp-rfp-submission__request-details">
+            
+        </div>
+    </div>
+    <button data-sly-test="${rfp.buttonText}" class="cmp-rfp-submission__button" onclick="window.print()">${rfp.buttonText}</button>
+</div>

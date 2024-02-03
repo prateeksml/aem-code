@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:isTransCreated="{Boolean}true"
+        cq:lastModified="{Date}2023-05-12T10:27:30.642-05:00"
+        cq:lastModifiedBy="admin"
+        cq:lastTranslationUpdate="{Date}2023-05-08T12:46:05.006-05:00"
+        cq:template="/conf/kpmg/settings/wcm/templates/page-content"
+        cq:translationSourcePath="/content/kpmg-style-guide/en/components/accordion"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="accordion"
+        sling:resourceType="kpmg/components/structure/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="kpmg/components/container/container"
+            layout="responsiveGrid">
+            <container
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="kpmg/components/container/container"
+                layout="responsiveGrid">
+                <title
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="الأكورديون"
+                    sling:resourceType="kpmg/components/content/title"/>
+                <container
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="kpmg/components/container/container"
+                    layout="responsiveGrid">
+                    <accordion
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="kpmg/components/content/accordion"
+                        headingElement="h2"
+                        singleExpansion="false">
+                        <item_1
+                            cq:panelTitle="البند 1"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Item 1"
+                            sling:resourceType="kpmg/components/container/container"
+                            layout="responsiveGrid">
+                            <title
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="البند 1"
+                                sling:resourceType="kpmg/components/content/title"/>
+                        </item_1>
+                        <item_2
+                            cq:panelTitle="البند 2"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Item 2"
+                            sling:resourceType="kpmg/components/container/container"
+                            layout="responsiveGrid">
+                            <title
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="البند 2"
+                                sling:resourceType="kpmg/components/content/title"/>
+                        </item_2>
+                        <item_1680753456327
+                            cq:panelTitle="البند 3"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="kpmg/components/container/container">
+                            <title
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="البند 3"
+                                sling:resourceType="kpmg/components/content/title"/>
+                        </item_1680753456327>
+                    </accordion>
+                </container>
+            </container>
+        </root>
+    </jcr:content>
+</jcr:root>

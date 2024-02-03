@@ -1,0 +1,34 @@
+{
+  "file": {
+    "jcr:primaryType": "nt:unstructured",
+    "jcr:createdBy": "admin",
+    "filehelpMessage": "testttt",
+    "filehideTitle": "true",
+    "filetitle": "Attachments",
+    "mobiletitle": "mobile title",
+    "jcr:lastModifiedBy": "admin",
+    "arialabel": "aria-label",
+    "filename": "first_name",
+    "filerequired": "true",
+    "jcr:created": "Wed Jul 26 2023 17:51:26 GMT+0530",
+    "fileusePlaceholder": "true",
+    "name": "first_name",
+    "title": "test",
+    "maxfiles": "5",
+    "desktoptitlelink": "Upload",
+    "jcr:lastModified": "Thu Jul 27 2023 17:16:22 GMT+0530",
+    "desktoptitle": "Drag and drop dialog",
+    "filemessage": "message",
+    "sling:resourceType": "kpmg/components/content/fileupload",
+    "maxfilesize": "15",
+    "mobiletitlelink": "mobile title link",
+    "filerequiredMessage": "message",
+    "fileDropMessage" : "Drag and drop files",
+    "maxFilesReached" :" Max files reached",
+    "noDuplicates" : "No Duplicates",
+    "supportedFileMessage" : "Supported File message",
+    "fileSizeExceeds" : "File size exceeds"
+  }
+
+
+}

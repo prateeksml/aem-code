@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="External Direct Link"
+    linkURL="https://kpmg.com"
+    name="Name 3"
+    type="direct">
+    <directLink
+        jcr:primaryType="nt:unstructured"
+        linkPath="https://kpmg.com"/>
+    <secondaryLinkWithChildren jcr:primaryType="nt:unstructured">
+        <item0 jcr:primaryType="nt:unstructured"/>
+    </secondaryLinkWithChildren>
+</jcr:root>

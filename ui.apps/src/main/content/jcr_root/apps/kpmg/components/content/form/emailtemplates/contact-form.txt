@@ -1,0 +1,7 @@
+subject=Thank You ${firstName}
+
+message=Thank You For Contacting Us ${firstName} 
+
+footer=\n \
+-------------------------------------------------------------------------------------\n \
+This is an automatically generated message. Please do not reply.

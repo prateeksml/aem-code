@@ -1,0 +1,24 @@
+{
+  "alias": {
+    "grid": {
+      "breakpoint": {
+        "small": {
+          "value": "{global.grid.breakpoint.small}",
+          "comment": "Mobile Viewport"
+        },
+        "medium": {
+          "value": "{global.grid.breakpoint.medium}",
+          "comment": "Tablet Viewport"
+        },
+        "large": {
+          "value": "{global.grid.breakpoint.large}",
+          "comment": "Desktop Small Viewport"
+        },
+        "x-large": {
+          "value": "{global.grid.breakpoint.x-large}",
+          "comment": "Desktop Medium Viewport"
+        }
+      }
+    }
+  }
+}

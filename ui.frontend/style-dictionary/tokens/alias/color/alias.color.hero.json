@@ -1,0 +1,32 @@
+{
+  "alias": {
+    "color": {
+      "hero": {
+        "title": {
+          "light": {
+            "value": "{global.color.brand.spectrum-blue}"
+          },
+          "dark": {
+            "value": "{global.color.brand.white}"
+          }
+        },
+        "description": {
+          "light": {
+            "value": "{global.color.grayscale.black}"
+          },
+          "dark": {
+            "value": "{global.color.grayscale.white}"
+          }
+        },
+        "date": {
+          "light": {
+            "value": "{global.color.brand.spectrum-blue}"
+          },
+          "dark": {
+            "value": "{global.color.brand.white}"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="nt:unstructured"
+    sling:resourceSuperType="wcm/foundation/components/basicpage/v1/basicpage/tabs/basic/items/column/items/title"
+    sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+    <items jcr:primaryType="nt:unstructured"
+    sling:hideChildren="[tagsShowOnCreate,tags]">
+        <hideinsearch
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                checked="{Boolean}false"
+                name="./hideInSearch"
+                text="Hide in Search"
+                uncheckedValue="false"
+                value="true">
+            <granite:data
+                    jcr:primaryType="nt:unstructured"
+                    allowBulkEdit="{Boolean}true"
+                    cq-msm-lockable="hideInSearch"/>
+        </hideinsearch>
+        <owner
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                fieldDescription="The Business Owner Group is used for internal operation to identify the group who owns the page. This is required for auditing pages and internal reporting. "
+                fieldLabel="Business Owner Group"
+                multiple="{Boolean}false"
+                name="./owner">
+            <datasource
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="kpmg/ca-config/datasource"
+                    config="business-owner"/>
+            <granite:data
+                    jcr:primaryType="nt:unstructured"
+                    allowBulkEdit="{Boolean}true"
+                    cq-msm-lockable="owner"/>
+        </owner>
+    </items>
+</jcr:root>

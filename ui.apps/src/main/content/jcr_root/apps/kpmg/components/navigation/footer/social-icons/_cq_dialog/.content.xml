@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root
+	xmlns:jcr="http://www.jcp.org/jcr/1.0"
+	xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+	xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+	xmlns:cq="http://www.day.com/jcr/cq/1.0"
+	xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+	jcr:primaryType="nt:unstructured"
+	jcr:title="Footer Social Icons"
+	sling:resourceType="cq/gui/components/authoring/dialog">
+	<content
+		jcr:primaryType="nt:unstructured"
+		sling:resourceType="granite/ui/components/coral/foundation/container">
+		<items jcr:primaryType="nt:unstructured">
+			<tabs
+				jcr:primaryType="nt:unstructured"
+				sling:resourceType="granite/ui/components/coral/foundation/tabs"
+				maximized="{Boolean}true">
+				<items jcr:primaryType="nt:unstructured">
+					<columns
+						jcr:primaryType="nt:unstructured"
+						sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+						margin="{Boolean}true">
+						<items jcr:primaryType="nt:unstructured">
+							<column
+								jcr:primaryType="nt:unstructured"
+								sling:resourceType="granite/ui/components/coral/foundation/container">
+								<items jcr:primaryType="nt:unstructured">
+									<socialIcons
+										jcr:primaryType="nt:unstructured"
+										sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+										composite="{Boolean}true"
+										fieldLabel="Social icons"
+										validation="coral-multifield">
+										<field
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/coral/foundation/container"
+											name="./items">
+											<items jcr:primaryType="nt:unstructured">
+												<column
+													jcr:primaryType="nt:unstructured"
+													sling:resourceType="granite/ui/components/coral/foundation/container">
+													<items jcr:primaryType="nt:unstructured">
+														<icon
+															jcr:primaryType="nt:unstructured"
+															sling:resourceType="granite/ui/components/coral/foundation/form/select"
+															fieldDescription="Select an icon"
+															fieldLabel="Icon"
+															name="./icon">
+															<datasource
+																jcr:primaryType="nt:unstructured"
+																sling:resourceType="kpmg/ca-config/datasource"
+																config="social-icons"/>
+														</icon>
+														<altText
+															jcr:primaryType="nt:unstructured"
+															sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+															fieldDescription="Input alt text"
+															fieldLabel="Alt Text"
+															name="./altText" />
+														<linkURL
+															jcr:primaryType="nt:unstructured"
+															sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+															fieldDescription="Select Link URL"
+															fieldLabel="Link Url"
+															name="./linkURL"
+															required="{Boolean}true"/>
+														<linkTarget
+															jcr:primaryType="nt:unstructured"
+															sling:resourceType="granite/ui/components/coral/foundation/form/select"
+															fieldLabel="Link Target"
+															name="./linkTarget">
+															<items jcr:primaryType="nt:unstructured">
+																<newTab
+																	jcr:primaryType="nt:unstructured"
+																	text="New Tab"
+																	value="_blank" />
+																<sameTab
+																	jcr:primaryType="nt:unstructured"
+																	text="Same Tab"
+																	value="_self" />
+															</items>
+														</linkTarget>
+													</items>
+												</column>
+											</items>
+										</field>
+										<granite:data
+                                            jcr:primaryType="nt:unstructured"
+                                            max-items="6"
+                                            min-items="0"/>
+									</socialIcons>
+								</items>
+							</column>
+						</items>
+					</columns>
+				</items>
+			</tabs>
+            <extraClientlibs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/includeclientlibs"
+                js="kpmg-footer"/>			
+		</items>
+	</content>
+</jcr:root>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Download"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    extraClientlibs="[core.wcm.components.download.v1.editor,kpmg.components.downlaod.editor,cq.author.filetype.validator,cq.author.pathfield]">
+    <content
+        granite:class="cmp-download__editor"
+        jcr:primaryType="nt:unstructured">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs jcr:primaryType="nt:unstructured">
+                <items jcr:primaryType="nt:unstructured">
+                    <asset
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Asset details">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns jcr:primaryType="nt:unstructured">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:hideChildren="[file]"
+                                            why="The asset upload option is not required ">
+                                            <alertMessage
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Message"
+                                                sling:orderBefore="anchorid"
+                                                sling:resourceType="granite/ui/components/coral/foundation/alert"
+                                                text="If you chose to author the Download component within the column control please use within 100% and 50% layout only."
+                                                variant="info"/>
+                                            <pdfdetails
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="PDF Details "
+                                                sling:resourceType="granite/ui/components/foundation/form/fieldset">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <asseturl
+                                                        granite:class="cmp-kpmg-contextual-pathfield-picker"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                        fieldLabel="Asset Url"
+                                                        name="./fileReference"
+                                                        required="{Boolean}true"
+                                                        rootPath="/content/dam/kpmgsites">
+                                                        <granite:data
+                                                            jcr:primaryType="nt:unstructured"
+                                                            contextfolder="/pdf"/>
+                                                    </asseturl>
+                                                </items>
+                                            </pdfdetails>
+                                            <anchorid
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:orderBefore="pdfdetails"
+                                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                fieldLabel="Anchor Id"
+                                                name="./anchorId"/>
+                                            <trackingscript
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                fieldDescription="txt"
+                                                fieldLabel="Linkedin image pixel tracking"
+                                                sling:hideResource="{Boolean}true"
+                                                name="[./trackingscript]"/>
+                                            <checkbox
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                checked="{Boolean}true"
+                                                fieldDescription="To Show the Thumbnail image from the asset present."
+                                                fieldLabel="Show Thumbnail Image"
+                                                name="./showThumbnail"
+                                                text="Show Image from the DAM asset"
+                                                uncheckedValue="false"
+                                                value="true"/>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </asset>
+                    <properties jcr:primaryType="nt:unstructured">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns jcr:primaryType="nt:unstructured">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column jcr:primaryType="nt:unstructured">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <actionText
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:hideResource="{Boolean}true"
+                                                why="Hide because the link is an icon"/>
+                                            <inline
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:hideResource="{Boolean}true"
+                                                why="Hide because actionText is hidden"/>
+                                            <descriptionGroup jcr:primaryType="nt:unstructured">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <description jcr:primaryType="nt:unstructured">
+                                                        <rtePlugins jcr:primaryType="nt:unstructured">
+                                                            <paraformat jcr:primaryType="nt:unstructured">
+                                                                <formats jcr:primaryType="nt:unstructured">
+                                                                    <default_h1
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:hideResource="{Boolean}true"
+                                                                        why="H1 is not required "/>
+                                                                </formats>
+                                                            </paraformat>
+                                                        </rtePlugins>
+                                                    </description>
+                                                </items>
+                                            </descriptionGroup>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </properties>
+                    <indexable
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/include"
+                        path="kpmg/components/utilities/tab_indexable/indexable"/>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

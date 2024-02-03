@@ -1,0 +1,179 @@
+@include light-theme {
+  --hero-people-name-accent: #{$global-color-brand-purple};
+  --hero-people-title-color: #{$global-color-brand-spectrum-blue};
+  --hero-people-text-color: #{$global-color-brand-spectrum-blue};
+  --hero-people-icon-border-color: #{$alias-color-contactcard-social-icon-border-color};
+  --hero-people-icon-color: #{$alias-color-contactcard-social-icon-color};
+}
+
+@include dark-theme {
+  --hero-people-name-accent: #{$global-color-brand-light-green};
+  --hero-people-title-color: #{$global-color-brand-white};
+  --hero-people-text-color: #{$global-color-brand-spectrum-blue};
+  --hero-people-icon-border-color: #{$alias-color-footer-social-icon-border-color};
+  --hero-people-icon-color: #{$alias-color-footer-social-icon-color};
+}
+
+.hero-people {
+  $hero-img-mobile: 240px;
+  $hero-img-tablet: 255px;
+  $hero-img-desktop: 299px;
+  $hero-img-desktop-xl: 281px;
+
+  $hero-accent-width: 4px;
+
+  $title-color: $global-color-brand-kpmg-blue;
+  $margin-xxx-small: $alias-margin-xxx-small;
+  $margin-base: $alias-margin-base;
+  $margin-medium: $alias-margin-medium;
+  $padding-small: $alias-padding-small;
+
+  .cmp-contact-card {
+    @include content-max-width;
+    padding: $alias-padding-xx-large $alias-padding-base $alias-padding-large; //48px 16px 32px
+    display: flex;
+    flex-direction: column;
+
+    @include tablet {
+      padding-left: $alias-padding-medium; // 24px
+      padding-right: $alias-padding-medium; // 24px
+    }
+
+    @include desktop-small {
+      flex-direction: row;
+      align-items: center;
+      padding-left: $alias-padding-large; //32px
+      padding-right: $alias-padding-large; //32px
+      padding-bottom: $alias-padding-xx-large; // 48px;
+    }
+
+    @include desktop-medium {
+      padding-right: $alias-padding-xx-large; //48px;
+      padding-left: 158px;
+    }
+  }
+
+  .cmp-contact-card__container {
+    margin-left: calc($alias-margin-small + $hero-accent-width); // 12px + 4px
+  }
+
+  .cmp-contact-card__bio-link {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .cmp-contact-card__img {
+    width: $hero-img-mobile;
+    height: $hero-img-mobile;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    margin-bottom: $alias-margin-large; // 32px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+
+    @include tablet {
+      width: $hero-img-tablet;
+      height: $hero-img-tablet;
+    }
+
+    @include desktop-small {
+      width: $hero-img-desktop;
+      height: $hero-img-desktop;
+      margin-right: $alias-margin-large; //32px;
+      margin-bottom: 0;
+      margin-left: 0;
+    }
+
+    @include desktop-medium {
+      width: $hero-img-desktop-xl;
+      height: $hero-img-desktop-xl;
+      margin-right: $alias-margin-xx-large; //48px
+    }
+  }
+
+  .cmp-contact-card__name,
+  .cmp-contact-card__job-title,
+  .cmp-contact-card__country {
+    margin: 0;
+  }
+
+  .cmp-contact-card__name {
+    @include typography-heading-two;
+    color: var(--hero-people-title-color);
+    margin-bottom: $alias-margin-x-small; // 8px;
+    position: relative;
+    &:before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      // left is also a relative number
+      left: -16px;
+      top: 0;
+      width: $hero-accent-width;
+      height: $alias-width-xx-large; // 48px;
+      background: var(--hero-people-name-accent);
+      @include desktop-small {
+        height: 56px;
+      }
+    }
+  }
+
+  .cmp-contact-card__job-title,
+  .cmp-contact-card__country {
+    @include typography-heading-six;
+  }
+
+  .cmp-contact-card__job-title {
+    margin-bottom: $alias-width-x-small; // 8px;
+
+    @include desktop-small {
+      max-width: 520px;
+    }
+  }
+
+  .cmp-contact-card__icons-container {
+    margin-top: $alias-margin-medium; // 24px;
+    .cmp-contact-card__icons-list {
+      max-width: 160px;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      padding: 0;
+      margin: 0;
+      &-item a {
+        display: inline-block;
+      }
+    }
+    .cmp-contact-card__material-icon {
+      @include material-icons-filled;
+      font-size: $alias-font-size-base;
+      color: var(--hero-people-icon-color);
+      border: 1px solid var(--hero-people-icon-border-color);
+      border-radius: 50%;
+      padding: 15px;
+      margin-right: $margin-base;
+    }
+
+    [class^="icon-"],
+    [class*=" icon-"] {
+      margin-right: $margin-base;
+      border-color: var(--hero-people-icon-border-color);
+      height: $alias-width-xx-large; // 48px;
+      width: $alias-width-xx-large; // 48px;
+      &:before {
+        color: var(--hero-people-icon-color);
+      }
+    }
+
+    .cmp-contact-card__social-icons-list__item-link {
+      display: inline-block;
+      height: $alias-icon-size-large;
+      vertical-align: middle;
+    }
+  }
+}

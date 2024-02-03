@@ -1,0 +1,89 @@
+{
+  "alias": {
+    "fonts": {
+      "body": {
+        "default-regular": {
+          "font-family": {
+            "value": "{global.fonts.font-family.opensans.regular}",
+            "comment": "{global.fonts.font-family.opensans.regular}"
+          },
+          "letter-spacing": {
+            "value": "{global.fonts.letter-spacing.body}"
+          }
+        },
+        "default-link": {
+          "font-family": {
+            "value": "{global.fonts.font-family.opensans.regular}",
+            "comment": "{global.fonts.font-family.opensans.regular}"
+          },
+          "letter-spacing": {
+            "value": "{global.fonts.letter-spacing.body}"
+          }
+        },
+        "default-semibold": {
+          "font-family": {
+            "value": "{global.fonts.font-family.opensans.semibold}",
+            "comment": "{global.fonts.font-family.opensans.semibold}"
+          },
+          "letter-spacing": {
+            "value": "{global.fonts.letter-spacing.body}"
+          }
+        },
+        "default-bold": {
+          "font-family": {
+            "value": "{global.fonts.font-family.opensans.bold}",
+            "comment": "{global.fonts.font-family.opensans.bold}"
+          },
+          "letter-spacing": {
+            "value": "{global.fonts.letter-spacing.body}"
+          }
+        },
+        "small-regular": {
+          "font-family": {
+            "value": "{global.fonts.font-family.opensans.regular}",
+            "comment": "{global.fonts.font-family.opensans.regular}"
+          },
+          "letter-spacing": {
+            "value": "{global.fonts.letter-spacing.body}"
+          }
+        },
+        "small-semibold": {
+          "font-family": {
+            "value": "{global.fonts.font-family.opensans.semibold}",
+            "comment": "{global.fonts.font-family.opensans.semibold}"
+          },
+          "letter-spacing": {
+            "value": "{global.fonts.letter-spacing.body}"
+          }
+        },
+        "small-bold": {
+          "font-family": {
+            "value": "{global.fonts.font-family.opensans.bold}",
+            "comment": "{global.fonts.font-family.opensans.bold}"
+          },
+          "letter-spacing": {
+            "value": "{global.fonts.letter-spacing.body}"
+          }
+        },
+        "headings-tags": {
+          "font-family": {
+            "value": "{global.fonts.font-family.opensans.semibold}",
+            "comment": "{global.fonts.font-family.opensans.semibold}"
+          },
+          "letter-spacing": {
+            "value": "{global.fonts.letter-spacing.body}"
+          }
+        },
+        "caption": {
+          "font-family": {
+            "value": "{global.fonts.font-family.opensans.semibold}",
+            "comment": "{global.fonts.font-family.opensans.semibold}"
+          },
+          "letter-spacing": {
+            "value": "{global.fonts.letter-spacing.body}"
+          }
+        }
+      }
+    }
+  }
+}

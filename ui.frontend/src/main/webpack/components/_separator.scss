@@ -1,0 +1,28 @@
+$separator-margin: $alias-margin-medium 0;
+$separator-default-color: $global-color-grayscale-black;
+
+$colors: (
+  cobalt-blue-20: $global-color-strokes-cobalt-blue-20-percent,
+  white-20: $global-color-strokes-white-20-percent,
+);
+
+.cmp-separator {
+}
+.cmp-separator__horizontal-rule {
+  height: 1px;
+  border: 0;
+  background-color: $separator-default-color;
+  margin: $separator-margin;
+}
+
+@mixin separator-utils($prefix, $element) {
+  @each $name, $val in $colors {
+    #{$prefix + "-" + $name} {
+      #{$element} {
+        background-color: $val;
+      }
+    }
+  }
+}
+
+@include separator-utils(".separator-color", ".cmp-separator__horizontal-rule");

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Bulk Indexing"
+        sling:resourceType="granite/ui/components/shell/page"
+        consoleId="bulk-indexing">
+        <head jcr:primaryType="nt:unstructured">
+            <clientlibs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/includeclientlibs"
+                categories="[granite.ui.coral.foundation,core.kpmg.admin.configurations.elasticsearch]">
+                <editor/>
+            </clientlibs>
+            <viewport
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/admin/page/viewport"/>
+            <meta
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/meta"
+                content="chrome=1"
+                name="X-UA-Compatible"/>
+        </head>
+        <title
+            jcr:primaryType="nt:unstructured"
+            jcr:title="Bulk Indexing"
+            sling:resourceType="granite/ui/components/shell/title"/>
+        <content
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/container"
+            margin="{Boolean}true">
+            <items jcr:primaryType="nt:unstructured">
+                <columns
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                    margin="{Boolean}true">
+                    <items jcr:primaryType="nt:unstructured">
+                        <column
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                            margin="{Boolean}true">
+                            <items jcr:primaryType="nt:unstructured">
+                                <container
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    margin="{Boolean}true">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <heading
+                                            granite:class="coral-Heading coral-Heading--2"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/heading"
+                                            level="{Long}2"
+                                            text="Bulk Indexing"/>
+                                        <well
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/well"
+                                            margin="{Boolean}true">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <container
+                                                    granite:id="indexingForm"
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form"
+                                                    enctype="multipart/form-data"
+                                                    foundationForm="{Boolean}true"
+                                                    loadingMask="{Boolean}true"
+                                                    margin="{Boolean}true"
+                                                    maximized="{Boolean}true"
+                                                    style="vertical">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <container
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                            margin="{Boolean}true">
+                                                            <items jcr:primaryType="nt:unstructured">
+                                                                <pathField
+                                                                    granite:id="pageToIndex"
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                                    emptyText="Enter a path, e.g. /content/kpmgpublic"
+                                                                    fieldLabel="Choose path to index or delete"
+                                                                    name="./pageToIndex"
+                                                                    required="{Boolean}true"
+                                                                    rootPath="/content/kpmgpublic"/>
+                                                                <pathHidden
+                                                                    granite:id="resourcePath"
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/hidden"
+                                                                    value="${empty requestPathInfo.suffix ? param.item : requestPathInfo.suffix}"/>
+                                                                <charset
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/hidden"
+                                                                    name="_charset_"
+                                                                    value="utf-8"/>
+                                                                <depth
+                                                                    granite:id="depth"
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    jcr:title="Filter by Depth"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                                    fieldLabel="Filter By Depth">
+                                                                    <items jcr:primaryType="nt:unstructured">
+                                                                        <option1
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            text="Include only immediate children"
+                                                                            value="false"/>
+                                                                        <option2
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            text="Include all children"
+                                                                            value="true"/>
+                                                                    </items>
+                                                                </depth>
+                                                                <indexType
+                                                                    granite:id="indexType"
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                                    fieldDescription="Choose Indexing Type"
+                                                                    fieldLabel="Indexing Type"
+                                                                    name="./indexingType">
+                                                                    <items jcr:primaryType="nt:unstructured">
+                                                                        <option1
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            text="Add To Index"
+                                                                            value="add"/>
+                                                                        <option2
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            text="Delete From Index"
+                                                                            value="delete"/>
+                                                                    </items>
+                                                                </indexType>
+                                                            </items>
+                                                        </container>
+                                                        <submission
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                            <items jcr:primaryType="nt:unstructured">
+                                                                <dryRun
+                                                                    granite:id="btnDryRun"
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/button"
+                                                                    text="Dry Run"
+                                                                    type="button"/>
+                                                                <execute
+                                                                    granite:id="btnExecute"
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/button"
+                                                                    text="Execute"
+                                                                    type="button"/>
+                                                            </items>
+                                                        </submission>
+                                                    </items>
+                                                </container>
+                                            </items>
+                                        </well>
+                                    </items>
+                                </container>
+                            </items>
+                        </column>
+                    </items>
+                </columns>
+            </items>
+        </content>
+    </jcr:content>
+</jcr:root>

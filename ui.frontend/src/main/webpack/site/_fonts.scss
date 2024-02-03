@@ -1,0 +1,37 @@
+//Open Sans
+@font-face {
+  font-family: $global-fonts-font-family-opensans-regular;
+  src: url($global-fonts-font-url-opensans-regular-woff2) format("woff2");
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $global-fonts-font-family-opensans-semibold;
+  src: url($global-fonts-font-url-opensans-semibold-woff2) format("woff2");
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $global-fonts-font-family-opensans-bold;
+  src: url($global-fonts-font-url-opensans-bold-woff2) format("woff2");
+  font-style: normal;
+  font-display: swap;
+}
+
+//Open Sans Condensed
+@font-face {
+  font-family: $global-fonts-font-family-opensans-condensed-regular;
+  src: url($global-fonts-font-url-opensans-condensed-regular-woff2)
+    format("woff2");
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $global-fonts-font-family-opensans-condensed-bold;
+  src: url($global-fonts-font-url-opensans-condensed-bold-woff2) format("woff2");
+  font-style: normal;
+  font-display: swap;
+}

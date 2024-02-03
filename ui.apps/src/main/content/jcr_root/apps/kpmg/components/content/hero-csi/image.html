@@ -1,0 +1,11 @@
+<sly data-sly-template.image="${@ hero}">
+	<div data-sly-use.coreimage="com.adobe.cq.wcm.core.components.models.Image" data-cmp-data-layer="${coreimage.data.json}" data-asset-id="${coreimage.uuid}" data-cmp-clickable="${coreimage.data ? true : false}" data-sly-set.imagePath="${properties.imageFromPageImage!='false' ? pageProperties['cq:featuredimage/fileReference'] : properties.fileReference}"
+		data-sly-test="${imagePath}" data-sly-use.imageModel="${'com.kpmg.core.models.Image' 
+		@ componentName='heroevent', imagePath=imagePath,
+		 imageAltText=coreimage.alt}" class="cmp-hero-csi__image-container">
+		<div class="cmp-hero-csi__image">
+			<sly data-sly-use.dm="${'/apps/kpmg/components/htl-templates/image.html'}"
+				data-sly-call="${dm.dmImageTemplate @ imageModel=imageModel}" />
+		</div>
+	</div>
+</sly>

@@ -1,0 +1,11 @@
+{
+  "getDocumentType":"Generic",
+  "getTemplates":[
+    "/conf/kpmg/settings/wcm/templates/page-content",
+    "/conf/kpmg/settings/wcm/templates/page-home",
+	"/conf/kpmg/settings/wcm/templates/page-industries",
+	"/conf/kpmg/settings/wcm/templates/page-insights",
+	"/conf/kpmg/settings/wcm/templates/page-service-landing",
+	"/conf/kpmg/settings/wcm/templates/page-html"
+  ]
+}

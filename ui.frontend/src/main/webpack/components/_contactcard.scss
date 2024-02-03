@@ -1,0 +1,257 @@
+@include light-theme {
+  --contact-card-title-color: #{$global-color-grayscale-black};
+  --contact-card-text-color: #{$global-color-grayscale-black};
+  --contact-card-icon-border-color: #{$alias-color-contactcard-social-icon-border-color};
+  --contact-card-icon-color: #{$alias-color-contactcard-social-icon-color};
+  --contact-card-border: 1px solid transparent;
+  --contact-card-border-radius: 8px;
+  --contant-card-title-link-color: #{$global-color-brand-cobalt-blue};
+  --contact-hover-text-decoration-color: #{$global-color-brand-cobalt-blue};
+  --contact-hover-title--color: #{$global-color-brand-cobalt-blue};
+}
+
+@include dark-theme {
+  --contact-card-title-color: #{$global-color-brand-white};
+  --contact-card-text-color: #{$global-color-brand-white};
+  --contact-card-icon-border-color: #{$alias-color-footer-social-icon-border-color};
+  --contact-card-icon-color: #{$alias-color-footer-social-icon-color};
+  --contact-card-border: 1px solid #{$global-color-strokes-white-25-percent};
+  --contact-card-border-radius: 8px;
+  --contant-card-title-link-color: #{$global-color-brand-white};
+  --contact-hover-text-decoration-color: #{$global-color-brand-white};
+  --contact-hover-title--color: #{$global-color-brand-white};
+}
+
+$default-variation-image-max-size: 80px;
+$square-variation-image-max-size: 160px;
+
+.contactcard {
+  // $title-color: $global-color-brand-kpmg-blue;
+  $margin-xxx-small: $alias-margin-xxx-small;
+  $margin-base: $alias-margin-base;
+  $margin-medium: $alias-margin-medium;
+  $card-margin-mobile: $alias-margin-x-small; // 16px
+  $card-magrin-tablet: $alias-margin-small; // 12px
+  $card-margin-desktop: $alias-margin-medium; // 24px
+  $padding-small: $alias-padding-small;
+  $padding-medium: $alias-padding-medium;
+  $padding-large: $alias-padding-large;
+  $card-padding: $padding-small $padding-small 20px $padding-small;
+  @include container;
+  display: flex;
+  padding: $card-margin-mobile;
+
+  @include tablet {
+    padding: $card-magrin-tablet;
+  }
+
+  @include desktop-small {
+    padding: $card-margin-desktop;
+  }
+  .cmp-contact-card {
+    display: flex;
+    padding: $padding-small;
+    border: var(--contact-card-border);
+    border-radius: var(--contact-card-border-radius);
+    width: 100%;
+  }
+
+  .cmp-contact-card__container {
+    display: inline-block;
+  }
+
+  .cmp-contact-card__bio-link {
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+      text-decoration-color: var(--contact-hover-text-decoration-color);
+
+      .cmp-contact-card__name {
+        color: var(--contact-hover-title--color);
+      }
+    }
+
+    .cmp-contact-card__name {
+      color: var(--contant-card-title-link-color);
+    }
+  }
+
+  .cmp-contact-card__img {
+    max-width: $default-variation-image-max-size;
+    max-height: $default-variation-image-max-size;
+    border: 1px solid transparent;
+    border-radius: 50px;
+    margin-right: 16px;
+  }
+
+  .cmp-contact-card__name,
+  .cmp-contact-card__job-title,
+  .cmp-contact-card__country {
+    margin: 0;
+  }
+
+  .cmp-contact-card__name {
+    @include typography-heading-six-semibold;
+    color: var(--contact-card-title-color);
+    margin-bottom: $margin-xxx-small;
+  }
+
+  .cmp-contact-card__job-title,
+  .cmp-contact-card__country {
+    @include typography-body-small-regular;
+    color: var(--contact-card-text-color);
+    white-space: normal;
+  }
+
+  .cmp-contact-card__icons-container {
+    margin-bottom: 20px;
+    margin-top: $margin-base;
+  }
+
+  .cmp-contact-card__icons-list {
+    list-style: none;
+    display: flex;
+    gap: $margin-base;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+  }
+
+  .cmp-contact-card__material-icon {
+    @include material-icons-filled;
+    color: var(--contact-card-icon-color);
+    border: 1px solid var(--contact-card-icon-border-color);
+    border-radius: 50px;
+    padding: 6px;
+  }
+
+  [class^="icon-"],
+  [class*=" icon-"] {
+    border-color: var(--contact-card-icon-border-color);
+    &:before {
+      color: var(--contact-card-icon-color);
+    }
+  }
+
+  .cmp-contact-card__social-icons-list__item-link {
+    display: inline-block;
+    height: $alias-icon-size-large;
+    vertical-align: middle;
+  }
+
+  @include desktop-small {
+    .cmp-contact-card {
+      padding: $padding-medium;
+    }
+  }
+
+  @include style-variation("contact-card__large") {
+    .cmp-contact-card {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding-bottom: $padding-large;
+    }
+
+    .cmp-contact-card__container {
+      display: block;
+    }
+
+    .cmp-contact-card__img {
+      max-width: $square-variation-image-max-size;
+      max-height: $square-variation-image-max-size;
+      border-radius: 50%;
+      margin-right: 0;
+      margin-bottom: $margin-base;
+    }
+
+    .cmp-contact-card__icons-container {
+      margin-bottom: 0;
+      margin-left: 0;
+      margin-top: $margin-base;
+
+      .cmp-contact-card__icons-list {
+        max-width: 100%;
+        justify-content: center;
+      }
+    }
+
+    @include tablet {
+      .cmp-contact-card {
+        padding-bottom: $padding-small;
+      }
+    }
+
+    @include desktop-small {
+      .cmp-contact-card {
+        padding: $padding-medium;
+      }
+    }
+  }
+
+  @include style-variation("contact-card__image-top") {
+    .cmp-contact-card {
+      flex-direction: column;
+      align-items: start;
+      text-align: left;
+    }
+
+    .cmp-contact-card__icons-container {
+      margin-bottom: 0;
+      margin-left: 0;
+      margin-top: $margin-base;
+    }
+  }
+
+  @include style-variation("utils-background-kpmg-blue") {
+    background-color: transparent;
+
+    .cmp-contact-card {
+      background-color: $global-color-brand-kpmg-blue;
+    }
+  }
+
+  @include style-variation("utils-background-cobalt-blue") {
+    background-color: transparent;
+
+    .cmp-contact-card {
+      background-color: $global-color-brand-cobalt-blue;
+    }
+  }
+
+  @include style-variation("utils-background-grey-100") {
+    background-color: transparent;
+
+    .cmp-contact-card {
+      background-color: $global-color-grayscale-neutrals-100;
+    }
+  }
+
+  @include style-variation("utils-background-white") {
+    background-color: transparent;
+
+    .cmp-contact-card {
+      background-color: $global-color-brand-white;
+    }
+  }
+}
+
+//* COMENTING OUT UNTIL UPDATE OF COLUMN CONTROL
+//
+// @include container-25 {
+//   .contactcard {
+//     .cmp-contact-card {
+//       flex-direction: column;
+//       align-items: center;
+//       text-align: center;
+//     }
+//     .cmp-contact-card__icons-list {
+//       justify-content: center;
+//     }
+//     .cmp-contact-card__img {
+//       max-width: $default-variation-image-max-size !important; // Important is a neccessary evil in this case.
+//     }
+//   }
+// }

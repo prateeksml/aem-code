@@ -1,0 +1,16 @@
+on:
+  push:
+    branches:
+      - sync-test
+jobs:
+  git-sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: git-sync
+        uses: wei/git-sync@v3
+        with:
+          source_repo: "git@github.com:kpmg-interim/KPMG.com.git"
+          source_branch: "$DEVELOP_BRANCH"
+          destination_repo: "https://$CM_USER_NAME:${{ secrets.CM_ACCESS_TOKEN }}@git.cloudmanager.adobe.com/kpmg/kpmg-dot-com/"
+          destination_branch: "$DEVELOP_BRANCH"
+          source_ssh_private_key: ${{ secrets.SOURCE_SSH_PRIVATE_KEY }}

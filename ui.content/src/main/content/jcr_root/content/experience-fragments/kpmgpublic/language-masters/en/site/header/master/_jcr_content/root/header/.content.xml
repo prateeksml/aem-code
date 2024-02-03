@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:lastModified="{Date}2023-06-11T17:21:58.222-05:00"
+    jcr:lastModifiedBy="admin"
+    jcr:primaryType="cq:Component"
+    sling:resourceType="kpmg/components/navigation/header"
+    disablelangselector="false"
+    disablelogin="false"
+    disablelogo="false"
+    disablemainnav="false"
+    disablerpf="false"
+    disablesearch="false"/>

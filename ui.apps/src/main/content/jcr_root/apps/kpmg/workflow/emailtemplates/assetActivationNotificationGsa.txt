@@ -1,0 +1,8 @@
+subject=Asset Activation Notification
+
+message=A new asset ${assetName} of a file type "${assetType}", has been uploaded and activated to the DAM by User "${initiator}" and is available in the following location: \n \
+${hostPrefix}${assetPath}\n \
+
+footer=\n \
+-------------------------------------------------------------------------------------\n \
+This is an automatically generated message. Please do not reply.

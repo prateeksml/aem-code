@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    jcr:primaryType="cq:Template"
+    allowedChildren="/conf/kpmg/settings/wcm/templates/page-month">
+    <jcr:content
+        cq:lastModified="{Date}2023-05-19T11:55:37.001Z"
+        cq:templateType="/conf/kpmg/settings/wcm/template-types/page"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Year Page"
+        allowedChildren="/conf/kpmg/settings/wcm/templates/page-month"
+        status="enabled"/>
+</jcr:root>

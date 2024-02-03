@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    banner="cq5dam-web-974-1218,974,1218|cq5dam-web-1120-684,1120,684|cq5dam-web-696-696,696,696|cq5dam-web-320-320,320,320|cq5dam-web-782-1056,782,1056|cq5dam-web-656-656,656,656|cq5dam-web-598-598,598,598|cq5dam-web-3840-1530,3840,1530|cq5dam-web-1976-878,1976,878|cq5dam-web-720-720,720,720|cq5dam-web-1536-936,1536,936|cq5dam-web-2732-1088,2732,1088"
+    crop_type="crop_smart"
+    preserveCrop="true"
+    swatch="\0"
+    usmAmount="1.75"
+    usmMonochrome="0"
+    usmRadius="0.2"
+    usmThreshold="2"/>

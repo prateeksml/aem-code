@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:isDelivered="{Boolean}true"
+        cq:isTransCreated="{Boolean}true"
+        cq:lastModified="{Date}2023-06-15T19:09:09.587Z"
+        cq:lastModifiedBy="musallam@adobe.com"
+        cq:lastReplicated_publish="{Date}2023-06-01T11:13:30.685Z"
+        cq:lastReplicated_scene7="{Date}2023-06-01T11:13:30.685Z"
+        cq:lastReplicatedBy_publish="tec04532@adobe.com"
+        cq:lastReplicatedBy_scene7="tec04532@adobe.com"
+        cq:lastReplicationAction_publish="Activate"
+        cq:lastReplicationAction_scene7="Activate"
+        cq:lastTranslationUpdate="{Date}2023-06-15T19:09:09.587Z"
+        cq:tags="[]"
+        cq:template="/libs/cq/experience-fragments/components/experiencefragment/template"
+        cq:translationSourcePath="/content/experience-fragments/kpmgpublic/language-masters/en/site/footer"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Footer"
+        jcr:uuid="c811e77b-d856-4e71-bdf1-ef2729b8cc7b"
+        sling:resourceType="cq/experience-fragments/components/experiencefragment"/>
+    <master/>
+</jcr:root>

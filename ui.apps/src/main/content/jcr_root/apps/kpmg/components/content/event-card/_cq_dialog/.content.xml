@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Event Card"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    extraClientlibs="[core.wcm.components.image.v3.editor,core.wcm.components.commons.editor.dialog.pageimagethumbnail.v1]">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs">
+                <items jcr:primaryType="nt:unstructured">
+                    <actions jcr:primaryType="nt:unstructured">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns jcr:primaryType="nt:unstructured">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column jcr:primaryType="nt:unstructured">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <linksNote
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/text"
+                                                    text="Author link to event page in the path browser provided below."/>
+                                            <link
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Link Editor"
+                                                sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                margin="{Boolean}true">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <url
+                                                        granite:class="cmp-link-url"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="cq/gui/components/coral/common/form/pagefield"
+                                                        fieldDescription="Link to a content page, external URL or page anchor."
+                                                        fieldLabel="Link"
+                                                        name="./linkURL"
+                                                        nodeTypes="dam:Asset, nt:file, cq:Page"
+                                                        rootPath="/content"
+                                                        required="{Boolean}true"/>
+                                                </items>
+                                            </link>
+                                            <actions
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:hideResource="{Boolean}true"
+                                                fieldDescription="Allows to link the teaser to multiple destinations. The page linked in the first call to action is used when inheriting the teaser title, description or image."
+                                                fieldLabel="Call-to-actions"/>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </actions>
+                    <text
+                        jcr:primaryType="nt:unstructured"
+                        sling:hideResource="{Boolean}true"/>
+                    <properties
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Event Card Properties"
+                        sling:orderBefore="asset"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <eventitle
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                disabled="{Boolean}true"
+                                                fieldDescription="Event Title fetched from page properties."
+                                                fieldLabel="Event Title"
+                                                required="{Boolean}true"
+                                                name="./eventTitle"/>
+                                            <titleHidden
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/hidden"
+                                                name="./eventTitle">
+                                                <granite:data
+                                                    jcr:primaryType="nt:unstructured"
+                                                    hiddenTitle="eventTitle"/>
+                                            </titleHidden>
+                                            <overridetitle
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                name="./overrideTitle"
+                                                text="Override Title"
+                                                uncheckedValue="false"
+                                                value="true"/>
+                                            <eventdescription
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                disabled="{Boolean}true"
+                                                fieldDescription="Event Description fetched from page properties."
+                                                fieldLabel="Event Description"
+                                                required="{Boolean}true"
+                                                name="./eventDescription"/>
+                                            <descriptionHidden
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/hidden"
+                                                name="./eventDescription">
+                                                <granite:data
+                                                    jcr:primaryType="nt:unstructured"
+                                                    hiddenDescription="eventDescription"/>
+                                            </descriptionHidden>
+                                            <overridedescription
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                name="./overrideDescription"
+                                                text="Override Description"
+                                                uncheckedValue="false"
+                                                value="true"/>
+                                            <eventtime
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Event Time"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <eventstartdate
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/datepicker"
+                                                        disabled="{Boolean}true"
+                                                        displayedFormat="MMMM DD, YYYY hh:mm a"
+                                                        displayTimezoneMessage="{Boolean}true"
+                                                        fieldLabel="Start Time"
+                                                        minDate="today"
+                                                        name="./eventStartTimeAndDate"
+                                                        type="datetime"/>
+                                                    <startdateHidden
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/hidden"
+                                                        name="./eventStartTimeAndDate"/>
+                                                    <eventendtdate
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/datepicker"
+                                                        disabled="{Boolean}true"
+                                                        displayedFormat="MMMM DD, YYYY hh:mm a"
+                                                        displayTimezoneMessage="{Boolean}true"
+                                                        fieldLabel="End Time"
+                                                        minDate="today"
+                                                        name="./eventEndTimeAndDate"
+                                                        type="datetime"
+                                                        validation="coral-date-validation"/>
+                                                    <endateHidden
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/hidden"
+                                                        name="./eventEndTimeAndDate"/>
+                                                    <eventimezone
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        disabled="{Boolean}true"
+                                                        fieldDescription="Event Time Zone fetched from page properties."
+                                                        fieldLabel="Event Time Zone"
+                                                        name="./eventTimeZone"/>
+                                                    <showtime
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                        checked="{Boolean}true"
+                                                        name="./showEventTime"
+                                                        text="Show Event Time"
+                                                        uncheckedValue="false"
+                                                        value="true"/>
+                                                    <showdate
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                            checked="{Boolean}true"
+                                                            name="./showEventDate"
+                                                            text="Show Event Date"
+                                                            uncheckedValue="false"
+                                                            value="true"/>
+                                                    <timzoneHidden
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/hidden"
+                                                        name="./eventTimeZone"/>
+                                                </items>
+                                            </eventtime>
+                                            <evenlocation
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Enter event location."
+                                                fieldLabel="Event Location"
+                                                name="./eventLocation"/>
+                                            <showlocation
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                checked="{Boolean}true"
+                                                name="./showEventLocation"
+                                                text="Show Event Location"
+                                                uncheckedValue="false"
+                                                value="true"/>
+                                            <showbutton
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                checked="{Boolean}true"
+                                                name="./showButton"
+                                                text="Show Button"
+                                                uncheckedValue="false"
+                                                value="true"/>
+                                            <buttonlabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Button Label"
+                                                fieldLabel="Button Label"
+                                                name="./buttonLabel"/>
+                                            <showimage
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                checked="{Boolean}true"
+                                                name="./showImage"
+                                                text="Show Image"
+                                                uncheckedValue="false"
+                                                value="true"/>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </properties>
+                    <indexable
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/include"
+                        path="kpmg/components/utilities/tab_indexable/indexable"/>
+                </items>
+            </tabs>
+            <extraClientlibs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/includeclientlibs"
+                js="kpmg-event-card"/>
+        </items>
+    </content>
+</jcr:root>

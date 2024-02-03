@@ -1,0 +1,5 @@
+/** Hide any editable overlays that are outside the contact card carousel*/
+/* This uses the title property, there was no other property to use for selection that is specific to this component */
+[title="Contact Card Carousel"]{
+  overflow-x: hidden;
+}

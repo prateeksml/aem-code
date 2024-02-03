@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2023-06-05T14:40:43.346-05:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/kpmg/settings/wcm/templates/page-content"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Text"
+        sling:resourceType="kpmg/components/structure/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="kpmg/components/container/container"
+            layout="responsiveGrid">
+            <main
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="kpmg/components/container/main"
+                layout="simple">
+                <section
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="kpmg/components/container/section"
+                    layout="simple">
+                    <title
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="kpmg/components/content/title"/>
+                    <text
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="kpmg/components/content/text"
+                        searchIndexable="false"
+                        text="&lt;h6>Industries&lt;/h6>&#xd;&#xa;&lt;h2>See what our clients have to say&lt;/h2>&#xd;&#xa;&lt;h4>Subheadline Unlike business-only consultancies, our 15,000+ IT&lt;/h4>&#xd;&#xa;&lt;h3>Headline Agenda&lt;/h3>&#xd;&#xa;&lt;h3>Subline for the Agenda&lt;/h3>&#xd;&#xa;&lt;table cellpadding=&quot;1&quot; cellspacing=&quot;0&quot; border=&quot;1&quot;>&#xd;&#xa;&lt;tbody>&lt;tr>&lt;td>08:00&lt;/td>&#xd;&#xa;&lt;td>Arrival and coffee&lt;/td>&#xd;&#xa;&lt;/tr>&lt;tr>&lt;td>08:00&lt;/td>&#xd;&#xa;&lt;td>Arrival and coffee&lt;/td>&#xd;&#xa;&lt;/tr>&lt;tr>&lt;td>08:00&lt;/td>&#xd;&#xa;&lt;td>Arrival and coffee&lt;/td>&#xd;&#xa;&lt;/tr>&lt;tr>&lt;td>08:00&lt;/td>&#xd;&#xa;&lt;td>Arrival and coffee&lt;/td>&#xd;&#xa;&lt;/tr>&lt;tr>&lt;td>08:00&lt;/td>&#xd;&#xa;&lt;td>Arrival and coffee&lt;/td>&#xd;&#xa;&lt;/tr>&lt;/tbody>&lt;/table>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>&lt;a href=&quot;https://kpmg.com&quot;>Link to article&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>&lt;b>KPMG's disciplinary approach and deep, practical industry knowledge help our clients meet their business challenge sand seize new opportunities. We meet clients whereever they are on their paths to change and partner with them to create lasting value in every direction.&lt;/b>&lt;/p>&#xd;&#xa;"
+                        textIsRich="true">
+                        <cq:responsive jcr:primaryType="nt:unstructured"/>
+                    </text>
+                </section>
+                <section_169365262
+                    cq:styleIds="[1685836502714]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="kpmg/components/container/section">
+                    <text_copy
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="kpmg/components/content/text"
+                        searchIndexable="false"
+                        text="&lt;h6>Industries&lt;/h6>&#xd;&#xa;&lt;h2>See what our clients have to say&lt;/h2>&#xd;&#xa;&lt;h4>Subheadline Unlike business-only consultancies, our 15,000+ IT&lt;/h4>&#xd;&#xa;&lt;h3>Headline Agenda&lt;/h3>&#xd;&#xa;&lt;h3>Subline for the Agenda&lt;/h3>&#xd;&#xa;&lt;table cellpadding=&quot;1&quot; cellspacing=&quot;0&quot; border=&quot;1&quot;>&#xd;&#xa;&lt;tbody>&lt;tr>&lt;td>08:00&lt;/td>&#xd;&#xa;&lt;td>Arrival and coffee&lt;/td>&#xd;&#xa;&lt;/tr>&lt;tr>&lt;td>08:00&lt;/td>&#xd;&#xa;&lt;td>Arrival and coffee&lt;/td>&#xd;&#xa;&lt;/tr>&lt;tr>&lt;td>08:00&lt;/td>&#xd;&#xa;&lt;td>Arrival and coffee&lt;/td>&#xd;&#xa;&lt;/tr>&lt;tr>&lt;td>08:00&lt;/td>&#xd;&#xa;&lt;td>Arrival and coffee&lt;/td>&#xd;&#xa;&lt;/tr>&lt;tr>&lt;td>08:00&lt;/td>&#xd;&#xa;&lt;td>Arrival and coffee&lt;/td>&#xd;&#xa;&lt;/tr>&lt;/tbody>&lt;/table>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>&lt;a href=&quot;https://kpmg.com&quot;>Link to article&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>&lt;b>KPMG's disciplinary approach and deep, practical industry knowledge help our clients meet their business challenge sand seize new opportunities. We meet clients whereever they are on their paths to change and partner with them to create lasting value in every direction.&lt;/b>&lt;/p>&#xd;&#xa;"
+                        textIsRich="true">
+                        <cq:responsive jcr:primaryType="nt:unstructured"/>
+                    </text_copy>
+                </section_169365262>
+            </main>
+        </root>
+    </jcr:content>
+</jcr:root>

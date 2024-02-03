@@ -1,0 +1,51 @@
+<div 
+   class="cmp-contact-card"
+   data-sly-use.profile="com.kpmg.core.models.ProfileContentFragment"
+   data-sly-use.imageTemplate="image.html"
+   data-cmp-data-layer="${profile.data.json}">
+   <div class="cmp-contact-card__container">
+      <a data-sly-test.bioPage="${properties.bioPage}" href="${properties.bioPage @ extension = 'html'}">
+         <sly data-sly-call="${imageTemplate.image @ profile=profile}"></sly>
+      </a>
+      <sly data-sly-test.bioPage="${!properties.bioPage}" data-sly-call="${imageTemplate.image @ profile=profile}"></sly>
+   </div>
+   <div class="cmp-contact-card__container">
+      <a data-sly-test.bioPage="${properties.bioPage}" href="${properties.bioPage @ extension = 'html'}"  class="cmp-contact-card__bio-link">
+         <h6 class="cmp-contact-card__name">${profile.title}</h6>
+      </a>
+      <h6 data-sly-test.bioPage="${!properties.bioPage}" class="cmp-contact-card__name">${profile.title}</h6>
+      <p data-sly-test="${profile.jobTitle}" class="cmp-contact-card__job-title">${profile.jobTitle}</p>
+      <p data-sly-test="${profile.memberFirm}" class="cmp-contact-card__country">${profile.memberFirm}</p>
+      <div class="cmp-contact-card__icons-container">
+         <ul class="cmp-contact-card__icons-list">
+            <li class="cmp-contact-card__icons-list-item" data-sly-test.email="${profile.email}">
+               <a data-first-name="${profile.firstName}"
+                  data-last-name="${profile.lastName}"
+                  triggers-dialog-modal="true"
+                  href="mailto:${profile.email}"
+                  data-cmp-data-layer="${profile.emailData.json}"
+                  data-cmp-clickable="true">
+                  <span class="cmp-contact-card__material-icon">mail</span>
+               </a>
+            </li>
+            <li class="cmp-contact-card__icons-list-item" data-sly-test.phoneNumber="${profile.phoneNumber}">
+               <a href="tel:${profile.phoneNumber}"
+                  data-cmp-data-layer="${profile.phoneData.json}"
+                  data-cmp-clickable="true">
+                  <span class="cmp-contact-card__material-icon">call</span>
+               </a>
+            </li>
+            <li data-sly-repeat.social="${profile.socialLinks}" class="cmp-contact-card__icons-list-item">
+               <a 
+                  data-sly-test="${social.link}"
+                  target="_blank"
+                  href="${social.link}"
+                  data-cmp-data-layer="${social.data.json}"
+                  data-cmp-clickable="${social.data ? true : false}">
+                  <span class="icon-${social.hostName}"></span>
+               </a>
+            </li>
+         </ul>
+      </div>
+   </div>
+</div>

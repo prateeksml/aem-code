@@ -1,0 +1,39 @@
+.text {
+  .cmp-text {
+    @include typography-body-default-regular;
+    @include text-color;
+    b {
+      @include typography-body-default-bold;
+    }
+    h1 {
+      @include typography-heading-one;
+    }
+    h2 {
+      @include typography-heading-two;
+    }
+    h3 {
+      @include typography-heading-three;
+    }
+    h4 {
+      @include typography-heading-four;
+    }
+    h5 {
+      @include typography-heading-five;
+    }
+    h6 {
+      @include typography-heading-six;
+    }
+    a {
+      @include typography-body-default-link;
+    }
+    figcaption {
+      @include typography-body-caption;
+    }
+    blockquote,
+    li,
+    td,
+    th {
+      @include text-color;
+    }
+  }
+}

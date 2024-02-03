@@ -1,0 +1,39 @@
+{
+  "jcr:primaryType": "cq:Page",
+  "jcr:createdBy": "admin",
+  "jcr:created": "Thu Jun 01 2023 14:29:19 GMT+0530",
+  "jcr:content": {
+    "jcr:primaryType": "cq:PageContent",
+    "jcr:createdBy": "admin",
+    "jcr:title": "Content Page",
+    "cq:template": "/conf/kpmg/settings/wcm/templates/page-content",
+    "documentId": "9efa391f-2cfe-4cac-bb80-a41a98f9602e",
+    "jcr:created": "Thu Jun 01 2023 14:29:19 GMT+0530",
+    "cq:lastModified": "Thu Jun 01 2023 14:29:19 GMT+0530",
+    "sling:resourceType": "kpmg/components/structure/page",
+    "cq:lastModifiedBy": "admin",
+    "root": {
+      "jcr:primaryType": "nt:unstructured",
+      "layout": "responsiveGrid",
+      "sling:resourceType": "kpmg/components/container/container",
+      "container": {
+        "jcr:primaryType": "nt:unstructured",
+        "layout": "responsiveGrid",
+        "sling:resourceType": "kpmg/components/container/container",
+        "title": {
+          "jcr:primaryType": "nt:unstructured",
+          "sling:resourceType": "kpmg/components/content/title"
+        },
+        "container": {
+          "jcr:primaryType": "nt:unstructured",
+          "layout": "responsiveGrid",
+          "sling:resourceType": "kpmg/components/container/container"
+        }
+      }
+    },
+    "cq:featuredimage": {
+      "jcr:primaryType": "nt:unstructured",
+      "fileReference": "/content/dam/kpmgsites/logo.svg"
+    }
+  }
+}

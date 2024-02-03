@@ -1,0 +1,34 @@
+<div data-sly-use.logo="com.adobe.cq.wcm.core.components.models.Image"
+     class="cmp-logo${!wcmmode.disabled ? ' cq-dd-image' : ''}"
+     id="${logo.id}"
+     data-cmp-is="image"
+     data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-test="${logo.src}"
+     data-cmp-widths="${logo.widths}"
+     data-cmp-dmimage="${logo.dmImage}"
+     data-cmp-smartcroprendition="${logo.smartCropRendition}"
+     data-cmp-src="${logo.srcUriTemplate ? logo.srcUriTemplate : logo.src}"
+     data-asset-id="${logo.uuid}"
+     data-cmp-filereference="${logo.fileReference}"
+     data-cmp-data-layer="${logo.data.json}"
+     data-cmp-hook-image="imageV3"
+     itemscope itemtype="http://schema.org/ImageObject">
+     <div class="cmp-logo__inner">
+          <a data-sly-unwrap="${!logo.imageLink.valid}"
+               class="cmp-logo__link"
+               data-sly-attribute="${logo.imageLink.htmlAttributes}"
+               data-cmp-clickable="${logo.data ? true : false}">
+               <img src="${logo.src}"
+                    srcset="${logo.srcset}"
+                    loading="${logo.lazyEnabled ? 'lazy' : ''}"
+                    class="cmp-logo__image"
+                    itemprop="contentUrl"
+                    width="${logo.width}" height="${logo.height}"
+                    sizes="${logo.sizes}"
+                    alt="${logo.alt || true}" title="${logo.displayPopupTitle && logo.title}"/>
+          </a>
+     </div>
+    <span class="cmp-logo__title" itemprop="caption" data-sly-test="${!logo.displayPopupTitle && logo.title}">${logo.title}</span>
+    <meta itemprop="caption" content="${logo.title}" data-sly-test="${logo.displayPopupTitle && logo.title}">
+</div>
+<sly data-sly-call="${templates.placeholder @ isEmpty = !logo.src, classAppend = 'cmp-logo cq-dd-image'}"></sly>

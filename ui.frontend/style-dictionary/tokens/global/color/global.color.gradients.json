@@ -1,0 +1,17 @@
+{
+  "global": {
+    "color": {
+      "gradients": {
+        "001": {
+          "value": "linear-gradient(225deg, #1E49E2 0%, #7213EB 100%)"
+        },
+        "002": {
+          "value": "linear-gradient(225deg, #ACE9FF 0%, #00B8F6 100%)"
+        },
+        "003": {
+          "value": "linear-gradient(225deg, #FD339C 0%, #7213EB 100%)"
+        }
+      }
+    }
+  }
+}

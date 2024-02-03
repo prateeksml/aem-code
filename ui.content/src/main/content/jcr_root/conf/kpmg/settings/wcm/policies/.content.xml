@@ -1,0 +1,2549 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:mixinTypes="[rep:AccessControllable]"
+    jcr:primaryType="cq:Page">
+    <rep:policy/>
+    <kpmg jcr:primaryType="nt:unstructured">
+        <components jcr:primaryType="nt:unstructured">
+            <content jcr:primaryType="nt:unstructured">
+                <carousel jcr:primaryType="nt:unstructured">
+                    <policy_1688047333712
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Carousel Policy"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        autopauseDisabled="false"
+                        autoplay="false"
+                        controlsPrepended="false"
+                        delay="5000">
+                        <jcr:content
+                            jcr:mixinTypes="[]"
+                            jcr:primaryType="nt:unstructured"/>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <item0
+                                cq:styleGroupLabel="Background"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="utils-background-kpmg-blue dark-theme"
+                                        cq:styleId="1688047355530"
+                                        cq:styleLabel="Dark Theme/KPMG Blue"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item0>
+                        </cq:styleGroups>
+                    </policy_1688047333712>
+                </carousel>
+                <form jcr:primaryType="nt:unstructured">
+                    <container jcr:primaryType="nt:unstructured">
+                        <policy_159803069738700
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Digital-form-policies"
+                            sling:resourceType="wcm/core/components/policy/policy"
+                            components="[/apps/kpmg/components/container/container,/apps/kpmg/components/content/fileupload,/apps/kpmg/components/content/privacy,/apps/kpmg/components/content/text,/apps/kpmg/components/content/title,/apps/kpmg/components/content/form/button,/apps/kpmg/components/content/form/hidden,/apps/kpmg/components/content/form/options,/apps/kpmg/components/content/form/text]">
+                            <jcr:content
+                                jcr:mixinTypes="[]"
+                                jcr:primaryType="nt:unstructured"/>
+                            <cq:styleGroups jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleGroupLabel="Widths"
+                                    cq:styleGroupMultiple="true"
+                                    jcr:primaryType="nt:unstructured">
+                                    <cq:styles jcr:primaryType="nt:unstructured">
+                                        <item0
+                                            cq:styleClasses="margin-left"
+                                            cq:styleId="1689847725183"
+                                            cq:styleLabel="Left Gap-Margin"
+                                            jcr:primaryType="nt:unstructured"/>
+                                        <item1
+                                            cq:styleClasses="margin-right"
+                                            cq:styleId="1689847730293"
+                                            cq:styleLabel="Right Gap-Margin"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </cq:styles>
+                                </item0>
+                            </cq:styleGroups>
+                        </policy_159803069738700>
+                    </container>
+                    <text jcr:primaryType="nt:unstructured">
+                        <policy_1689847547576
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="KPMG Forms"
+                            sling:resourceType="wcm/core/components/policy/policy">
+                            <jcr:content
+                                jcr:mixinTypes="[]"
+                                jcr:primaryType="nt:unstructured"/>
+                            <cq:styleGroups jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleGroupLabel="Width"
+                                    cq:styleGroupMultiple="true"
+                                    jcr:primaryType="nt:unstructured">
+                                    <cq:styles jcr:primaryType="nt:unstructured">
+                                        <item0
+                                            cq:styleClasses="margin-left"
+                                            cq:styleId="1689847578281"
+                                            cq:styleLabel="Left Gap-Margin"
+                                            jcr:primaryType="nt:unstructured"/>
+                                        <item1
+                                            cq:styleClasses="margin-right"
+                                            cq:styleId="1689847605715"
+                                            cq:styleLabel="Right Gap-Margin"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </cq:styles>
+                                </item0>
+                            </cq:styleGroups>
+                        </policy_1689847547576>
+                    </text>
+                    <options jcr:primaryType="nt:unstructured">
+                        <policy_1689847636682
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="KPMG Forms"
+                            sling:resourceType="wcm/core/components/policy/policy">
+                            <jcr:content
+                                jcr:mixinTypes="[]"
+                                jcr:primaryType="nt:unstructured"/>
+                            <cq:styleGroups jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleGroupLabel="Widths"
+                                    cq:styleGroupMultiple="true"
+                                    jcr:primaryType="nt:unstructured">
+                                    <cq:styles jcr:primaryType="nt:unstructured">
+                                        <item0
+                                            cq:styleClasses="margin-left"
+                                            cq:styleId="1689847658112"
+                                            cq:styleLabel="Left Gap-Margin"
+                                            jcr:primaryType="nt:unstructured"/>
+                                        <item1
+                                            cq:styleClasses="margin-right"
+                                            cq:styleId="1689847659284"
+                                            cq:styleLabel="Right Gap-Margin"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </cq:styles>
+                                </item0>
+                            </cq:styleGroups>
+                        </policy_1689847636682>
+                    </options>
+                    <button jcr:primaryType="nt:unstructured">
+                        <policy_1689847678051
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="KPMG Forms"
+                            sling:resourceType="wcm/core/components/policy/policy">
+                            <jcr:content
+                                jcr:mixinTypes="[]"
+                                jcr:primaryType="nt:unstructured"/>
+                            <cq:styleGroups jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleGroupLabel="Widths"
+                                    cq:styleGroupMultiple="true"
+                                    jcr:primaryType="nt:unstructured">
+                                    <cq:styles jcr:primaryType="nt:unstructured">
+                                        <item0
+                                            cq:styleClasses="margin-left"
+                                            cq:styleId="1689847689514"
+                                            cq:styleLabel="Left Gap-Margin"
+                                            jcr:primaryType="nt:unstructured"/>
+                                        <item1
+                                            cq:styleClasses="margin-right"
+                                            cq:styleId="1689847692742"
+                                            cq:styleLabel="Right Gap-Margin"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </cq:styles>
+                                </item0>
+                            </cq:styleGroups>
+                        </policy_1689847678051>
+                    </button>
+                </form>
+                <contact-carousel jcr:primaryType="nt:unstructured">
+                    <policy_1687909087374
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Contact Carousel Policy"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        autopauseDisabled="false"
+                        autoplay="false"
+                        components="/apps/kpmg/components/content/contactcard"
+                        controlsPrepended="false"
+                        delay="5000">
+                        <jcr:content
+                            jcr:mixinTypes="[]"
+                            jcr:primaryType="nt:unstructured"/>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <item0
+                                cq:styleGroupLabel="Background"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="utils-background-kpmg-blue dark-theme"
+                                        cq:styleId="1688175502858"
+                                        cq:styleLabel="KPMG Blue"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="utils-background-cobalt-blue dark-theme"
+                                        cq:styleId="1688175513487"
+                                        cq:styleLabel="Cobalt Blue"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item2
+                                        cq:styleClasses="utils-background-grey-100"
+                                        cq:styleId="1688175532186"
+                                        cq:styleLabel="Grey 100"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item3
+                                        cq:styleClasses="utils-background-white"
+                                        cq:styleId="1688175540055"
+                                        cq:styleLabel="White"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item0>
+                        </cq:styleGroups>
+                    </policy_1687909087374>
+                </contact-carousel>
+                <accordion jcr:primaryType="nt:unstructured">
+                    <policy_1683521372666
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Accordion Policy"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        allowedHeadingElements="[h2,h3,h4,h5,h6]"
+                        headingElement="h3">
+                        <jcr:content
+                            jcr:mixinTypes="[]"
+                            jcr:primaryType="nt:unstructured"/>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <item0
+                                cq:styleGroupLabel="Accordion theme"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="dark-theme"
+                                        cq:styleId="1683521391505"
+                                        cq:styleLabel="Dark theme"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item0>
+                        </cq:styleGroups>
+                    </policy_1683521372666>
+                </accordion>
+                <standardteaser jcr:primaryType="nt:unstructured">
+                    <policy_1683302799112
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Standard Teaser Policy"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        allowedHeadingElements="[h1,h2,h3,h4,h5,h6]"
+                        enableDmFeatures="true"
+                        showTitleType="false"
+                        titleType="h2">
+                        <jcr:content
+                            jcr:mixinTypes="[]"
+                            jcr:primaryType="nt:unstructured"/>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <item0
+                                cq:styleGroupLabel="Background"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="utils-background-kpmg-blue dark-theme"
+                                        cq:styleId="1683302811374"
+                                        cq:styleLabel="Dark Theme/KPMG Blue"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="utils-background-cobalt-blue dark-theme"
+                                        cq:styleId="1683302820748"
+                                        cq:styleLabel="Cobalt Blue"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item2
+                                        cq:styleClasses="utils-background-grey-100"
+                                        cq:styleId="1683302825053"
+                                        cq:styleLabel="Grey 100"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item3
+                                        cq:styleClasses="utils-background-white light-theme"
+                                        cq:styleId="1687849052214"
+                                        cq:styleLabel="White"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item0>
+                            <item1
+                                cq:styleGroupLabel="Layout"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="cmp-teaser--image-left"
+                                        cq:styleId="1683302831007"
+                                        cq:styleLabel="Image Left"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item1>
+                            <item2
+                                cq:styleGroupLabel="Bleed"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="utils-bleed-top"
+                                        cq:styleId="1683302843374"
+                                        cq:styleLabel="Bleed Top"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="utils-bleed-bottom"
+                                        cq:styleId="1683302918860"
+                                        cq:styleLabel="Bleed Bottom"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item2>
+                            <item3
+                                cq:styleGroupLabel="Bleed Color"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="utils-bleed-color-kpmg-blue"
+                                        cq:styleId="1683302942478"
+                                        cq:styleLabel="KPMG Blue"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="utils-bleed-color-cobalt-blue"
+                                        cq:styleId="1683302982544"
+                                        cq:styleLabel="Cobalt Blue"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item2
+                                        cq:styleClasses="utils-bleed-color-grey-100"
+                                        cq:styleId="1683302993663"
+                                        cq:styleLabel="Grey 100"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item3
+                                        cq:styleClasses="utils-bleed-color-white"
+                                        cq:styleId="1683303006283"
+                                        cq:styleLabel="White"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item3>
+                        </cq:styleGroups>
+                    </policy_1683302799112>
+                </standardteaser>
+                <textlist jcr:primaryType="nt:unstructured">
+                    <policy_1683225299012
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Text List"
+                        sling:resourceType="wcm/core/components/policy/policy">
+                        <jcr:content
+                            jcr:mixinTypes="[]"
+                            jcr:primaryType="nt:unstructured"/>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <item0
+                                cq:styleGroupLabel="Variant"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="cmp-text-list--icon"
+                                        cq:styleId="1683225304882"
+                                        cq:styleLabel="Icon List"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="cmp-text-list--numbers-left"
+                                        cq:styleId="1683226431477"
+                                        cq:styleLabel="Numberd List - Left"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item0>
+                            <item1
+                                cq:styleGroupLabel="Background"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="utils-background-kpmg-blue dark-theme"
+                                        cq:styleId="1683729613622"
+                                        cq:styleLabel="KPMG Blue"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item1>
+                        </cq:styleGroups>
+                    </policy_1683225299012>
+                </textlist>
+                <button jcr:primaryType="nt:unstructured">
+                    <policy_1681240725381
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Button Policy"
+                        sling:resourceType="wcm/core/components/policy/policy">
+                        <jcr:content
+                            jcr:mixinTypes="[]"
+                            jcr:primaryType="nt:unstructured"/>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <item0
+                                cq:styleGroupLabel="Variation"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="cmp-button--primary"
+                                        cq:styleId="1681328202785"
+                                        cq:styleLabel="Primary"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="cmp-button--secondary"
+                                        cq:styleId="1681240731653"
+                                        cq:styleLabel="Secondary"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item2
+                                        cq:styleClasses="cmp-button--tertiary"
+                                        cq:styleId="1681240737516"
+                                        cq:styleLabel="Tertiary"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item0>
+                            <item1
+                                cq:styleGroupLabel="Width"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleId="1681328195001"
+                                        cq:styleLabel="Full Width"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="cmp-button--content-width"
+                                        cq:styleId="1681328200520"
+                                        cq:styleLabel="Content Width"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item2
+                                        cq:styleClasses="cmp-button--standard-width "
+                                        cq:styleId="1681328223694"
+                                        cq:styleLabel="Standard Width"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item1>
+                            <item2
+                                cq:styleGroupLabel="Theme"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="light-theme"
+                                        cq:styleId="1683298124604"
+                                        cq:styleLabel="Light Theme"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="dark-theme"
+                                        cq:styleId="1683298130337"
+                                        cq:styleLabel="Dark Theme"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item2>
+                            <item3
+                                cq:styleGroupLabel="Vertical Margin"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="utils-margin-vertical--medium"
+                                        cq:styleId="1683298147379"
+                                        cq:styleLabel="Medium"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item3>
+                        </cq:styleGroups>
+                    </policy_1681240725381>
+                </button>
+                <text jcr:primaryType="nt:unstructured">
+                    <policy_1688731157372
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Text Policy"
+                        sling:resourceType="wcm/core/components/policy/policy">
+                        <jcr:content
+                            jcr:mixinTypes="[]"
+                            jcr:primaryType="nt:unstructured"/>
+                        <rtePlugins jcr:primaryType="nt:unstructured">
+                            <paraformat
+                                jcr:primaryType="nt:unstructured"
+                                features="*">
+                                <formats
+                                    jcr:primaryType="nt:unstructured"
+                                    override="true">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        description="Paragraph"
+                                        tag="p"/>
+                                    <item1
+                                        jcr:primaryType="nt:unstructured"
+                                        description="Preformatted"
+                                        tag="pre"/>
+                                    <item2
+                                        jcr:primaryType="nt:unstructured"
+                                        description="Quote"
+                                        tag="blockquote"/>
+                                    <item3
+                                        jcr:primaryType="nt:unstructured"
+                                        description="Heading 2"
+                                        tag="h2"/>
+                                    <item4
+                                        jcr:primaryType="nt:unstructured"
+                                        description="Heading 3"
+                                        tag="h3"/>
+                                    <item5
+                                        jcr:primaryType="nt:unstructured"
+                                        description="Heading 4"
+                                        tag="h4"/>
+                                    <item6
+                                        jcr:primaryType="nt:unstructured"
+                                        description="Heading 5"
+                                        tag="h5"/>
+                                    <item7
+                                        jcr:primaryType="nt:unstructured"
+                                        description="Heading 6"
+                                        tag="h6"/>
+                                </formats>
+                            </paraformat>
+                            <misctools
+                                jcr:primaryType="nt:unstructured"
+                                features="specialchars">
+                                <specialCharsConfig jcr:primaryType="nt:unstructured">
+                                    <chars
+                                        jcr:primaryType="nt:unstructured"
+                                        override="true">
+                                        <item0
+                                            jcr:primaryType="nt:unstructured"
+                                            entity="&amp;copy;"
+                                            name="copyright"/>
+                                        <item1
+                                            jcr:primaryType="nt:unstructured"
+                                            entity="&amp;euro;"
+                                            name="euro"/>
+                                        <item2
+                                            jcr:primaryType="nt:unstructured"
+                                            entity="&amp;reg;"
+                                            name="registered"/>
+                                        <item3
+                                            jcr:primaryType="nt:unstructured"
+                                            entity="&amp;trade;"
+                                            name="trademark"/>
+                                    </chars>
+                                </specialCharsConfig>
+                            </misctools>
+                            <edit
+                                jcr:primaryType="nt:unstructured"
+                                features="paste-plaintext,paste-wordhtml"/>
+                            <format
+                                jcr:primaryType="nt:unstructured"
+                                features="bold,italic,underline"/>
+                            <findreplace
+                                jcr:primaryType="nt:unstructured"
+                                features="-"/>
+                            <image
+                                jcr:primaryType="nt:unstructured"
+                                features="-"/>
+                            <lists
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                            <table
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                            <justify
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                            <links
+                                jcr:primaryType="nt:unstructured"
+                                features="modifylink,unlink,anchor"/>
+                            <subsuperscript
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                            <undo
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                            <spellcheck
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                        </rtePlugins>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <item0
+                                cq:styleGroupLabel="Text theme"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="dark-theme"
+                                        cq:styleId="1688731959532"
+                                        cq:styleLabel="Dark theme"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item0>
+                            <item1
+                                cq:styleGroupLabel="Background"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="utils-background-kpmg-blue dark-theme"
+                                        cq:styleId="1688731998705"
+                                        cq:styleLabel="KPMG Blue"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="utils-background-cobalt-blue  dark-theme"
+                                        cq:styleId="1688732011930"
+                                        cq:styleLabel="Cobalt Blue"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item2
+                                        cq:styleClasses="utils-background-grey-100 light-theme"
+                                        cq:styleId="1688732024457"
+                                        cq:styleLabel="Grey"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item3
+                                        cq:styleClasses="utils-background-white light-theme"
+                                        cq:styleId="1688732037098"
+                                        cq:styleLabel="White"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item1>
+                            <item2
+                                cq:styleGroupLabel="Margin"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="utils-margin--small"
+                                        cq:styleId="1688732064660"
+                                        cq:styleLabel="Small"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item2>
+                        </cq:styleGroups>
+                    </policy_1688731157372>
+                    <policy_641562756958017
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Content Text"
+                        sling:resourceType="wcm/core/components/policy/policy">
+                        <jcr:content
+                            jcr:mixinTypes="[]"
+                            jcr:primaryType="nt:unstructured"/>
+                        <rtePlugins jcr:primaryType="nt:unstructured">
+                            <paraformat
+                                jcr:primaryType="nt:unstructured"
+                                features="*">
+                                <formats
+                                    jcr:primaryType="nt:unstructured"
+                                    override="true">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        description="Paragraph"
+                                        tag="p"/>
+                                    <item1
+                                        jcr:primaryType="nt:unstructured"
+                                        description="Quote"
+                                        tag="blockquote"/>
+                                    <item2
+                                        jcr:primaryType="nt:unstructured"
+                                        description="Preformatted"
+                                        tag="pre"/>
+                                    <item4
+                                        jcr:primaryType="nt:unstructured"
+                                        description="h2"
+                                        tag="h2"/>
+                                    <item5
+                                        jcr:primaryType="nt:unstructured"
+                                        description="h3"
+                                        tag="h3"/>
+                                    <item6
+                                        jcr:primaryType="nt:unstructured"
+                                        description="h4"
+                                        tag="h4"/>
+                                    <item7
+                                        jcr:primaryType="nt:unstructured"
+                                        description="h5"
+                                        tag="h5"/>
+                                    <item8
+                                        jcr:primaryType="nt:unstructured"
+                                        description="h6"
+                                        tag="h6"/>
+                                </formats>
+                            </paraformat>
+                            <misctools
+                                jcr:primaryType="nt:unstructured"
+                                features="specialchars">
+                                <specialCharsConfig jcr:primaryType="nt:unstructured">
+                                    <chars
+                                        jcr:primaryType="nt:unstructured"
+                                        override="true">
+                                        <item0
+                                            jcr:primaryType="nt:unstructured"
+                                            entity="&amp;copy;"
+                                            name="copyright"/>
+                                        <item1
+                                            jcr:primaryType="nt:unstructured"
+                                            entity="&amp;euro;"
+                                            name="euro"/>
+                                        <item2
+                                            jcr:primaryType="nt:unstructured"
+                                            entity="&amp;reg;"
+                                            name="registered"/>
+                                        <item3
+                                            jcr:primaryType="nt:unstructured"
+                                            entity="&amp;trade;"
+                                            name="trademark"/>
+                                    </chars>
+                                </specialCharsConfig>
+                            </misctools>
+                            <edit
+                                jcr:primaryType="nt:unstructured"
+                                features="paste-plaintext,paste-wordhtml"/>
+                            <findreplace
+                                jcr:primaryType="nt:unstructured"
+                                features="-"/>
+                            <undo
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                            <spellcheck
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                            <image
+                                jcr:primaryType="nt:unstructured"
+                                features="-"/>
+                            <table
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                            <lists
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                            <justify
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                            <format
+                                jcr:primaryType="nt:unstructured"
+                                features="bold,italic,underline"/>
+                            <links
+                                jcr:primaryType="nt:unstructured"
+                                features="modifylink,unlink,anchor"/>
+                            <subsuperscript
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                        </rtePlugins>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <item0
+                                cq:styleGroupLabel="Text theme"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="dark-theme"
+                                        cq:styleId="1682694616681"
+                                        cq:styleLabel="Dark theme"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item0>
+                        </cq:styleGroups>
+                    </policy_641562756958017>
+                </text>
+                <title jcr:primaryType="nt:unstructured">
+                    <policy_641475696923109
+                        jcr:description="Allows only H1 and disallows links for the main page title."
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Page Title"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        allowedTypes="h1"
+                        linkDisabled="true"
+                        type="h1">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy_641475696923109>
+                    <policy_641528232375303
+                        jcr:description="Allows all sizes, but not H1, which is reserved for the main page title."
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Title Policy"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        allowedTypes="[h1,h2,h3,h4,h5,h6]"
+                        linkDisabled="true"
+                        type="h2">
+                        <jcr:content
+                            jcr:mixinTypes="[]"
+                            jcr:primaryType="nt:unstructured"/>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <item0
+                                cq:styleGroupLabel="Width"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="utils-narrow-width"
+                                        cq:styleId="1682543296719"
+                                        cq:styleLabel="Narrow"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item0>
+                            <item1
+                                cq:styleGroupLabel="Padding Horizontal"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="utils-padding-horizontal--10x-large"
+                                        cq:styleId="1690264247924"
+                                        cq:styleLabel="Padding Horizontal 10x large (160px)"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item1>
+                        </cq:styleGroups>
+                    </policy_641528232375303>
+                </title>
+                <topicteaser jcr:primaryType="nt:unstructured">
+                    <policy_1683742639531
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Topic Teaser Policy"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        allowedHeadingElements="[h1,h2,h3,h4,h5,h6]"
+                        enableDmFeatures="true"
+                        showTitleType="false"
+                        titleType="h2">
+                        <jcr:content
+                            jcr:mixinTypes="[]"
+                            jcr:primaryType="nt:unstructured"/>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <item0
+                                cq:styleGroupLabel="Background"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="utils-background-kpmg-blue dark-theme"
+                                        cq:styleId="1683742648336"
+                                        cq:styleLabel="Dark Theme/KPMG Blue"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="utils-background-cobalt-blue dark-theme"
+                                        cq:styleId="1683742658738"
+                                        cq:styleLabel="Cobalt Blue"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item2
+                                        cq:styleClasses="utils-background-grey-100 light-theme"
+                                        cq:styleId="1683742669938"
+                                        cq:styleLabel="Grey 100"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item0>
+                            <item1
+                                cq:styleGroupLabel="Teaser Height"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="topicteaser-25"
+                                        cq:styleId="1683747193351"
+                                        cq:styleLabel="Min Height Small"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="topicteaser-33"
+                                        cq:styleId="1683747212618"
+                                        cq:styleLabel="Min Height Medium"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item2
+                                        cq:styleClasses="topicteaser-50"
+                                        cq:styleId="1683747219179"
+                                        cq:styleLabel="Min Height Large"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item1>
+                        </cq:styleGroups>
+                    </policy_1683742639531>
+                </topicteaser>
+                <sectionheader jcr:primaryType="nt:unstructured">
+                    <policy_1684349555923
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Section Header Policy"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        allowedTypes="[h2]"
+                        linkDisabled="true"
+                        type="h2">
+                        <jcr:content
+                            jcr:mixinTypes="[]"
+                            jcr:primaryType="nt:unstructured"/>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <item0
+                                cq:styleGroupLabel="Background"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="utils-background-kpmg-blue dark-theme"
+                                        cq:styleId="1684364851270"
+                                        cq:styleLabel="Dark Theme/KPMG Blue"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="utils-background-cobalt-blue dark-theme"
+                                        cq:styleId="1684364860841"
+                                        cq:styleLabel="Cobalt Blue"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item2
+                                        cq:styleClasses="utils-background-grey-100 light-theme"
+                                        cq:styleId="1684364864862"
+                                        cq:styleLabel="Grey 100"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item0>
+                        </cq:styleGroups>
+                    </policy_1684349555923>
+                </sectionheader>
+                <cardteaser jcr:primaryType="nt:unstructured">
+                    <policy_1684753563589
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Card Teaser Policy"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        allowedHeadingElements="[h2,h3,h4,h5,h6]"
+                        pretitleHidden="true"
+                        showTitleType="false"
+                        titleType="h3">
+                        <jcr:content
+                            jcr:mixinTypes="[]"
+                            jcr:primaryType="nt:unstructured"/>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <item0
+                                cq:styleGroupLabel="Text theme"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="dark-theme"
+                                        cq:styleId="1684753877049"
+                                        cq:styleLabel="Dark theme"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item0>
+                            <item1
+                                cq:styleGroupLabel="Background"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="utils-background-kpmg-blue dark-theme"
+                                        cq:styleId="1684753956574"
+                                        cq:styleLabel="KPMG blue"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="utils-background-white light-theme"
+                                        cq:styleId="1684753974164"
+                                        cq:styleLabel="White"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item1>
+                        </cq:styleGroups>
+                    </policy_1684753563589>
+                </cardteaser>
+                <separator jcr:primaryType="nt:unstructured">
+                    <policy_1685094524656
+                        cq:styleDefaultClasses="separator-color-cobalt-blue-20"
+                        jcr:lastModified="{Date}2023-09-08T14:21:55.886-04:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Separator policy"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        isDecorative="false">
+                        <jcr:content
+                            jcr:mixinTypes="[]"
+                            jcr:primaryType="nt:unstructured"/>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <item0
+                                cq:styleGroupLabel="Separator colors"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="separator-color-cobalt-blue-20"
+                                        cq:styleId="1691775747613"
+                                        cq:styleLabel="Light theme"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="separator-color-white-20"
+                                        cq:styleId="1691775748540"
+                                        cq:styleLabel="Dark theme"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item0>
+                        </cq:styleGroups>
+                    </policy_1685094524656>
+                </separator>
+                <download jcr:primaryType="nt:unstructured">
+                    <policy_1686336018065
+                        cq:styleDefaultClasses="utils-background-grey-100"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Download"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        allowUpload="false"
+                        displayFilename="true"
+                        displayFormat="true"
+                        displaySize="true">
+                        <jcr:content
+                            jcr:mixinTypes="[]"
+                            jcr:primaryType="nt:unstructured"/>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <item0
+                                cq:styleGroupLabel="Theme"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="utils-background-grey-100"
+                                        cq:styleId="1686336050484"
+                                        cq:styleLabel="Light theme"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="dark-theme utils-background-kpmg-blue"
+                                        cq:styleId="1686336038141"
+                                        cq:styleLabel="Dark theme"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item0>
+                        </cq:styleGroups>
+                    </policy_1686336018065>
+                </download>
+                <contactcard jcr:primaryType="nt:unstructured">
+                    <policy_1686601619544
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Contact Card Policy"
+                        sling:resourceType="wcm/core/components/policy/policy">
+                        <jcr:content
+                            jcr:mixinTypes="[]"
+                            jcr:primaryType="nt:unstructured"/>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <item0
+                                cq:styleGroupLabel="Layout"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="contact-card__image-top"
+                                        cq:styleId="1686601636871"
+                                        cq:styleLabel="Image Top"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="contact-card__large"
+                                        cq:styleId="1687915557564"
+                                        cq:styleLabel="Large Card (Square)"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item0>
+                            <item1
+                                cq:styleGroupLabel="Background"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="utils-background-kpmg-blue dark-theme"
+                                        cq:styleId="1686867277321"
+                                        cq:styleLabel="KPMG Blue"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="utils-background-cobalt-blue dark-theme"
+                                        cq:styleId="1686867437274"
+                                        cq:styleLabel="Cobalt Blue"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item2
+                                        cq:styleClasses="utils-background-grey-100 light-theme"
+                                        cq:styleId="1686867452322"
+                                        cq:styleLabel="Grey 100"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item3
+                                        cq:styleClasses="utils-background-white light-theme"
+                                        cq:styleId="1686867478522"
+                                        cq:styleLabel="White"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item1>
+                        </cq:styleGroups>
+                    </policy_1686601619544>
+                </contactcard>
+                <quote jcr:primaryType="nt:unstructured">
+                    <policy_1686765430637
+                        cq:styleDefaultClasses="utils-background-grey-100"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Quote"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        allowedHeadingElements="[h1,h2,h3,h4,h5,h6]"
+                        showTitleType="false"
+                        titleHidden="true"
+                        titleType="h2">
+                        <jcr:content
+                            jcr:mixinTypes="[]"
+                            jcr:primaryType="nt:unstructured"/>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <item0
+                                cq:styleGroupLabel="Theme"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="utils-background-kpmg-blue dark-theme"
+                                        cq:styleId="1686767081615"
+                                        cq:styleLabel="Dark theme"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item0>
+                        </cq:styleGroups>
+                    </policy_1686765430637>
+                </quote>
+                <heropeople jcr:primaryType="nt:unstructured">
+                    <policy_1687771155579
+                        cq:styleDefaultClasses="utils-background-grey-100"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Hero People policy"
+                        sling:resourceType="wcm/core/components/policy/policy">
+                        <jcr:content
+                            jcr:mixinTypes="[]"
+                            jcr:primaryType="nt:unstructured"/>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <item0
+                                cq:styleGroupLabel="Background"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="utils-background-kpmg-blue dark-theme"
+                                        cq:styleId="1687771244278"
+                                        cq:styleLabel="KPMG Blue"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="utils-background-cobalt-blue dark-theme"
+                                        cq:styleId="1687771368715"
+                                        cq:styleLabel="Cobalt Blue"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item2
+                                        cq:styleClasses="utils-background-grey-100 light-theme"
+                                        cq:styleId="1687771387260"
+                                        cq:styleLabel="Grey 100"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item3
+                                        cq:styleClasses="utils-background-white light-theme"
+                                        cq:styleId="1687771396600"
+                                        cq:styleLabel="White"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item0>
+                        </cq:styleGroups>
+                    </policy_1687771155579>
+                </heropeople>
+                <hero-csi jcr:primaryType="nt:unstructured">
+                    <policy_1687848869780
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="hero-csi-policy"
+                        enableDmFeatures="true"
+                        sling:resourceType="wcm/core/components/policy/policy">
+                        <jcr:content
+                            jcr:mixinTypes="[]"
+                            jcr:primaryType="nt:unstructured"/>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <item0
+                                cq:styleGroupLabel="Background"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="utils-background-kpmg-blue dark-theme"
+                                        cq:styleId="1687849003895"
+                                        cq:styleLabel="KPMG Blue"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="utils-background-cobalt-blue dark-theme"
+                                        cq:styleId="1687849018218"
+                                        cq:styleLabel="Cobalt Blue"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item2
+                                        cq:styleClasses="utils-background-grey-100 light-theme"
+                                        cq:styleId="1687849028459"
+                                        cq:styleLabel="Grey 100"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item3
+                                        cq:styleClasses="utils-background-white light-theme"
+                                        cq:styleId="1687849052213"
+                                        cq:styleLabel="White"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item0>
+                        </cq:styleGroups>
+                    </policy_1687848869780>
+                </hero-csi>
+                <image jcr:primaryType="nt:unstructured">
+                    <policy_1688017015054
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Image"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        altValueFromDAM="true"
+                        disableLazyLoading="false"
+                        displayPopupTitle="true"
+                        enableAssetDelivery="true"
+                        enableDmFeatures="true"
+                        isDecorative="false"
+                        titleValueFromDAM="true">
+                        <jcr:content
+                            jcr:mixinTypes="[]"
+                            jcr:primaryType="nt:unstructured"/>
+                    </policy_1688017015054>
+                </image>
+                <standardteaser-carousel jcr:primaryType="nt:unstructured">
+                    <policy_1688047333712
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Standard Teaser Carousel"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        autopauseDisabled="false"
+                        autoplay="false"
+                        components="/apps/kpmg/components/content/standardteaser"
+                        controlsPrepended="false"
+                        delay="5000">
+                        <jcr:content
+                            jcr:mixinTypes="[]"
+                            jcr:primaryType="nt:unstructured"/>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <item0
+                                cq:styleGroupLabel="Background"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="utils-background-kpmg-blue dark-theme"
+                                        cq:styleId="1688047355530"
+                                        cq:styleLabel="Dark Theme/KPMG Blue"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="utils-background-cobalt-blue dark-theme"
+                                        cq:styleId="1687849018219"
+                                        cq:styleLabel="Cobalt Blue"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item2
+                                        cq:styleClasses="utils-background-grey-100 light-theme"
+                                        cq:styleId="1687849028460"
+                                        cq:styleLabel="Grey 100"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item3
+                                        cq:styleClasses="utils-background-white light-theme"
+                                        cq:styleId="1687849052214"
+                                        cq:styleLabel="White"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item0>
+                            <item1
+                                cq:styleGroupLabel="Image Align"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="standardteaser-carousel--image-left"
+                                        cq:styleId="1690555538656"
+                                        cq:styleLabel="left"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item1>
+                        </cq:styleGroups>
+                    </policy_1688047333712>
+                </standardteaser-carousel>
+                <hero-event jcr:primaryType="nt:unstructured">
+                    <policy_1689109284367
+                        cq:styleDefaultClasses="utils-background-grey-100"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Hero Event Variation"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        altValueFromDAM="true"
+                        disableLazyLoading="false"
+                        displayPopupTitle="true"
+                        enableDmFeatures="true"
+                        isDecorative="false"
+                        titleValueFromDAM="true">
+                        <jcr:content
+                            jcr:mixinTypes="[]"
+                            jcr:primaryType="nt:unstructured"/>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <item0
+                                cq:styleGroupLabel="Background"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="utils-background-kpmg-blue dark-theme"
+                                        cq:styleId="1689109315707"
+                                        cq:styleLabel="KPMG Blue"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="utils-background-cobalt-blue dark-theme"
+                                        cq:styleId="1689109328096"
+                                        cq:styleLabel="Cobalt Blue"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item2
+                                        cq:styleClasses="utils-background-grey-100"
+                                        cq:styleId="1689109339467"
+                                        cq:styleLabel="Grey 100"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item3
+                                        cq:styleClasses="utils-background-white"
+                                        cq:styleId="1689109351908"
+                                        cq:styleLabel="White"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item0>
+                        </cq:styleGroups>
+                    </policy_1689109284367>
+                </hero-event>
+                <engagementpromo jcr:primaryType="nt:unstructured">
+                    <policy_1688689133698
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Engagement Promo Policy"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        allowedHeadingElements="[h1,h2,h3,h4,h5,h6]"
+                        showTitleType="false"
+                        titleType="h2">
+                        <jcr:content
+                            jcr:mixinTypes="[]"
+                            jcr:primaryType="nt:unstructured"/>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <item0
+                                cq:styleGroupLabel="Engagement Promo Background"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="utils-background-kpmg-blue light-theme"
+                                        cq:styleId="1688689177324"
+                                        cq:styleLabel="KPMG Blue"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="utils-background-cobalt-blue light-theme"
+                                        cq:styleId="1688689186585"
+                                        cq:styleLabel="Cobalt Blue"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item2
+                                        cq:styleClasses="utils-background-grey-100 dark-theme"
+                                        cq:styleId="1688689203145"
+                                        cq:styleLabel="Grey 100"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item3
+                                        cq:styleClasses="utils-background-white dark-theme"
+                                        cq:styleId="1688689218872"
+                                        cq:styleLabel="White"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item0>
+                            <item1
+                                cq:styleGroupLabel="Bottom Bleed Color"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="utils-bleed-bottom utils-bleed-color-kpmg-blue"
+                                        cq:styleId="1688689275023"
+                                        cq:styleLabel="KPMG Blue"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="utils-bleed-bottom utils-bleed-color-cobalt-blue"
+                                        cq:styleId="1688689302106"
+                                        cq:styleLabel="Cobalt Blue"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item2
+                                        cq:styleClasses="utils-bleed-bottom utils-bleed-color-grey-100"
+                                        cq:styleId="1688689333581"
+                                        cq:styleLabel="Grey 100"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item3
+                                        cq:styleClasses="utils-bleed-bottom utils-bleed-color-white  "
+                                        cq:styleId="1689710486437"
+                                        cq:styleLabel="White"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item1>
+                        </cq:styleGroups>
+                    </policy_1688689133698>
+                </engagementpromo>
+                <hero-fbv jcr:primaryType="nt:unstructured">
+                    <policy_1689274203611
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Hero - Full Bleed Video"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        allowedHeadingElements="h1"
+                        showTitleType="false"
+                        titleType="h1">
+                        <jcr:content
+                            jcr:mixinTypes="[]"
+                            jcr:primaryType="nt:unstructured"/>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <item0
+                                cq:styleGroupLabel="Overlay Background"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="cmp-hero-fbv__overlay-bg--kpmg-blue dark-theme"
+                                        cq:styleId="1689274210382"
+                                        cq:styleLabel="KPMG Blue"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="cmp-hero-fbv__overlay-bg--cobalt-blue dark-theme"
+                                        cq:styleId="1689274218954"
+                                        cq:styleLabel="Cobalt Blue"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item2
+                                        cq:styleClasses="cmp-hero-fbv__overlay-bg--grey100 light-theme"
+                                        cq:styleId="1689274226778"
+                                        cq:styleLabel="Grey 100"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item3
+                                        cq:styleClasses="cmp-hero-fbv__overlay-bg--white light-theme"
+                                        cq:styleId="1689274232919"
+                                        cq:styleLabel="White"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item0>
+                            <item1
+                                cq:styleGroupLabel="Button Width"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleId="1689293493653"
+                                        cq:styleLabel="Full Width"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="cmp-button--content-width"
+                                        cq:styleId="1689293514276"
+                                        cq:styleLabel="Content Width"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item2
+                                        cq:styleClasses="cmp-button--standard-width "
+                                        cq:styleId="1689293530037"
+                                        cq:styleLabel="Standard Width"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item1>
+                            <item2
+                                cq:styleGroupLabel="Hero Height"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleId="1691071266916"
+                                        cq:styleLabel="Default"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="hero-fbv--reduced-height"
+                                        cq:styleId="1691071272713"
+                                        cq:styleLabel="Reduced"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item2>
+                        </cq:styleGroups>
+                    </policy_1689274203611>
+                </hero-fbv>
+                <industryservicegrid jcr:primaryType="nt:unstructured">
+                    <policy_1689591743993
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Industry and Service Grid Policy"
+                        sling:resourceType="wcm/core/components/policy/policy">
+                        <jcr:content
+                            jcr:mixinTypes="[]"
+                            jcr:primaryType="nt:unstructured"/>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <item0
+                                cq:styleGroupLabel="Background"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="utils-background-kpmg-blue dark-theme"
+                                        cq:styleId="1689591768253"
+                                        cq:styleLabel="KPMG Blue"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="utils-background-cobalt-blue dark-theme"
+                                        cq:styleId="1689109328098"
+                                        cq:styleLabel="Cobalt Blue"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item2
+                                        cq:styleClasses="utils-background-grey-100"
+                                        cq:styleId="1689109339466"
+                                        cq:styleLabel="Grey 100"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item3
+                                        cq:styleClasses="utils-background-white"
+                                        cq:styleId="1689109351980"
+                                        cq:styleLabel="White"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item0>
+                        </cq:styleGroups>
+                    </policy_1689591743993>
+                </industryservicegrid>
+                <event-card jcr:primaryType="nt:unstructured">
+                    <policy_1691557062055
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Event Card Policy"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        allowedHeadingElements="[h1,h2,h3,h4,h5,h6]"
+                        showTitleType="false"
+                        titleType="h2">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <item0
+                                cq:styleGroupLabel="Background"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="utils-background-kpmg-blue dark-theme"
+                                        cq:styleId="1691557074232"
+                                        cq:styleLabel="Dark Theme/KPMG Blue"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="utils-background-cobalt-blue dark-theme"
+                                        cq:styleId="1691557109126"
+                                        cq:styleLabel="Cobalt Blue"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item2
+                                        cq:styleClasses="utils-background-grey-100"
+                                        cq:styleId="1691557125465"
+                                        cq:styleLabel="Grey 100"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item3
+                                        cq:styleClasses="utils-background-white light-theme"
+                                        cq:styleId="1691557138291"
+                                        cq:styleLabel="White"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item0>
+                        </cq:styleGroups>
+                    </policy_1691557062055>
+                </event-card>
+                <emailcontent jcr:primaryType="nt:unstructured">
+                    <policy_1692344710975
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Email Content"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        altValueFromDAM="true"
+                        disableLazyLoading="false"
+                        displayPopupTitle="true"
+                        enableDmFeatures="true"
+                        isDecorative="false"
+                        titleValueFromDAM="true">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy_1692344710975>
+                </emailcontent>
+                <section-header-image jcr:primaryType="nt:unstructured">
+                    <policy_1692644970143
+                        jcr:lastModified="{Date}2023-08-21T20:03:09.564-04:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Section Header with Image Policy"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        actionsDisabled="true"
+                        allowedHeadingElements="[h2,h3,h4,h5,h6]"
+                        allowedTypes="[h2,h3,h4,h5,h6]"
+                        descriptionHidden="true"
+                        linkDisabled="true"
+                        pretitleHidden="true"
+                        showTitleType="false"
+                        titleType="h2"
+                        type="h2">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <item0
+                                cq:styleGroupLabel="Background"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="utils-background-kpmg-blue dark-theme"
+                                        cq:styleId="1692662557339"
+                                        cq:styleLabel="KPMG Blue"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="utils-background-cobalt-blue dark-theme"
+                                        cq:styleId="1692662562675"
+                                        cq:styleLabel="Cobalt Blue"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item2
+                                        cq:styleClasses="utils-background-grey-100 light-theme"
+                                        cq:styleId="1692662579242"
+                                        cq:styleLabel="Grey 100"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item3
+                                        cq:styleClasses="utils-background-white light-theme"
+                                        cq:styleId="1692662584855"
+                                        cq:styleLabel="White"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item0>
+                        </cq:styleGroups>
+                    </policy_1692644970143>
+                </section-header-image>
+                <section-highlight jcr:primaryType="nt:unstructured">
+                    <policy_1693253656521
+                        jcr:lastModified="{Date}2023-08-28T16:48:03.085-04:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Section Highlight"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        allowedTypes="[h4,h5,h6]"
+                        linkDisabled="false"
+                        type="h4">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <item0
+                                cq:styleGroupLabel="Background"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="highlight-background-kpmg-blue dark-theme"
+                                        cq:styleId="1693253676844"
+                                        cq:styleLabel="KPMG Blue"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="highlight-background-cobalt-blue dark-theme"
+                                        cq:styleId="1693253683450"
+                                        cq:styleLabel="Cobalt Blue"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item2
+                                        cq:styleClasses="highlight-background-grey-100 light-theme"
+                                        cq:styleId="1693253692715"
+                                        cq:styleLabel="Neutral"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item3
+                                        cq:styleClasses="highlight-background-white light-theme"
+                                        cq:styleId="1693253704669"
+                                        cq:styleLabel="White"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item0>
+                            <item1
+                                cq:styleGroupLabel="Bleed"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="cmp-section-highlight--bleed-left"
+                                        cq:styleId="1693253713854"
+                                        cq:styleLabel="Bleed Left"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="cmp-section-highlight--bleed-right"
+                                        cq:styleId="1693255672330"
+                                        cq:styleLabel="Bleed Right"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item1>
+                            <item2
+                                cq:styleGroupLabel="Bleed Color"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="highlight-bleed-kpmg-blue"
+                                        cq:styleId="1693253742326"
+                                        cq:styleLabel="KPMG Blue"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="highlight-bleed-cobalt-blue"
+                                        cq:styleId="1693253749849"
+                                        cq:styleLabel="Cobalt Blue"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item2
+                                        cq:styleClasses="highlight-bleed-grey-100"
+                                        cq:styleId="1693253753902"
+                                        cq:styleLabel="Grey 100"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item3
+                                        cq:styleClasses="highlight-bleed-white"
+                                        cq:styleId="1693253758474"
+                                        cq:styleLabel="White"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item2>
+                        </cq:styleGroups>
+                    </policy_1693253656521>
+                </section-highlight>
+            </content>
+            <structure jcr:primaryType="nt:unstructured">
+                <xfpage jcr:primaryType="nt:unstructured">
+                    <policy_162021117425200
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Digital-forms-page-policies"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        clientlibs="[kpmg.base,kpmg.dependencies,kpmg.site]">
+                        <jcr:content
+                            jcr:mixinTypes="[]"
+                            jcr:primaryType="nt:unstructured"/>
+                    </policy_162021117425200>
+                </xfpage>
+                <page jcr:primaryType="nt:unstructured">
+                    <policy
+                        jcr:description="Includes the required client libraries."
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Generic Page"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        clientlibs="[kpmg.base,kpmg.dependencies,kpmg.site]"
+                        clientlibsJsHead="[kpmg.dependencies]">
+                        <jcr:content
+                            jcr:mixinTypes="[]"
+                            jcr:primaryType="nt:unstructured"/>
+                    </policy>
+                </page>
+                <page-contact jcr:primaryType="nt:unstructured">
+                    <policy
+                        jcr:description="Includes the required client libraries."
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Generic Page"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        clientlibs="[kpmg.base,kpmg.dependencies,kpmg.site]"
+                        clientlibsJsHead="[kpmg.dependencies]">
+                        <jcr:content
+                            jcr:mixinTypes="[]"
+                            jcr:primaryType="nt:unstructured"/>
+                    </policy>
+                </page-contact>
+                <page-article jcr:primaryType="nt:unstructured">
+                    <policy
+                        jcr:description="Includes the required client libraries."
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Generic Page"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        clientlibs="[kpmg.base,kpmg.dependencies,kpmg.site]"
+                        clientlibsJsHead="[kpmg.dependencies]">
+                        <jcr:content
+                            jcr:mixinTypes="[]"
+                            jcr:primaryType="nt:unstructured"/>
+                    </policy>
+                </page-article>
+                <page-event jcr:primaryType="nt:unstructured">
+                    <policy
+                        jcr:description="Includes the required client libraries."
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Generic Page"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        clientlibs="[kpmg.base,kpmg.dependencies,kpmg.site]"
+                        clientlibsJsHead="[kpmg.dependencies]">
+                        <jcr:content
+                            jcr:mixinTypes="[]"
+                            jcr:primaryType="nt:unstructured"/>
+                    </policy>
+                </page-event>
+                <page-error jcr:primaryType="nt:unstructured">
+                    <policy
+                        jcr:description="Includes the required client libraries."
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Generic Page"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        clientlibs="[kpmg.base,kpmg.dependencies,kpmg.site]"
+                        clientlibsJsHead="[kpmg.dependencies]">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy>
+                </page-error>
+            </structure>
+            <container jcr:primaryType="nt:unstructured">
+                <policy_1683620515483
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Container Policy"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    components="[group:KPMG.com - Content,group:KPMG.com - Structure]"
+                    layoutDisabled="false">
+                    <jcr:content
+                        jcr:mixinTypes="[]"
+                        jcr:primaryType="nt:unstructured"/>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item1
+                            cq:styleGroupLabel="Background"
+                            jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="utils-background-kpmg-blue dark-theme"
+                                    cq:styleId="1683625497828"
+                                    cq:styleLabel="KPMG Blue"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item1
+                                    cq:styleClasses="utils-background-cobalt-blue dark-theme"
+                                    cq:styleId="1683625510872"
+                                    cq:styleLabel="Cobalt Blue"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item2
+                                    cq:styleClasses="utils-background-grey-100 light-theme"
+                                    cq:styleId="1683625525061"
+                                    cq:styleLabel="Grey"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item3
+                                    cq:styleClasses="utils-background-white light-theme"
+                                    cq:styleId="1683625543110"
+                                    cq:styleLabel="White"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item1>
+                        <item2
+                            cq:styleGroupLabel="BACKGROUND WIDTH"
+                            jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="standard-width"
+                                    cq:styleId="1683625618785"
+                                    cq:styleLabel="Standard"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item1
+                                    cq:styleClasses="full-bleed"
+                                    cq:styleId="1683625638745"
+                                    cq:styleLabel="Full Bleed"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item2>
+                        <item3
+                            cq:styleGroupLabel="Margin"
+                            jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="utils-margin-left--4x-large"
+                                    cq:styleId="1687819577099"
+                                    cq:styleLabel="Left"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item1
+                                    cq:styleClasses="utils-padding-bottom--4x-large"
+                                    cq:styleId="1687819584625"
+                                    cq:styleLabel="Bottom"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item3>
+                    </cq:styleGroups>
+                </policy_1683620515483>
+                <container jcr:primaryType="nt:unstructured">
+                    <policy_1574694950110
+                        jcr:description="Allows the template components and defines the component mapping (this configures what components should be automatically created when authors drop assets from the content finder to the page editor)."
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Page Root"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        components="[group:KPMG.com - Content,/apps/kpmg/components/container/container,group:KPMG.com - Structure]">
+                        <jcr:content
+                            jcr:mixinTypes="[]"
+                            jcr:primaryType="nt:unstructured"/>
+                        <cq:authoring jcr:primaryType="nt:unstructured">
+                            <assetToComponentMapping jcr:primaryType="nt:unstructured">
+                                <mapping_1575024218483
+                                    jcr:primaryType="nt:unstructured"
+                                    assetGroup="media"
+                                    assetMimetype="image/*"
+                                    droptarget="image"
+                                    resourceType="kpmg/components/content/image"/>
+                                <mapping_1575030843388
+                                    jcr:primaryType="nt:unstructured"
+                                    assetGroup="content"
+                                    assetMimetype="text/html"
+                                    droptarget="experiencefragment"
+                                    resourceType="kpmg/components/fragments/experiencefragment"/>
+                                <mapping_1575030853128
+                                    jcr:primaryType="nt:unstructured"
+                                    assetGroup="media"
+                                    assetMimetype="[text/html,application/vnd.adobe.contentfragment]"
+                                    droptarget="contentfragment"
+                                    resourceType="kpmg/components/contentfragment"/>
+                            </assetToComponentMapping>
+                        </cq:authoring>
+                    </policy_1574694950110>
+                    <policy_1574695586800
+                        cq:styleDefaultElement="main"
+                        jcr:description="Allows the page components and defines the component mapping (this configures what components should be automatically created when authors drop assets from the content finder to the page editor)."
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Page Content"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        components="[group:KPMG Navigation,/apps/kpmg/components/container/section,group:KPMG.com - Content]"
+                        layout="responsiveGrid"
+                        layoutDisabled="false">
+                        <jcr:content
+                            jcr:mixinTypes="[]"
+                            jcr:primaryType="nt:unstructured"/>
+                        <cq:authoring jcr:primaryType="nt:unstructured">
+                            <assetToComponentMapping jcr:primaryType="nt:unstructured">
+                                <mapping_1575030255082
+                                    jcr:primaryType="nt:unstructured"
+                                    assetGroup="media"
+                                    assetMimetype="image/*"
+                                    droptarget="image"
+                                    resourceType="kpmg/components/content/image"/>
+                                <mapping_1575030260142
+                                    jcr:primaryType="nt:unstructured"
+                                    assetGroup="content"
+                                    assetMimetype="text/html"
+                                    droptarget="experiencefragment"
+                                    resourceType="kpmg/components/fragments/experiencefragment"/>
+                            </assetToComponentMapping>
+                        </cq:authoring>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <item0
+                                cq:styleGroupLabel="Background"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="utils-background-kpmg-blue dark-theme dark-theme"
+                                        cq:styleId="1683700337802"
+                                        cq:styleLabel="KPMG Blue"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="utils-background-cobalt-blue dark-theme dark-theme"
+                                        cq:styleId="1683700361476"
+                                        cq:styleLabel="Cobalt Blue"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item2
+                                        cq:styleClasses="utils-background-grey-100 light-theme light-theme"
+                                        cq:styleId="1683700376617"
+                                        cq:styleLabel="Grey"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item3
+                                        cq:styleClasses="utils-background-white light-theme light-theme"
+                                        cq:styleId="1683700391047"
+                                        cq:styleLabel="White"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item0>
+                            <item1
+                                cq:styleGroupLabel="Background Width"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="cmp-container--full-width"
+                                        cq:styleId="1683700448229"
+                                        cq:styleLabel="Standard"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="cmp-container--full-bleed"
+                                        cq:styleId="1683700461598"
+                                        cq:styleLabel="Full Bleed"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item1>
+                            <item2
+                                cq:styleGroupLabel="Margin"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="utils-margin-left--4x-large"
+                                        cq:styleId="1687819577099"
+                                        cq:styleLabel="Left"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="utils-padding-bottom--4x-large"
+                                        cq:styleId="1687819584625"
+                                        cq:styleLabel="Bottom"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item2>
+                        </cq:styleGroups>
+                    </policy_1574695586800>
+                    <policy_649128221558427
+                        cq:styleDefaultElement="main"
+                        jcr:description="Sets a &lt;main> element on the page content area."
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Page Main"
+                        sling:resourceType="wcm/core/components/policy/policy">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy_649128221558427>
+                    <policy_1575040440977
+                        jcr:description="Allows the template components and defines the component mapping (this configures what components should be automatically created when authors drop assets from the content finder to the page editor)."
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="XF Root"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        components="[group:KPMG.com - Content,group:KPMG Navigation,/apps/kpmg/components/container/container]">
+                        <jcr:content
+                            jcr:mixinTypes="[]"
+                            jcr:primaryType="nt:unstructured"/>
+                        <cq:authoring jcr:primaryType="nt:unstructured">
+                            <assetToComponentMapping jcr:primaryType="nt:unstructured">
+                                <mapping_1575024218483
+                                    jcr:primaryType="nt:unstructured"
+                                    assetGroup="media"
+                                    assetMimetype="image/*"
+                                    droptarget="image"
+                                    resourceType="kpmg/components/content/image"/>
+                                <mapping_1575030843388
+                                    jcr:primaryType="nt:unstructured"
+                                    assetGroup="content"
+                                    assetMimetype="text/html"
+                                    droptarget="experiencefragment"
+                                    resourceType="kpmg/components/fragments/experiencefragment"/>
+                                <mapping_1575030853128
+                                    jcr:primaryType="nt:unstructured"
+                                    assetGroup="media"
+                                    assetMimetype="[text/html,application/vnd.adobe.contentfragment]"
+                                    droptarget="contentfragment"
+                                    resourceType="kpmg/components/contentfragment"/>
+                            </assetToComponentMapping>
+                        </cq:authoring>
+                    </policy_1575040440977>
+                    <policy_1210215100502400
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Container Policy"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        columns="12"
+                        components="[group:KPMG Navigation,group:KPMG.com - Content]"
+                        layout="responsiveGrid"
+                        layoutDisabled="false">
+                        <jcr:content
+                            jcr:mixinTypes="[]"
+                            jcr:primaryType="nt:unstructured"/>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <item0
+                                cq:styleGroupLabel="Background"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="utils-background-kpmg-blue dark-theme dark-theme"
+                                        cq:styleId="1683700337802"
+                                        cq:styleLabel="KPMG Blue"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="utils-background-cobalt-blue dark-theme dark-theme"
+                                        cq:styleId="1683700361476"
+                                        cq:styleLabel="Cobalt Blue"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item2
+                                        cq:styleClasses="utils-background-grey-100 light-theme light-theme"
+                                        cq:styleId="1683700376617"
+                                        cq:styleLabel="Grey"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item3
+                                        cq:styleClasses="utils-background-white light-theme light-theme"
+                                        cq:styleId="1683700391047"
+                                        cq:styleLabel="White"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item0>
+                            <item1
+                                cq:styleGroupLabel="Background Width"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="cmp-container--full-width"
+                                        cq:styleId="1683700448229"
+                                        cq:styleLabel="Standard"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="cmp-container--full-bleed"
+                                        cq:styleId="1683700461598"
+                                        cq:styleLabel="Full Bleed"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item1>
+                            <item2
+                                cq:styleGroupLabel="Margin"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="utils-margin-left--4x-large"
+                                        cq:styleId="1687819577099"
+                                        cq:styleLabel="Left"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="utils-padding-bottom--4x-large"
+                                        cq:styleId="1687819584625"
+                                        cq:styleLabel="Bottom"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item2>
+                        </cq:styleGroups>
+                    </policy_1210215100502400>
+                    <policy_1685002483242
+                        jcr:description="Allows the page components and defines the component mapping (this configures what components should be automatically created when authors drop assets from the content finder to the page editor)."
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Search Results"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        components="[/apps/kpmg/components/content/search-results,/apps/kpmg/components/content/search-input]"
+                        layoutDisabled="false">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                        <cq:authoring jcr:primaryType="nt:unstructured">
+                            <assetToComponentMapping jcr:primaryType="nt:unstructured"/>
+                        </cq:authoring>
+                    </policy_1685002483242>
+                    <policy_1685979869003
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="KPMG Container Policy"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        columns="12"
+                        components="group:KPMG.com - Content"
+                        layout="responsiveGrid"
+                        layoutDisabled="false">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <item0
+                                cq:styleGroupLabel="Background"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="utils-background-kpmg-blue dark-theme"
+                                        cq:styleId="1685980027333"
+                                        cq:styleLabel="KPMG Blue"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="utils-background-cobalt-blue dark-theme"
+                                        cq:styleId="1685980045525"
+                                        cq:styleLabel="Cobalt Blue "
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item2
+                                        cq:styleClasses="utils-background-grey-100 light-theme"
+                                        cq:styleId="1685980186781"
+                                        cq:styleLabel="Grey 100"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item3
+                                        cq:styleClasses="utils-background-white light-theme"
+                                        cq:styleId="1685980198511"
+                                        cq:styleLabel="white"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item0>
+                        </cq:styleGroups>
+                    </policy_1685979869003>
+                    <policy_1688967726557
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="XF-Forms-Policy"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        columns="12"
+                        components="[/apps/kpmg/components/container/main,/apps/kpmg/components/container/section,/apps/kpmg/components/content/form/container]"
+                        layout="responsiveGrid"
+                        layoutDisabled="false">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <item0
+                                cq:styleGroupLabel="Background"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="utils-background-kpmg-blue dark-theme"
+                                        cq:styleId="1685980027333"
+                                        cq:styleLabel="KPMG Blue"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="utils-background-cobalt-blue dark-theme"
+                                        cq:styleId="1685980045525"
+                                        cq:styleLabel="Cobalt Blue "
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item2
+                                        cq:styleClasses="utils-background-grey-100 light-theme"
+                                        cq:styleId="1685980186781"
+                                        cq:styleLabel="Grey 100"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item3
+                                        cq:styleClasses="utils-background-white light-theme"
+                                        cq:styleId="1685980198511"
+                                        cq:styleLabel="white"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item0>
+                        </cq:styleGroups>
+                    </policy_1688967726557>
+                    <policy_1689313123701
+                        jcr:description="Allows the template components and defines the component mapping (this configures what components should be automatically created when authors drop assets from the content finder to the page editor)."
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Digital-form-policy"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        components="[/apps/kpmg/components/container/main,/apps/kpmg/components/content/image,/apps/kpmg/components/content/text,/apps/kpmg/components/content/title,/apps/kpmg/components/content/form/container]"
+                        layoutDisabled="false">
+                        <jcr:content
+                            jcr:mixinTypes="[]"
+                            jcr:primaryType="nt:unstructured"/>
+                        <cq:authoring jcr:primaryType="nt:unstructured">
+                            <assetToComponentMapping jcr:primaryType="nt:unstructured"/>
+                        </cq:authoring>
+                    </policy_1689313123701>
+                    <policy_77084598613791
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Hero Container Policy"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        components="[/apps/kpmg/components/content/hero-csi,/apps/kpmg/components/content/hero-fbv]"
+                        layoutDisabled="false">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <item0
+                                cq:styleGroupLabel="Background"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="utils-background-kpmg-blue dark-theme dark-theme"
+                                        cq:styleId="1691570511759"
+                                        cq:styleLabel="KPMG Blue"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="utils-background-cobalt-blue dark-theme dark-theme"
+                                        cq:styleId="1691570523170"
+                                        cq:styleLabel="Cobalt Blue"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item2
+                                        cq:styleClasses="utils-background-grey-100 light-theme light-theme"
+                                        cq:styleId="1691570534642"
+                                        cq:styleLabel="Grey"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item3
+                                        cq:styleClasses="utils-background-white light-theme light-theme"
+                                        cq:styleId="1691570544509"
+                                        cq:styleLabel="White"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item0>
+                            <item1
+                                cq:styleGroupLabel="Background Width"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="cmp-container--full-width"
+                                        cq:styleId="1691570562515"
+                                        cq:styleLabel="Standard"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="cmp-container--full-bleed"
+                                        cq:styleId="1691570575227"
+                                        cq:styleLabel="Full Bleed"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item1>
+                        </cq:styleGroups>
+                    </policy_77084598613791>
+                    <policy_104079606055208
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Home Hero Container Policy"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        components="[/apps/kpmg/components/content/hero-fbv]"
+                        layoutDisabled="false">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <item0
+                                cq:styleGroupLabel="Background"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="utils-background-kpmg-blue dark-theme dark-theme"
+                                        cq:styleId="1691570511759"
+                                        cq:styleLabel="KPMG Blue"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="utils-background-cobalt-blue dark-theme dark-theme"
+                                        cq:styleId="1691570523170"
+                                        cq:styleLabel="Cobalt Blue"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item2
+                                        cq:styleClasses="utils-background-grey-100 light-theme light-theme"
+                                        cq:styleId="1691570534642"
+                                        cq:styleLabel="Grey"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item3
+                                        cq:styleClasses="utils-background-white light-theme light-theme"
+                                        cq:styleId="1691570544509"
+                                        cq:styleLabel="White"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item0>
+                            <item1
+                                cq:styleGroupLabel="Background Width"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="cmp-container--full-width"
+                                        cq:styleId="1691570562515"
+                                        cq:styleLabel="Standard"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="cmp-container--full-bleed"
+                                        cq:styleId="1691570575227"
+                                        cq:styleLabel="Full Bleed"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item1>
+                        </cq:styleGroups>
+                    </policy_104079606055208>
+                </container>
+                <teaserbox jcr:primaryType="nt:unstructured">
+                    <policy_1684814284330
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Teaserbox Policy"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        components="[/apps/kpmg/components/content/cardteaser,/apps/kpmg/components/content/contactcard,/apps/kpmg/components/content/topicteaser]"
+                        layoutDisabled="false">
+                        <jcr:content
+                            jcr:mixinTypes="[]"
+                            jcr:primaryType="nt:unstructured"/>
+                    </policy_1684814284330>
+                </teaserbox>
+                <policy_179748275455300
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Article Template policy"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    components="[/apps/kpmg/components/content/accordion,/apps/kpmg/components/content/button,/apps/kpmg/components/content/standardteaser,/apps/kpmg/components/content/text,/apps/kpmg/components/content/textlist,/apps/kpmg/components/content/topicteaser]"
+                    layoutDisabled="false">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                </policy_179748275455300>
+                <main jcr:primaryType="nt:unstructured">
+                    <policy_1685834008406
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Main Container Policy"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        components="[/apps/kpmg/components/container/section,group:KPMG.com - Content]"
+                        layout="simple"
+                        layoutDisabled="true">
+                        <jcr:content
+                            jcr:mixinTypes="[]"
+                            jcr:primaryType="nt:unstructured"/>
+                    </policy_1685834008406>
+                    <policy_1355679011023900
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Email Template Container Policy"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        components="[/apps/kpmg/components/content/emailcontent]"
+                        layoutDisabled="false">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy_1355679011023900>
+                    <policy_86242760979375
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="HTML Page Template Main Container Policy"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        components="[/apps/kpmg/components/container/section,/apps/kpmg/components/content/htmlcontainer,/apps/kpmg/components/content/title]"
+                        layoutDisabled="false">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy_86242760979375>
+                </main>
+                <section jcr:primaryType="nt:unstructured">
+                    <policy_1685835870434
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Section Policy"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        components="group:KPMG.com - Content"
+                        layout="simple"
+                        layoutDisabled="true">
+                        <jcr:content
+                            jcr:mixinTypes="[]"
+                            jcr:primaryType="nt:unstructured"/>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <item0
+                                cq:styleGroupLabel="Background"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="utils-background-kpmg-blue dark-theme"
+                                        cq:styleId="1685836502714"
+                                        cq:styleLabel="KPMG Blue"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="utils-background-cobalt-blue dark-theme"
+                                        cq:styleId="1685975467587"
+                                        cq:styleLabel="Cobalt Blue"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item2
+                                        cq:styleClasses="utils-background-grey-100 light-theme"
+                                        cq:styleId="1685975486988"
+                                        cq:styleLabel="Grey 100"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item3
+                                        cq:styleClasses="utils-background-white light-theme"
+                                        cq:styleId="1685975499316"
+                                        cq:styleLabel="White"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item0>
+                            <item1
+                                cq:styleGroupLabel="Bleed Position"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="utils-bleed-bottom"
+                                        cq:styleId="1685979435871"
+                                        cq:styleLabel="Bottom"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="utils-bleed-top"
+                                        cq:styleId="1685979420383"
+                                        cq:styleLabel="Top"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item1>
+                            <item2
+                                cq:styleGroupLabel="Bleed Color"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="utils-bleed-color-kpmg-blue"
+                                        cq:styleId="1685979453471"
+                                        cq:styleLabel="KPMG Blue"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="utils-bleed-color-cobalt-blue"
+                                        cq:styleId="1685979465121"
+                                        cq:styleLabel="Cobalt Blue"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item2
+                                        cq:styleClasses="utils-bleed-color-grey-100"
+                                        cq:styleId="1685979481696"
+                                        cq:styleLabel="Grey 100"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item3
+                                        cq:styleClasses="utils-bleed-color-white"
+                                        cq:styleId="1685979493705"
+                                        cq:styleLabel="White"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item2>
+                            <item3
+                                cq:styleGroupLabel="Padding Horizontal"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="utils-padding-horizontal--10x-large"
+                                        cq:styleId="1690264247924"
+                                        cq:styleLabel="Padding Horizontal 10x large (160px)"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item3>
+                            <item4
+                                cq:styleGroupLabel="Padding Right"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="content-right"
+                                        cq:styleId="1690264247924"
+                                        cq:styleLabel="Content Right"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item4>
+                        </cq:styleGroups>
+                    </policy_1685835870434>
+                </section>
+                <columncontrol jcr:primaryType="nt:unstructured">
+                    <policy_1685981869773
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Column Control Policy"
+                        sling:resourceType="wcm/core/components/policy/policy">
+                        <jcr:content
+                            jcr:mixinTypes="[]"
+                            jcr:primaryType="nt:unstructured"/>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <item0
+                                cq:styleGroupLabel="Column Items"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="columncontrol--column-items-vertical-stretch"
+                                        cq:styleId="1689186591405"
+                                        cq:styleLabel="Vertical Stretch"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="utils-background-cobalt-blue dark-theme"
+                                        cq:styleId="1685990468292"
+                                        cq:styleLabel="Cobalt Blue"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item2
+                                        cq:styleClasses="utils-background-grey-100 light-theme"
+                                        cq:styleId="1685990627609"
+                                        cq:styleLabel="Grey 100"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item3
+                                        cq:styleClasses="utils-background-white light-theme"
+                                        cq:styleId="1685990641758"
+                                        cq:styleLabel="White"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item0>
+                            <item1
+                                cq:styleGroupLabel="Bleed Position"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="utils-bleed-bottom"
+                                        cq:styleId="1685982013280"
+                                        cq:styleLabel="Bottom"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="utils-bleed-top"
+                                        cq:styleId="1685982052708"
+                                        cq:styleLabel="Top"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item1>
+                            <item2
+                                cq:styleGroupLabel="Bleed Color"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="utils-bleed-color-kpmg-blue"
+                                        cq:styleId="1685982083292"
+                                        cq:styleLabel="KPMG Blue"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="utils-bleed-color-cobalt-blue"
+                                        cq:styleId="1685982101489"
+                                        cq:styleLabel="Cobalt Blue"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item2
+                                        cq:styleClasses="utils-bleed-color-grey-100"
+                                        cq:styleId="1685982111048"
+                                        cq:styleLabel="Grey 100"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item3
+                                        cq:styleClasses="utils-bleed-color-white"
+                                        cq:styleId="1685982130229"
+                                        cq:styleLabel="White"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item2>
+                            <item3
+                                cq:styleGroupLabel="Column Item Vertical Alignment"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="columncontrol--vertical-align-top"
+                                        cq:styleId="1687819577099"
+                                        cq:styleLabel="Top"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="columncontrol--vertical-align-center"
+                                        cq:styleId="1687819584625"
+                                        cq:styleLabel="Center"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item2
+                                        cq:styleClasses="columncontrol--vertical-align-bottom"
+                                        cq:styleId="1687819592570"
+                                        cq:styleLabel="bottom"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item3>
+                            <item4
+                                cq:styleGroupLabel="Padding Top"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="utils-padding-top--small"
+                                        cq:styleId="1688586471536"
+                                        cq:styleLabel="Padding Top Small (12px)"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="utils-padding-top--base"
+                                        cq:styleId="1688586522025"
+                                        cq:styleLabel="Padding Top Base (16px)"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item2
+                                        cq:styleClasses="utils-padding-top--medium"
+                                        cq:styleId="1688586541178"
+                                        cq:styleLabel="Padding Top Medium (24px)"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item4>
+                            <item5
+                                cq:styleGroupLabel="Padding Horizontal"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="utils-padding-horizontal--small"
+                                        cq:styleId="1688586623918"
+                                        cq:styleLabel="Padding Horizontal Small (12px)"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="utils-padding-horizontal--base"
+                                        cq:styleId="1688586665934"
+                                        cq:styleLabel="Padding Horizontal Base (16px)"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item2
+                                        cq:styleClasses="utils-padding-horizontal--medium"
+                                        cq:styleId="1688586684132"
+                                        cq:styleLabel="Padding Horizontal Medium (24px)"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item3
+                                        cq:styleClasses="utils-padding-horizontal--10x-large"
+                                        cq:styleId="1690204150367"
+                                        cq:styleLabel="Padding Horizontal 10x-Large (160px)"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item5>
+                            <item6
+                                cq:styleGroupLabel="Padding Bottom"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="utils-padding-bottom--small"
+                                        cq:styleId="1688586720423"
+                                        cq:styleLabel="Padding Bottom Small (12px)"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="utils-padding-bottom--base"
+                                        cq:styleId="1688586738825"
+                                        cq:styleLabel="Padding Bottom Base (16px)"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item2
+                                        cq:styleClasses="utils-padding-bottom--medium"
+                                        cq:styleId="1688586758334"
+                                        cq:styleLabel="Padding Bottom Medium (24px)"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item6>
+                        </cq:styleGroups>
+                    </policy_1685981869773>
+                </columncontrol>
+            </container>
+            <fragments jcr:primaryType="nt:unstructured">
+                <experiencefragment jcr:primaryType="nt:unstructured">
+                    <policy_header
+                        cq:styleDefaultElement="header"
+                        jcr:description="Sets a &lt;header> element on the page header experience fragment."
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Page Header"
+                        sling:resourceType="wcm/core/components/policy/policy">
+                        <jcr:content
+                            jcr:mixinTypes="[]"
+                            jcr:primaryType="nt:unstructured"/>
+                    </policy_header>
+                    <policy_footer
+                        cq:styleDefaultElement="footer"
+                        jcr:description="Sets a &lt;footer> element on the page footer experience fragment."
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Page Footer"
+                        sling:resourceType="wcm/core/components/policy/policy">
+                        <jcr:content
+                            jcr:mixinTypes="[]"
+                            jcr:primaryType="nt:unstructured"/>
+                    </policy_footer>
+                </experiencefragment>
+            </fragments>
+        </components>
+    </kpmg>
+</jcr:root>

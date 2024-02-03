@@ -1,0 +1,77 @@
+{
+  "jcr:primaryType": "cq:Page",
+  "jcr:createdBy": "admin",
+  "jcr:created": "Sat May 27 2023 12:25:11 GMT+0530",
+  "jcr:content": {
+    "jcr:primaryType": "cq:PageContent",
+    "jcr:mixinTypes": ["mix:versionable"],
+    "jcr:createdBy": "admin",
+    "jcr:title": "Contact Page",
+    "cq:lastReplicatedBy_publish": "kunal.dhak@publicissapient.com",
+    "metaOgSiteSettings": "KPMG",
+    "cq:isDelivered": true,
+    "cq:lastReplicationAction": "Activate",
+    "jobTitle": "Developer",
+    "jcr:versionHistory": "c1e9b456-5276-47a7-9eb0-5e4c4ca1dbdc",
+    "offTime": "Fri Jun 30 2023 13:55:00 GMT+0530",
+    "pwaOrientation": "any",
+    "lastName": "Thomas",
+    "cq:template": "/conf/kpmg/settings/wcm/templates/page-contact",
+    "cq:lastReplicatedBy": "kunal.dhak@publicissapient.com",
+    "salutation": "Mr.",
+    "phoneNumber": "242424",
+    "cq:lastReplicationAction_publish": "Activate",
+    "jcr:predecessors": ["96f57942-be2e-42aa-bc66-6fcab5356152"],
+    "jcr:created": "Sat May 27 2023 12:25:11 GMT+0530",
+    "pwaDisplay": "standalone",
+    "cq:lastReplicated": "Fri Jun 02 2023 05:41:49 GMT+0000",
+    "cq:lastModified": "Mon Jun 05 2023 06:18:04 GMT+0000",
+    "city": "Toronto",
+    "contactType": "permanent",
+    "biography": "Sample biography information",
+    "email": "kdhak@sapient.com",
+    "owner": "en-global-audit",
+    "state": "Ontario",
+    "firstName": "Jithin",
+    "hideInSearch": "false",
+    "kpmgMemberFirm": "mf1",
+    "jcr:description": "People Page Description",
+    "pwaCachestrategy": "staleWhileRevalidate",
+    "jcr:baseVersion": "96f57942-be2e-42aa-bc66-6fcab5356152",
+    "jcr:isCheckedOut": true,
+    "metaOgType": "website",
+    "country": "de",
+    "jcr:uuid": "4fb3fc51-d468-4616-a3f7-106ae1b6dc3b",
+    "sling:resourceType": "kpmg/components/structure/page-contact",
+    "metaOgImage": "/content/dam/kpmgsites/pexels-chokniti-khongchum-2280547.jpg",
+    "metaOgTitle": "Contact Page",
+    "cq:lastReplicated_publish": "Fri Jun 02 2023 05:41:49 GMT+0000",
+    "fragmentPath":"/content/dam/kpmgsites/ch/content-fragments/contacts/kunal-dhak",
+    "cq:lastModifiedBy": "kunal.dhak@publicissapient.com",
+    "root": {
+      "jcr:primaryType": "nt:unstructured",
+      "layout": "responsiveGrid",
+      "sling:resourceType": "kpmg/components/container/container",
+      "container": {
+        "jcr:primaryType": "nt:unstructured",
+        "layout": "responsiveGrid",
+        "sling:resourceType": "kpmg/components/container/container",
+        "title": {
+          "jcr:primaryType": "nt:unstructured",
+          "sling:resourceType": "kpmg/components/content/title"
+        },
+        "container": {
+          "jcr:primaryType": "nt:unstructured",
+          "layout": "responsiveGrid",
+          "sling:resourceType": "kpmg/components/container/container"
+        }
+      }
+    },
+    "cq:featuredimage": {
+      "jcr:primaryType": "nt:unstructured",
+      "fileReference": "/content/dam/kpmgsites/pexels-chokniti-khongchum-2280547.jpg",
+      "imgDescRequired": "false",
+      "alt": "Image description"
+    }
+  }
+}

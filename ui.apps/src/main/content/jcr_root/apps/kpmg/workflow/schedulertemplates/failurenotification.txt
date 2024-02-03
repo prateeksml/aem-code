@@ -1,0 +1,13 @@
+subject=Schedule Job Failure in  ${job} 
+
+header= <br/> \${errorMessage}
+
+message=<br/> \
+<br/> \
+<table border="2" width="100%"> \ <tr> \ <th> \Exception in ${job} </th>\ </tr>\
+{{#each exceptionList}} <tr> \ <td> \ {{this}} </td>\  </tr> \ {{/each}}\n \
+</table> \
+<br/> \
+-------------------------------------------------------------------------------------------------------------------------------------------------<br/> \
+This is an automatically generated message. Please do not reply<br/> \
+

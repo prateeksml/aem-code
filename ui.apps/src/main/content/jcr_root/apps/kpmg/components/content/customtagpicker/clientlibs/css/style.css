@@ -1,0 +1,233 @@
+
+.com-customtagpicker {
+  --list-item-bg-color: #f5f5f5;
+  --list-item-bg-selected-color: #BFD9F6;
+  --list-item-hover-color: #E6F1FD;
+  --list-item-selected-color: #283142;
+  --tag-remove-btn-color: #000;
+  --tag-remove-btn-hover-color: #fff;
+  --tag-remove-btn-bg-color: rgba(0, 0, 0, 0.2);
+  --tag-remove-btn-bg-hover-color: #000;
+  --tag-remove-btn-border-color: gray;
+  --tag-remove-btn-border-hover-color: #000;
+
+}
+.com-customtagpicker .hide {
+  display: none;
+}
+.com-customtagpicker .dialog-opener-container {
+  text-align: right;
+  margin-top: 2rem;
+  margin-right: 3rem;
+}
+.com-customtagpicker  .cq-msm-property-toggle-inheritance{
+  position: absolute;
+  bottom: 1rem;
+  right: 0;
+}
+.com-customtagpicker .category-title {
+  margin: 0;
+  font-weight: 400;
+  padding: 0;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid;
+  display: none;
+}
+.com-customtagpicker .btn {
+  padding: 0.4rem 1.3rem;
+  border-radius: 4px;
+  border: 1px solid;
+  background-color: #fff;
+  cursor: pointer;
+  text-align: left;
+}
+.com-customtagpicker .btn:disabled {
+  cursor: not-allowed;
+}
+
+.com-customtagpicker .dialog-container {
+  position: relative;
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 0 2rem;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  height: 75vh;
+  width: 80%;
+  z-index: 2;
+  max-width: 1200px;
+}
+.com-customtagpicker .dialog-container .close-icon-btn {
+  position: absolute;
+  right: 0;
+  padding: .4rem .8rem;
+  margin: 1rem 2rem 0;
+  display: inline-block;
+  border: 1px solid;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+.com-customtagpicker .dialog-container .search-control {
+  width: 100%;
+  margin-top: .6rem;
+  margin-bottom: .6rem;
+}
+.com-customtagpicker .dialog-container .search-control ._coral-Search,
+.com-customtagpicker .dialog-container .search-control ._coral-Search ._coral-Textfield{
+width: 100%;
+}
+
+.com-customtagpicker .dialog-container.show {
+  display: flex;
+  flex-flow: column nowrap;
+}
+.com-customtagpicker .dialog-container-content {
+  flex: 1;
+}
+.com-customtagpicker .dialog-container-content .header-area {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.6rem 0;
+  align-items: center;
+}
+.com-customtagpicker .dialog-container-content .tag-list  .loading-message {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+.com-customtagpicker .dialog-container-content .tag-list  .loading-message .message{
+  font-size: 1rem;
+}
+.com-customtagpicker .dialog-container-content .header-area .item-count {
+  font-size: 1.2em;
+}
+.com-customtagpicker .dialog-container-title {
+  padding: 0;
+}
+.com-customtagpicker .dialog-container .dialog-footer {
+  padding: 1rem 0 1rem 0;
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+  align-items: center;
+}
+.com-customtagpicker .dialog-container .dialog-footer .buttons {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+}
+.com-customtagpicker .overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 999;
+}
+.com-customtagpicker .tag-list {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: column;
+  flex-wrap: nowrap;
+  width: 100%;
+  align-items: center;
+  overflow: auto;
+  background-color: var(--list-item-bg-color);
+}
+
+.com-customtagpicker .tag-list-item {
+  display: flex;
+  width: 100%;
+  border: 1px solid transparent;
+  transition: background 0.3s ease-in-out;
+}
+.com-customtagpicker .tag-list-item,
+.com-customtagpicker .tag-list-item label,
+.com-customtagpicker .tag-list-item input,
+.com-customtagpicker .tag-list-item span {
+  cursor: pointer;
+}
+.com-customtagpicker .tag-list-item input {
+  display: inline-block;
+}
+.com-customtagpicker .tag-list-item:hover {
+  background-color: var(--list-item-hover-color);
+}
+.com-customtagpicker .tag-list-item input {
+  margin-right: 1rem;
+}
+.com-customtagpicker .tag-list-item label {
+  padding: 1rem 0 1rem 1rem;
+  display: flex;
+  width: 100%;
+}
+.com-customtagpicker .tag-list-item-text {
+  color: var(--list-item-color);
+  display: inline-block;
+}
+.com-customtagpicker .tag-list-item.hide {
+  display: none;
+}
+.com-customtagpicker .tag-list-item.selected {
+  background-color: var(--list-item-bg-selected-color);
+}
+.com-customtagpicker .tag-list-item.selected-text {
+  color: var(--list-item-selected-color);
+}
+.com-customtagpicker .selected-tags-container .tags-list {
+  list-style: none;
+  padding: 1rem;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+.com-customtagpicker .selected-tags-container .tags-list > p {
+  display: none;
+}
+.com-customtagpicker .selected-tags-container .tags-list > p.show {
+  display: block;
+}
+.com-customtagpicker .selected-tags-container .tags-list .tag-item {
+  display: inline-block;
+  padding: 0.3rem 0 0.3rem 1rem;
+  cursor: auto;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.6rem;
+  margin-left: 0.6rem;
+  border: 1px solid #cecece;
+  border-radius: 1.5rem;
+  cursor: auto;
+}
+.com-customtagpicker .selected-tags-container .tags-list .tag-item .close-btn {
+  display: inline-block;
+  margin: 0 1rem;
+  padding: 0;
+  height: 1.4rem;
+  width: 1.4rem;
+  border-radius: 50%;
+  background-color: var(--tag-remove-btn-bg-color);
+  border: 1px solid var(--tag-remove-btn-border-color);
+  color: var(--tag-remove-btn-color);
+  cursor: pointer;
+  font-size: 1.1em;
+}
+.com-customtagpicker .selected-tags-container .tags-list .tag-item .close-btn:hover:not(:disabled) {
+  background-color: var(--tag-remove-btn-bg-hover-color);
+  border: 1px solid var(--tag-remove-btn-border-hover-color);
+  color: var(--tag-remove-btn-hover-color);
+}
+.com-customtagpicker .selected-tags-container .tags-list .tag-item .close-btn:disabled{
+  cursor: not-allowed;
+}
+.body-no-scroll,.body-no-scroll .foundation-layout-panel-content{
+  overflow: hidden;
+}

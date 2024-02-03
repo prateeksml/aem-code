@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        jcr:primaryType="nt:unstructured"
+       allowedMimeTypes="[text/javascript,application/javascript,application/json,application/pdf,application/xml,image/png,image/gif,image/jpeg,image/webp,text/xml,text/css,text/vcard,text/x-vcard,text/calendar,text/vcalendar,text/plain,image/svg+xml,image/svg\\+xml,image/svg,text/svg\\+xml]"/>
+</jcr:root>

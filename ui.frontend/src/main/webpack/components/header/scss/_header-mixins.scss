@@ -1,0 +1,114 @@
+@mixin header-horizontal-margin {
+  --header-spacing: #{$alias-margin-base};
+  @include tablet {
+    --header-spacing: #{$alias-margin-medium};
+  }
+  @include desktop-medium {
+    --header-spacing: #{$alias-padding-6x-large};
+  }
+  margin-left: var(--header-spacing);
+  margin-right: var(--header-spacing);
+}
+
+//Menu Label - Common Styling
+@mixin menu-label {
+  @include typography-body-default-semibold;
+  color: $global-color-brand-white;
+  text-transform: capitalize;
+}
+
+@mixin menu-label-desktop-medium {
+  @include typography-body-default-regular;
+  text-transform: capitalize;
+  height: $global-size-15;
+}
+
+//Default Menu Item - Common Styling for Login/RFP/Lang Selector etc.
+@mixin menu-item {
+  $menu-item-width: $alias-size-4x-large; //80px
+  $menu-item-height: $alias-size-xx-large; //48px
+
+  width: $menu-item-width;
+  height: $menu-item-height;
+  background: transparent;
+
+  button {
+    margin: 0;
+    padding: $alias-padding-xxx-small;
+    width: 100%;
+    background: none;
+    border: none;
+  }
+
+  &__inner {
+    @include display-flex-align-center;
+    padding: $alias-padding-xxx-small;
+    flex-direction: column;
+    text-decoration: none;
+    height: $menu-item-height;
+    justify-content: space-between;
+  }
+
+  //Icon
+  &__icon {
+    @include material-icons-outlined;
+    font-size: 1rem;
+    color: $global-color-brand-white;
+    width: 100%;
+    text-align: center;
+  }
+
+  //Label
+  &__label {
+    @include typography-body-caption;
+    color: $global-color-brand-white;
+    text-transform: capitalize;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+//Menu Item - Common Styling for Login/RFP/Lang Selector etc. for tablet and up
+@mixin menu-item-tablet {
+  margin: 0 $alias-margin-medium;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  width: auto;
+  @include display-flex-align-center;
+  flex: auto;
+
+  &__inner {
+    @include normalize-style;
+    @include display-flex-align-center;
+    flex-direction: row;
+  }
+
+  button {
+    @include normalize-style;
+    background: none;
+    border: none;
+  }
+
+  //Label
+  &__label {
+    @include typography-body-small-semibold;
+    color: $global-color-brand-white;
+    text-align: left;
+  }
+
+  &__icon {
+    @include material-icons-outlined;
+    font-size: 1rem;
+    color: $global-color-brand-white;
+    text-align: left;
+    width: auto;
+    margin-right: $alias-margin-x-small;
+  }
+}

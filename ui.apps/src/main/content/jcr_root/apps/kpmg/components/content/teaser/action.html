@@ -1,0 +1,12 @@
+<sly data-sly-template.action="${@ action, customAction}">
+    <a class="cmp-teaser__action-link"
+       aria-label="${customAction.accessibilityLabel}"
+       data-sly-attribute="${action.link.htmlAttributes}"
+       data-sly-unwrap="${!action.link.valid}"
+       id="${action.id}"
+       data-cmp-data-layer="${action.data.json}"
+       data-cmp-clickable="${action.data ? true : false}">${action.title}</a>
+</sly>
+
+
+

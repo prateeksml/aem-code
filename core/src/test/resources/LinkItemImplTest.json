@@ -1,0 +1,7 @@
+{
+  "jcr:primaryType": "nt:unstructured",
+  "linkTitle": "Link Title",
+  "linkURL": "/content/link",
+  "linkTarget": "_self",
+  "linkText": "Link Text"
+}

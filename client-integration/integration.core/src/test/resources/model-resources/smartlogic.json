@@ -1,0 +1,265 @@
+{
+  "jcr:primaryType": "cq:Page",
+  "jcr:createdBy": "admin",
+  "jcr:created": "Fri Jun 16 2023 15:24:03 GMT+0530",
+  "jcr:content": {
+    "jcr:primaryType": "cq:PageContent",
+    "sl-geography-zthesid": [
+      "109696834004935164871543",
+      "138068637292039368038642"
+    ],
+    "sl-service-zthesid": [
+      "91564587734620380"
+    ],
+    "jcr:createdBy": "admin",
+    "sl-media-hierarchy": [
+      "Media formats/Audio",
+      "Media formats/Audio/Podcasts"
+    ],
+    "jcr:title": "test-page",
+    "metaOgSiteSettings": "KPMG",
+    "sl-service-qualified-name": [
+      "Advisory"
+    ],
+    "sl-insight-qualified-name-id": [
+      "708496833081327404827146390382137",
+      "708496833081327404827146390382137/6302550637005123818027"
+    ],
+    "sl-industry-qualified-name": [
+      "Automotive",
+      "Automotive/Automotive Industry Suppliers"
+    ],
+    "sl-content-hierarchy": [
+      "Content type/About KPMG",
+      "Content type/About KPMG/Annual Reports",
+      "Content type/Apps"
+    ],
+    "sl-market-hierarchy-id": [
+      "100680041286213344818000/19825234964952847383902/151887532780582056340592"
+    ],
+    "pwaOrientation": "any",
+    "sl-persona-hierarchy-id": [
+      "55463311195631660891109/549916431768785771034065349584824",
+      "55463311195631660891109/549916431768785771034065349584824/29610923617167907289120"
+    ],
+    "cq:template": "/conf/kpmg/settings/wcm/templates/page-content",
+    "sl-service-hierarchy": [
+      "Services/Advisory"
+    ],
+    "sl-persona-hierarchy": [
+      "Personas/Audience",
+      "Personas/Audience/Alumni"
+    ],
+    "sl-service-hierarchy-id": [
+      "148027434902027958438931/91564587734620380"
+    ],
+    "sl-market-qualified-name": [
+      "High Growth Markets/Emerging markets"
+    ],
+    "sl-media-hierarchy-id": [
+      "164000807485345111581424/44122092496063585482498",
+      "164000807485345111581424/44122092496063585482498/179338705728847208475281"
+    ],
+    "market": [
+      "High Growth Markets/Emerging markets"
+    ],
+    "sl-industry-hierarchy": [
+      "Industries/Automotive",
+      "Industries/Automotive/Automotive Industry Suppliers"
+    ],
+    "sl-insight-zthesid": [
+      "708496833081327404827146390382137",
+      "6302550637005123818027"
+    ],
+    "sl-insight-hierarchy-id": [
+      "83240608170062883780427/708496833081327404827146390382137",
+      "83240608170062883780427/708496833081327404827146390382137/6302550637005123818027"
+    ],
+    "sl-market-hierarchy": [
+      "Markets/High Growth Markets/Emerging markets"
+    ],
+    "sl-content-zthesid": [
+      "92056386201793838246691",
+      "195905901432661949245695",
+      "137060850018942582044256"
+    ],
+    "sl-geography-unm49-region": [
+      "2"
+    ],
+    "sl-persona-qualified-name-id": [
+      "549916431768785771034065349584824",
+      "549916431768785771034065349584824/29610923617167907289120"
+    ],
+    "persona": [
+      "Audience",
+      "Audience/Alumni"
+    ],
+    "sl-geography-qualified-name-id": [
+      "109696834004935164871543",
+      "109696834004935164871543/138068637292039368038642"
+    ],
+    "contenttype": [
+      "About KPMG",
+      "About KPMG/Annual Reports",
+      "Apps"
+    ],
+    "sl-industry-zthesid": [
+      "49836440742850442553958",
+      "146608106338816780507774"
+    ],
+    "sl-media-qualified-name-id": [
+      "44122092496063585482498",
+      "44122092496063585482498/179338705728847208475281"
+    ],
+    "jcr:created": "Fri Jun 16 2023 15:24:03 GMT+0530",
+    "sl-service-qualified-name-id": [
+      "91564587734620380"
+    ],
+    "pwaDisplay": "standalone",
+    "cq:lastModified": "Thu Jul 06 2023 16:50:59 GMT-0400",
+    "sl-geography-qualified-name": [
+      "Africa",
+      "Africa/Eastern Africa"
+    ],
+    "sl-geography-unm49-subregion": [
+      "14"
+    ],
+    "owner": "en-global-audit",
+    "sl-content-qualified-name": [
+      "About KPMG",
+      "About KPMG/Annual Reports",
+      "Apps"
+    ],
+    "industry": [
+      "Automotive",
+      "Automotive/Automotive Industry Suppliers"
+    ],
+    "hideInSearch": "false",
+    "sl-persona-zthesid": [
+      "549916431768785771034065349584824",
+      "29610923617167907289120"
+    ],
+    "sl-media-qualified-name": [
+      "Audio",
+      "Audio/Podcasts"
+    ],
+    "sl-content-qualified-name-id": [
+      "92056386201793838246691",
+      "92056386201793838246691/195905901432661949245695",
+      "137060850018942582044256"
+    ],
+    "pwaCachestrategy": "staleWhileRevalidate",
+    "sl-persona-qualified-name": [
+      "Audience",
+      "Audience/Alumni"
+    ],
+    "sl-industry-qualified-name-id": [
+      "49836440742850442553958",
+      "49836440742850442553958/146608106338816780507774"
+    ],
+    "sl-content-hierarchy-id": [
+      "53054337506891119764226/92056386201793838246691",
+      "53054337506891119764226/92056386201793838246691/195905901432661949245695",
+      "53054337506891119764226/137060850018942582044256"
+    ],
+    "metaOgType": "website",
+    "sl-geography-hierarchy-id": [
+      "93812326507033629793301/109696834004935164871543",
+      "93812326507033629793301/109696834004935164871543/138068637292039368038642"
+    ],
+    "sl-market-zthesid": [
+      "151887532780582056340592"
+    ],
+    "sling:resourceType": "kpmg/components/structure/page",
+    "geography": [
+      "Africa",
+      "Africa/Eastern Africa"
+    ],
+    "sl-media-zthesid": [
+      "44122092496063585482498",
+      "179338705728847208475281"
+    ],
+    "metaOgImage": "/content/dam/kpmgsites/logo.svg",
+    "metaOgTitle": "test-page",
+    "sl-industry-hierarchy-id": [
+      "135320640047454042275950/49836440742850442553958",
+      "135320640047454042275950/49836440742850442553958/146608106338816780507774"
+    ],
+    "sl-geography-hierarchy": [
+      "Geography/Africa",
+      "Geography/Africa/Eastern Africa"
+    ],
+    "sl-insight-hierarchy": [
+      "Insights/Audit",
+      "Insights/Audit/Assurance"
+    ],
+    "sl-market-qualified-name-id": [
+      "19825234964952847383902/151887532780582056340592"
+    ],
+    "cq:lastModifiedBy": "admin",
+    "insight": [
+      "Audit",
+      "Audit/Assurance"
+    ],
+    "mediaformats": [
+      "Audio",
+      "Audio/Podcasts"
+    ],
+    "sl-insight-qualified-name": [
+      "Audit",
+      "Audit/Assurance"
+    ],
+    "service": [
+      "Advisory"
+    ],
+    "root": {
+      "jcr:primaryType": "nt:unstructured",
+      "layout": "responsiveGrid",
+      "sling:resourceType": "kpmg/components/container/container",
+      "container": {
+        "jcr:primaryType": "nt:unstructured",
+        "layout": "responsiveGrid",
+        "sling:resourceType": "kpmg/components/container/container",
+        "title": {
+          "jcr:primaryType": "nt:unstructured",
+          "sling:resourceType": "kpmg/components/content/title"
+        },
+        "container": {
+          "jcr:primaryType": "nt:unstructured",
+          "layout": "responsiveGrid",
+          "sling:resourceType": "kpmg/components/container/container",
+          "standardteaser": {
+            "jcr:primaryType": "nt:unstructured",
+            "imageFromPageImage": "false",
+            "fileReference": "/content/dam/kpmg-style-guide/ayo-ogunseinde-237739.jpeg",
+            "pretitle": "Test",
+            "jcr:lastModifiedBy": "shipraj@adobe.com",
+            "titleFromPage": "true",
+            "alt": "test",
+            "jcr:lastModified": "Thu May 18 2023 05:25:58 GMT+0000",
+            "descriptionFromPage": "true",
+            "sling:resourceType": "kpmg/components/content/standardteaser",
+            "isDecorative": "false",
+            "textIsRich": "true",
+            "searchIndexable": "true",
+            "altValueFromDAM": "false",
+            "actions": {
+              "jcr:primaryType": "nt:unstructured",
+              "item0": {
+                "jcr:primaryType": "nt:unstructured",
+                "link": "/content/outbound-marketing",
+                "text": "test",
+                "linkTarget": "_self"
+              }
+            }
+          }
+        }
+      }
+    },
+    "cq:featuredimage": {
+      "jcr:primaryType": "nt:unstructured",
+      "fileReference": "/content/dam/kpmgsites/logo.svg",
+      "imgDescRequired": "false"
+    }
+  }
+}

@@ -1,0 +1,38 @@
+<section class="cmp-search-results" 
+data-sly-use.searchResults="com.kpmg.integration.models.SearchResults">
+    <div class="cmp-search-results__filters-container" data-sly-test="${searchResults.filterList}">
+        <button id="cmp-search-results__filters--prev-btn">
+        </button>
+        <div class="cmp-search-results__filters" data-sly-list.flist="${searchResults.filterList}">
+            <button data-filter-type="${flist.filterType}" class="cmp-search-results__filters--cta ${flist.filterType == 'all' ? 'selected' : ''}">${flist.filterLabel}</button>
+        </div>
+        <button id="cmp-search-results__filters--next-btn">
+        </button>
+    </div>
+    <div class="cmp-search-results__count">
+        <div class="cmp-search-results__count--desktop-label" data-text="${searchResults.resultsCountMessage}"></div>
+        <div class="cmp-search-results__count--mobile-label"><span></span> ${searchResults.mResultsCountMessage}</div>
+    </div>
+    <div id="cmp-search-results__no-results">
+        <div aria-hidden="true" class="cmp-search-results__no-results--icon">error_outline</div>
+        ${searchResults.noResultsMessage @ context ="html"}
+    </div>
+    <div class="cmp-search-results__list-container">
+        <ul class="cmp-search-results__list" data-upcoming-label="${searchResults.upcomingLabel}" data-past-label="${searchResults.pastEventLabel}">
+            
+        </ul>
+    </div>
+    <div id="cmp-search-results__pagination"></div>
+     <div class="error-msg-for-overlay" aria-hidden="true" style="display: none;">
+        <div class="text-msg">
+            <div>
+                <span class="material-icons-outlined" aria-hidden="true">error_outline</span>                
+            </div>
+            <div class="text" data-button-text-close="${searchResults.cancelButtonText}">
+                <div class="cmp-text">
+                    ${searchResults.systemErrorMessage @ context ="html"}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

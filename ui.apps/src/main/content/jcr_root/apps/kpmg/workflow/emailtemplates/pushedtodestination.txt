@@ -1,0 +1,10 @@
+subject=Asset moved to correct folder
+
+message=Your recently uploaded Asset ${assetName} was uploaded to the incorrect folder in the DAM. This has now been automatically moved to the correct folder in the following location:\n \
+${hostPrefix}${assetPath}\
+
+footer=\n \
+-------------------------------------------------------------------------------------\n \
+View the overview in your ${hostPrefix}/aem/inbox\n \
+-------------------------------------------------------------------------------------\n \
+This is an automatically generated message. Please do not reply.

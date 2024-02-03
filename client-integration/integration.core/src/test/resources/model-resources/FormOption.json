@@ -1,0 +1,35 @@
+{
+  "options": {
+    "jcr:primaryType": "nt:unstructured",
+    "jcr:title": "Location",
+    "datasourceRT": "/bin/CFDropdown",
+    "jcr:lastModifiedBy": "admin",
+    "source": "datasource",
+    "required": "true",
+    "name": "cfloc",
+    "type": "drop-down",
+    "jcr:lastModified": "Wed Jul 05 2023 12:53:17 GMT+0530",
+    "sling:resourceType": "kpmg/components/content/form/options",
+    "fragmentpath": "/content/dam/kpmgsites/contentfragment",
+    "requiredMessage": "required message",
+    "cq:responsive": {
+      "jcr:primaryType": "nt:unstructured",
+      "default": {
+        "jcr:primaryType": "nt:unstructured",
+        "offset": "1",
+        "width": "5"
+      }
+    }
+  },
+
+  "privacy": {
+    "jcr:primaryType": "nt:unstructured",
+    "jcr:lastModifiedBy": "jeevana.anubrolu@publicissapient.com",
+    "jcr:lastModified": "Mon Jul 03 2023 12:14:49 GMT+0000",
+    "sling:resourceType": "kpmg/components/content/privacy",
+    "privacytext": "<p>By clicking send, you acknowledge that we may use this information to respond to your request and process it as outlined in the <a href=\"https://kpmg.com/content/kpmgpublic/xx/en/home/misc/privacy.html\">KPMG Online Privacy Statement</a></p>\r\n",
+    "textIsRich": "true",
+    "privacyid" : "privacy"
+  }
+
+}

@@ -1,0 +1,49 @@
+@use "sass:math";
+
+// MEDIA QUERIES
+@mixin tablet {
+  //Applies styles to anything with a viewport of 768px and up
+  //Note: We are utilizing a mobile first approach,
+  //therefore the default styling will apply to the mobile 360px viewport
+  @media (min-width: #{$global-grid-breakpoint-medium}) {
+    @content;
+  }
+}
+
+@mixin desktop-small {
+  //Applies styles to anything with a viewport of 1024px and up
+  //Note: We are utilizing a mobile first approach,
+  //therefore the default styling will apply to the mobile 360px viewport
+  @media (min-width: #{$global-grid-breakpoint-large}) {
+    @content;
+  }
+}
+
+@mixin desktop-medium {
+  //Applies styles to anything with a viewport of 1366px and up
+  //Note: We are utilizing a mobile first approach,
+  //therefore the default styling will apply to the mobile 360px viewport
+  @media (min-width: #{$global-grid-breakpoint-x-large}) {
+    @content;
+  }
+}
+
+@mixin container {
+  container-type: inline-size;
+}
+
+@mixin container-50 {
+  /* stylelint-disable at-rule-no-unknown */
+  @container (width < 50vw) {
+    @media (min-width: #{$global-grid-breakpoint-large}) {
+      @content;
+    }
+  }
+}
+
+@mixin container-25 {
+  /* stylelint-disable at-rule-no-unknown */
+  @container (width < 25vw) {
+    @content;
+  }
+}

@@ -1,0 +1,685 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2023-06-05T13:49:28.377-05:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/kpmg/settings/wcm/templates/page-content"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Card Teaser"
+        sling:resourceType="kpmg/components/structure/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="kpmg/components/container/container"
+            layout="responsiveGrid">
+            <main
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="kpmg/components/container/main"
+                layout="simple">
+                <section
+                    cq:styleIds="[1685836502714,1685979435871,1685979465121]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="kpmg/components/container/section"
+                    layout="responsiveGrid">
+                    <title
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="kpmg/components/content/title"/>
+                    <title_80794766
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="In Container"
+                        sling:resourceType="kpmg/components/content/title"
+                        searchIndexable="true"
+                        type="h4"/>
+                    <container
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="kpmg/components/container/container">
+                        <cardteaser
+                            cq:styleIds="[1684753974164]"
+                            jcr:description="&lt;p>Embed a social strategy inside and outside your organization with considerations for DEI, health equity, human rights, employee safety, and more. Our services include:&lt;br />&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>Diversity, Equity, and Inclusion strategy&lt;/p>&#xd;&#xa;"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Tax ESG"
+                            sling:resourceType="kpmg/components/content/cardteaser"
+                            buttonLabel="Learn more"
+                            customDescription="&lt;p>Embed a social strategy inside and outside your organization with considerations for DEI, health equity, human rights, employee safety, and more.&lt;/p>&#xd;&#xa;"
+                            customTitle="Title Here"
+                            descriptionFromPage="false"
+                            flip="true"
+                            flipButtonLabel="Learn More"
+                            icon="group"
+                            iconType="materialIcon"
+                            imageFromPageImage="false"
+                            isDecorative="true"
+                            linkTarget="_self"
+                            pretitle="Tax ESG"
+                            searchIndexable="false"
+                            textIsRich="true"
+                            titleFromPage="false">
+                            <cq:responsive jcr:primaryType="nt:unstructured">
+                                <default
+                                    jcr:primaryType="nt:unstructured"
+                                    offset="0"
+                                    width="3"/>
+                            </cq:responsive>
+                        </cardteaser>
+                        <cardteaser_copy
+                            cq:styleIds="[1684753974164]"
+                            jcr:description="&lt;p>Embed a social strategy inside and outside your organization with considerations for DEI, health equity, human rights, employee safety, and more. Our services include:&lt;br />&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>Diversity, Equity, and Inclusion strategy&lt;/p>&#xd;&#xa;"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Tax ESG"
+                            sling:resourceType="kpmg/components/content/cardteaser"
+                            buttonLabel="Learn more"
+                            customDescription="&lt;p>Embed a social strategy inside and outside your organization with considerations for DEI, health equity, human rights, employee safety, and more.&lt;/p>&#xd;&#xa;"
+                            customTitle="Title Here"
+                            descriptionFromPage="false"
+                            flip="true"
+                            flipButtonLabel="Learn More"
+                            icon="group"
+                            iconType="materialIcon"
+                            imageFromPageImage="false"
+                            isDecorative="true"
+                            linkTarget="_self"
+                            pretitle="Tax ESG"
+                            searchIndexable="false"
+                            textIsRich="true"
+                            titleFromPage="false">
+                            <cq:responsive jcr:primaryType="nt:unstructured">
+                                <default
+                                    jcr:primaryType="nt:unstructured"
+                                    offset="0"
+                                    width="3"/>
+                            </cq:responsive>
+                        </cardteaser_copy>
+                        <cardteaser_copy_1263461870
+                            cq:styleIds="[1684753974164]"
+                            jcr:description="&lt;p>Embed a social strategy inside and outside your organization with considerations for DEI, health equity, human rights, employee safety, and more. Our services include:&lt;br />&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>Diversity, Equity, and Inclusion strategy&lt;/p>&#xd;&#xa;"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Tax ESG"
+                            sling:resourceType="kpmg/components/content/cardteaser"
+                            buttonLabel="Learn more"
+                            customDescription="&lt;p>Embed a social strategy inside and outside your organization with considerations for DEI, health equity, human rights, employee safety, and more.&lt;/p>&#xd;&#xa;"
+                            customTitle="Title Here"
+                            descriptionFromPage="false"
+                            flip="true"
+                            flipButtonLabel="Learn More"
+                            icon="group"
+                            iconType="materialIcon"
+                            imageFromPageImage="false"
+                            isDecorative="true"
+                            linkTarget="_self"
+                            pretitle="Tax ESG"
+                            searchIndexable="false"
+                            textIsRich="true"
+                            titleFromPage="false">
+                            <cq:responsive jcr:primaryType="nt:unstructured">
+                                <default
+                                    jcr:primaryType="nt:unstructured"
+                                    offset="0"
+                                    width="3"/>
+                            </cq:responsive>
+                        </cardteaser_copy_1263461870>
+                        <cardteaser_copy_1378754799
+                            cq:styleIds="[1684753974164]"
+                            jcr:description="&lt;p>Embed a social strategy inside and outside your organization with considerations for DEI, health equity, human rights, employee safety, and more. Our services include:&lt;br />&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>Diversity, Equity, and Inclusion strategy&lt;/p>&#xd;&#xa;"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Tax ESG"
+                            sling:resourceType="kpmg/components/content/cardteaser"
+                            buttonLabel="Learn more"
+                            customDescription="&lt;p>Embed a social strategy inside and outside your organization with considerations for DEI, health equity, human rights, employee safety, and more.&lt;/p>&#xd;&#xa;"
+                            customTitle="Title Here"
+                            descriptionFromPage="false"
+                            flip="true"
+                            flipButtonLabel="Learn More"
+                            icon="group"
+                            iconType="materialIcon"
+                            imageFromPageImage="false"
+                            isDecorative="true"
+                            linkTarget="_self"
+                            pretitle="Tax ESG"
+                            searchIndexable="false"
+                            textIsRich="true"
+                            titleFromPage="false">
+                            <cq:responsive jcr:primaryType="nt:unstructured">
+                                <default
+                                    jcr:primaryType="nt:unstructured"
+                                    offset="0"
+                                    width="3"/>
+                            </cq:responsive>
+                        </cardteaser_copy_1378754799>
+                        <cardteaser_copy_577165112
+                            cq:styleIds="[1684753974164]"
+                            jcr:description="&lt;p>Embed a social strategy inside and outside your organization with considerations for DEI, health equity, human rights, employee safety, and more. Our services include:&lt;br />&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>Diversity, Equity, and Inclusion strategy&lt;/p>&#xd;&#xa;"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Tax ESG"
+                            sling:resourceType="kpmg/components/content/cardteaser"
+                            buttonLabel="Learn more"
+                            customDescription="&lt;p>Embed a social strategy inside and outside your organization with considerations for DEI, health equity, human rights, employee safety, and more.&lt;/p>&#xd;&#xa;"
+                            customTitle="Title Here"
+                            descriptionFromPage="false"
+                            flip="true"
+                            flipButtonLabel="Learn More"
+                            icon="group"
+                            iconType="materialIcon"
+                            imageFromPageImage="false"
+                            isDecorative="true"
+                            linkTarget="_self"
+                            pretitle="Tax ESG"
+                            searchIndexable="false"
+                            textIsRich="true"
+                            titleFromPage="false">
+                            <cq:responsive jcr:primaryType="nt:unstructured">
+                                <default
+                                    jcr:primaryType="nt:unstructured"
+                                    offset="0"
+                                    width="3"/>
+                            </cq:responsive>
+                        </cardteaser_copy_577165112>
+                        <cardteaser_copy_244804347
+                            cq:styleIds="[1684753974164]"
+                            jcr:description="&lt;p>Embed a social strategy inside and outside your organization with considerations for DEI, health equity, human rights, employee safety, and more. Our services include:&lt;br />&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>Diversity, Equity, and Inclusion strategy&lt;/p>&#xd;&#xa;"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Tax ESG"
+                            sling:resourceType="kpmg/components/content/cardteaser"
+                            buttonLabel="Learn more"
+                            customDescription="&lt;p>Embed a social strategy inside and outside your organization with considerations for DEI, health equity, human rights, employee safety, and more.&lt;/p>&#xd;&#xa;"
+                            customTitle="Title Here"
+                            descriptionFromPage="false"
+                            flip="true"
+                            flipButtonLabel="Learn More"
+                            icon="group"
+                            iconType="materialIcon"
+                            imageFromPageImage="false"
+                            isDecorative="true"
+                            linkTarget="_self"
+                            pretitle="Tax ESG"
+                            searchIndexable="false"
+                            textIsRich="true"
+                            titleFromPage="false">
+                            <cq:responsive jcr:primaryType="nt:unstructured">
+                                <default
+                                    jcr:primaryType="nt:unstructured"
+                                    offset="0"
+                                    width="3"/>
+                            </cq:responsive>
+                        </cardteaser_copy_244804347>
+                        <cardteaser_copy_710909532
+                            cq:styleIds="[1684753974164]"
+                            jcr:description="&lt;p>Embed a social strategy inside and outside your organization with considerations for DEI, health equity, human rights, employee safety, and more. Our services include:&lt;br />&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>Diversity, Equity, and Inclusion strategy&lt;/p>&#xd;&#xa;"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Tax ESG"
+                            sling:resourceType="kpmg/components/content/cardteaser"
+                            buttonLabel="Learn more"
+                            customDescription="&lt;p>Embed a social strategy inside and outside your organization with considerations for DEI, health equity, human rights, employee safety, and more.&lt;/p>&#xd;&#xa;"
+                            customTitle="Title Here"
+                            descriptionFromPage="false"
+                            flip="true"
+                            flipButtonLabel="Learn More"
+                            icon="group"
+                            iconType="materialIcon"
+                            imageFromPageImage="false"
+                            isDecorative="true"
+                            linkTarget="_self"
+                            pretitle="Tax ESG"
+                            searchIndexable="false"
+                            textIsRich="true"
+                            titleFromPage="false">
+                            <cq:responsive jcr:primaryType="nt:unstructured">
+                                <default
+                                    jcr:primaryType="nt:unstructured"
+                                    offset="0"
+                                    width="3"/>
+                            </cq:responsive>
+                        </cardteaser_copy_710909532>
+                        <cardteaser_copy_332838108
+                            cq:styleIds="[1684753974164]"
+                            jcr:description="&lt;p>Embed a social strategy inside and outside your organization with considerations for DEI, health equity, human rights, employee safety, and more. Our services include:&lt;br />&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>Diversity, Equity, and Inclusion strategy&lt;/p>&#xd;&#xa;"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Tax ESG"
+                            sling:resourceType="kpmg/components/content/cardteaser"
+                            buttonLabel="Learn more"
+                            customDescription="&lt;p>Embed a social strategy inside and outside your organization with considerations for DEI, health equity, human rights, employee safety, and more.&lt;/p>&#xd;&#xa;"
+                            customTitle="Title Here"
+                            descriptionFromPage="false"
+                            flip="true"
+                            flipButtonLabel="Learn More"
+                            icon="group"
+                            iconType="materialIcon"
+                            imageFromPageImage="false"
+                            isDecorative="true"
+                            linkTarget="_self"
+                            pretitle="Tax ESG"
+                            searchIndexable="false"
+                            textIsRich="true"
+                            titleFromPage="false">
+                            <cq:responsive jcr:primaryType="nt:unstructured">
+                                <default
+                                    jcr:primaryType="nt:unstructured"
+                                    offset="0"
+                                    width="3"/>
+                            </cq:responsive>
+                        </cardteaser_copy_332838108>
+                    </container>
+                </section>
+                <section2
+                    cq:styleIds="[1685975467587,1685979481696,1685979435871]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="kpmg/components/container/section"
+                    layout="responsiveGrid">
+                    <title_copy_copy
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="In Column Control"
+                        sling:resourceType="kpmg/components/content/title"
+                        searchIndexable="true"
+                        type="h4"/>
+                    <columncontrol
+                        cq:styleIds="[1685990627609]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="kpmg/components/container/columncontrol"
+                        columnWidth="fourEven">
+                        <container-1
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="kpmg/components/container/container">
+                            <cardteaser_copy
+                                jcr:description="&lt;p>Embed a social strategy inside and outside your organization with considerations for DEI, health equity, human rights, employee safety, and more. Our services include:&lt;br />&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>Diversity, Equity, and Inclusion strategy&lt;/p>&#xd;&#xa;"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Tax ESG"
+                                sling:resourceType="kpmg/components/content/cardteaser"
+                                buttonLabel="Learn more"
+                                customDescription="&lt;p>Embed a social strategy inside and outside your organization with considerations for DEI, health equity, human rights, employee safety, and more.&lt;/p>&#xd;&#xa;"
+                                customTitle="Title Here"
+                                descriptionFromPage="false"
+                                flip="true"
+                                flipButtonLabel="Learn More"
+                                icon="group"
+                                iconType="materialIcon"
+                                imageFromPageImage="false"
+                                isDecorative="true"
+                                linkTarget="_self"
+                                pretitle="Tax ESG"
+                                searchIndexable="false"
+                                textIsRich="true"
+                                titleFromPage="false">
+                                <cq:responsive jcr:primaryType="nt:unstructured"/>
+                            </cardteaser_copy>
+                            <cardteaser_copy_copy
+                                jcr:description="&lt;p>Embed a social strategy inside and outside your organization with considerations for DEI, health equity, human rights, employee safety, and more. Our services include:&lt;br />&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>Diversity, Equity, and Inclusion strategy&lt;/p>&#xd;&#xa;"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Tax ESG"
+                                sling:resourceType="kpmg/components/content/cardteaser"
+                                buttonLabel="Learn more"
+                                customDescription="&lt;p>Embed a social strategy inside and outside your organization with considerations for DEI, health equity, human rights, employee safety, and more.&lt;/p>&#xd;&#xa;"
+                                customTitle="Title Here"
+                                descriptionFromPage="false"
+                                flip="true"
+                                flipButtonLabel="Learn More"
+                                icon="group"
+                                iconType="materialIcon"
+                                imageFromPageImage="false"
+                                isDecorative="true"
+                                linkTarget="_self"
+                                pretitle="Tax ESG"
+                                searchIndexable="false"
+                                textIsRich="true"
+                                titleFromPage="false">
+                                <cq:responsive jcr:primaryType="nt:unstructured"/>
+                            </cardteaser_copy_copy>
+                        </container-1>
+                        <container-2
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="kpmg/components/container/container">
+                            <cardteaser_copy
+                                jcr:description="&lt;p>Embed a social strategy inside and outside your organization with considerations for DEI, health equity, human rights, employee safety, and more. Our services include:&lt;br />&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>Diversity, Equity, and Inclusion strategy&lt;/p>&#xd;&#xa;"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Tax ESG"
+                                sling:resourceType="kpmg/components/content/cardteaser"
+                                buttonLabel="Learn more"
+                                customDescription="&lt;p>Embed a social strategy inside and outside your organization with considerations for DEI, health equity, human rights, employee safety, and more.&lt;/p>&#xd;&#xa;"
+                                customTitle="Title Here"
+                                descriptionFromPage="false"
+                                flip="true"
+                                flipButtonLabel="Learn More"
+                                icon="group"
+                                iconType="materialIcon"
+                                imageFromPageImage="false"
+                                isDecorative="true"
+                                linkTarget="_self"
+                                pretitle="Tax ESG"
+                                searchIndexable="false"
+                                textIsRich="true"
+                                titleFromPage="false">
+                                <cq:responsive jcr:primaryType="nt:unstructured"/>
+                            </cardteaser_copy>
+                            <cardteaser_copy_copy
+                                jcr:description="&lt;p>Embed a social strategy inside and outside your organization with considerations for DEI, health equity, human rights, employee safety, and more. Our services include:&lt;br />&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>Diversity, Equity, and Inclusion strategy&lt;/p>&#xd;&#xa;"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Tax ESG"
+                                sling:resourceType="kpmg/components/content/cardteaser"
+                                buttonLabel="Learn more"
+                                customDescription="&lt;p>Embed a social strategy inside and outside your organization with considerations for DEI, health equity, human rights, employee safety, and more.&lt;/p>&#xd;&#xa;"
+                                customTitle="Title Here"
+                                descriptionFromPage="false"
+                                flip="true"
+                                flipButtonLabel="Learn More"
+                                icon="group"
+                                iconType="materialIcon"
+                                imageFromPageImage="false"
+                                isDecorative="true"
+                                linkTarget="_self"
+                                pretitle="Tax ESG"
+                                searchIndexable="false"
+                                textIsRich="true"
+                                titleFromPage="false">
+                                <cq:responsive jcr:primaryType="nt:unstructured"/>
+                            </cardteaser_copy_copy>
+                        </container-2>
+                        <container-3
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="kpmg/components/container/container">
+                            <cardteaser_copy
+                                jcr:description="&lt;p>Embed a social strategy inside and outside your organization with considerations for DEI, health equity, human rights, employee safety, and more. Our services include:&lt;br />&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>Diversity, Equity, and Inclusion strategy&lt;/p>&#xd;&#xa;"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Tax ESG"
+                                sling:resourceType="kpmg/components/content/cardteaser"
+                                buttonLabel="Learn more"
+                                customDescription="&lt;p>Embed a social strategy inside and outside your organization with considerations for DEI, health equity, human rights, employee safety, and more.&lt;/p>&#xd;&#xa;"
+                                customTitle="Title Here"
+                                descriptionFromPage="false"
+                                flip="true"
+                                flipButtonLabel="Learn More"
+                                icon="group"
+                                iconType="materialIcon"
+                                imageFromPageImage="false"
+                                isDecorative="true"
+                                linkTarget="_self"
+                                pretitle="Tax ESG"
+                                searchIndexable="false"
+                                textIsRich="true"
+                                titleFromPage="false">
+                                <cq:responsive jcr:primaryType="nt:unstructured"/>
+                            </cardteaser_copy>
+                            <cardteaser_copy_copy
+                                jcr:description="&lt;p>Embed a social strategy inside and outside your organization with considerations for DEI, health equity, human rights, employee safety, and more. Our services include:&lt;br />&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>Diversity, Equity, and Inclusion strategy&lt;/p>&#xd;&#xa;"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Tax ESG"
+                                sling:resourceType="kpmg/components/content/cardteaser"
+                                buttonLabel="Learn more"
+                                customDescription="&lt;p>Embed a social strategy inside and outside your organization with considerations for DEI, health equity, human rights, employee safety, and more.&lt;/p>&#xd;&#xa;"
+                                customTitle="Title Here"
+                                descriptionFromPage="false"
+                                flip="true"
+                                flipButtonLabel="Learn More"
+                                icon="group"
+                                iconType="materialIcon"
+                                imageFromPageImage="false"
+                                isDecorative="true"
+                                linkTarget="_self"
+                                pretitle="Tax ESG"
+                                searchIndexable="false"
+                                textIsRich="true"
+                                titleFromPage="false">
+                                <cq:responsive jcr:primaryType="nt:unstructured"/>
+                            </cardteaser_copy_copy>
+                        </container-3>
+                        <container-4
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="kpmg/components/container/container">
+                            <cardteaser_copy_copy
+                                jcr:description="&lt;p>Embed a social strategy inside and outside your organization with considerations for DEI, health equity, human rights, employee safety, and more. Our services include:&lt;br />&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>Diversity, Equity, and Inclusion strategy&lt;/p>&#xd;&#xa;"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Tax ESG"
+                                sling:resourceType="kpmg/components/content/cardteaser"
+                                buttonLabel="Learn more"
+                                customDescription="&lt;p>Embed a social strategy inside and outside your organization with considerations for DEI, health equity, human rights, employee safety, and more.&lt;/p>&#xd;&#xa;"
+                                customTitle="Title Here"
+                                descriptionFromPage="false"
+                                flip="true"
+                                flipButtonLabel="Learn More"
+                                icon="group"
+                                iconType="materialIcon"
+                                imageFromPageImage="false"
+                                isDecorative="true"
+                                linkTarget="_self"
+                                pretitle="Tax ESG"
+                                searchIndexable="false"
+                                textIsRich="true"
+                                titleFromPage="false">
+                                <cq:responsive jcr:primaryType="nt:unstructured"/>
+                            </cardteaser_copy_copy>
+                            <cardteaser_copy_copy_1654728078
+                                jcr:description="&lt;p>Embed a social strategy inside and outside your organization with considerations for DEI, health equity, human rights, employee safety, and more. Our services include:&lt;br />&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>Diversity, Equity, and Inclusion strategy&lt;/p>&#xd;&#xa;"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Tax ESG"
+                                sling:resourceType="kpmg/components/content/cardteaser"
+                                buttonLabel="Learn more"
+                                customDescription="&lt;p>Embed a social strategy inside and outside your organization with considerations for DEI, health equity, human rights, employee safety, and more.&lt;/p>&#xd;&#xa;"
+                                customTitle="Title Here"
+                                descriptionFromPage="false"
+                                flip="true"
+                                flipButtonLabel="Learn More"
+                                icon="group"
+                                iconType="materialIcon"
+                                imageFromPageImage="false"
+                                isDecorative="true"
+                                linkTarget="_self"
+                                pretitle="Tax ESG"
+                                searchIndexable="false"
+                                textIsRich="true"
+                                titleFromPage="false">
+                                <cq:responsive jcr:primaryType="nt:unstructured"/>
+                            </cardteaser_copy_copy_1654728078>
+                        </container-4>
+                    </columncontrol>
+                </section2>
+                <section3
+                    cq:styleIds="[1685975486988,1685979435871,1685979453471]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="kpmg/components/container/section"
+                    layout="responsiveGrid">
+                    <title
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Column Control with KPMG Blue background "
+                        sling:resourceType="kpmg/components/content/title"
+                        searchIndexable="true"
+                        type="h4"/>
+                    <columncontrol
+                        cq:styleIds="[1685990451453]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="kpmg/components/container/columncontrol"
+                        columnWidth="fourEven">
+                        <container-1
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="kpmg/components/container/container">
+                            <cardteaser_copy
+                                jcr:description="&lt;p>Embed a social strategy inside and outside your organization with considerations for DEI, health equity, human rights, employee safety, and more. Our services include:&lt;br />&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>Diversity, Equity, and Inclusion strategy&lt;/p>&#xd;&#xa;"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Tax ESG"
+                                sling:resourceType="kpmg/components/content/cardteaser"
+                                buttonLabel="Learn more"
+                                customDescription="&lt;p>Embed a social strategy inside and outside your organization with considerations for DEI, health equity, human rights, employee safety, and more.&lt;/p>&#xd;&#xa;"
+                                customTitle="Title Here"
+                                descriptionFromPage="false"
+                                flip="true"
+                                flipButtonLabel="Learn More"
+                                icon="group"
+                                iconType="materialIcon"
+                                imageFromPageImage="false"
+                                isDecorative="true"
+                                linkTarget="_self"
+                                pretitle="Tax ESG"
+                                searchIndexable="false"
+                                textIsRich="true"
+                                titleFromPage="false">
+                                <cq:responsive jcr:primaryType="nt:unstructured"/>
+                            </cardteaser_copy>
+                            <cardteaser_copy_copy
+                                jcr:description="&lt;p>Embed a social strategy inside and outside your organization with considerations for DEI, health equity, human rights, employee safety, and more. Our services include:&lt;br />&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>Diversity, Equity, and Inclusion strategy&lt;/p>&#xd;&#xa;"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Tax ESG"
+                                sling:resourceType="kpmg/components/content/cardteaser"
+                                buttonLabel="Learn more"
+                                customDescription="&lt;p>Embed a social strategy inside and outside your organization with considerations for DEI, health equity, human rights, employee safety, and more.&lt;/p>&#xd;&#xa;"
+                                customTitle="Title Here"
+                                descriptionFromPage="false"
+                                flip="true"
+                                flipButtonLabel="Learn More"
+                                icon="group"
+                                iconType="materialIcon"
+                                imageFromPageImage="false"
+                                isDecorative="true"
+                                linkTarget="_self"
+                                pretitle="Tax ESG"
+                                searchIndexable="false"
+                                textIsRich="true"
+                                titleFromPage="false">
+                                <cq:responsive jcr:primaryType="nt:unstructured"/>
+                            </cardteaser_copy_copy>
+                        </container-1>
+                        <container-2
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="kpmg/components/container/container">
+                            <cardteaser_copy
+                                jcr:description="&lt;p>Embed a social strategy inside and outside your organization with considerations for DEI, health equity, human rights, employee safety, and more. Our services include:&lt;br />&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>Diversity, Equity, and Inclusion strategy&lt;/p>&#xd;&#xa;"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Tax ESG"
+                                sling:resourceType="kpmg/components/content/cardteaser"
+                                buttonLabel="Learn more"
+                                customDescription="&lt;p>Embed a social strategy inside and outside your organization with considerations for DEI, health equity, human rights, employee safety, and more.&lt;/p>&#xd;&#xa;"
+                                customTitle="Title Here"
+                                descriptionFromPage="false"
+                                flip="true"
+                                flipButtonLabel="Learn More"
+                                icon="group"
+                                iconType="materialIcon"
+                                imageFromPageImage="false"
+                                isDecorative="true"
+                                linkTarget="_self"
+                                pretitle="Tax ESG"
+                                searchIndexable="false"
+                                textIsRich="true"
+                                titleFromPage="false">
+                                <cq:responsive jcr:primaryType="nt:unstructured"/>
+                            </cardteaser_copy>
+                            <cardteaser_copy_copy
+                                jcr:description="&lt;p>Embed a social strategy inside and outside your organization with considerations for DEI, health equity, human rights, employee safety, and more. Our services include:&lt;br />&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>Diversity, Equity, and Inclusion strategy&lt;/p>&#xd;&#xa;"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Tax ESG"
+                                sling:resourceType="kpmg/components/content/cardteaser"
+                                buttonLabel="Learn more"
+                                customDescription="&lt;p>Embed a social strategy inside and outside your organization with considerations for DEI, health equity, human rights, employee safety, and more.&lt;/p>&#xd;&#xa;"
+                                customTitle="Title Here"
+                                descriptionFromPage="false"
+                                flip="true"
+                                flipButtonLabel="Learn More"
+                                icon="group"
+                                iconType="materialIcon"
+                                imageFromPageImage="false"
+                                isDecorative="true"
+                                linkTarget="_self"
+                                pretitle="Tax ESG"
+                                searchIndexable="false"
+                                textIsRich="true"
+                                titleFromPage="false">
+                                <cq:responsive jcr:primaryType="nt:unstructured"/>
+                            </cardteaser_copy_copy>
+                        </container-2>
+                        <container-3
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="kpmg/components/container/container">
+                            <cardteaser_copy
+                                jcr:description="&lt;p>Embed a social strategy inside and outside your organization with considerations for DEI, health equity, human rights, employee safety, and more. Our services include:&lt;br />&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>Diversity, Equity, and Inclusion strategy&lt;/p>&#xd;&#xa;"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Tax ESG"
+                                sling:resourceType="kpmg/components/content/cardteaser"
+                                buttonLabel="Learn more"
+                                customDescription="&lt;p>Embed a social strategy inside and outside your organization with considerations for DEI, health equity, human rights, employee safety, and more.&lt;/p>&#xd;&#xa;"
+                                customTitle="Title Here"
+                                descriptionFromPage="false"
+                                flip="true"
+                                flipButtonLabel="Learn More"
+                                icon="group"
+                                iconType="materialIcon"
+                                imageFromPageImage="false"
+                                isDecorative="true"
+                                linkTarget="_self"
+                                pretitle="Tax ESG"
+                                searchIndexable="false"
+                                textIsRich="true"
+                                titleFromPage="false">
+                                <cq:responsive jcr:primaryType="nt:unstructured"/>
+                            </cardteaser_copy>
+                            <cardteaser_copy_copy
+                                jcr:description="&lt;p>Embed a social strategy inside and outside your organization with considerations for DEI, health equity, human rights, employee safety, and more. Our services include:&lt;br />&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>Diversity, Equity, and Inclusion strategy&lt;/p>&#xd;&#xa;"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Tax ESG"
+                                sling:resourceType="kpmg/components/content/cardteaser"
+                                buttonLabel="Learn more"
+                                customDescription="&lt;p>Embed a social strategy inside and outside your organization with considerations for DEI, health equity, human rights, employee safety, and more.&lt;/p>&#xd;&#xa;"
+                                customTitle="Title Here"
+                                descriptionFromPage="false"
+                                flip="true"
+                                flipButtonLabel="Learn More"
+                                icon="group"
+                                iconType="materialIcon"
+                                imageFromPageImage="false"
+                                isDecorative="true"
+                                linkTarget="_self"
+                                pretitle="Tax ESG"
+                                searchIndexable="false"
+                                textIsRich="true"
+                                titleFromPage="false">
+                                <cq:responsive jcr:primaryType="nt:unstructured"/>
+                            </cardteaser_copy_copy>
+                        </container-3>
+                        <container-4
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="kpmg/components/container/container">
+                            <cardteaser_copy_copy
+                                jcr:description="&lt;p>Embed a social strategy inside and outside your organization with considerations for DEI, health equity, human rights, employee safety, and more. Our services include:&lt;br />&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>Diversity, Equity, and Inclusion strategy&lt;/p>&#xd;&#xa;"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Tax ESG"
+                                sling:resourceType="kpmg/components/content/cardteaser"
+                                buttonLabel="Learn more"
+                                customDescription="&lt;p>Embed a social strategy inside and outside your organization with considerations for DEI, health equity, human rights, employee safety, and more.&lt;/p>&#xd;&#xa;"
+                                customTitle="Title Here"
+                                descriptionFromPage="false"
+                                flip="true"
+                                flipButtonLabel="Learn More"
+                                icon="group"
+                                iconType="materialIcon"
+                                imageFromPageImage="false"
+                                isDecorative="true"
+                                linkTarget="_self"
+                                pretitle="Tax ESG"
+                                searchIndexable="false"
+                                textIsRich="true"
+                                titleFromPage="false">
+                                <cq:responsive jcr:primaryType="nt:unstructured"/>
+                            </cardteaser_copy_copy>
+                            <cardteaser_copy_copy_1654728078
+                                jcr:description="&lt;p>Embed a social strategy inside and outside your organization with considerations for DEI, health equity, human rights, employee safety, and more. Our services include:&lt;br />&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>Diversity, Equity, and Inclusion strategy&lt;/p>&#xd;&#xa;"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Tax ESG"
+                                sling:resourceType="kpmg/components/content/cardteaser"
+                                buttonLabel="Learn more"
+                                customDescription="&lt;p>Embed a social strategy inside and outside your organization with considerations for DEI, health equity, human rights, employee safety, and more.&lt;/p>&#xd;&#xa;"
+                                customTitle="Title Here"
+                                descriptionFromPage="false"
+                                flip="true"
+                                flipButtonLabel="Learn More"
+                                icon="group"
+                                iconType="materialIcon"
+                                imageFromPageImage="false"
+                                isDecorative="true"
+                                linkTarget="_self"
+                                pretitle="Tax ESG"
+                                searchIndexable="false"
+                                textIsRich="true"
+                                titleFromPage="false">
+                                <cq:responsive jcr:primaryType="nt:unstructured"/>
+                            </cardteaser_copy_copy_1654728078>
+                        </container-4>
+                    </columncontrol>
+                </section3>
+            </main>
+        </root>
+    </jcr:content>
+</jcr:root>

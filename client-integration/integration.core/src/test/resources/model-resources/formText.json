@@ -1,0 +1,34 @@
+{
+  "text": {
+    "sling:resourceType": "kpmg/components/content/form/text",
+    "jcr:title": "First Name",
+    "type": "text",
+    "required": "true",
+    "isCustomRegex": "false",
+    "regexMessage": "this is test message",
+    "customRegex": "[a-zA-Z0-9]",
+    "validationRegex": "^[a-zA-Z ]*$",
+    "jcr:created": "Mon Jul 03 2023 12:07:32 GMT+0000",
+    "jcr:lastModifiedBy": "jeevana.anubrolu@publicissapient.com",
+    "maxlength": "10",
+    "jcr:createdBy": "jeevana.anubrolu@publicissapient.com",
+    "rows": "2",
+    "jcr:lastModified": "Wed Jul 26 2023 05:27:02 GMT+0000",
+    "name": "first_name",
+    "jcr:primaryType": "nt:unstructured",
+    "requiredMessage": "Please provide a First Name",
+    "cq:responsive": {
+      "jcr:primaryType": "nt:unstructured",
+      "default": {
+        "offset": "0",
+        "width": "4",
+        "jcr:primaryType": "nt:unstructured"
+      },
+      "phone": {
+        "offset": "0",
+        "width": "10",
+        "jcr:primaryType": "nt:unstructured"
+      }
+    }
+  }
+}

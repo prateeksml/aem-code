@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="sling:OrderedFolder"
+    sling:resourceType="dam/rendition/smartcrop">
+    <jcr:content
+        jcr:lastModified="{Date}2023-07-14T11:39:31.381Z"
+        jcr:lastModifiedBy="dam-writer-service"
+        jcr:primaryType="nt:unstructured"
+        croptype="banner"
+        height="{Long}696"
+        left="{Double}0.3321917808219178"
+        manualCrop="{Boolean}false"
+        normalizedHeight="{Double}1.0"
+        normalizedWidth="{Double}0.6666666666666666"
+        rendition.handler.id="smartcrop.rendition.handler"
+        source="nui"
+        top="{Double}0.0"
+        width="{Long}696"/>
+</jcr:root>

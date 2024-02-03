@@ -1,0 +1,93 @@
+{
+  "jcr:primaryType": "cq:Page",
+  "jcr:createdBy": "admin",
+  "jcr:created": "Sat May 27 2023 12:25:11 GMT+0530",
+  "jcr:content": {
+    "jcr:primaryType": "cq:PageContent",
+    "jcr:mixinTypes": ["mix:versionable"],
+    "jcr:createdBy": "admin",
+    "jcr:title": "Aritcle Page",
+    "cq:lastReplicatedBy_publish": "kunal.dhak@publicissapient.com",
+    "metaOgSiteSettings": "KPMG",
+    "cq:isDelivered": true,
+    "cq:lastReplicationAction": "Activate",
+    "jcr:versionHistory": "64ac278f-3e6b-4884-bc09-7fac676dcb47",
+    "offTime": "Fri Jun 30 2023 14:00:00 GMT+0530",
+    "pwaOrientation": "any",
+    "cq:template": "/conf/kpmg/settings/wcm/templates/page-article",
+    "cq:lastReplicatedBy": "kunal.dhak@publicissapient.com",
+    "articlePrimaryFormat": "audio",
+    "cq:lastReplicationAction_publish": "Activate",
+    "articleTimeAndDate": "Fri May 19 2023 17:53:00 GMT+0530",
+    "jcr:predecessors": ["90b58732-36a1-4fec-b80a-bef00688ddb6"],
+    "jcr:created": "Sat May 27 2023 12:25:11 GMT+0530",
+    "pwaDisplay": "standalone",
+    "cq:lastReplicated": "Fri Jun 02 2023 05:45:44 GMT+0000",
+    "cq:lastModified": "Thu Jun 15 2023 23:26:46 GMT+0530",
+    "owner": "en-global-audit",
+    "hideInSearch": "false",
+    "jcr:description": "Article Description",
+    "pwaCachestrategy": "staleWhileRevalidate",
+    "jcr:baseVersion": "90b58732-36a1-4fec-b80a-bef00688ddb6",
+    "jcr:isCheckedOut": true,
+    "metaOgType": "website",
+    "articleType": "audit",
+    "jcr:uuid": "7681d67b-a390-4af4-b2dd-80a8e344d22b",
+    "sling:resourceType": "kpmg/components/structure/page-article",
+    "metaOgTitle": "Aritcle Page",
+    "cq:lastReplicated_publish": "Fri Jun 02 2023 05:45:44 GMT+0000",
+    "cq:lastModifiedBy": "admin",
+    "root": {
+      "jcr:primaryType": "nt:unstructured",
+      "jcr:lastModifiedBy": "admin",
+      "layout": "responsiveGrid",
+      "jcr:lastModified": "Mon May 15 2023 19:06:28 GMT+0530",
+      "sling:resourceType": "kpmg/components/container/container",
+      "experiencefragment-header": {
+        "jcr:primaryType": "nt:unstructured",
+        "fragmentVariationPath": "/content/experience-fragments/kpmg/language-masters/en/site/header/master",
+        "sling:resourceType": "kpmg/components/fragments/experiencefragment"
+      },
+      "container": {
+        "jcr:primaryType": "nt:unstructured",
+        "layout": "responsiveGrid",
+        "sling:resourceType": "kpmg/components/container/container",
+        "text": {
+          "jcr:primaryType": "nt:unstructured",
+          "jcr:lastModifiedBy": "musallam@adobe.com",
+          "text": "<p>this is a text</p>\r\n",
+          "jcr:lastModified": "Fri May 19 2023 15:18:43 GMT+0000",
+          "sling:resourceType": "kpmg/components/content/text",
+          "textIsRich": "true",
+          "searchIndexable": "true"
+        },
+        "text_8429574": {
+          "jcr:primaryType": "nt:unstructured",
+          "jcr:lastModifiedBy": "musallam@adobe.com",
+          "text": "<h1>&nbsp; &nbsp; &nbsp; THIS IS A TEXT</h1>\r\n",
+          "jcr:lastModified": "Fri May 19 2023 15:21:42 GMT+0000",
+          "sling:resourceType": "kpmg/components/content/text",
+          "textIsRich": "true",
+          "searchIndexable": "true"
+        }
+      },
+      "text": {
+        "jcr:primaryType": "nt:unstructured",
+        "jcr:createdBy": "admin",
+        "jcr:lastModifiedBy": "admin",
+        "jcr:created": "Thu Jun 15 2023 23:12:56 GMT+0530",
+        "text": "<pre>\r\nHow are you ?\r\n</pre>\r\n<ol>\r\n<li>1</li>\r\n<li>2</li>\r\n</ol>\r\n<p><a href=\"http://www.google.com\">Link Example</a></p>\r\n<pre>\r\n&nbsp;\r\n</pre>\r\n<pre>\r\n&nbsp;\r\n</pre>\r\n",
+        "jcr:lastModified": "Thu Jun 15 2023 23:26:46 GMT+0530",
+        "sling:resourceType": "kpmg/components/content/text",
+        "textIsRich": "true",
+        "searchIndexable": "true",
+        "cq:styleIds": ["1682694616681"]
+      }
+    },
+    "cq:featuredimage": {
+      "jcr:primaryType": "nt:unstructured",
+      "fileReference": "/content/dam/kpmgsites/patricia",
+      "imgDescRequired": "false"
+    }
+  }
+}

@@ -1,0 +1,54 @@
+$parent: ".cmp-header";
+
+#{$parent} {
+  //TODO map to design tokens
+
+  $main-nav-bar-height: $global-size-3;
+  $main-nav-bar-height-medium: $global-size-5;
+  $main-nav-bar-container-height: $global-size-2;
+  $desktop-bar-height: $global-size-3;
+  $mobile-toggle-width: $global-size-2;
+  $header-background-color: $global-color-brand-white;
+  $header-border-color: $global-color-strokes-cobalt-blue-20-percent;
+
+  @include display-flex-align-center;
+  flex-direction: column;
+  width: 100%;
+  z-index: 9999;
+  background-color: $header-background-color;
+
+  //Displayed at all breakpoints
+  &__main-nav-bar {
+    @include display-flex-align-center;
+    width: 100%;
+    height: $main-nav-bar-height;
+    border-bottom: solid 1px $header-border-color;
+
+    @include desktop-medium {
+      height: $main-nav-bar-height-medium;
+    }
+
+    &--container {
+      @include display-flex-align-center;
+      @include header-horizontal-margin;
+      width: 100%;
+    }
+
+    &--inner {
+      @include display-flex-align-center;
+      width: 100%;
+    }
+
+    &--column {
+      @include display-flex-align-center;
+
+      &:last-child {
+        flex: auto;
+      }
+    }
+
+    &--search {
+      width: 100%;
+    }
+  }
+}

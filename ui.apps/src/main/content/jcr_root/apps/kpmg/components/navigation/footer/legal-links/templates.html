@@ -1,0 +1,23 @@
+<template data-sly-template.link="${@ linkItem}">
+    <a
+        data-sly-attribute="${linkItem.link.htmlAttributes}"
+        data-cmp-clickable="true"
+        class="cmp-footer-legal-links-list__item-link">
+        <span>${linkItem.linkTitle}</span>
+    </a>
+</template>
+
+<template data-sly-template.links="${@ linkItems}">
+    <ul
+        class="cmp-footer-legal-links-list"
+        data-sly-list.linkItem="${linkItems}">
+        <li class="cmp-footer-legal-links-list__item">
+            <sly data-sly-call="${link @linkItem=linkItem}"></sly>
+        </li>
+        <!--Adding One Trust Cookie Preferences button at the end of the list.-->
+        <li data-sly-test="${linkItemList.last}" class="ot-sdk-footer-link cmp-footer-legal-links-list__item">
+            <button id="ot-sdk-btn" data-cmp-clickable="true" class="ot-sdk-show-settings cmp-footer-legal-links-list__item-link"></button>
+        </li>
+    </ul>
+</template>
+

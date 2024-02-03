@@ -1,0 +1,9 @@
+{
+  "global": {
+    "border": {
+      "radius": {
+        "value": "24px"
+      }
+    }
+  }
+}

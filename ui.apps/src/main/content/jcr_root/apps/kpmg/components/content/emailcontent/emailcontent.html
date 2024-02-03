@@ -1,0 +1,56 @@
+<section class="email-content"
+
+data-sly-use.emailcontent="com.kpmg.integration.models.EmailContent">
+<style type="text/css">
+    body {
+        margin: 0;
+    }
+</style>
+    <table style="display: inline-block; position:absolute; font-family: Arial;">
+
+        <tr style="background-color: #005eb8;">
+            <td style="padding: 25px; font-family: Arial;">
+                <img width="132" height="54" style="width: 132px;height: 54px;" src="${emailcontent.src}" alt="${emailcontent.alt}">
+                
+            </td>
+        </tr>
+        <tr>
+            <td style="padding: 35px 25px 20px; font-family: Arial;">
+                
+
+                    <h1 style="font-size:24px;margin: 0; font-family: Arial; font-weight:400; color:#00338d; overflow:hidden;display: block;word-break: break-word; -ms-word-break: break-all;" class="email-subject">${emailcontent.emailSubject @context='html'}</h1>
+                
+            </td>
+        </tr>
+        <tr>
+            <td style="font-family: Arial;font-size:16px; color:#333333; font-weight:400; line-height: 24px;padding: 0 25px;" class="emailContent">
+                ${emailcontent.emailContent @context='html'}
+            </td>
+        </tr>
+        <tr>
+            <td style="height:20px; font-family: Arial;" height="20"></td>
+        </tr>
+        <tr>
+            <td style="padding: 0 25px;background-color: #eeeeee; font-family: Arial;">
+                <table style="padding: 25px 0 35px; bottom:0; font-family: Arial;">
+                    <tr>
+                        <td style="font-family: Arial;">
+                            <p class="footerLinks" style="font-size:14px; font-family: Arial; line-height:17px; overflow:hidden;justify-content: space-between;color: #333333;margin: 0;" data-sly-list.flist="${emailcontent.footerLink}">
+
+                                <a style="text-decoration:underline; color:#333333;display:inline-block;" href="${flist.publishLinkPath}">${flist.linkLabel}</a>
+                                <span data-sly-test="${emailcontent.linklimit > flistList.count }"> | </span>
+
+                            </p>
+                            <div style="display:inline-block;font-size:14px; font-family: Arial;color: #333333;margin:0px;" class="email-copyRight"><html>
+ <head></head>
+ <body>
+  ${emailcontent.footerText @context='html'}
+ </body>
+</html></div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</section> 

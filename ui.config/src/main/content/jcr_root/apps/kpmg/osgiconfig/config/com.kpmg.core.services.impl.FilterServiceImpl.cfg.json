@@ -1,0 +1,5 @@
+{
+  "getFilterEndpoint":"$[env:ES_FILTER_ENDPOINT;default='']",
+  "getPagination:Integer":8,
+  "getListingEndpoint":"$[env:ES_LISTING_ENDPOINT;default='']"
+}

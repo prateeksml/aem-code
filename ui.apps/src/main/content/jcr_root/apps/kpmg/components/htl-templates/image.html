@@ -1,0 +1,10 @@
+<template data-sly-set.hasHDImageRendition="${imageModel.renditions['desktophd'] ? true : false}" data-sly-template.dmImageTemplate="${ @ imageModel,cssClass,lazyload }">
+    <picture>
+        <source data-sly-test="${!hasHDImageRendition}" media="(min-width: 1366px)" srcset="${imageModel.renditions['desktopmedium']}, ${imageModel.renditions['retinadesktopmedium']} 2x" />
+        <source data-sly-test="${hasHDImageRendition}" media="(min-width: 1366px)" srcset="${imageModel.renditions['desktopmedium']}, ${imageModel.renditions['retinadesktopmedium']} 2x, ${imageModel.renditions['desktophd']} 4x" />
+        <source media="(min-width: 1024px)" srcset="${imageModel.renditions['desktopsmall']}, ${imageModel.renditions['retinadesktopsmall']} 2x" />
+        <source data-sly-test="${imageModel.renditions['tablet']}" media="(min-width: 768px)" srcset="${imageModel.renditions['tablet']}, ${imageModel.renditions['retinatablet']} 2x" />
+         <source data-sly-test="${imageModel.renditions['mobile']}" media="(min-width: 360px)" srcset="${imageModel.renditions['mobile']}, ${imageModel.renditions['retinamobile']} 2x" />
+        <img itemprop="contentUrl" class="${cssClass}" data-sly-attribute.loading="${lazyload}" src="${imageModel.renditions['mobile']}" alt="${imageModel.altText}" title="${imageModel.altText}" />
+    </picture>
+</template>

@@ -1,0 +1,58 @@
+{
+  "jcr:primaryType": "cq:Page",
+  "jcr:createdBy": "admin",
+  "jcr:created": "Sat May 27 2023 12:25:11 GMT+0530",
+  "jcr:content": {
+    "jcr:primaryType": "cq:PageContent",
+    "jcr:mixinTypes": ["mix:versionable"],
+    "jcr:createdBy": "admin",
+    "jcr:title": "Content Page",
+    "metaOgSiteSettings": "KPMG",
+    "jcr:versionHistory": "4dc2cbb9-1329-4f62-a34b-ef3582e52b1d",
+    "pwaOrientation": "any",
+    "cq:template": "/conf/kpmg/settings/wcm/templates/page-content",
+    "documentId": "28a8eee8-2427-4e2a-b693-14de7ca903a1",
+    "jcr:predecessors": ["92d60477-bd5f-440d-bc93-429bbbd53d03"],
+    "jcr:created": "Sat May 27 2023 12:25:11 GMT+0530",
+    "pwaDisplay": "standalone",
+    "cq:lastModified": "Tue May 23 2023 07:08:32 GMT+0000",
+    "hideInSearch": "false",
+    "jcr:description": "This is description",
+    "pwaCachestrategy": "staleWhileRevalidate",
+    "jcr:baseVersion": "92d60477-bd5f-440d-bc93-429bbbd53d03",
+    "jcr:isCheckedOut": true,
+    "metaOgType": "website",
+    "jcr:uuid": "0b7d2f8e-a8a6-4395-b0e6-16eef8badae8",
+    "sling:resourceType": "kpmg/components/structure/page",
+    "metaOgTitle": "Content Page",
+    "cq:lastModifiedBy": "kunal.dhak@publicissapient.com",
+    "root": {
+      "jcr:primaryType": "nt:unstructured",
+      "layout": "responsiveGrid",
+      "sling:resourceType": "kpmg/components/container/container",
+      "container": {
+        "jcr:primaryType": "nt:unstructured",
+        "layout": "responsiveGrid",
+        "sling:resourceType": "kpmg/components/container/container",
+        "title": {
+          "jcr:primaryType": "nt:unstructured",
+          "text": "<h1>&nbsp; &nbsp; &nbsp; THIS IS A TEXT</h1>\r\n",
+          "sling:resourceType": "kpmg/components/content/title",
+          "searchIndexable": "true"
+        },
+        "container": {
+          "jcr:primaryType": "nt:unstructured",
+          "layout": "responsiveGrid",
+          "sling:resourceType": "kpmg/components/container/container"
+        }
+      }
+    },
+    "cq:featuredimage": {
+      "jcr:primaryType": "nt:unstructured",
+      "jcr:lastModifiedBy": "kunal.dhak@publicissapient.com",
+      "jcr:lastModified": "Tue May 23 2023 07:08:32 GMT+0000",
+      "sling:resourceType": "core/wcm/components/image/v3/image",
+      "altValueFromDAM": "false"
+    }
+  }
+}

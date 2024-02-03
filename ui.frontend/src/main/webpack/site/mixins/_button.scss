@@ -1,0 +1,180 @@
+@import "theme";
+
+//ELEMENTS
+@include light-theme {
+  // primary
+  --button-primary-color: #{$alias-color-button-color-primary-enabled};
+  --button-primary-background-color: #{$alias-color-button-background-color-primary-enabled};
+  --button-primary-border-color-enabled: #{$alias-color-button-border-color-primary-enabled};
+  --button-primary-color-hover: #{$alias-color-button-color-primary-hover};
+  --button-primary-background-color-hover: #{$alias-color-button-background-color-primary-hover};
+  --button-primary-border-color-hover: #{$alias-color-button-border-color-primary-hover};
+  --button-outline-color-primary-focus: #{$alias-color-button-outline-color-primary-focus};
+
+  // Secondary
+  --button-secondary-color: #{$alias-color-button-color-secondary-enabled};
+  --button-secondary-background-color: #{$alias-color-button-background-color-secondary-enabled};
+  --button-secondary-border-color-enabled: #{$alias-color-button-border-color-secondary-enabled};
+  --button-secondary-color-hover: #{$alias-color-button-color-secondary-hover};
+  --button-secondary-background-color-hover: #{$alias-color-button-background-color-secondary-hover};
+  --button-secondary-border-color-hover: #{$alias-color-button-border-color-secondary-hover};
+
+  // tertiary
+  --button-tertiary-color: #{$alias-color-button-color-tertiary-enabled};
+  --button-tertiary-background-color: #{$alias-color-button-background-color-tertiary-enabled};
+  --button-tertiary-border-color-enabled: #{$alias-color-button-border-color-tertiary-enabled};
+  --button-tertiary-color-hover: #{$alias-color-button-color-tertiary-hover};
+  --button-tertiary-background-color-hover: #{$alias-color-button-background-color-tertiary-hover};
+  --button-tertiary-border-color-hover: #{$alias-color-button-border-color-tertiary-hover};
+}
+// primary
+@include dark-theme {
+  --button-primary-color: #{$alias-color-button-color-primary-dark-enabled};
+  --button-primary-background-color: #{$alias-color-button-background-color-primary-dark-enabled};
+  --button-primary-border-color-enabled: #{$alias-color-button-border-color-primary-dark-enabled};
+  --button-primary-color-hover: #{$alias-color-button-color-primary-dark-hover};
+  --button-primary-background-color-hover: #{$alias-color-button-background-color-primary-dark-hover};
+  --button-primary-border-color-hover: #{$alias-color-button-border-color-primary-dark-hover};
+
+  // Secondary
+  --button-secondary-color: #{$alias-color-button-color-secondary-dark-enabled};
+  --button-secondary-background-color: #{$alias-color-button-background-color-secondary-dark-enabled};
+  --button-secondary-border-color-enabled: #{$alias-color-button-border-color-secondary-dark-enabled};
+  --button-secondary-color-hover: #{$alias-color-button-color-secondary-dark-hover};
+  --button-secondary-background-color-hover: #{$alias-color-button-background-color-secondary-dark-hover};
+  --button-secondary-border-color-hover: #{$alias-color-button-border-color-secondary-dark-hover};
+
+  // tertiary
+  --button-tertiary-color: #{$alias-color-button-color-tertiary-dark-enabled};
+  --button-tertiary-background-color: #{$alias-color-button-background-color-tertiary-dark-enabled};
+  --button-tertiary-border-color-enabled: #{$alias-color-button-border-color-tertiary-dark-enabled};
+  --button-tertiary-color-hover: #{$alias-color-button-color-tertiary-dark-hover};
+  --button-tertiary-background-color-hover: #{$alias-color-button-background-color-tertiary-dark-hover};
+  --button-tertiary-border-color-hover: #{$alias-color-button-border-color-tertiary-dark-hover};
+}
+
+@mixin button {
+  cursor: pointer;
+  border-radius: $alias-border-radius;
+  border-width: 1px;
+  border-style: solid;
+  padding: $alias-padding-small $alias-padding-base;
+  width: 100%;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  line-height: 1.25rem;
+  font-family: $alias-fonts-body-default-semibold-font-family;
+  min-width: $alias-width-10x-large;
+
+  span {
+    font-size: $alias-font-size-base;
+    vertical-align: middle;
+
+    &:after {
+      font-family: $global-fonts-font-family-materialicons-filled;
+      font-size: $alias-font-size-medium;
+      vertical-align: middle;
+      content: "chevron_right" #{"/*!rtl: 'chevron_left' */"};
+      margin-left: $alias-margin-base;
+      margin-right: 0;
+    }
+  }
+}
+
+//Button
+@mixin button-primary {
+  @include button();
+
+  background-color: var(--button-primary-background-color);
+  border-color: var(--button-primary-border-color-enabled);
+  color: var(--button-primary-color);
+
+  span {
+    &:hover {
+      color: var(--button-primary-color-hover);
+    }
+  }
+
+  &:hover {
+    background-color: var(--button-primary-background-color-hover);
+    border-color: var(--button-primary-border-color-hover);
+  }
+
+  &:focus {
+    outline: 4px solid var(--button-outline-color-primary-focus);
+  }
+}
+
+@mixin button-secondary {
+  @include button();
+  border-color: var(--button-secondary-border-color-enabled);
+  background-color: var(--button-secondary-background-color);
+  color: var(--button-secondary-color);
+
+  &:hover {
+    background-color: var(--button-secondary-background-color-hover);
+    border-color: var(--button-secondary-border-color-hover);
+    color: var(--button-secondary-color-hover);
+
+    span {
+      color: var(--button-secondary-color-hover);
+    }
+  }
+}
+
+@mixin button-tertiary {
+  @include button();
+  background-color: var(--button-tertiary-background-color);
+  border: none;
+
+  &:hover {
+    background-color: var(--button-tertiary-background-color-hover);
+    border-color: var(--button-tertiary-border-color-hover);
+
+    span {
+      color: var(--button-tertiary-color-hover);
+    }
+  }
+
+  span {
+    color: var(--button-tertiary-color);
+  }
+}
+
+@mixin button-icon(
+  $icon-name,
+  $icon-font-family: $global-fonts-font-family-materialicons-outlined
+) {
+  /**
+  * @param {string} $icon-name - get icon names from her, also accepts the icon code: https://fonts.google.com/icons?icon.set=Material+Icons
+  * @param {string/sass variable} $icon-font-family - the material icon font family you wish to use, default is outlined
+  */
+  font-family: $icon-font-family;
+  font-size: $alias-font-size-base;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: $alias-margin-base;
+
+  &:before {
+    //Enter either the icon name or code point here
+    content: $icon-name;
+  }
+
+  &:after {
+    display: none;
+  }
+}
+
+@mixin button-full-width {
+  width: 100%;
+}
+
+@mixin button-content-width {
+  width: initial;
+}
+
+@mixin button-standard-width {
+  width: initial;
+  min-width: calc($alias-width-4x-large * 3); //Calculates to 15rem
+}

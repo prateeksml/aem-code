@@ -1,0 +1,115 @@
+@include light-theme {
+  --hero-csi-title-color: #{$alias-color-hero-title-light};
+  --hero-csi-description-color: #{$alias-color-hero-description-light};
+  --hero-csi-article-date-color: #{$alias-color-hero-date-light};
+}
+
+@include dark-theme {
+  --hero-csi-title-color: #{$alias-color-hero-title-dark};
+  --hero-csi-description-color: #{$alias-color-hero-description-dark};
+  --hero-csi-article-date-color: #{$alias-color-hero-date-dark};
+}
+
+.hero-csi {
+  //Note: All breadcrumb styles can be found in
+  //ui.frontend/src/main/webpack/components/_breadcrumb.scss
+
+  .cmp-hero-csi__main-container {
+    @include content-max-width;
+    display: block;
+    justify-content: space-between;
+    //As per figma: 24px, 16px, 0px, 16px
+    padding: $alias-padding-medium $alias-padding-base 0;
+
+    @include tablet {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+      //As per figma: 24px, 24px, 0px, 24px
+      padding: $alias-padding-medium $alias-padding-medium 0;
+    }
+
+    @include desktop-small {
+      grid-template-columns: 60% 40%;
+      //As per figma: 24px, 32px, 0px, 32px
+      padding: $alias-padding-medium $alias-padding-large 0;
+    }
+
+    @include desktop-medium {
+      grid-template-columns: 70% 30%;
+      //As per figma: 24px, 48px, 0px, 48px
+      padding: $alias-padding-medium $alias-padding-xx-large 0;
+    }
+  }
+
+  .cmp-hero-csi__content-container {
+    //As per figma: 24px, 0px, 24px, 0px
+    padding: $alias-padding-medium 0;
+
+    @include tablet {
+      //As per figma: 32px, 0px, 32px, 0px
+      //Note: applies to Tablet and Desktop
+      padding: $alias-padding-large 0;
+    }
+
+    @include desktop-medium {
+      //As per figma: 48px, 0px, 48px, 0px
+      padding: $alias-padding-xx-large 0;
+    }
+  }
+
+  .cmp-hero-csi__title {
+    @include typography-heading-one;
+    color: var(--hero-csi-title-color);
+    margin: 0;
+    padding: $alias-padding-base 0 $alias-padding-x-small;
+  }
+
+  .cmp-hero-csi__description {
+    @include typography-body-default-regular;
+    color: var(--hero-csi-description-color);
+    margin: 0;
+    padding: $alias-padding-x-small 0;
+
+    p {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  .cmp-hero-csi__article-date {
+    @include typography-body-small-semibold;
+    color: var(--hero-csi-article-date-color);
+    padding-top: $alias-padding-x-small;
+    padding-bottom: $alias-padding-medium;
+
+    span {
+      padding-right: $alias-padding-x-small;
+      vertical-align: middle;
+    }
+  }
+
+  .cmp-hero-csi__image-container {
+    @include tablet {
+      padding-left: $alias-padding-medium;
+    }
+
+    @include desktop-small {
+      padding-top: $alias-padding-xxx-large;
+      padding-left: $alias-padding-large;
+    }
+
+    @include desktop-medium {
+      padding-top: 0;
+      padding-left: $alias-padding-xx-large;
+    }
+  }
+
+  .cmp-hero-csi__image {
+    picture {
+      display: grid;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

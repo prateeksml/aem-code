@@ -1,0 +1,58 @@
+@use "sass:math";
+@use "sass:map";
+
+@function setHeight($size) {
+  @return math.div($size, $global-size-1) * $global-size-1;
+}
+
+@mixin hero {
+  position: relative;
+  width: 100vw;
+  height: auto;
+
+  video,
+  img {
+    object-fit: cover;
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+@mixin hero-fixed-height($isReduced: false) {
+  $defaultHeight: (
+    "default": 360px,
+    "tablet": 468px,
+    "desktop-small": 544px,
+    "desktop-medium": 544px,
+  );
+  $reducedHeight: (
+    "default": 160px,
+    "tablet": 320px,
+    "desktop-small": 240px,
+    "desktop-medium": 360px,
+  );
+  $heroHeight: $defaultHeight;
+
+  //Mobile default
+  width: auto;
+  @if ($isReduced) {
+    $heroHeight: $reducedHeight;
+  }
+
+  height: setHeight(map.get($heroHeight, "default"));
+
+  @include tablet {
+    height: setHeight(map.get($heroHeight, "tablet"));
+  }
+
+  @include desktop-small {
+    height: setHeight(map.get($heroHeight, "desktop-small"));
+  }
+
+  @include desktop-medium {
+    height: setHeight(map.get($heroHeight, "desktop-medium"));
+  }
+}

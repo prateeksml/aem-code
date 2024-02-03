@@ -1,0 +1,163 @@
+<jcr:root
+    xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="${{tabLabel}}"
+    sling:resourceType="granite/ui/components/coral/foundation/container">
+    <items jcr:primaryType="nt:unstructured">
+        <list
+            granite:class="kpmg-mainnavigation-dropdown-showhide"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+            fieldLabel="Link Type"
+            name="./${{navItemName}}/type">
+            <granite:data
+                jcr:primaryType="nt:unstructured"
+                kpmg-mainnavigation-dropdown-showhide-target=".list-option-listfrom-showhide-target-${{navItemName}}"/>
+            <items jcr:primaryType="nt:unstructured">
+                <secondarylinkwithchildren
+                    jcr:primaryType="nt:unstructured"
+                    text="Secondary Link with Sub children"
+                    value="tertiary"/>
+                <secondarylink
+                    jcr:primaryType="nt:unstructured"
+                    text="Only Secondary Link"
+                    value="secondary"/>
+            </items>
+        </list>
+        <title
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+            disabled="{Boolean}true"
+            fieldLabel="Main Navigation Name"
+            ignoreData="{Boolean}true"
+            name="./${{navItemName}}/jcr:title1"
+            value="${{navItemDefaultName}}"/>
+        <titleHidden jcr:primaryType="nt:unstructured"
+                     sling:resourceType="granite/ui/components/coral/foundation/form/hidden"
+                     name="./${{navItemName}}/jcr:title"
+                     value="${{navItemDefaultName}}"/>
+        <allLinksText jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/hidden"
+                      name="./${{navItemName}}/allLinksText"
+                      value="${{allLinksName}}"/>
+        <allLinks
+            granite:class="hide list-option-listfrom-showhide-target-${{navItemName}} foundation-layout-util-vmargin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/container">
+            <granite:data
+                jcr:primaryType="nt:unstructured"
+                showhidetargetvalue="tertiary"/>
+            <items jcr:primaryType="nt:unstructured">
+                <links
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                    fieldLabel="${{allLinksName}}"
+                    fieldDescription="If link isn't authored, this field will be hidden."
+                    name="./${{navItemName}}/allLinks"
+                    rootPath="/content/kpmgpublic"/>
+            </items>
+        </allLinks>
+        <secondarylinkwithchildren
+            granite:class="hide list-option-listfrom-showhide-target-${{navItemName}} foundation-layout-util-vmargin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/container">
+            <granite:data
+                jcr:primaryType="nt:unstructured"
+                showhidetargetvalue="tertiary"/>
+            <items jcr:primaryType="nt:unstructured">
+                <multifield
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                    composite="{Boolean}true"
+                    fieldLabel="Secondary Links"
+                    min="1"
+                    validation="multifield-max-6">
+                    <field
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        name="./${{navItemName}}/items">
+                        <items jcr:primaryType="nt:unstructured">
+                            <name
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                emptyText="Link Name"
+                                name="jcr:title"/>
+                            <links
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                composite="{Boolean}true"
+                                fieldLabel="Child Links"
+                                min="1"
+                                validation="multifield-max-6">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/well"
+                                    name="items">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <linkTitle
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldDescription="Input link title"
+                                            fieldLabel="Link Title"
+                                            name="jcr:title"
+                                            required="{Boolean}true"/>
+                                        <linkURL
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                            fieldDescription="Select Link URL"
+                                            fieldLabel="Link Url"
+                                            name="linkURL"
+                                            rootPath="/content/kpmgpublic"/>
+                                    </items>
+                                </field>
+                            </links>
+                        </items>
+                    </field>
+                </multifield>
+            </items>
+        </secondarylinkwithchildren>
+        <secondarylink
+            granite:class="hide list-option-listfrom-showhide-target-${{navItemName}} foundation-layout-util-vmargin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/container">
+            <granite:data
+                jcr:primaryType="nt:unstructured"
+                showhidetargetvalue="secondary"/>
+            <items jcr:primaryType="nt:unstructured">
+                <multifield
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                    class="hide test-options-showhide-target foundation-layout-util-vmargin"
+                    composite="{Boolean}true"
+                    fieldLabel="Secondary Links"
+                    min="1"
+                    validation="multifield-max-18">
+                    <field
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/well"
+                        name="./${{navItemName}}/items">
+                        <items jcr:primaryType="nt:unstructured">
+                            <linkTitle
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Input link title"
+                                fieldLabel="Link Title"
+                                name="./jcr:title"
+                                required="{Boolean}true"/>
+                            <linkURL
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldDescription="Select Link URL"
+                                fieldLabel="Link Url"
+                                name="linkURL"
+                                rootPath="/content/kpmgpublic"/>
+                        </items>
+                    </field>
+                </multifield>
+            </items>
+        </secondarylink>
+    </items>
+</jcr:root>

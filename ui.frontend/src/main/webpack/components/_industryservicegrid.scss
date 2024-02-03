@@ -1,0 +1,208 @@
+@include light-theme {
+  --cmp-teaser__icon--left-boder-color: #63ebda;
+  --industryservicegrid-icon-color: #{$global-color-brand-purple};
+  --industryservicegrid-icon-border-color: #{$global-color-strokes-cobalt-blue-20-percent};
+  --industryservicegrid-action-color: #{$global-color-brand-cobalt-blue};
+  --industryservicegrid-description-color: #{$global-color-brand-spectrum-blue};
+}
+@include dark-theme {
+  --cmp-teaser__icon--left-boder-color: #63ebda;
+  --industryservicegrid-icon-border-color: #{$global-color-strokes-white-25-percent};
+  --industryservicegrid-icon-color: #{$global-color-brand-light-green};
+  --industryservicegrid-action-color: #{$global-color-brand-white};
+  --industryservicegrid-description-color: #{$global-color-brand-white};
+}
+$industry-grid-custom-icon-height: 60px;
+.industryservicegrid {
+  .cmp-industryservicegrid {
+    @include content-max-width;
+    padding: $alias-padding-large $alias-padding-base;
+    &[data-show="true"] {
+      > .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 100%;
+        margin: 56px 0 0;
+        @include desktop-small {
+          margin: 0;
+        }
+      }
+      .cmp-col {
+        display: none;
+        &:nth-of-type(-n + 4) {
+          display: block;
+        }
+      }
+      &.active .cmp-col {
+        display: block;
+      }
+    }
+    &[data-show="false"] {
+      > .button {
+        display: none;
+      }
+    }
+    .button-view-all {
+      .cmp-button__text {
+        &:after {
+          transform: rotate(90deg);
+          display: inline-block;
+          margin-left: $alias-margin-x-small; // 8px
+        }
+      }
+      &.active {
+        .cmp-button__text {
+          &:after {
+            transform: rotate(-90deg);
+          }
+        }
+      }
+    }
+  }
+  .cmp-row--fourEvenCards {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: stretch;
+    .cmp-col {
+      flex: 1 0 100%;
+      border: 1px solid $global-color-strokes-cobalt-blue-20-hex;
+      border-bottom: none;
+      &:last-child {
+        .cmp-teaser__content {
+          border-bottom: 0px solid transparent;
+        }
+      }
+    }
+  }
+  .industryservicegridteaser {
+    .cmp-teaser__content {
+      padding: $alias-padding-x-large $alias-padding-medium
+        $alias-padding-x-large 0;
+      border-top: 0px solid transparent;
+      .cmp-teaser__custom-icon {
+        border-left: 3px solid var(--cmp-teaser__icon--left-boder-color);
+        margin: 1rem 0 0 0;
+        padding: 0.5rem 0 0.5rem 1.5rem;
+        height: $industry-grid-custom-icon-height;
+      }
+    }
+    .cmp-teaser__icon {
+      display: inline-block;
+      @include material-icons-filled;
+      font-size: $alias-font-size-x-large;
+      color: var(--industryservicegrid-icon-color);
+      margin: $alias-margin-base 0 0 $alias-margin-medium;
+      border-width: 1px;
+      border-style: solid;
+      border-color: var(--industryservicegrid-icon-border-color);
+      border-radius: 50px;
+      padding: $alias-padding-base;
+      position: relative;
+      &::before {
+        position: absolute;
+        left: -25px;
+        top: -5px;
+        content: "";
+        height: 110%;
+        width: 3px;
+        background: var(--cmp-teaser__icon--left-boder-color);
+      }
+    }
+    .cmp-teaser__custom-icon {
+      display: inline-block;
+      height: 48px;
+      margin: $alias-margin-base 0 0 $alias-margin-medium;
+    }
+
+    .cmp-teaser__eyebrow {
+      @include material-icons-filled;
+      padding-right: $alias-padding-x-small;
+    }
+
+    .cmp-teaser__custom-eyebrow {
+      height: 14px;
+      padding-right: $alias-padding-x-small;
+    }
+    .cmp-teaser__title {
+      @include typography-heading-six-semibold;
+      @include text-color;
+      font-weight: 600;
+      padding-left: $alias-padding-medium;
+      margin: $alias-margin-base 0 0;
+    }
+    .cmp-teaser__description {
+      margin: $alias-margin-base 0 0;
+      padding-left: $alias-padding-medium;
+      color: var(--industryservicegrid-description-color);
+      p {
+        margin: 0;
+        color: var(--industryservicegrid-description-color);
+      }
+    }
+    .cmp-teaser__action-container {
+      margin: $alias-margin-large 0 $alias-margin-x-large;
+      padding-left: $alias-padding-medium;
+      .cmp-teaser__action-link {
+        text-decoration: none;
+        color: var(--industryservicegrid-action-color);
+        &:after {
+          font-family: $global-fonts-font-family-materialicons-filled;
+          content: "chevron_right"; //for more codes go to https://fonts.google.com/icons
+          font-size: $alias-font-size-x-large;
+          margin-left: $alias-padding-x-small;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+  @include tablet {
+    .cmp-industryservicegrid {
+      padding: $alias-padding-large $alias-padding-medium;
+    }
+    .cmp-row--fourEvenCards {
+      .cmp-col {
+        flex: 0 0 50%;
+        &:first-child,
+        &:nth-child(2) {
+          .cmp-teaser__content {
+            border-top: 0px solid transparent;
+          }
+        }
+      }
+    }
+    .industryservicegridteaser {
+      .cmp-teaser__content {
+        padding: $alias-padding-large $alias-padding-medium $alias-padding-large
+          0;
+        border-bottom: 0px solid transparent;
+      }
+    }
+  }
+  @include desktop-small {
+    .cmp-industryservicegrid {
+      padding: calc($alias-padding-5x-large + $alias-padding-base)
+        $alias-padding-xx-large
+        calc($alias-padding-xxx-large - $alias-padding-x-small)
+        $alias-padding-xx-large;
+      margin: $alias-margin-base 0;
+    }
+    .cmp-row--fourEvenCards {
+      padding-bottom: calc($alias-padding-xxx-large - $alias-padding-x-small);
+      .cmp-col {
+        flex: 0 0 25%;
+        &:first-child,
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(4) {
+          border-top: 0px solid transparent;
+        }
+      }
+    }
+    .industryservicegridteaser {
+      .cmp-teaser__content {
+        padding: $alias-padding-base $alias-padding-medium $alias-padding-base 0;
+      }
+    }
+  }
+}

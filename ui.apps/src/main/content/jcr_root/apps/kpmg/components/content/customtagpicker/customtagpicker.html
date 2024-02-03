@@ -1,0 +1,51 @@
+<div class="com-customtagpicker coral-Form-fieldwrapper foundation-field-edit" data-category="${properties.category}"
+  data-sl-url="${properties.slUrl}">
+  <div class="selected-tags-container coral-Form-field"
+    data-cq-msm-lockable="${ properties.lockable ? properties.category : ''}">
+    <h2 class="category-title">${properties.category} Tags</h2>
+
+    <ul class="tags-list">
+      <p class="show">No Tags Selected</p>
+    </ul>
+  </div>
+
+  <div class="dialog-opener-container coral-Form-field">
+    <button type="button" class="btn" is="coral-button">Select Tags</button>
+  </div>
+
+  <!-- The dialog element -->
+  <div class="dialog-container" aria-hidden="true" role="dialog" aria-labelledby="dialogTitle">
+    <h2 id="dialogTitle" class="dialog-container-title">
+      Select tags for <i>${properties.displayValue || ''}</i> Category
+    </h2>
+    <span class="close-icon-btn" title="Close" role="button"> X </span>
+    <div class="search-control" data-placeholder="Search Tags... ">
+    </div>
+    <div class="dialog-container-content">
+      <div class="header-area">
+        <p aria-atomic="true" aria-live="polite" class="item-count">0 Selected Items</p>
+        <button class="btn" type="button">Clear Selected</button>
+      </div>
+      <ul class="tag-list" aria-atomic="true" aria-live="assertive">
+        <div class="loading-message" data-message="Loading, Please Wait..."
+          data-no-tags-message="No Tags Found, Please Try again after some time.">
+          <div class="spinner" aria-hidden="true"></div>
+          <p class="message"></p>
+        </div>
+      </ul>
+    </div>
+    <div class="dialog-footer">
+      <div class="buttons">
+        <button class="close-btn btn" type="button">Done</button>
+      </div>
+    </div>
+  </div>
+  <!--/* The overlay element */-->
+  <div class="overlay"></div>
+  <div>
+    <input is="coral-textfield" class="required-field coral-Form-field"
+      data-sly-attribute.required="${properties.required}"
+      style="height:1px;width:1px;top:1rem;padding:0;margin:0;border:none;position:absolute;visibility:hidden;display:inline;pointer-events:none;">
+
+  </div>
+</div>

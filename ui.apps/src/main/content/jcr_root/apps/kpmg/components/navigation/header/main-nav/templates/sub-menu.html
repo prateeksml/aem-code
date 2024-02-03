@@ -1,0 +1,49 @@
+<sly data-sly-template.subMenu="${@ subMenuItem}">
+    <!--/* Direct Link */-->
+    <sly data-sly-test="${subMenuItem.isDirect}" data-sly-use.menuLinkTemplate="templates/menu-link.html"
+        data-sly-call="${menuLinkTemplate.link @ item=subMenuItem, hideIcon=true, isLevelOne=true }" />
+
+    <!--/* Link with Submenu*/-->
+    <sly data-sly-test="${!subMenuItem.isDirect}">
+
+        <!--/* Main Link that will trigger sub menu */-->
+        <sly data-sly-use.menuLinkTemplate="templates/menu-link.html"
+            data-sly-call="${menuLinkTemplate.link @ item=subMenuItem, isLevelOne=true }" />
+
+        <!--/* Submenu */-->
+        <nav aria-label="Sub Menu Navigation for ${subMenuItem.allLinksText}" class="cmp-sub-menu" data-cmp-sub-menu>
+
+            <div class="cmp-sub-menu__container">
+
+                <!--/* Back Button */-->
+                <button class="cmp-sub-menu__back-button" data-cmp-sub-menu-back type="button" aria-expanded="false"
+                    aria-label="Mobile Menu Back Button">
+                    <span class="cmp-sub-menu__back-button-icon"></span>
+                    <div class="cmp-sub-menu__back-button-label">Back</div>
+                </button>
+
+                <sly data-sly-test="${subMenuItem.allLinks.htmlAttributes}">
+                    <div class="cmp-sub-menu__link">
+                        <!--/* Submenu Section Link */-->
+                        <sly data-sly-use.subMenuLinkTemplate="templates/menu-link.html"
+                            data-sly-call="${subMenuLinkTemplate.link @ item=subMenuItem, hideIcon=true, isSubMenu=true }" />
+                    </div>
+                </sly>
+
+                <!--/* Call Secondary Submenu*/-->
+                <sly data-sly-test="${subMenuItem.secondary}">
+                    <!--/* Tertiary Submenu Section */-->
+                    <sly data-sly-use.subMenuSectionTemplate="templates/sub-menu-section.html"
+                    data-sly-call="${subMenuSectionTemplate.subMenuSection @ subMenuSection=subMenuItem.items, subMenuItem=subMenuItem }" />
+                </sly>
+
+                <!--/* Call Tertiary Submenu */-->
+                <sly data-sly-test="${subMenuItem.tertiary}" data-sly-list.subMenuSection="${subMenuItem.items}">
+                    <!--/* Tertiary Submenu Section */-->
+                    <sly data-sly-use.subMenuSectionTemplate="templates/sub-menu-section.html"
+                    data-sly-call="${subMenuSectionTemplate.subMenuSection @ subMenuSection=subMenuSection, subMenuItem=subMenuItem }" />
+                </sly>
+            </div>
+        </nav>
+    </sly>
+</sly>

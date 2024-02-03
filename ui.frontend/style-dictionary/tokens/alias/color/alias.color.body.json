@@ -1,0 +1,11 @@
+{
+  "alias": {
+    "color": {
+      "body": {
+        "regular": {
+          "value": "{global.color.grayscale.black}"
+        }
+      }
+    }
+  }
+}

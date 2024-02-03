@@ -1,0 +1,60 @@
+//ACCESSIBILTY
+@mixin aria-invisible {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+// select only the first n-items
+@mixin first-n-items($n) {
+  &:nth-child(-n + #{$n}) {
+    @content;
+  }
+}
+
+// Container spacing at the diferent breakpoints
+:root {
+  --container-spacing: #{$alias-padding-base};
+  @include tablet {
+    --container-spacing: #{$alias-padding-medium};
+  }
+
+  @include desktop-small {
+    --container-spacing: #{$alias-padding-large};
+  }
+}
+
+@mixin container-padding {
+  padding: var(--container-spacing);
+}
+
+@mixin container-horizontal-padding {
+  padding-left: var(--container-spacing);
+  padding-right: var(--container-spacing);
+}
+@mixin container-horizontal-margin {
+  margin-left: var(--container-spacing);
+  margin-right: var(--container-spacing);
+}
+
+@mixin container-vertical-padding {
+  padding-top: var(--container-spacing);
+  padding-bottom: var(--container-spacing);
+}
+
+@mixin display-flex-align-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin normalize-style {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto;
+}

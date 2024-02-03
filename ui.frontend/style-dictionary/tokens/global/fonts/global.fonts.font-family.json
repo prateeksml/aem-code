@@ -1,0 +1,47 @@
+{
+  "global": {
+    "fonts": {
+      "font-family": {
+        "opensans": {
+          "regular": {
+            "value": "OpenSans--Regular"
+          },
+          "bold": {
+            "value": "OpenSans--Bold"
+          },
+          "semibold": {
+            "value": "OpenSans--SemiBold"
+          }
+        },
+        "opensans-condensed": {
+          "regular": {
+            "value": "OpenSans_Condensed--Regular"
+          },
+          "bold": {
+            "value": "OpenSans_Condensed--Bold"
+          }
+        },
+        "materialicons": {
+          "filled": {
+            "value": "Material_Icons--Filled"
+          },
+          "outlined": {
+            "value": "Material_Icons--Outlined"
+          },
+          "round": {
+            "value": "Material_Icons--Round"
+          },
+          "sharp": {
+            "value": "Material_Icons--Sharp"
+          },
+          "two-tone": {
+            "value": "Material_Icons--Two-Tone"
+          }
+        },
+        "icomoonicons": {
+          "value": "icomoon"
+        }
+      }
+    }
+  }
+}

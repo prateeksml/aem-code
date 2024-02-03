@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Industries"
+    allLinksText="All Industries"
+    type="secondary">
+    <items jcr:primaryType="nt:unstructured">
+        <item0
+            jcr:primaryType="nt:unstructured"
+            jcr:title="Energy and Natural Resources"
+            linkURL="/content/kpmgpublic/us/en"/>
+        <item1
+            jcr:primaryType="nt:unstructured"
+            jcr:title="Consumer, Retail and Leisure"
+            linkURL="/content/kpmgpublic/us/en"/>
+        <item2
+            jcr:primaryType="nt:unstructured"
+            jcr:title="Technology, Media and Telecoms"
+            linkURL="/content/kpmgpublic/us/en"/>
+        <item3
+            jcr:primaryType="nt:unstructured"
+            jcr:title="Industrial Manufacturing"
+            linkURL="/content/kpmgpublic/us/en"/>
+        <item4
+            jcr:primaryType="nt:unstructured"
+            jcr:title="Financial Servcices"
+            linkURL="/content/kpmgpublic/us/en"/>
+        <item5
+            jcr:primaryType="nt:unstructured"
+            jcr:title="Infrastructure, Government and Healthcare"
+            linkURL="/content/kpmgpublic/us/en"/>
+        <item6
+            jcr:primaryType="nt:unstructured"
+            jcr:title="Banking"
+            linkURL="/content/kpmgpublic/us/en"/>
+        <item7
+            jcr:primaryType="nt:unstructured"
+            jcr:title="Insurance"
+            linkURL="/content/kpmgpublic/us/en"/>
+        <item8
+            jcr:primaryType="nt:unstructured"
+            jcr:title="Asset Management"
+            linkURL="/content/kpmgpublic/us/en"/>
+        <item9
+            jcr:primaryType="nt:unstructured"
+            jcr:title="Real Estate"
+            linkURL="/content/kpmgpublic/us/en"/>
+        <item10
+            jcr:primaryType="nt:unstructured"
+            jcr:title="Power and Utilities"
+            linkURL="/content/kpmgpublic/us/en"/>
+        <item11
+            jcr:primaryType="nt:unstructured"
+            jcr:title="Oil and Gas"
+            linkURL="/content/kpmgpublic/us/en"/>
+        <item12
+            jcr:primaryType="nt:unstructured"
+            jcr:title="Healthcare"
+            linkURL="/content/kpmgpublic/us/en"/>
+        <item13
+            jcr:primaryType="nt:unstructured"
+            jcr:title="Infrastructure, Building and Construction"
+            linkURL="/content/kpmgpublic/us/en"/>
+        <item14
+            jcr:primaryType="nt:unstructured"
+            jcr:title="Life Sciences"
+            linkURL="/content/kpmgpublic/us/en"/>
+        <item15
+            jcr:primaryType="nt:unstructured"
+            jcr:title="Leisure"
+            linkURL="/content/kpmgpublic/us/en"/>
+        <item16
+            jcr:primaryType="nt:unstructured"
+            jcr:title="Aerospace and Defence"
+            linkURL="/content/kpmgpublic/us/en"/>
+        <item17
+            jcr:primaryType="nt:unstructured"
+            jcr:title="Automotive"
+            linkURL="/content/kpmgpublic/us/en"/>
+    </items>
+</jcr:root>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+    xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Main Navigation"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    extraClientlibs="kpmg.components.mainnavigation.editor">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <insightsTab
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Insights"
+                        sling:resourceType="acs-commons/granite/ui/components/include"
+                        path="/apps/kpmg/components/navigation/header/main-nav/dialog-partial/header-tab-partial"
+                        margin="{Boolean}false">
+                        <parameters
+                            jcr:primaryType="nt:unstructured"
+                            tabLabel="Insights"
+                            navItemName="nav1"
+                            navItemDefaultName="Insights"
+                            allLinksName="All Insights"
+                        />
+                    </insightsTab>
+                    <industriesTab
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Industries"
+                        sling:resourceType="acs-commons/granite/ui/components/include"
+                        path="/apps/kpmg/components/navigation/header/main-nav/dialog-partial/header-tab-partial"
+                        margin="{Boolean}false">
+                        <parameters
+                            jcr:primaryType="nt:unstructured"
+                            tabLabel="Industries"
+                            navItemName="nav2"
+                            navItemDefaultName="Industries"
+                            allLinksName="All Industries"
+                        />
+                    </industriesTab>
+                    <servicesTab
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Services"
+                        sling:resourceType="acs-commons/granite/ui/components/include"
+                        path="/apps/kpmg/components/navigation/header/main-nav/dialog-partial/header-tab-partial"
+                        margin="{Boolean}false">
+                        <parameters
+                            jcr:primaryType="nt:unstructured"
+                            tabLabel="Services"
+                            navItemName="nav3"
+                            navItemDefaultName="Services"
+                            allLinksName="All Services"
+                        />
+                    </servicesTab>
+
+                    <link4Tab
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Link 4"
+                        sling:resourceType="acs-commons/granite/ui/components/include"
+                        path="/apps/kpmg/components/navigation/header/main-nav/dialog-partial/header-tab-partial-other"
+                        margin="{Boolean}false">
+                        <parameters
+                            jcr:primaryType="nt:unstructured"
+                            tabLabel="Link 4"
+                            navItemName="nav4"
+                        />
+                    </link4Tab>
+
+                    <link5Tab
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Link 5"
+                        sling:resourceType="acs-commons/granite/ui/components/include"
+                        path="/apps/kpmg/components/navigation/header/main-nav/dialog-partial/header-tab-partial-other"
+                        margin="{Boolean}false">
+                        <parameters
+                            jcr:primaryType="nt:unstructured"
+                            tabLabel="Link 5"
+                            navItemName="nav5"
+                        />
+                    </link5Tab>
+                    <link6Tab
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Link 6"
+                        sling:resourceType="acs-commons/granite/ui/components/include"
+                        path="/apps/kpmg/components/navigation/header/main-nav/dialog-partial/header-tab-partial-other"
+                        margin="{Boolean}false">
+                        <parameters
+                            jcr:primaryType="nt:unstructured"
+                            tabLabel="Link 6"
+                            navItemName="nav6"
+                        />
+                    </link6Tab>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

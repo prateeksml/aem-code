@@ -1,0 +1,51 @@
+<div data-sly-use.herofbv="com.adobe.cq.wcm.core.components.models.Teaser"
+  data-sly-use.templates="core/wcm/components/commons/v1/templates.html" data-sly-use.imageTemplate="image.html"
+  data-sly-use.pretitleTemplate="pretitle.html" data-sly-use.titleTemplate="title.html"
+  data-sly-use.videoTemplate="video.html" data-sly-use.descriptionTemplate="description.html"
+  data-sly-use.actionsTemplate="actions.html"
+  data-sly-test.hasContent="${herofbv.imageResource || herofbv.pretitle || herofbv.title || herofbv.description || herofbv.actions.size > 0}"
+  id="${herofbv.id}" class="cmp-hero-fbv${!wcmmode.disabled && herofbv.imageResource ? ' cq-dd-image' : ''}"
+  data-cmp-data-layer="${herofbv.data.json}">
+  <a class="cmp-hero-fbv__link" data-sly-attribute="${herofbv.link.htmlAttributes}"
+    data-sly-unwrap="${!herofbv.link.valid || !herofbv.actions.empty}"
+    data-cmp-clickable="${herofbv.data ? true : false}">
+
+    <sly data-sly-test="${'image' == properties.selectBackground}">
+      <sly data-sly-call="${imageTemplate.image @ teaser=herofbv}"></sly>
+    </sly>
+
+    <sly data-sly-test="${'video' == properties.selectBackground}">
+      <sly data-sly-call="${videoTemplate.video @ teaser=herofbv}"></sly>
+    </sly>
+
+    <sly data-sly-test="${properties.selectBackground}">
+      <div class="cmp-hero-fbv__content">
+        <div class="cmp-hero-fbv__content-container">
+          <div class="cmp-hero-fbv__content-overlay">
+            <div class="cmp-hero-fbv__content-overlay-inner">
+              <sly data-sly-call="${titleTemplate.title @ teaser=herofbv}"></sly>
+              <sly data-sly-call="${descriptionTemplate.description @ teaser=herofbv}"></sly>
+              <sly data-sly-call="${actionsTemplate.actions @ teaser=herofbv}"></sly>
+            </div>
+          </div>
+        </div>
+      </div>
+    </sly>
+
+    <sly data-sly-test="${!properties.selectBackground}">
+      <div class="cmp-hero-fbv__content cmp-hero-fbv__content--no-bg">
+        <div class="cmp-hero-fbv__content-container">
+          <div class="cmp-hero-fbv__content-overlay">
+            <div class="cmp-hero-fbv__content-overlay-inner">
+              <sly data-sly-call="${titleTemplate.title @ teaser=herofbv}"></sly>
+              <sly data-sly-call="${descriptionTemplate.description @ teaser=herofbv}"></sly>
+              <sly data-sly-call="${actionsTemplate.actions @ teaser=herofbv}"></sly>
+            </div>
+          </div>
+        </div>
+      </div>
+    </sly>
+
+  </a>
+</div>
+<sly data-sly-call="${templates.placeholder @ isEmpty=!hasContent, classAppend='cmp-hero-fbv'}"></sly>

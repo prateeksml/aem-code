@@ -1,0 +1,8 @@
+subject=Uploaded Asset Has not Been Processed
+
+message=Your recently uploaded asset ${assetName} is of a file type Image, available in the below path is not being processed to generate smart crop renditions and hence the workflow is terminated.\n \
+${hostPrefix}${assetPath}\n \
+
+footer=\n \
+-------------------------------------------------------------------------------------\n \
+This is an automatically generated message. Please do not reply.

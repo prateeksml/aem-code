@@ -1,0 +1,80 @@
+.toc-grid-wrapper {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-auto-rows: 1fr; /* remove if 25% in 50-25 variation- equal height not needed */
+
+  .toc-grid-item {
+    display: grid;
+
+    > .cmp-container {
+      display: grid;
+      padding: 0;
+      margin: 0;
+      > .topicteaser.teaser {
+        display: grid;
+      }
+    }
+  }
+
+  &--50-25 {
+    grid-auto-rows: auto;
+    @include tablet {
+      grid-template-columns: repeat(2, 50%);
+    }
+
+    @include desktop-small {
+      grid-template-columns: 50% 1fr 1fr;
+    }
+
+    @include desktop-medium {
+      grid-template-columns: 50% 1fr 1fr;
+    }
+
+    .toc-grid-item:nth-child(1) {
+      grid-row: span 2;
+
+      @include tablet {
+        grid-column: span 2;
+      }
+
+      @include desktop-small {
+        grid-column: 1;
+      }
+
+      @include desktop-medium {
+        grid-column: 1;
+      }
+    }
+  }
+  &--50 {
+    @include desktop-small {
+      grid-template-columns: repeat(2, 50%);
+    }
+
+    @include desktop-medium {
+      grid-template-columns: repeat(2, 50%);
+    }
+  }
+  &--33 {
+    @include desktop-small {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include desktop-medium {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  &--25 {
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include desktop-small {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include desktop-medium {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}

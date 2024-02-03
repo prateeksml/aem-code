@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:isCheckedOut="{Boolean}false"
+    jcr:primaryType="cq:WorkflowModel"
+    jcr:uuid="cdca12d0-afbf-41b5-81ed-d18b0950e411"
+    sling:resourceType="cq/workflow/components/model"
+    description="No Description"
+    title="KPMG : Create New Page">
+    <metaData
+        cq:generatingPage="/conf/global/settings/workflow/models/kpmg/create-newpage/jcr:content"
+        cq:lastModified="{Long}1682255296784"
+        cq:lastModifiedBy="admin"
+        jcr:primaryType="nt:unstructured"
+        lastSynced="{Date}2023-04-23T18:38:16.657+05:30"/>
+    <nodes jcr:primaryType="nt:unstructured">
+        <node0
+            jcr:primaryType="cq:WorkflowNode"
+            title="Start"
+            type="START">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node0>
+        <node1
+            jcr:primaryType="cq:WorkflowNode"
+            title="Allowed Templates"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.kpmg.core.workflow.newpage.AllowedTemplate"
+                PROCESS_AUTO_ADVANCE="true"/>
+        </node1>
+        <node2
+            jcr:primaryType="cq:WorkflowNode"
+            description="This step will hideInNav=true if page sling:resourceType is container page, error page or migration page"
+            title="Add Hide In Nav Property"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.kpmg.core.workflow.newpage.SetHideInNavProperty"
+                PROCESS_AUTO_ADVANCE="true"/>
+        </node2>
+        <node3
+            jcr:primaryType="cq:WorkflowNode"
+            description="This process step allows the RFP template modify only to GSA"
+            title="Allow RFP only To GSA"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.kpmg.core.workflow.newpage.RestrictRFPModifyToGSA"
+                PROCESS_AUTO_ADVANCE="true"/>
+        </node3>
+        <node4
+            jcr:primaryType="cq:WorkflowNode"
+            description="This step will check whether the page belongs to lblue print of live copy"
+            title="Blue Print"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.kpmg.core.workflow.deactivate.BluePrint"/>
+        </node4>
+        <node5
+            jcr:primaryType="cq:WorkflowNode"
+            title="OR_SPLIT"
+            type="OR_SPLIT">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node5>
+        <node6
+            jcr:primaryType="cq:WorkflowNode"
+            title="OR_JOIN"
+            type="OR_JOIN">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node6>
+        <node7
+            jcr:primaryType="cq:WorkflowNode"
+            title="Permission"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.kpmg.core.workflow.newpage.PermissionModification"
+                PROCESS_ARGS="This step will modify the permission."
+                PROCESS_AUTO_ADVANCE="true"/>
+        </node7>
+        <node8
+            jcr:primaryType="cq:WorkflowNode"
+            description="Update ativation permission for specific templates"
+            title="Update Activation Permission"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.kpmg.core.workflow.newpage.PermissionActivation"
+                PROCESS_AUTO_ADVANCE="true"/>
+        </node8>
+        <node9
+            jcr:primaryType="cq:WorkflowNode"
+            description="Update content-deleter permissions"
+            title="Update Delete Permission"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.kpmg.core.workflow.newpage.PermissionDelete"
+                PROCESS_ARGS="This route for Live copy. It is a process step and will remove delete permission of template"
+                PROCESS_AUTO_ADVANCE="true"/>
+        </node9>
+        <node10
+            jcr:primaryType="cq:WorkflowNode"
+            description="Update modify permission for error page"
+            title="Update Modify Permission"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.kpmg.core.workflow.newpage.UpdateModifyPermission"
+                PROCESS_AUTO_ADVANCE="true"/>
+        </node10>
+        <node11
+            jcr:primaryType="cq:WorkflowNode"
+            title="End"
+            type="END">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node11>
+    </nodes>
+    <transitions jcr:primaryType="nt:unstructured">
+        <node0_x0023_node1
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node0"
+            rule="\0"
+            to="node1">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node0_x0023_node1>
+        <node1_x0023_node2
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node1"
+            rule="\0"
+            to="node2">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node1_x0023_node2>
+        <node2_x0023_node3
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node2"
+            rule="\0"
+            to="node3">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node2_x0023_node3>
+        <node3_x0023_node4
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node3"
+            rule="\0"
+            to="node4">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node3_x0023_node4>
+        <node4_x0023_node5
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node4"
+            to="node5">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node4_x0023_node5>
+        <node5_x0023_node7
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node5"
+            rule="\0"
+            to="node7">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                isDefault="false"/>
+        </node5_x0023_node7>
+        <node7_x0023_node6
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node7"
+            to="node6">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node7_x0023_node6>
+        <node5_x0023_node8
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node5"
+            rule="\0"
+            to="node8">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                isDefault="false"/>
+        </node5_x0023_node8>
+        <node8_x0023_node9
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node8"
+            rule="\0"
+            to="node9">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node8_x0023_node9>
+        <node9_x0023_node10
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node9"
+            rule="\0"
+            to="node10">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node9_x0023_node10>
+        <node10_x0023_node6
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node10"
+            to="node6">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node10_x0023_node6>
+        <node6_x0023_node11
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node6"
+            to="node11">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node6_x0023_node11>
+    </transitions>
+</jcr:root>

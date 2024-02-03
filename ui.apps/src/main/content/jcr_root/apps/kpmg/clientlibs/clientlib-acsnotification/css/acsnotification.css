@@ -1,0 +1,85 @@
+@red: #FC776A;
+@green: #A4CE6E;
+@blue: #7BAEE8;
+@yellow: #FBD360;
+@dark-grey: #323232;
+@width: 100%;  
+
+
+body{
+    #acsCommons-System-Notifications {
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      width: calc(100% - 30px);
+      max-width: inherit;          
+      font-family: adobe-clean, Helvetica, Arial, sans-serif;
+      z-index: 1000000;
+      font-size: 14px;
+      line-height: 1.25rem;
+      transform: translate(15px, 0%);
+      margin: 0px;	
+      .acsCommons-System-Notification {
+        border: solid 2px;
+        color: @dark-grey;
+        margin: 0 auto 1rem auto;
+        padding: 1rem 2rem;
+        min-width: 300px;
+    
+        .acsCommons-System-Notification-dismiss {
+          position: absolute;
+          right: 10px;
+          top: 10px;
+          font-size: 0px;
+          text-decoration: none;
+          
+          &:hover {
+            text-decoration: underline;
+          }
+          &:after{
+            content: '\2716';
+            position: absolute;
+            right: 5px;
+            top: 0px;
+            font-size: 14px;
+          }
+        }
+        
+        .acsCommons-System-Notification-title {
+          font-size: 1.5rem;
+          font-weight: bold;
+          margin-bottom: 1rem;
+          &:empty {
+              display: none;
+            }      
+        }
+    
+        a {
+          color: @dark-grey;
+        }
+      }
+    
+      .acsCommons-System-Notification--yellow {
+        background-color: #fbd360;
+        border-color: #d6a005;
+        color: black
+      }
+
+      .acsCommons-System-Notification--green {
+        background-color: #e0eecd;
+    	border-color: #648d30
+      }
+      
+      .acsCommons-System-Notification--blue {
+        background-color: #7baee8;
+   		border-color: #226dc2
+      }
+    
+      .acsCommons-System-Notification--red {
+        background-color: #fc776a;
+   		border-color: #e21805
+      }
+    }
+}
+
+

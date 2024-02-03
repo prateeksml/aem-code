@@ -1,0 +1,974 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="nt:unstructured"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    extraClientlibs="[cq.common.wcm,core.wcm.components.page.v3.editor,cq.wcm.msm.properties,granite.contexthub.configuration,cq.siteadmin.admin.properties,core.wcm.components.image.v3.editor,core.kpmg.components.basepage]">
+    <content jcr:primaryType="nt:unstructured">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs jcr:primaryType="nt:unstructured">
+                <items jcr:primaryType="nt:unstructured">
+                    <basic
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Basic"
+                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <title
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/include"
+                                        path="/mnt/override/apps/kpmg/components/utilities/basic_title_delegate"/>
+                                    <moretitles
+                                        cq:showOnCreate="{Boolean}true"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="More Titles and Description"
+                                        path="/mnt/override/apps/kpmg/components/utilities/basic_description"/>
+                                </items>
+                            </column>
+                        </items>
+                    </basic>
+                    <advanced
+                            cq:showOnCreate="{Boolean}true"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Advanced"
+                            sling:resourceSuperType="wcm/foundation/components/basicpage/v1/basicpage/tabs/advanced"
+                            sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <section1
+                                            jcr:primaryType="nt:unstructured"
+                                            jcr:title="Settings"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <alias
+                                                    jcr:primaryType="nt:unstructured"
+                                                    fieldLabel="Alias/URL translation">
+                                            </alias>
+                                        </items>
+                                    </section1>
+                                </items>
+                            </column>
+                        </items>
+                    </advanced>
+                    <thumbnail
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Images"
+                            sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <image
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                            fieldLabel="Image"
+                                            granite:class="featuredimage"                                            
+                                            mimeType="image"
+                                            name="./cq:featuredimage/fileReference"
+                                            required="{Boolean}true"
+                                            rootPath="/content/dam"/>
+                                    <alt
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldDescription="Image  Description"
+                                            fieldLabel="Alt Text"
+                                            name="./cq:featuredimage/alt"
+                                            required="{Boolean}true"
+                                            cq:showOnCreate="{Boolean}true"/>
+                                    <filetype
+                                            jcr:primaryType="nt:unstructured"
+                                            cq:showOnCreate="{Boolean}true"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/hidden"
+                                            value="core/wcm/components/image/v3/image"
+                                            name="./cq:featuredimage/sling:resourceType"/>
+                                    <featuredimage
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:hideResource="{Boolean}true"/>
+                                    <thumbnail
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:hideResource="{Boolean}true"/>
+                                </items>
+                            </column>
+                        </items>
+                    </thumbnail>
+                    <kpmg
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="KPMG"
+                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <errorPages
+                                        cq:showOnCreate="{Boolean}true"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                        fieldDescription="Enter path for error pages"
+                                        fieldLabel="Error Pages"
+                                        name="./errorPages"
+                                        rootPath="/content/kpmgpublic"/>
+                                    <direction
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        fieldDescription="The direction of the page. Inherit options uses the value set for the closest ancestor page."
+                                        fieldLabel="Document Direction"
+                                        multiple="{Boolean}false"
+                                        name="./direction">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <inherit
+                                                jcr:primaryType="nt:unstructured"
+                                                selected="{Boolean}true"
+                                                text="Inherit"
+                                                value="\0"/>
+                                            <left-to-right
+                                                jcr:primaryType="nt:unstructured"
+                                                selected="{Boolean}false"
+                                                text="Left To Right"
+                                                value="ltr"/>
+                                            <right-to-left
+                                                jcr:primaryType="nt:unstructured"
+                                                selected="{Boolean}false"
+                                                text="Right To Left"
+                                                value="rtl"/>
+                                        </items>
+                                    </direction>
+                                </items>
+                            </column>
+                        </items>
+                    </kpmg>                    
+                    <dynamic
+                        cq:showOnCreate="{Boolean}false"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Meta Properties"
+                        sling:resourceType="granite/ui/components/foundation/section">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <opengraph
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Open Graph"
+                                        sling:resourceType="granite/ui/components/foundation/layouts/collapsible">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <opengraph
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <ogtitle
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="og:title"
+                                                        granite:class="ogsitetitle"
+                                                        name="./metaOgTitle">
+                                                        <granite:data
+                                                            jcr:primaryType="nt:unstructured"
+                                                            allowBulkEdit="{Boolean}true"
+                                                            cq-msm-lockable="metaOgTitle"/>
+                                                    </ogtitle>
+                                                    <ogimage
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                        fieldLabel="og:image"
+                                                        granite:class="ogsiteimage"
+                                                        name="./metaOgImage"
+                                                        rootPath="/content/dam/kpmgsites">
+                                                        <granite:data
+                                                            jcr:primaryType="nt:unstructured"
+                                                            allowBulkEdit="{Boolean}true"
+                                                            cq-msm-lockable="metaOgImage"/>
+                                                    </ogimage>
+                                                    <ogdesc
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                        fieldLabel="og:description"
+                                                        name="./metaOgDescription">
+                                                        <granite:data
+                                                            jcr:primaryType="nt:unstructured"
+                                                            allowBulkEdit="{Boolean}true"
+                                                            cq-msm-lockable="metaOgDescription"/>
+                                                    </ogdesc>
+                                                    <oglanguagelocale
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="og:locale"
+                                                        name="./metaOgLanguage">
+                                                        <granite:data
+                                                            jcr:primaryType="nt:unstructured"
+                                                            allowBulkEdit="{Boolean}true"
+                                                            cq-msm-lockable="metaOgLangauage"/>
+                                                    </oglanguagelocale>
+                                                    <ogsitesettings
+                                                        granite:class="ogsitename"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="og:site_name"
+                                                        name="./metaOgSiteSettings">
+                                                        <granite:data
+                                                            jcr:primaryType="nt:unstructured"
+                                                            allowBulkEdit="{Boolean}true"
+                                                            cq-msm-lockable="metaOgSiteSettings"/>
+                                                    </ogsitesettings>
+                                                    <ogtype
+                                                        granite:class="ogsitetype"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="og:type"
+                                                        name="./metaOgType">
+                                                        <granite:data
+                                                            jcr:primaryType="nt:unstructured"
+                                                            allowBulkEdit="{Boolean}true"
+                                                            cq-msm-lockable="metaOgType"/>
+                                                    </ogtype>
+                                                </items>
+                                            </opengraph>
+                                        </items>
+                                    </opengraph>
+                                </items>
+                                <layout
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/foundation/layouts/collapsible"
+                                    margin="{Boolean}false"/>
+                            </column>
+                        </items>
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+                            margin="{Boolean}false"/>
+                    </dynamic>
+                    <categorization
+                    	cq:showOnCreate="{Boolean}false"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Categorization"
+                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                granite:class="coral-RichText-FixedColumn-column"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                
+                                    <manual
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Manual Selection"
+                                        sling:resourceType="granite/ui/components/foundation/layouts/collapsible">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <tabs
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/container">
+                                                <layout
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/layouts/tabs"/>
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <contenttype
+                                                        jcr:primaryType="nt:unstructured"
+                                                        jcr:title="Content Type*"
+                                                        sling:resourceType="granite/ui/components/foundation/container"
+                                                        id="contenttype-tab">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                        <customtagpicker
+                                                            jcr:primaryType="nt:unstructured"
+                                                            category="contenttype"
+                                                            lockable="{Boolean}true"
+                                                            displayValue="Content Type"
+                                                            slUrl="/bin/kpmg/tags/smartlogic"
+                                                            required="{Boolean}true"
+                                                            sling:resourceType="/apps/kpmg/components/content/customtagpicker"/>
+                                                            <layoutConfig
+                                                                jcr:primaryType="nt:unstructured"
+                                                                active="{Boolean}true"/>
+                                                        </items>
+                                                    </contenttype>
+                                                    <mediaformats
+                                                        jcr:primaryType="nt:unstructured"
+                                                        jcr:title="Media Formats*"
+                                                        sling:resourceType="granite/ui/components/foundation/container"
+                                                        id="mediaformat-tab">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <customtagpicker
+                                                                jcr:primaryType="nt:unstructured"
+                                                                category="mediaformats"
+                                                                lockable="{Boolean}true"
+                                                                displayValue="Media Formats"
+                                                                slUrl="/bin/kpmg/tags/smartlogic"
+                                                                required="{Boolean}true"
+                                                                sling:resourceType="/apps/kpmg/components/content/customtagpicker"/>
+                                                            <!-- <mediaformats
+                                                                cq:showOnCreate="{Boolean}true"
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="/apps/kpmg/components/content/widgets/touch/tagspicker"
+                                                                allowBulkEdit="{Boolean}false"
+                                                                allowCreate="{Boolean}false"
+                                                                category="mediaformats"
+                                                                class="kpmg-required-tag-field"
+                                                                cq-msm-lockable="mediaformats"
+                                                                fieldLabel="Media Formats*"
+                                                                id="mediaformat-sl-tag"
+                                                                name="./mediaformats"
+                                                                renderReadOnly="{Boolean}true"/> -->
+                                                        </items>
+                                                    </mediaformats>
+                                                    <personas
+                                                        jcr:primaryType="nt:unstructured"
+                                                        jcr:title="Personas*"
+                                                        sling:resourceType="granite/ui/components/foundation/container"
+                                                        id="personas-tab">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                        <customtagpicker
+                                                                jcr:primaryType="nt:unstructured"
+                                                                category="persona"
+                                                                lockable="{Boolean}true"
+                                                                displayValue="Personas"
+                                                                slUrl="/bin/kpmg/tags/smartlogic"
+                                                                required="{Boolean}true"
+                                                                sling:resourceType="/apps/kpmg/components/content/customtagpicker"/>
+                                                            <!-- <personas
+                                                                cq:showOnCreate="{Boolean}true"
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="/apps/kpmg/components/content/widgets/touch/tagspicker"
+                                                                allowBulkEdit="{Boolean}false"
+                                                                allowCreate="{Boolean}false"
+                                                                category="persona"
+                                                                class="kpmg-required-tag-field"
+                                                                cq-msm-lockable="persona"
+                                                                fieldLabel="Personas*"
+                                                                id="personas-sl-tag"
+                                                                name="./persona"
+                                                                renderReadOnly="{Boolean}true"/> -->
+                                                        </items>
+                                                    </personas>
+                                                </items>
+                                            </tabs>
+                                        </items>
+                                    </manual>
+                                    <auto
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Assisted Selection"
+                                        sling:resourceType="granite/ui/components/foundation/layouts/collapsible">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <buttons
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/container">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <clearall
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="/libs/granite/ui/components/foundation/button"
+                                                        class="cleartags"
+                                                        text="Remove All"
+                                                        title="Clear All Tags"/>
+                                                    <updateall
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="/libs/granite/ui/components/foundation/button"
+                                                        class="updateall"
+                                                        text="Update"
+                                                        title="Update Tags"/>
+                                                </items>
+                                            </buttons>
+                                            <tabs
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/container">
+                                                <layout
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/layouts/tabs"/>
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <geography
+                                                        jcr:primaryType="nt:unstructured"
+                                                        jcr:title="Geography"
+                                                        sling:resourceType="granite/ui/components/foundation/container">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <!-- <geographies
+                                                                cq:showOnCreate="{Boolean}true"
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="/apps/kpmg/components/content/widgets/touch/tagspicker"
+                                                                allowBulkEdit="{Boolean}false"
+                                                                allowCreate="{Boolean}false"
+                                                                category="geography"
+                                                                cq-msm-lockable="geography"
+                                                                fieldLabel="Geography"
+                                                                id="geography-sl-tag"
+                                                                name="./geography"
+                                                                renderReadOnly="{Boolean}true"/> -->
+                                                                <customtagpicker
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    category="geography"
+                                                                    lockable="{Boolean}true"
+                                                                    displayValue="Geography"
+                                                                    slUrl="/bin/kpmg/tags/smartlogic"
+                                                                    sling:resourceType="/apps/kpmg/components/content/customtagpicker"/>
+                                                            <layoutConfig
+                                                                jcr:primaryType="nt:unstructured"
+                                                                active="{Boolean}true"/>
+                                                        </items>
+                                                    </geography>
+                                                    <industry
+                                                        jcr:primaryType="nt:unstructured"
+                                                        jcr:title="Industries"
+                                                        sling:resourceType="granite/ui/components/foundation/container">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <!-- <industries
+                                                                cq:showOnCreate="{Boolean}true"
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="/apps/kpmg/components/content/widgets/touch/tagspicker"
+                                                                allowBulkEdit="{Boolean}false"
+                                                                allowCreate="{Boolean}false"
+                                                                category="industry"
+                                                                fieldLabel="Industries"
+                                                                id="industry-sl-tag"
+                                                                name="./industry"
+                                                                renderReadOnly="{Boolean}true"/> -->
+                                                                <customtagpicker
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    category="industry"
+                                                                    displayValue="Industries"
+                                                                    slUrl="/bin/kpmg/tags/smartlogic"
+                                                                    sling:resourceType="/apps/kpmg/components/content/customtagpicker"/>
+                                                        </items>
+                                                    </industry>
+                                                    <insights
+                                                        jcr:primaryType="nt:unstructured"
+                                                        jcr:title="Insights"
+                                                        sling:resourceType="granite/ui/components/foundation/container">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <!-- <insights
+                                                                cq:showOnCreate="{Boolean}true"
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="/apps/kpmg/components/content/widgets/touch/tagspicker"
+                                                                allowBulkEdit="{Boolean}false"
+                                                                allowCreate="{Boolean}false"
+                                                                category="insight"
+                                                                fieldLabel="Insights"
+                                                                id="insight-sl-tag"
+                                                                name="./insight"
+                                                                renderReadOnly="{Boolean}true"/> -->
+                                                                <customtagpicker
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    category="insight"
+                                                                    displayValue="Insights"
+                                                                    slUrl="/bin/kpmg/tags/smartlogic"
+                                                                    sling:resourceType="/apps/kpmg/components/content/customtagpicker"/>
+                                                        </items>
+                                                    </insights>
+                                                    <markets
+                                                        jcr:primaryType="nt:unstructured"
+                                                        jcr:title="Market"
+                                                        sling:resourceType="granite/ui/components/foundation/container">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <!-- <markets
+                                                                cq:showOnCreate="{Boolean}true"
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="/apps/kpmg/components/content/widgets/touch/tagspicker"
+                                                                allowBulkEdit="{Boolean}false"
+                                                                allowCreate="{Boolean}false"
+                                                                category="market"
+                                                                cq-msm-lockable="market"
+                                                                fieldLabel="Markets"
+                                                                id="market-sl-tag"
+                                                                name="./market"
+                                                                renderReadOnly="{Boolean}true"/> -->
+                                                                <customtagpicker
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    category="market"
+                                                                    lockable="{Boolean}true"
+                                                                    displayValue="Market"
+                                                                    slUrl="/bin/kpmg/tags/smartlogic"
+                                                                    sling:resourceType="/apps/kpmg/components/content/customtagpicker"/>
+                                                        </items>
+                                                    </markets>
+                                                    <services
+                                                        jcr:primaryType="nt:unstructured"
+                                                        jcr:title="Services"
+                                                        sling:resourceType="granite/ui/components/foundation/container">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <!-- <services
+                                                                cq:showOnCreate="{Boolean}true"
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="/apps/kpmg/components/content/widgets/touch/tagspicker"
+                                                                allowBulkEdit="{Boolean}false"
+                                                                allowCreate="{Boolean}false"
+                                                                category="service"
+                                                                fieldLabel="Services"
+                                                                id="service-sl-tag"
+                                                                name="./service"
+                                                                renderReadOnly="{Boolean}true"/> -->
+                                                                <customtagpicker
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    category="service"
+                                                                    displayValue="Services"
+                                                                    slUrl="/bin/kpmg/tags/smartlogic"
+                                                                    sling:resourceType="/apps/kpmg/components/content/customtagpicker"/>
+                                                        </items>
+                                                    </services>
+                                                </items>
+                                            </tabs>
+                                        </items>
+                                    </auto>
+                                    <systemvalue
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="System values"
+                                        sling:resourceType="granite/ui/components/foundation/layouts/collapsible">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <Manual
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Managed List Fields"
+                                                sling:resourceType="granite/ui/components/foundation/container">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <businessOwner
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="Business Owner Group">
+                                                        <granite:data
+                                                            jcr:primaryType="nt:unstructured"
+                                                            kpmg-auto-update-value="\{&quot;type&quot;: &quot;pageInfo&quot;, &quot;propertyPath&quot;: &quot;owner&quot;}"
+                                                            readonly="{Boolean}true"/>
+                                                    </businessOwner>
+                                                    <campaign
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="Campaign Name">
+                                                        <granite:data
+                                                            jcr:primaryType="nt:unstructured"
+                                                            kpmg-auto-update-value="\{&quot;type&quot;: &quot;pageInfo&quot;, &quot;propertyPath&quot;: &quot;campaign&quot;}"
+                                                            readonly="{Boolean}true"/>
+                                                    </campaign>
+                                                </items>
+                                                <layout
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/layouts/collapsible"
+                                                    margin="{Boolean}false"/>
+                                            </Manual>
+                                            <content
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Content Type"
+                                                sling:resourceType="granite/ui/components/foundation/container">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <contentid
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                        fieldLabel="Tag ID">
+                                                        <granite:data
+                                                            jcr:primaryType="nt:unstructured"
+                                                            kpmg-auto-update-value="\{&quot;type&quot;: &quot;pageInfo&quot;, &quot;propertyPath&quot;: &quot;sl-content-zthesid&quot;}"
+                                                            readonly="{Boolean}true"/>
+                                                    </contentid>
+                                                    <contentpath
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                        fieldLabel="Tag Path">
+                                                        <granite:data
+                                                            jcr:primaryType="nt:unstructured"
+                                                            kpmg-auto-update-value="\{&quot;type&quot;: &quot;pageInfo&quot;, &quot;propertyPath&quot;: &quot;sl-content-hierarchy&quot;}"
+                                                            readonly="{Boolean}true"/>
+                                                    </contentpath>
+                                                </items>
+                                                <layout
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/layouts/collapsible"
+                                                    margin="{Boolean}false"/>
+                                            </content>
+                                            <mediaformat
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Media Format Type"
+                                                sling:resourceType="granite/ui/components/foundation/container">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <mediaid
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                        fieldLabel="Tag ID">
+                                                        <granite:data
+                                                            jcr:primaryType="nt:unstructured"
+                                                            kpmg-auto-update-value="\{&quot;type&quot;: &quot;pageInfo&quot;, &quot;propertyPath&quot;: &quot;sl-media-zthesid&quot;}"
+                                                            readonly="{Boolean}true"/>
+                                                    </mediaid>
+                                                    <mediapath
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                        fieldLabel="Tag Path">
+                                                        <granite:data
+                                                            jcr:primaryType="nt:unstructured"
+                                                            kpmg-auto-update-value="\{&quot;type&quot;: &quot;pageInfo&quot;, &quot;propertyPath&quot;: &quot;sl-media-hierarchy&quot;}"
+                                                            readonly="{Boolean}true"/>
+                                                    </mediapath>
+                                                </items>
+                                                <layout
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/layouts/collapsible"
+                                                    margin="{Boolean}false"/>
+                                            </mediaformat>
+                                            <manual
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Persona"
+                                                sling:resourceType="granite/ui/components/foundation/container">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <id
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                        fieldLabel="Tag ID">
+                                                        <granite:data
+                                                            jcr:primaryType="nt:unstructured"
+                                                            kpmg-auto-update-value="\{&quot;type&quot;: &quot;pageInfo&quot;, &quot;propertyPath&quot;: &quot;sl-persona-zthesid&quot;}"
+                                                            readonly="{Boolean}true"/>
+                                                    </id>
+                                                    <path
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                        fieldLabel="Tag Title Path">
+                                                        <granite:data
+                                                            jcr:primaryType="nt:unstructured"
+                                                            kpmg-auto-update-value="\{&quot;type&quot;: &quot;pageInfo&quot;, &quot;propertyPath&quot;: &quot;sl-persona-hierarchy&quot;}"
+                                                            readonly="{Boolean}true"/>
+                                                    </path>
+                                                </items>
+                                                <layout
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/layouts/collapsible"
+                                                    margin="{Boolean}false"/>
+                                            </manual>
+                                            <auto-geo
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Geo Relevance "
+                                                sling:resourceType="granite/ui/components/foundation/container">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <geotag
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                        fieldLabel="Tag ID">
+                                                        <granite:data
+                                                            jcr:primaryType="nt:unstructured"
+                                                            kpmg-auto-update-value="\{&quot;type&quot;: &quot;pageInfo&quot;, &quot;propertyPath&quot;: &quot;sl-geography-zthesid&quot;}"
+                                                            readonly="{Boolean}true"/>
+                                                    </geotag>
+                                                    <tagpathgeo
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                        fieldLabel="Tag Path">
+                                                        <granite:data
+                                                            jcr:primaryType="nt:unstructured"
+                                                            kpmg-auto-update-value="\{&quot;type&quot;: &quot;pageInfo&quot;, &quot;propertyPath&quot;: &quot;sl-geography-hierarchy&quot;}"
+                                                            readonly="{Boolean}true"/>
+                                                    </tagpathgeo>
+                                                    
+                                                    <iso3166
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                        fieldLabel="ISO 3166">
+                                                        <granite:data
+                                                            jcr:primaryType="nt:unstructured"
+                                                            kpmg-auto-update-value="\{&quot;type&quot;: &quot;pageInfo&quot;, &quot;propertyPath&quot;: &quot;sl-geography-iso3166&quot;}"
+                                                            readonly="{Boolean}true"/>
+                                                    </iso3166>
+                                                    <ISO3166-2
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                        fieldLabel="ISO3166-2">
+                                                        <granite:data
+                                                            jcr:primaryType="nt:unstructured"
+                                                            kpmg-auto-update-value="\{&quot;type&quot;: &quot;pageInfo&quot;, &quot;propertyPath&quot;: &quot;sl-geography-iso3166-2&quot;}"
+                                                            readonly="{Boolean}true"/>
+                                                    </ISO3166-2>
+                                                    <ISO3166-3
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                        fieldLabel="ISO3166-3">
+                                                        <granite:data
+                                                            jcr:primaryType="nt:unstructured"
+                                                            kpmg-auto-update-value="\{&quot;type&quot;: &quot;pageInfo&quot;, &quot;propertyPath&quot;: &quot;sl-geography-iso3166-3&quot;}"
+                                                            readonly="{Boolean}true"/>
+                                                    </ISO3166-3>
+                                                    <unm49Region
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                        fieldLabel="UN M.49 - Region">
+                                                        <granite:data
+                                                            jcr:primaryType="nt:unstructured"
+                                                            kpmg-auto-update-value="\{&quot;type&quot;: &quot;pageInfo&quot;, &quot;propertyPath&quot;: &quot;sl-geography-unm49-region&quot;}"
+                                                            readonly="{Boolean}true"/>
+                                                    </unm49Region>
+                                                    <unm49Subregion
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                        fieldLabel="UN M.49 - Subregion">
+                                                        <granite:data
+                                                            jcr:primaryType="nt:unstructured"
+                                                            kpmg-auto-update-value="\{&quot;type&quot;: &quot;pageInfo&quot;, &quot;propertyPath&quot;: &quot;sl-geography-unm49-subregion&quot;}"
+                                                            readonly="{Boolean}true"/>
+                                                    </unm49Subregion>
+                                                    <unm49Subsubregion
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                        fieldLabel="UN M.49 – Sub-Subregion">
+                                                        <granite:data
+                                                            jcr:primaryType="nt:unstructured"
+                                                            kpmg-auto-update-value="\{&quot;type&quot;: &quot;pageInfo&quot;, &quot;propertyPath&quot;: &quot;sl-geography-unm49-subsubregion&quot;}"
+                                                            readonly="{Boolean}true"/>
+                                                    </unm49Subsubregion>
+                                                </items>
+                                                <layout
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/layouts/collapsible"
+                                                    margin="{Boolean}false"/>
+                                            </auto-geo>
+                                            <auto-industry
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Industries"
+                                                sling:resourceType="granite/ui/components/foundation/container">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <industry
+                                                        jcr:primaryType="nt:unstructured"
+                                                        jcr:title="Common Industries"
+                                                        sling:resourceType="granite/ui/components/foundation/section"
+                                                        fieldLabel="Common Industries"
+                                                        text="Common Industries">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <geotag
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                                fieldLabel="Tag ID">
+                                                                <granite:data
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    kpmg-auto-update-value="\{&quot;type&quot;: &quot;pageInfo&quot;, &quot;propertyPath&quot;: &quot;sl-industry-common-zthesid&quot;}"
+                                                                    readonly="{Boolean}true"/>
+                                                            </geotag>
+                                                            <tagpathgeo
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                                fieldLabel="Tag Path">
+                                                                <granite:data
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    kpmg-auto-update-value="\{&quot;type&quot;: &quot;pageInfo&quot;, &quot;propertyPath&quot;: &quot;sl-industry-common-hierarchy&quot;}"
+                                                                    readonly="{Boolean}true"/>
+                                                            </tagpathgeo>
+                                                        </items>
+                                                        <layout
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/foundation/layouts/collapsible"
+                                                            margin="{Boolean}false"/>
+                                                    </industry>
+                                                    <industrylocal
+                                                        jcr:primaryType="nt:unstructured"
+                                                        jcr:title="Local Industries"
+                                                        sling:resourceType="granite/ui/components/foundation/section">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <geotag
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                                fieldLabel="Tag ID">
+                                                                <granite:data
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    kpmg-auto-update-value="\{&quot;type&quot;: &quot;pageInfo&quot;, &quot;propertyPath&quot;: &quot;sl-industry-zthesid&quot;}"
+                                                                    readonly="{Boolean}true"/>
+                                                            </geotag>
+                                                            <tagpathgeo
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                                fieldLabel="Tag Path">
+                                                                <granite:data
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    kpmg-auto-update-value="\{&quot;type&quot;: &quot;pageInfo&quot;, &quot;propertyPath&quot;: &quot;sl-industry-hierarchy&quot;}"
+                                                                    readonly="{Boolean}true"/>
+                                                            </tagpathgeo>
+                                                        </items>
+                                                        <layout
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/foundation/layouts/collapsible"
+                                                            margin="{Boolean}false"/>
+                                                    </industrylocal>
+                                                </items>
+                                                <layout
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/layouts/collapsible"
+                                                    margin="{Boolean}false"/>
+                                            </auto-industry>
+                                            <auto-service
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Services"
+                                                sling:resourceType="granite/ui/components/foundation/container">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <service
+                                                        jcr:primaryType="nt:unstructured"
+                                                        jcr:title="Common Services"
+                                                        sling:resourceType="granite/ui/components/foundation/section">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <geotag
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                                fieldLabel="Tag ID">
+                                                                <granite:data
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    kpmg-auto-update-value="\{&quot;type&quot;: &quot;pageInfo&quot;, &quot;propertyPath&quot;: &quot;sl-service-common-zthesid&quot;}"
+                                                                    readonly="{Boolean}true"/>
+                                                            </geotag>
+                                                            <tagpathgeo
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                                fieldLabel="Tag Path">
+                                                                <granite:data
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    kpmg-auto-update-value="\{&quot;type&quot;: &quot;pageInfo&quot;, &quot;propertyPath&quot;: &quot;sl-service-common-hierarchy&quot;}"
+                                                                    readonly="{Boolean}true"/>
+                                                            </tagpathgeo>
+                                                        </items>
+                                                        <layout
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/foundation/layouts/collapsible"
+                                                            margin="{Boolean}false"/>
+                                                    </service>
+                                                    <servicelocal
+                                                        jcr:primaryType="nt:unstructured"
+                                                        jcr:title="Local Services"
+                                                        sling:resourceType="granite/ui/components/foundation/section">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <geotag
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                                fieldLabel="Tag ID">
+                                                                <granite:data
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    kpmg-auto-update-value="\{&quot;type&quot;: &quot;pageInfo&quot;, &quot;propertyPath&quot;: &quot;sl-service-zthesid&quot;}"
+                                                                    readonly="{Boolean}true"/>
+                                                            </geotag>
+                                                            <tagpathgeo
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                                fieldLabel="Tag Path">
+                                                                <granite:data
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    kpmg-auto-update-value="\{&quot;type&quot;: &quot;pageInfo&quot;, &quot;propertyPath&quot;: &quot;sl-service-hierarchy&quot;}"
+                                                                    readonly="{Boolean}true"/>
+                                                            </tagpathgeo>
+                                                        </items>
+                                                        <layout
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/foundation/layouts/collapsible"
+                                                            margin="{Boolean}false"/>
+                                                    </servicelocal>
+                                                </items>
+                                                <layout
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/layouts/collapsible"
+                                                    margin="{Boolean}false"/>
+                                            </auto-service>
+                                            <insight
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Insights"
+                                                sling:resourceType="granite/ui/components/foundation/container">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <insight
+                                                        jcr:primaryType="nt:unstructured"
+                                                        jcr:title="Common Insights"
+                                                        sling:resourceType="granite/ui/components/foundation/section"
+                                                        fieldLabel="Common Insights"
+                                                        text="Common Insights">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <geotag
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                                fieldLabel="Tag ID">
+                                                                <granite:data
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    kpmg-auto-update-value="\{&quot;type&quot;: &quot;pageInfo&quot;, &quot;propertyPath&quot;: &quot;sl-insight-common-zthesid&quot;}"
+                                                                    readonly="{Boolean}true"/>
+                                                            </geotag>
+                                                            <tagpathgeo
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                                fieldLabel="Tag Path">
+                                                                <granite:data
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    kpmg-auto-update-value="\{&quot;type&quot;: &quot;pageInfo&quot;, &quot;propertyPath&quot;: &quot;sl-insight-common-hierarchy&quot;}"
+                                                                    readonly="{Boolean}true"/>
+                                                            </tagpathgeo>
+                                                        </items>
+                                                        <layout
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/foundation/layouts/collapsible"
+                                                            margin="{Boolean}false"/>
+                                                    </insight>
+                                                    <insightlocal
+                                                        jcr:primaryType="nt:unstructured"
+                                                        jcr:title="Local Insights"
+                                                        sling:resourceType="granite/ui/components/foundation/section">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <geotag
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                                fieldLabel="Tag ID">
+                                                                <granite:data
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    kpmg-auto-update-value="\{&quot;type&quot;: &quot;pageInfo&quot;, &quot;propertyPath&quot;: &quot;sl-insight-zthesid&quot;}"
+                                                                    readonly="{Boolean}true"/>
+                                                            </geotag>
+                                                            <tagpathgeo
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                                fieldLabel="Tag Path">
+                                                                <granite:data
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    kpmg-auto-update-value="\{&quot;type&quot;: &quot;pageInfo&quot;, &quot;propertyPath&quot;: &quot;sl-insight-hierarchy&quot;}"
+                                                                    readonly="{Boolean}true"/>
+                                                            </tagpathgeo>
+                                                        </items>
+                                                        <layout
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/foundation/layouts/collapsible"
+                                                            margin="{Boolean}false"/>
+                                                    </insightlocal>
+                                                </items>
+                                                <layout
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/layouts/collapsible"
+                                                    margin="{Boolean}false"/>
+                                            </insight>
+                                            <market
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Markets"
+                                                sling:resourceType="granite/ui/components/foundation/container">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <geotag
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                        fieldLabel="Tag ID">
+                                                        <granite:data
+                                                            jcr:primaryType="nt:unstructured"
+                                                            kpmg-auto-update-value="\{&quot;type&quot;: &quot;pageInfo&quot;, &quot;propertyPath&quot;: &quot;sl-market-zthesid&quot;}"
+                                                            readonly="{Boolean}true"/>
+                                                    </geotag>
+                                                    <tagpathgeo
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                        fieldLabel="Tag Path">
+                                                        <granite:data
+                                                            jcr:primaryType="nt:unstructured"
+                                                            kpmg-auto-update-value="\{&quot;type&quot;: &quot;pageInfo&quot;, &quot;propertyPath&quot;: &quot;sl-market-hierarchy&quot;}"
+                                                            readonly="{Boolean}true"/>
+                                                    </tagpathgeo>
+                                                </items>
+                                                <layout
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/layouts/collapsible"
+                                                    margin="{Boolean}false"/>
+                                            </market>
+                                        </items>
+                                        <layout
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/foundation/layouts/collapsible"
+                                            margin="{Boolean}false"/>
+                                    </systemvalue>
+                                </items>
+                            </column>
+                        </items>
+                        <granite:rendercondition
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="kpmg/renderCondition/categorizationTab"/>
+                    </categorization>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

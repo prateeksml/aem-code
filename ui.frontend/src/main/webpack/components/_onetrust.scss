@@ -1,0 +1,22 @@
+.pc-footer-logo,
+.powered-by-logo,
+.ot-pc-footer-logo,
+#ot-sdk-btn-floating {
+  display: none !important;
+}
+.ot-sdk-footer-link {
+  #ot-sdk-btn.ot-sdk-show-settings,
+  #ot-sdk-btn.ot-sdk-show-settings:hover {
+    display: none;
+    position: static;
+    @include typography-body-caption;
+    color: $alias-color-footer-legal-link-color;
+    text-decoration: underline;
+    background: transparent;
+    outline: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+}
+/* OneTrust - End */

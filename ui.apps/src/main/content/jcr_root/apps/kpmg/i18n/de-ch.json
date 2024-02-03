@@ -1,0 +1,49 @@
+{
+  "kpmg.search.label": "Suchen Sie nach KPMG",
+
+  "kpmg.search.previous.label": "Ihre bisherigen Suchanfragen",
+
+  "kpmg.search.short.label": "Suche zu kurz",
+
+  "kpmg.search.limit.label": "Sollte mindestens 3 Zeichen lang sein.",
+
+  "kpmg.search.button.label": "Suchen",
+
+  "kpmg.search.cancel.button.label": "Stornieren",
+
+  "kpmg.search.upcoming.label": "Bevorstehende",
+
+  "kpmg.search.pastevent.label": "Vergangenes Ereignis",
+
+  "kpmg.search.showing.results.label": "Es werden {current_page} mit {total_results} Ergebnissen angezeigt",
+
+  "kpmg.search.previous.accessibility.label": "Sie haben {number} vorherige Suchbegriffe",
+
+  "kpmg.search.datanotfound.message": "Daten nicht gefunden",
+
+  "kpmg.filterby.label": "Filtern nach",
+
+  "kpmg.filter.label": "Filtern",
+
+  "kpmg.loadMore.label": "Mehr laden",
+
+  "kpmg.clearAll.label": "Alles löschen",
+
+  "kpmg.tags.label": "Stichworte",
+
+  "kpmg.readMore.label": "Weiterlesen",
+
+  "kpmg.loading.label": "Wird geladen..",
+
+  "kpmg.noResultTitle.label": "Keine Ergebnisse gefunden!",
+
+  "kpmg.noResultMessage.label": "Wir konnten nicht finden, wonach Sie gesucht haben. Versuchen Sie erneut zu suchen.",
+
+  "kpmg.serverErrorTitle.label": "Er is een serverfout opgetreden!",
+
+  "kpmg.serverErrorMessage.label": "Het spijt ons, er is een serverfout opgetreden. Wacht even en probeer het opnieuw.",
+
+  "kpmg.filterError.label" : "Er is iets mis gegaan, probeer het alstublieft nogmaals",
+
+  "kpmg.applyFilter.label": "Filter anwenden"
+}

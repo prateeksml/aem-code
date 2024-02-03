@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    cq:lastRolledout="{Date}2023-06-07T09:42:53.195Z"
+    cq:lastRolledoutBy="ashut@adobe.com"
+    jcr:mixinTypes="[cq:LiveRelationship]"
+    jcr:primaryType="nt:folder"/>

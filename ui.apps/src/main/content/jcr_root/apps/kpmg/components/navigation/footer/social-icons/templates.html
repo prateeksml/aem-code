@@ -1,0 +1,20 @@
+<template data-sly-template.icon="${@ iconLinkItem}">
+    <a
+            data-sly-attribute="${iconLinkItem.link.htmlAttributes}"
+            data-cmp-clickable="true"
+            class="cmp-footer-social-icons-list__item-link"
+            aria-label="${iconLinkItem.altText}">
+        <span class="${iconLinkItem.icon}"></span>
+    </a>
+</template>
+
+<template data-sly-template.icons="${@ iconLinkItems}">
+    <ul
+        class="cmp-footer-social-icons-list"
+        data-sly-list.linkItem="${iconLinkItems}">
+        <li class="cmp-footer-social-icons-list__item">
+            <sly data-sly-call="${icon @iconLinkItem=linkItem}"></sly>
+        </li>
+    </ul>
+</template>
+

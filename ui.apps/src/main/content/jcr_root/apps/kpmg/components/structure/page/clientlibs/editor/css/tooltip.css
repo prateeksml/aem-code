@@ -1,0 +1,9 @@
+.featured__image__tooltip ._coral-Tooltip-label {
+	top: 10px;
+	max-width: 250px;
+	line-height: 16px;
+}
+
+.coral-RichText-FixedColumn-column {
+	width: 70%;
+}

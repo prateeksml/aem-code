@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/kpmg/sling:configs" mode="merge"/>
+    <filter root="/conf/kpmg/settings/cloudconfigs" mode="merge"/>
+    <filter root="/conf/kpmg/settings/dam" mode="merge"/>
+    <filter root="/conf/kpmg/settings/wcm" mode="merge" />
+    <filter root="/conf/kpmg/settings/workflow" mode="merge"/>
+    <filter root="/content/kpmgpublic" mode="merge"/>
+    <filter root="/content/dam/kpmgsites" mode="merge">
+        <exclude pattern="/content/dam/kpmgsites(/.*)?"/>
+        <include pattern="/content/dam/kpmgsites/jcr:content(/.*)?"/>
+    </filter>
+    <filter root="/content/dam/kpmgsites/logo.svg" mode="merge"/>
+    <filter root="/content/experience-fragments/kpmgpublic" mode="merge"/>
+    <filter root="/conf/global/settings/workflow/models/kpmg"/>
+    <filter root="/var/workflow/models/kpmg"/>
+
+    <filter root="/content/kpmg-style-guide"/>
+    <filter root="/content/dam/kpmg-style-guide"/>
+    <filter root="/etc/languages"/>
+    <filter root="/etc/mobile/groups/kpmg"/>
+    <filter root="/conf/global/settings/dam/assets-configurations"/>
+    <filter root="/conf/global/settings/dam/adminui-extension"/>
+    <filter root="/var/acs-commons/reports/kpmg-cf-social-links-report"/>
+</workspaceFilter>

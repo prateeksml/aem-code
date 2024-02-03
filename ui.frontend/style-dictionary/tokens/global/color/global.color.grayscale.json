@@ -1,0 +1,37 @@
+{
+  "global": {
+    "color": {
+      "grayscale": {
+        "black": {
+          "value": "#333333",
+          "comment": "Refer to Brand Book as Grey 1"
+        },
+        "neutrals": {
+          "700": {
+            "value": "#666666",
+            "comment": "Refer to Brand Book as Grey 2"
+          },
+          "500": {
+            "value": "#B2B2B2",
+            "comment": "Refer to Brand Book as Grey 4"
+          },
+          "400": {
+            "value": "#989898",
+            "comment": "Refer to Brand Book as Grey 3"
+          },
+          "300": {
+            "value": "#E5E5E5",
+            "comment": "Refer to Brand Book as Grey 5"
+          },
+          "100": {
+            "value": "#F5F6FA",
+            "comment": "New for digital use"
+          }
+        },
+        "white": {
+          "value": "#FFFFFF"
+        }
+      }
+    }
+  }
+}

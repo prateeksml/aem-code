@@ -1,0 +1,25 @@
+{
+  "getContentTypeZthesID":"53054337506891119764226",
+  "getMediaFormatsZthesID" : "164000807485345111581424",
+  "getPersonasZthesID" : "55463311195631660891109",
+  "getGeopraphyZthesID" : "93812326507033629793301",
+  "getIndustryZthesID" : "135320640047454042275950",
+  "getServiceZthesID" : "128865388042170613038114",
+  "getInsightZthesID" : "83240608170062883780427",
+  "getMarketsZthesID" : "100680041286213344818000",
+  "getSesClientHostIP" : "$[env:CDN_ENDPOINT]",
+  "getSesPort" : "443",
+  "getSesClientPath" : "/ses",
+  "getSesClientProtocol" : "https",
+  "getCommonZthesID" : "97508671404166678130047",
+  "getDisabledTemplates" : [
+  						"/conf/kpmg/settings/wcm/templates/page-error",
+  						"/conf/kpmg/settings/wcm/templates/page-year",
+						"/conf/kpmg/settings/wcm/templates/page-alphabet",
+						"/conf/kpmg/settings/wcm/templates/search-results",
+						"/conf/kpmg/settings/wcm/templates/page-month",
+						"/conf/kpmg/settings/wcm/templates/digital-forms-xf",
+						"/conf/kpmg/settings/wcm/templates/email-template",
+						"/conf/kpmg/settings/wcm/templates/xf-web-variation"
+						]
+}

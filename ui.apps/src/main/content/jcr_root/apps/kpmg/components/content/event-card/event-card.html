@@ -1,0 +1,36 @@
+<sly data-sly-use.event="com.kpmg.core.models.impl.EventCardImpl"
+     data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-test.hasContent="${properties.eventTitle}">
+  <div class="cmp-event-card" data-sly-use.teaser="com.adobe.cq.wcm.core.components.models.Teaser"
+       data-sly-use.imageTemplate="image.html" data-cmp-data-layer="${event.data.json}">
+    <sly data-sly-test="${properties.showImage}" data-sly-call="${imageTemplate.image @ teaser=teaser, event=event}"></sly>
+    <div class="cmp-event-card__content">
+      <h6 class="cmp-event-card__title">${event.eventTitle}</h6>
+      <p class="cmp-event-card__description">${event.eventDescription}</p>
+      <div class="cmp-event-card__date-container" data-sly-test="${event.eventStartTimeAndDate && properties.showEventDate}">
+        <p>
+          <span class="material-icons-outlined">mail</span>
+          ${'dd MMM yyyy' @format=event.eventStartTimeAndDate}
+        </p>
+      </div>
+      <div class="cmp-event-card__location-container" data-sly-test="${properties.showEventLocation}">
+        <p>
+          <span class="material-icons-outlined">bookmark_add</span>
+          ${properties.eventLocation}
+        </p>
+      </div>
+      <div class="cmp-event-card__time-container" data-sly-test="${properties.showEventTime}">
+        <p>
+          <span class="material-icons-outlined">visibility</span>
+          ${'hh:mma' @ format=event.eventStartTimeAndDate } - ${'hh:mma' @ format=event.eventEndTimeAndDate }
+          ${event.eventTimeZone}
+        </p>
+      </div>
+      <div class="cmp-event-card__action-container" data-sly-test="${properties.showButton}">
+        <a class="cmp-event-card__button" href="${event.pageURL}" data-cmp-clickable="true">${properties.buttonLabel}</a>
+      </div>
+    </div>
+  </div>
+</sly>
+<sly data-sly-call="${templates.placeholder @ isEmpty=!hasContent, classAppend='cmp-event-card'}">
+</sly>

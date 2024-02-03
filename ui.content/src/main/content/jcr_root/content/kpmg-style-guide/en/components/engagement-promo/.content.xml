@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2023-07-18T18:32:27.147-04:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/kpmg/settings/wcm/templates/page-content"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Engagement Promo"
+        sling:resourceType="kpmg/components/structure/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="kpmg/components/container/container"
+            layout="responsiveGrid">
+            <main
+                jcr:lastModified="{Date}2023-06-03T19:12:45.974-05:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="kpmg/components/container/main"
+                layout="simple">
+                <section
+                    jcr:lastModified="{Date}2023-06-03T18:53:29.854-05:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="kpmg/components/container/section"
+                    layout="simple">
+                    <engagementpromo
+                        cq:styleIds="[1688689275023]"
+                        jcr:description="&lt;p>Lorem ipsum dolor sit amet consectetur. Montes sed leo dui orci massa risus. Sed consectetur semper nunc.&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                        jcr:lastModified="{Date}2023-07-06T15:03:35.471-04:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Time to chat"
+                        sling:resourceType="kpmg/components/content/engagementpromo"
+                        descriptionFromPage="false"
+                        fileReference="/content/dam/kpmg-style-guide/Promo.jpg"
+                        imageFromPageImage="false"
+                        isDecorative="true"
+                        searchIndexable="true"
+                        textIsRich="true"
+                        titleFromPage="false">
+                        <actions jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                link="/content/kpmgpublic"
+                                linkTarget="_self"
+                                text="Contact Us"/>
+                        </actions>
+                    </engagementpromo>
+                    <columncontrol
+                        jcr:lastModified="{Date}2023-07-06T15:52:40.143-04:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="kpmg/components/container/columncontrol"
+                        columnWidth="twoEven">
+                        <container-1
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="kpmg/components/container/container">
+                            <engagementpromo_copy
+                                cq:styleIds="[1688689302106]"
+                                jcr:description="&lt;p>Lorem ipsum dolor sit amet consectetur. Montes sed leo dui orci massa risus. Sed consectetur semper nunc.&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                                jcr:lastModified="{Date}2023-07-06T15:03:35.471-04:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Time to chat"
+                                sling:resourceType="kpmg/components/content/engagementpromo"
+                                descriptionFromPage="false"
+                                fileReference="/content/dam/kpmg-style-guide/Promo.jpg"
+                                imageFromPageImage="false"
+                                isDecorative="true"
+                                searchIndexable="true"
+                                textIsRich="true"
+                                titleFromPage="false">
+                                <actions jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        link="/content/kpmgpublic"
+                                        linkTarget="_self"
+                                        text="Contact Us"/>
+                                </actions>
+                            </engagementpromo_copy>
+                        </container-1>
+                        <container-2
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="kpmg/components/container/container">
+                            <engagementpromo_copy
+                                cq:styleIds="[1688689275023]"
+                                jcr:description="&lt;p>Lorem ipsum dolor sit amet consectetur. Montes sed leo dui orci massa risus. Sed consectetur semper nunc.&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                                jcr:lastModified="{Date}2023-07-06T15:03:35.471-04:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Time to chat"
+                                sling:resourceType="kpmg/components/content/engagementpromo"
+                                descriptionFromPage="false"
+                                fileReference="/content/dam/kpmg-style-guide/Promo.jpg"
+                                imageFromPageImage="false"
+                                isDecorative="true"
+                                searchIndexable="true"
+                                textIsRich="true"
+                                titleFromPage="false">
+                                <actions jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        link="/content/kpmgpublic"
+                                        linkTarget="_self"
+                                        text="Contact Us"/>
+                                </actions>
+                            </engagementpromo_copy>
+                        </container-2>
+                        <container-3
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="kpmg/components/container/container">
+                            <topicteaser_copy
+                                cq:styleIds="[1683742669938]"
+                                jcr:description="&lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ornare sem ut imperdiet dapibus.&lt;/p>&#xd;&#xa;"
+                                jcr:lastModified="{Date}2023-05-10T14:18:24.665-04:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Title"
+                                sling:resourceType="kpmg/components/content/topicteaser"
+                                descriptionFromPage="false"
+                                fileReference="/content/dam/kpmg-brand/Card Image.png"
+                                imageFromPageImage="false"
+                                isDecorative="true"
+                                linkTarget="_self"
+                                pretitle="Pretitle"
+                                textIsRich="true"
+                                titleFromPage="false">
+                                <actions jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        link="/content/kpmg-style-guide/en/components/topic-teaser"
+                                        linkTarget="_self"
+                                        text="Read more"/>
+                                </actions>
+                            </topicteaser_copy>
+                        </container-3>
+                        <container-4
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="kpmg/components/container/container">
+                            <topicteaser_copy
+                                cq:styleIds="[1683742669938]"
+                                jcr:description="&lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ornare sem ut imperdiet dapibus.&lt;/p>&#xd;&#xa;"
+                                jcr:lastModified="{Date}2023-05-10T14:18:24.665-04:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Title"
+                                sling:resourceType="kpmg/components/content/topicteaser"
+                                descriptionFromPage="false"
+                                fileReference="/content/dam/kpmg-brand/Card Image.png"
+                                imageFromPageImage="false"
+                                isDecorative="true"
+                                linkTarget="_self"
+                                pretitle="Pretitle"
+                                textIsRich="true"
+                                titleFromPage="false">
+                                <actions jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        link="/content/kpmg-style-guide/en/components/topic-teaser"
+                                        linkTarget="_self"
+                                        text="Read more"/>
+                                </actions>
+                            </topicteaser_copy>
+                        </container-4>
+                    </columncontrol>
+                </section>
+                <container
+                    jcr:lastModified="{Date}2023-07-06T15:58:45.359-04:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="kpmg/components/container/container">
+                    <cq:responsive jcr:primaryType="nt:unstructured">
+                        <default
+                            jcr:primaryType="nt:unstructured"
+                            offset="0"
+                            width="6"/>
+                    </cq:responsive>
+                </container>
+            </main>
+        </root>
+        <cq:featuredimage
+            jcr:primaryType="nt:unstructured"
+            fileReference="/content/dam/kpmgsites/logo.svg"/>
+    </jcr:content>
+</jcr:root>

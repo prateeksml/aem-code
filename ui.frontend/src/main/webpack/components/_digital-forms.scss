@@ -1,0 +1,941 @@
+.loading-spinner-container {
+  display: none;
+  position: fixed;
+  z-index: 999999;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  align-items: center;
+  background-color: rgba(12, 35, 60, 0.6);
+  justify-content: center;
+  .loading-spinner {
+    margin: $alias-margin-base;
+    display: inline-block;
+    position: relative;
+    background: $global-color-brand-white;
+    padding: $alias-padding-medium;
+    max-width: 100%;
+    width: 100%;
+    @include tablet {
+      width: 534px;
+    }
+    @include desktop-medium {
+      width: 611px;
+      padding: $alias-padding-xx-large;
+    }
+    .loading-spinner__icon {
+      border: 4px solid $global-color-strokes-cobalt-blue-20-percent;
+      border-top: 4px solid $global-color-brand-cobalt-blue;
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      animation: spin 1.5s linear infinite;
+      margin: auto;
+    }
+    h4 {
+      @include typography-heading-four;
+      margin: 0;
+      margin-bottom: $alias-margin-small;
+      color: $global-color-brand-spectrum-blue;
+    }
+    h6 {
+      @include typography-heading-six-semibold;
+      margin: 0;
+      margin-bottom: $alias-margin-large;
+      color: $global-color-brand-spectrum-blue;
+    }
+    p {
+      text-align: center;
+      margin: 0;
+      margin-top: $alias-margin-x-small;
+      @include typography-body-default-regular;
+      color: $global-color-brand-spectrum-blue;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  }
+}
+
+body.loading {
+  overflow: hidden;
+  .loading-spinner-container {
+    display: flex;
+  }
+}
+
+.cmp-digital-form {
+  $control-radius: 4px !default;
+  $control-border-width: 1px !default;
+  $control-boorder-color: $alias-color-body-regular;
+  $control-gap-normal: $alias-padding-x-small;
+  $control-gap-large: $alias-padding-small;
+  $control-gap-vertical: $alias-margin-x-large;
+  $control-label-gap-vertical: $control-gap-normal;
+  $control-hover-border-color: $global-color-brand-kpmg-blue;
+  $cotrol-focus-outline-color: $global-color-strokes-cobalt-blue-20-hex;
+  $cotrol-focus-outline-size: 3px;
+  $contol-message-count-color: $global-color-brand-kpmg-blue;
+  $contol-checkbox-bgcolor: $global-color-brand-cobalt-blue;
+  $contol-checkbox-hover-bgcolor: $global-color-brand-white;
+  $color-grayscale-neutrals-3: $global-color-grayscale-neutrals-400;
+  $number-icon-width-height-desktop: 3rem;
+  $number-icon-width-height: 2.25rem;
+
+  padding: $cotrol-focus-outline-size;
+  //so that the focus outline color does not get cropped
+
+  @mixin control-outline {
+    border-radius: $control-radius;
+    border-width: $control-border-width;
+    padding: $control-gap-normal $control-gap-large;
+    border: $control-border-width solid $control-boorder-color;
+    transition-property: border-color, box-shadow;
+    transition-duration: 0.1s;
+    transition-timing-function: ease-in-out;
+    margin: 0;
+    background: $global-color-brand-white;
+    color: $global-color-brand-spectrum-blue;
+
+    &:not([type="checkbox"]):not([type="radio"]):focus {
+      border-color: $global-color-brand-kpmg-blue;
+      box-shadow: 0px 0px 0px 3px $cotrol-focus-outline-color;
+      outline: none;
+    }
+
+    &:not([type="checkbox"]):not([type="radio"]):not(:disabled):not(
+        :focus
+      ):hover,
+    &:disabled {
+      //hover but not editing
+      background-color: $global-color-grayscale-neutrals-100;
+    }
+
+    &.invalid {
+      border-color: $global-color-system-red-300;
+
+      &:not([type="checkbox"]):not([type="radio"]):focus {
+        border-color: $global-color-system-red-300;
+      }
+    }
+
+    &:disabled {
+      border-color: $global-color-grayscale-neutrals-100;
+    }
+  }
+
+  @mixin custom-checkbox($label_item: "label") {
+    //original checkbox will act as tab accessible for custom one
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px);
+    /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    border: none;
+
+    & + #{$label_item} {
+      display: flex;
+      align-items: flex-start;
+      position: relative;
+      border: 1px solid transparent;
+      border-radius: $control-radius;
+      width: 100%;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $contol-checkbox-hover-bgcolor;
+      }
+
+      &::before {
+        content: "";
+        position: relative;
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        background: $global-color-brand-white;
+        border: 2px solid;
+        cursor: pointer;
+        border-radius: 2px;
+        flex-shrink: 0;
+        flex-grow: 0;
+        margin: $control-gap-normal;
+        transition-property: border-color, box-shadow;
+        transition-duration: 0.1s;
+        transition-timing-function: ease-in-out;
+        margin-top: 11px;
+      }
+    }
+    &.invalid {
+      & + #{$label_item} {
+        border: 1px solid $global-color-system-red-300;
+
+        &::before {
+          border-color: $global-color-system-red-500;
+        }
+      }
+    }
+
+    &:checked {
+      & + #{$label_item} {
+        &::before {
+          background-color: $contol-checkbox-bgcolor;
+          border-color: $contol-checkbox-bgcolor;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          margin: $control-gap-normal;
+          top: 4px;
+          left: 3px;
+          border-left: 2px solid;
+          border-bottom: 2px solid;
+          border-color: $global-color-brand-white;
+          height: 7px;
+          width: 12px;
+          transform: rotate(-45deg);
+          flex-shrink: 0;
+          flex-grow: 0;
+          margin-top: 11px;
+        }
+      }
+
+      &.invalid {
+        & + #{$label_item} {
+          &::before {
+            background: $global-color-system-red-500;
+            border: 2px solid $global-color-system-red-500;
+          }
+        }
+      }
+
+      &:disabled {
+        & + #{$label_item} {
+          &::before {
+            background: $color-grayscale-neutrals-3;
+            border-color: $color-grayscale-neutrals-3;
+          }
+        }
+      }
+    }
+  }
+
+  @mixin label-main {
+    @include typography-body-small-semibold;
+    margin-bottom: $control-label-gap-vertical;
+    display: block;
+  }
+
+  &,
+  & * {
+    box-sizing: border-box;
+  }
+
+  .err-msg {
+    display: none;
+    margin: 0;
+    padding: 0;
+    padding-top: $control-gap-normal;
+
+    @include typography-body-small-regular;
+
+    color: $global-color-system-red-500;
+
+    &.disabled {
+      color: $global-color-grayscale-neutrals-700;
+    }
+
+    .prepend-icon-info {
+      display: flex;
+      align-items: flex-start;
+
+      &::before {
+        @include material-icons-outlined;
+        margin-right: $control-gap-normal;
+        // line-height: $alias-fonts-line-height-large;
+        content: "info";
+        line-height: 1.25rem;
+
+        @include tablet {
+          line-height: 1;
+        }
+
+        vertical-align: top;
+      }
+    }
+
+    &.show {
+      display: block;
+    }
+
+    align-items: flex-start;
+
+    @include tablet {
+      align-items: center;
+    }
+  }
+
+  sup {
+    //this style is probably not required, need to verify with designs
+    position: absolute;
+    padding-left: 2px;
+  }
+
+  input,
+  select,
+  textarea {
+    @include typography-body-default-regular;
+    width: 100%;
+
+    &:disabled {
+      color: $global-color-grayscale-neutrals-700;
+    }
+  }
+
+  fieldset {
+    //override default styles
+    padding: 0;
+    margin: 0;
+    border: none;
+  }
+
+  .text,
+  .options,
+  .privacy,
+  .button {
+    @for $i from 1 through 11 {
+      &.aem-GridColumn--default--#{$i}.margin {
+        $gap-desktop: ($alias-margin-large / 2);
+        $gap-tablet: ($alias-margin-medium / 2);
+        @include tablet {
+          &-left {
+            padding-left: $gap-tablet;
+          }
+          &-right {
+            padding-right: $gap-tablet;
+          }
+        }
+        @include desktop-small {
+          &-left {
+            padding-left: $gap-desktop;
+          }
+          &-right {
+            padding-right: $gap-desktop;
+          }
+        }
+      }
+    }
+  }
+  .options,
+  .privacy,
+  .button,
+  .fileupload {
+    margin-bottom: $control-gap-vertical;
+  }
+  .cmp-form-text {
+    margin-bottom: $control-gap-vertical - $alias-margin-large;
+    &__textarea,
+    &__text {
+      @include control-outline;
+    }
+
+    &__label {
+      @include label-main;
+      display: block;
+    }
+
+    &__label.has-char-count {
+      //only for textarea label we need different display
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .char-count {
+        padding: 0;
+        margin: 0;
+        color: $contol-message-count-color;
+      }
+    }
+
+    &__textarea {
+      padding-inline: $control-gap-normal $control-gap-large;
+      // @mixin textarea-icon {
+      //   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="gray"> <path d="M12 14l-4-4h8z"/></svg>');
+      //   background-size: 40px;
+      //   background-repeat: no-repeat;
+      //   background-position: 50% 50%;
+      //   cursor: grab;
+      // }
+
+      // /* Customize the resize icon */
+      // &::-webkit-resizer{@include textarea-icon;}
+      // &::-moz-resizer{@include textarea-icon;}
+      // &::-o-resizer{@include textarea-icon;}
+      // &::-ms-resizer{@include textarea-icon;}
+    }
+  }
+
+  .cmp-form-options {
+    &--radio,
+    &--checkbox {
+      display: flex;
+      flex-flow: row wrap;
+    }
+
+    &__field {
+      &--drop-down {
+        @include control-outline;
+        appearance: none;
+      }
+
+      &-label {
+        //for individual radio items
+        &:not(:last-child) {
+          margin-right: 1rem;
+        }
+      }
+      $lbl-selctor: ".cmp-form-options__field-description";
+      &--radio {
+        &,
+        & + #{$lbl-selctor} {
+          flex-shrink: 0;
+          flex-grow: 0;
+          color: $global-color-brand-spectrum-blue;
+        }
+
+        &:focus {
+          & + #{$lbl-selctor} {
+            box-shadow: 0px 0px 0px 3px $cotrol-focus-outline-color;
+          }
+        }
+
+        @include custom-checkbox($lbl-selctor);
+        $check-pos-left: 0.25rem;
+
+        & + #{$lbl-selctor},
+        &:checked + #{$lbl-selctor} {
+          padding: $control-gap-normal;
+
+          &::before,
+          &::after {
+            height: 24px;
+            width: 24px;
+            padding: 0;
+            margin: 0;
+            top: 0;
+            left: 0;
+            transform: rotate(0);
+            display: inline-block;
+            box-sizing: border-box;
+            background-color: $global-color-brand-white;
+            border-radius: 50%;
+            margin-right: $control-gap-normal;
+            border-color: $control-boorder-color;
+          }
+
+          &::after {
+            position: absolute;
+            left: $check-pos-left + $control-gap-normal;
+            height: 1px;
+            width: 1px;
+            transition-property: height, width;
+            transition-duration: 0.2s;
+            transition-timing-function: ease-in-out;
+          }
+        }
+
+        &:checked + #{$lbl-selctor} {
+          &::before {
+            border-color: $contol-checkbox-bgcolor;
+          }
+          &::after {
+            height: 16px;
+            width: 16px;
+            background-color: $contol-checkbox-bgcolor;
+            border: 1px solid;
+            position: absolute;
+            transform: translateY(-50%);
+            top: 50%;
+            left: $check-pos-left + $control-gap-normal;
+            border: none;
+          }
+        }
+
+        &:checked.invalid + #{$lbl-selctor} {
+          &::before {
+            background-color: $global-color-brand-white;
+          }
+
+          &::after {
+            background-color: $global-color-system-red-500;
+          }
+        }
+        &:disabled,
+        &:checked:disabled {
+          & + #{$lbl-selctor} {
+            color: $color-grayscale-neutrals-3;
+            &::before {
+              background-color: $global-color-brand-white;
+              border-color: $color-grayscale-neutrals-3;
+            }
+            &::after {
+              background-color: $color-grayscale-neutrals-3;
+            }
+          }
+        }
+      }
+      &--checkbox {
+        @include custom-checkbox($lbl-selctor);
+        & + #{$lbl-selctor} {
+          span {
+            padding-top: $control-gap-normal;
+          }
+        }
+      }
+    }
+
+    &__label,
+    &__legend {
+      @include label-main;
+    }
+
+    .select-wrapper {
+      position: relative;
+
+      select {
+        padding-right: 44px;
+      }
+
+      &:after {
+        @include material-icons-outlined;
+        content: "\e313";
+        color: $global-color-brand-cobalt-blue;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: $control-gap-large;
+        font-size: $alias-icon-size-medium;
+      }
+
+      &.disabled {
+        &::after {
+          color: $color-grayscale-neutrals-3;
+        }
+      }
+    }
+  }
+  .privacy {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    .cmp-form-privacy {
+      &__paragraph {
+        margin: 0;
+        padding: 0;
+        margin-top: $control-gap-normal;
+        @include typography-body-default-regular;
+
+        p {
+          padding: 0;
+          margin: 0;
+        }
+      }
+
+      &__label {
+        padding-right: $control-gap-large;
+        padding-bottom: $control-gap-normal;
+
+        &:focus {
+          box-shadow: 0px 0px 0px 3px $cotrol-focus-outline-color;
+        }
+      }
+
+      &__checkbox {
+        &.custom[type="checkbox"] {
+          @include custom-checkbox(".cmp-form-privacy__label");
+
+          &:focus {
+            & + label {
+              // &::before { ////uncomment just to focus the checkbox.
+              box-shadow: 0px 0px 0px 3px $cotrol-focus-outline-color;
+              // }
+            }
+          }
+
+          &.invalid + .cmp-form-privacy__label {
+            border: none;
+            p {
+              color: $global-color-system-red-500;
+            }
+          }
+        }
+      }
+    }
+  }
+  .options {
+    &.custom[type="checkbox"] {
+      @include custom-checkbox(".cmp-form-privacy__label");
+    }
+  }
+  .cmp-form-button {
+    width: 100%;
+    @include button-primary;
+    padding-inline: $alias-padding-xxx-large;
+    &[type="button"] {
+      @include button-secondary;
+      &:disabled {
+        color: $global-color-grayscale-neutrals-300;
+        border-color: $global-color-grayscale-neutrals-300;
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  .text {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+      color: $global-color-brand-spectrum-blue;
+      margin: 0;
+      padding: 0;
+    }
+    h1,
+    h2 {
+      padding: 0;
+      margin-top: $alias-margin-large;
+      margin-bottom: $alias-margin-x-small;
+      @include desktop-small {
+        margin-top: $alias-margin-xx-large;
+      }
+    }
+    h3,
+    h4,
+    h5,
+    h6 {
+      @include typography-heading-six-semibold;
+      margin-bottom: $alias-padding-base;
+    }
+    margin-bottom: $alias-margin-large;
+  }
+  .title h1 {
+    color: $global-color-brand-spectrum-blue;
+    padding: 0;
+    margin-top: $alias-margin-large;
+    margin-bottom: $alias-margin-x-small;
+
+    @include desktop-small {
+      margin-top: $alias-margin-xx-large;
+    }
+  }
+  margin-bottom: $alias-margin-large;
+
+  #file-upload-container {
+    width: 100%;
+    cursor: pointer;
+    border: 1px dashed $global-color-grayscale-black;
+    padding: $alias-padding-large $alias-padding-medium;
+    text-align: center;
+    background-color: transparent;
+    border-radius: $control-radius;
+    min-height: 122px;
+    &:hover {
+      background-color: $global-color-grayscale-neutrals-100;
+      border-color: $global-color-brand-kpmg-blue;
+    }
+    &:focus {
+      box-shadow: 0px 0px 0px 3px $cotrol-focus-outline-color;
+      border-color: $global-color-brand-kpmg-blue;
+      outline: none;
+    }
+    &.invalid {
+      border-color: $global-color-system-red-300;
+    }
+    .file-upload__input-message {
+      @include typography-body-default-regular;
+      color: $global-color-grayscale-neutrals-700;
+      .file-upload__input-message--desktop {
+        display: none;
+        @include tablet {
+          display: block;
+        }
+      }
+      .file-upload__input-message--mobile {
+        display: block;
+        @include tablet {
+          display: none;
+        }
+      }
+      span {
+        @include typography-body-default-semibold;
+        color: $global-color-brand-cobalt-blue;
+      }
+    }
+    .file-upload__help-message {
+      @include typography-body-headings-tags;
+      margin-top: $alias-margin-small;
+      color: $global-color-grayscale-neutrals-700;
+    }
+    .file-upload__drop-message {
+      display: none;
+      margin: auto;
+      @include typography-body-default-semibold;
+      color: $global-color-brand-spectrum-blue;
+      span {
+        margin-right: $alias-margin-x-small;
+        @include material-icons-outlined;
+        color: $global-color-brand-spectrum-blue;
+      }
+    }
+    &.drag-over {
+      display: flex;
+      background-color: $global-color-strokes-cobalt-blue-20-percent;
+      border-color: $global-color-brand-cobalt-blue;
+      .file-upload__drop-message {
+        display: block;
+        pointer-events: none;
+      }
+
+      .file-upload__input-message,
+      .file-upload__help-message {
+        display: none;
+      }
+    }
+  }
+
+  #file-list {
+    list-style: none;
+    padding: 0;
+    li {
+      position: relative;
+      @include typography-body-default-regular;
+      display: flex;
+      background-color: $global-color-grayscale-neutrals-100;
+      border-radius: $control-radius;
+      padding: $alias-padding-small;
+      margin-bottom: $alias-margin-base;
+      color: $global-color-grayscale-neutrals-700;
+
+      .file-upload__file-name {
+        margin-right: $alias-margin-x-small;
+        margin-left: $alias-margin-x-small;
+      }
+      .file-upload__icon,
+      .file-upload__cancel-button {
+        @include material-icons-outlined;
+        font-size: $alias-icon-size-medium;
+        line-height: $global-fonts-line-height-15;
+        color: inherit;
+      }
+      .file-upload__loading {
+        width: 1rem;
+        height: 1rem;
+        border: 2px solid $global-color-brand-cobalt-blue;
+        border-bottom-color: transparent;
+        border-radius: 50%;
+        display: inline-block;
+        box-sizing: border-box;
+        animation: rotation 1s linear infinite;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+      }
+
+      @keyframes rotation {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      .file-upload__cancel-button {
+        background-color: transparent;
+        padding: 0;
+        margin: 0;
+        border: 0;
+        color: $global-color-brand-cobalt-blue;
+        margin-left: auto;
+        cursor: pointer;
+        width: 1.5rem;
+        height: 1.5rem;
+        text-align: center;
+        display: none;
+        &.active {
+          display: inline-block;
+        }
+        &:hover {
+          color: $global-color-brand-kpmg-blue;
+        }
+        &:focus {
+          box-shadow: 0px 0px 0px 3px $cotrol-focus-outline-color;
+          border-radius: 50%;
+          outline: none;
+        }
+      }
+    }
+  }
+
+  &.cmp-digital-form__rfp {
+    background-color: $global-color-brand-white;
+    padding-top: $alias-margin-4x-large;
+    @include container-horizontal-padding;
+    counter-reset: section;
+    @include desktop-medium {
+      padding-top: 120px;
+    }
+    &.publisher {
+      .container {
+        display: none;
+        &.show {
+          display: block;
+          .cmp-container {
+            margin-top: $alias-margin-xx-large;
+            padding-top: 0;
+            border-top: 0;
+          }
+        }
+      }
+
+      &.show-second-step {
+        .container {
+          display: block;
+        }
+      }
+    }
+    .container:last-of-type {
+      .cmp-container {
+        &::before {
+          display: none;
+        }
+      }
+    }
+    .cmp-container {
+      position: relative;
+      padding-top: $alias-padding-xx-large;
+      border-top: 2px solid $global-color-grayscale-neutrals-100;
+      @include tablet {
+        padding-left: $number-icon-width-height + $alias-padding-medium;
+      }
+      @include desktop-medium {
+        padding-left: $number-icon-width-height-desktop + $alias-padding-medium;
+      }
+      @include tablet {
+        &::before {
+          @include typography-heading-six-semibold;
+          counter-increment: section;
+          content: counter(section);
+          width: $number-icon-width-height;
+          height: $number-icon-width-height;
+          line-height: $number-icon-width-height;
+          background: $global-color-brand-purple;
+          border-radius: 50%;
+          color: $global-color-grayscale-neutrals-100;
+          display: inline-block;
+          text-align: center;
+          position: absolute;
+          left: 0;
+          @include desktop-medium {
+            width: $number-icon-width-height-desktop;
+            height: $number-icon-width-height-desktop;
+            line-height: $number-icon-width-height-desktop;
+          }
+        }
+      }
+      .text .cmp-text h3 {
+        &::before {
+          @include typography-heading-six-semibold;
+          counter-increment: section;
+          content: counter(section);
+          width: $number-icon-width-height;
+          height: $number-icon-width-height;
+          line-height: $number-icon-width-height;
+          background: $global-color-brand-purple;
+          border-radius: 50%;
+          color: $global-color-grayscale-neutrals-100;
+          display: inline-block;
+          text-align: center;
+          margin-right: $alias-margin-base;
+          vertical-align: top;
+          @include tablet {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  &.hide {
+    display: none;
+  }
+}
+
+.form-result-container {
+  padding: 0 $alias-padding-x-large;
+  margin: $alias-width-10x-large 0;
+  display: none;
+  text-align: center;
+
+  &.show {
+    display: block;
+  }
+
+  .cmp-title {
+    color: $global-color-brand-spectrum-blue;
+    margin: 0;
+    padding: 0;
+
+    &__text {
+      @include typography-heading-three;
+      margin: 0;
+      padding: 0;
+      margin-bottom: $alias-padding-base;
+    }
+
+    &__paragraph {
+      @include typography-heading-six-semibold;
+      color: $global-color-brand-spectrum-blue;
+      margin-bottom: $alias-padding-base;
+    }
+  }
+
+  .icon {
+    color: $global-color-brand-dark-green;
+    font-size: $alias-icon-size-xxx-large;
+    margin-bottom: $alias-margin-medium;
+  }
+
+  .button,
+  .close-btn-bottom {
+    margin-top: $alias-margin-large;
+    @include button-secondary;
+    padding-left: $alias-padding-base;
+    padding-right: $alias-padding-base;
+    width: auto;
+  }
+}
+
+.cmp-digital-form {
+  .warning-overlay-msg,
+  .submit-error-message {
+    display: none;
+  }
+}
+
+iframe[title="recaptcha challenge expires in two minutes"] {
+  position: fixed;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+}

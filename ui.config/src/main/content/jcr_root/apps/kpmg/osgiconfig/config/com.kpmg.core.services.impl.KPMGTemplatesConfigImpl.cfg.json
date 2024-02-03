@@ -1,0 +1,13 @@
+{
+  "hideInNavTemplates":[
+    "/conf/kpmg/settings/wcm/templates/error-page",
+    "/conf/kpmg/settings/wcm/templates/base-page"
+  ],
+  "hideInSearchTemplates":[
+    "/conf/kpmg/settings/wcm/templates/error-page",
+    "/conf/kpmg/settings/wcm/templates/base-page"
+  ],
+  "allowedTemplates":[
+"/apps/kpmgpublic/templates/base-template&/conf/kpmgpublic/settings/wcm/templates/dynamic-homepage-template:/conf/kpmgpublic/settings/wcm/templates/editable-services-landing-page-template,/conf/kpmgpublic/settings/wcm/templates/editable-industries-landing-page-template,/conf/kpmgpublic/settings/wcm/templates/editable-insights-landing-page,/conf/kpmgpublic/settings/wcm/templates/editable-industry-page-template,/conf/kpmgpublic/settings/wcm/templates/editable-service-page-template",
+"/conf/kpmgpublic/settings/wcm/templates/editable-events-landing-template&/apps/kpmgpublic/templates/year-container-template&/apps/kpmgpublic/templates/month-container-template:/apps/kpmgpublic/templates/generic-migration-template,/conf/kpmgpublic/settings/wcm/templates/event-registration-template"]
+}

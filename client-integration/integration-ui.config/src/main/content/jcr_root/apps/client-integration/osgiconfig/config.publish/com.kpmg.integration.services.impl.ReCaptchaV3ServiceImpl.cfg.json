@@ -1,0 +1,7 @@
+{
+  "getCaptchaEnabled": "$[env:CAPTCHA_ENABLED;default=false]",
+  "getCaptchaEndpoint": "https://www.google.com/recaptcha/api/siteverify",
+  "getSiteKey":"$[env:CAPTCHA_SITE_KEY]",
+  "getSiteSecret": "$[secret:CAPTCHA_SITE_SECRET]",
+  "getScoreTolerance": 0.5
+}

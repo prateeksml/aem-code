@@ -1,0 +1,143 @@
+.cmn-msg-overlay {
+  display: none;
+  position: fixed;
+  z-index: 99992;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  align-items: center;
+  background-color: rgba($global-color-brand-spectrum-blue, 0.6);
+  justify-content: center;
+
+  &.show {
+    z-index: 99993;
+    opacity: 1;
+    pointer-events: unset;
+    display: flex;
+  }
+
+  .people-contact-modal__content {
+    margin: $alias-margin-base;
+    display: inline-block;
+    position: relative;
+    background: $global-color-brand-white;
+    padding: $alias-padding-medium;
+    max-width: 100%;
+    width: 100%;
+
+    min-height: unset;
+    @include desktop-small {
+      min-height: unset;
+    }
+
+    @include tablet {
+      width: 534px;
+    }
+
+    @include desktop-medium {
+      width: 611px;
+      padding: $alias-padding-xx-large;
+    }
+
+    // @include desktop-small {
+    //   width: auto;
+    //   margin: auto;
+    //   border-radius: 4px;
+    //   padding: $alias-padding-xx-large;
+    // }
+
+    // @include desktop-medium {
+    //   width: auto;
+    //   margin: auto;
+    //   border-radius: 4px;
+    // }
+  }
+
+  .section {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+
+    &.buttons {
+      margin-top: $alias-margin-base;
+      justify-content: flex-end;
+    }
+
+    @include tablet {
+      flex-flow: row wrap;
+    }
+
+    .btn {
+      &.btn-cancel {
+        @include button-tertiary();
+        color: $global-color-brand-cobalt-blue;
+        width: auto;
+        margin-bottom: $alias-margin-base;
+        margin-right: $alias-margin-base;
+
+        &:focus {
+          outline: 4px solid var(--button-outline-color-primary-focus);
+        }
+        @include tablet {
+          margin-bottom: 0;
+        }
+      }
+
+      &.btn-continue {
+        @include button-primary();
+        width: auto;
+      }
+    }
+  }
+
+  .text {
+    .cmp-text {
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}
+
+.cmn-msg-overlay.err-msg-overlay {
+  .people-contact-modal__content {
+    .text-msg {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      flex-wrap: nowrap;
+
+      @include tablet {
+        flex-direction: row;
+      }
+    }
+  }
+
+  .material-icons-outlined {
+    color: $global-color-system-red-300;
+    font-size: $alias-icon-size-large;
+    padding: $alias-padding-x-small;
+    background-color: $global-color-system-red-100;
+    border-radius: 50%;
+    margin-right: $alias-margin-base;
+    margin-bottom: $alias-margin-base;
+  }
+
+  .btn-close {
+    @include button-primary();
+    width: auto;
+  }
+}
+
+body[class*="no-scroll-"] {
+  overflow: hidden;
+  scrollbar-gutter: stable;
+}

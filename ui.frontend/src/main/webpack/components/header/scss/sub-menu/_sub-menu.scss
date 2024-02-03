@@ -1,0 +1,90 @@
+//SUB MENU
+$parent: ".cmp-sub-menu";
+
+#{$parent} {
+  $sub-menu-top-offset: $global-size-3;
+  $sub-menu-top-offset-medium: calc($global-size-5 + $global-size-25);
+  $animation-speed: 0.75s;
+
+  @include normalize-style;
+  position: absolute;
+  top: $sub-menu-top-offset;
+  left: 100%;
+  height: 100%;
+  z-index: 500;
+  color: $global-color-brand-white;
+  background-color: none;
+
+  &--active {
+    @include slide-left-in($animation-speed);
+  }
+
+  &--deactivate {
+    @include slide-left-out($animation-speed);
+  }
+
+  //BACK BUTTON
+  &__back-button {
+    @include display-flex-align-center;
+    width: 100%;
+    padding: $alias-padding-base;
+    border: none;
+    border-bottom: 1px solid $global-color-strokes-cobalt-blue-20-percent;
+    background-color: $global-color-brand-kpmg-blue;
+    height: $sub-menu-top-offset;
+    cursor: pointer;
+
+    &-icon {
+      height: $global-size-15;
+      &:after {
+        //TODO add arg to icon mixin to set icon name
+        @include material-icons-outlined;
+        content: "arrow_back_ios" #{"/*!rtl: 'arrow_forward_ios' */"};
+        color: $global-color-brand-white;
+        font-size: $global-size-15;
+        vertical-align: middle;
+        height: $global-size-15;
+      }
+    }
+
+    &-label {
+      @include typography-body-default-semibold;
+      color: $global-color-brand-white;
+      height: $global-size-15;
+    }
+  }
+
+  &__container {
+    height: 100%;
+    background-color: $global-color-brand-kpmg-blue;
+  }
+
+  //Sub Menu Section
+  &__section {
+    &-link {
+      display: none;
+    }
+
+    &-title {
+      &--container {
+        height: calc($alias-size-medium * 3);
+        padding: $alias-padding-medium $alias-padding-base;
+        border-bottom: 1px solid $global-color-strokes-cobalt-blue-20-percent;
+
+        p {
+          @include menu-label;
+          margin: 0;
+        }
+      }
+    }
+
+    &-nav {
+      ul {
+        @include normalize-style;
+        list-style-type: none;
+      }
+    }
+  }
+}
+
+@import "breakpoints/sub-menu--desktop-medium";

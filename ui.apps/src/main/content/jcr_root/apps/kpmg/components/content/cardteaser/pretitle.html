@@ -1,0 +1,16 @@
+<sly data-sly-template.pretitle="${@ teaser}">
+  <!--/* Adding Icon Before pretitle */-->
+  <span class="cmp-teaser__icon" data-sly-test="${properties.iconType=='materialIcon'}"
+    >${properties.icon}</span
+  >
+  <img
+    class="cmp-teaser__custom-icon"
+    alt=""
+    data-sly-test="${properties.iconType=='customIcon'}"
+    src="${properties.customIcon}"
+    loading="lazy"
+  />
+  <p class="cmp-teaser__pretitle" data-sly-test.pretitle="${teaser.pretitle}">
+    ${pretitle}
+  </p>
+</sly>

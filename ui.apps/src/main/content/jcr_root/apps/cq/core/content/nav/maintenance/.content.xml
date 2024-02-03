@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
+    jcr:mixinTypes="[rep:AccessControllable]"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Elasticsearch Admin Tools"
+    icon="DataUser"
+    id="cq-maintenance">
+    <bulkIndexing
+        jcr:description="Bulk index/delete page from elastic search"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Bulk Indexing"
+        href="/apps/kpmg/admin/configurations/elasticsearch/components/bulk-indexing.html"
+        icon="GlobeSearch"
+        id="cq-core-tools-maintenance-bulkindexing"/>
+    <es-term-editor
+        jcr:description="Manage Elasticsearch suggestion entries"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="ElasticSearch Term Editor"
+        href="/apps/kpmg/admin/configurations/elasticsearch-term-editor/content.html"
+        icon="project"
+        id="cq-core-tools-maintenance-elasticsearch-term-editor"/>
+	 <monitoring
+        jcr:description="Sling Jobs -  try clearing the replication queues or any blocked queues"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Bulk Index Sling Jobs Monitoring Dashboard"
+        href="/apps/kpmg/admin/configurations/Index-monitoring/slingjobs-initiator/content.html"
+        icon="deleteOutline"
+        id="clearoutexcessslingjobs_generator"
+        target="_blank"/>
+</jcr:root>

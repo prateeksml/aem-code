@@ -1,0 +1,9 @@
+<template data-sly-template.v2="${@ container, onetrust}">
+    <sly data-sly-test.oneTrustEnabled=${onetrust.oneTrustScript}></sly>
+    <sly data-sly-test.category="${onetrust.mapOptions['google-recaptcha']}"></sly>
+    <script type="text/${oneTrustEnabled && category ? 'plain': 'javascript'}"
+        class="google-captcha-trigger-script ${oneTrustEnabled && category ? ['optanon-category', category]: '' @ join = '-'}">
+        document.body.classList.add('google-captcha-enabled');
+        document.body.dispatchEvent(new CustomEvent('onetrust-google-recaptcha-selected'));
+    </script>
+</template>

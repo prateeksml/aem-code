@@ -1,0 +1,11 @@
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"  xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+    jcr:primaryType="cq:EditConfig"
+    cq:dialogMode="floating"
+    cq:layout="editbar">
+    <cq:listeners
+        jcr:primaryType="cq:EditListenersConfig"
+        aftercopy="REFRESH_SELF"
+        afterdelete="REFRESH_SELF"
+        afteredit="REFRESH_SELF"
+        afterinsert="REFRESH_INSERTED"/>
+</jcr:root>

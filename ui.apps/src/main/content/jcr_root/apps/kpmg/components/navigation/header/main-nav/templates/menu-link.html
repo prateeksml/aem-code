@@ -1,0 +1,20 @@
+<sly data-sly-template.link="${@ item, hideIcon, isSectionNav, isLevelOne, isSubMenu }">
+
+    <div class="cmp-menu-link${isLevelOne ? ' cmp-menu-link--level-one' : ''}${isSubMenu ? ' cmp-menu-link--sub-menu' : ''}${isSectionNav ? ' cmp-menu-link--section-nav' : ''}">
+
+        <sly data-sly-test.linkTitle="${isSubMenu ? item.allLinksText : item.title}"/>
+        <sly data-sly-test.menuLink="${isSubMenu ? item.allLinks : item.link}"/>
+
+        <button 
+            class="cmp-menu-link__inner" 
+            type="${menuLink.htmlAttributes.href ? '' : 'button'}"
+            data-sly-element="${menuLink.htmlAttributes.href ? 'a' : 'button'}" 
+            data-sly-attribute="${menuLink.htmlAttributes}" 
+            data-cmp-data-layer="${menuLink.data.json}"
+            data-cmp-clickable="${menuLink.data ? true : false}" 
+            data-cmp-menu-link>
+            <div class="cmp-menu-link__inner--label">${linkTitle}</div>
+            <span data-sly-test="${!hideIcon}" class="cmp-menu-link__inner--icon"></span>
+        </button>
+    </div>
+</sly>

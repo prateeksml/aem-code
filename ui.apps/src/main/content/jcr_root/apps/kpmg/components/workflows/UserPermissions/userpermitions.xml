@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="userpermitions"
+    xtype="dialog">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <checkbox
+            jcr:primaryType="cq:Widget"
+            defaultValue="true"
+            fieldLabel="Incremental"
+            inputValue="true"
+            name="incremental"
+            type="checkbox"
+            xtype="selection"/>
+        <countries
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Enter Country Paths"
+            name="countryData"
+            xtype="multifield">
+            <fieldConfig
+                jcr:primaryType="cq:Widget"
+                allowBlank="false"
+                xtype="pathfield"/>
+        </countries>
+    </items>
+</jcr:root>

@@ -1,0 +1,11 @@
+{
+  "queue.priority":"NORM",
+  "queue.name":"KPMG Akamai Cache Flush Job Queue",
+  "queue.type":"UNORDERED",
+  "queue.topics":[
+    "akamaicache/flush/jobs"
+  ],
+  "queue.retries":"3",
+  "queue.retrydelay":"2000",
+  "queue.maxparallel":"10"
+}

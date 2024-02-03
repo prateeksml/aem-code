@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <components/>
+    <jcr:content
+        cq:isTransCreated="{Boolean}true"
+        cq:lastModified="{Date}2023-05-08T12:52:42.999-05:00"
+        cq:lastModifiedBy="admin"
+        cq:lastTranslationUpdate="{Date}2023-05-08T12:46:04.879-05:00"
+        cq:template="/conf/kpmg/settings/wcm/templates/page-content"
+        cq:translationSourcePath="/content/kpmg-style-guide/en"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Arabic"
+        sling:resourceType="kpmg/components/structure/page"
+        direction="rtl"
+        pwaCachestrategy="staleWhileRevalidate"
+        pwaDisplay="standalone"
+        pwaOrientation="any">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="kpmg/components/container/container"
+            layout="responsiveGrid">
+            <container
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="kpmg/components/container/containe"
+                layout="responsiveGrid">
+                <title
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="kpmg/components/content/title"/>
+                <container
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="kpmg/components/container/container"
+                    layout="responsiveGrid"/>
+            </container>
+        </root>
+        <cq:featuredimage
+            jcr:lastModified="{Date}2023-05-08T12:52:42.987-05:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/wcm/components/image/v3/image"
+            altValueFromDAM="false"/>
+    </jcr:content>
+</jcr:root>

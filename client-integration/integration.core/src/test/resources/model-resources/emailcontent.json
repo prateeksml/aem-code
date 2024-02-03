@@ -1,0 +1,32 @@
+{
+  "jcr:primaryType": "nt:unstructured",
+  "jcr:createdBy": "admin",
+  "emailSubject": "Your contact form submission",
+  "imageFromPageImage": "false",
+  "fileReference": "/content/dam/kpmg/logo.svg",
+  "jcr:lastModifiedBy": "admin",
+  "jcr:created": "Thu Jul 27 2023 13:21:42 GMT+0530",
+  "jcr:lastModified": "Fri Jul 28 2023 00:06:24 GMT+0530",
+  "emailContent": "EMAIL CONTENT",
+  "sling:resourceType": "kpmg/components/content/emailcontent",
+  "isDecorative": "true",
+  "footerText": "KPMG FOOTER",
+  "textIsRich": [
+    "true",
+    "true"
+  ],
+  "resultsCountMessage": "Label",
+  "footerLink": {
+    "jcr:primaryType": "nt:unstructured",
+    "item0": {
+      "jcr:primaryType": "nt:unstructured",
+      "linkLabel": "Tax",
+      "linkPath": "/content/kpmgpublic/us/en/Tax"
+    },
+    "item1": {
+      "jcr:primaryType": "nt:unstructured",
+      "linkLabel": "Test",
+      "linkPath": "/content/kpmgpublic/ch/fr/home/test_page"
+    }
+  }
+}

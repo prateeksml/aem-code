@@ -1,0 +1,11 @@
+{
+  "queue.priority":"NORM",
+  "queue.name":"KPMG Elastic Search Job Queue",
+  "queue.type":"UNORDERED",
+  "queue.topics":[
+    "elasticsearch/index/jobs"
+  ],
+  "queue.retries":"5",
+  "queue.retrydelay":"2000",
+  "queue.maxparallel":"10"
+}
